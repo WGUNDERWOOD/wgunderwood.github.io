@@ -6,6 +6,9 @@ layout: home
 title: Home
 ---
 
+<img style="float: right; padding-left: 30px; padding-top: 3px;"
+src="/assets/graphics/images_home/profile_small.png">
+
 I am a PhD candidate in the
 [Operations Research & Financial Engineering](https://orfe.princeton.edu/)
 department at Princeton University, where
