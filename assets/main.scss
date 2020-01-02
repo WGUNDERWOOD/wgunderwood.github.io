@@ -48,10 +48,20 @@ body{
 }
 
 .page-link{
-    &,
-    &:visited{
-        color: white;
+    &:link{
+        color: #50fa7b;
     }
+    &:visited{
+        color: #50fa7b;
+    }
+}
+
+.site-nav{
+    background: #44475a;
+}
+
+.menu-icon path{
+    fill: #f8f8f2;
 }
 
 h1{
