@@ -24,14 +24,27 @@ body{
 }
 
 .page-heading{
-    font-size: 36px;
-    height: 36px;
+    font-size: 40px;
+    height: 40px;
     line-height: 1;
     margin-bottom: 30px;
 }
 
+.site-footer{
+    border-top: 1px solid #44475a;
+}
+
+.p-name{
+    color: #a8a8a2;
+}
+
+.post-meta{
+    color: #a8a8a2;
+}
+
 .post-title{
-    font-size: 36px;
+    font-size: 40px;
+    height: 40px;
 }
 
 .page-link{
@@ -45,11 +58,15 @@ h1{
     color: #bd93f9;
 }
 
+h2{
+    color: #ffb86c;
+}
+
 a{
     &:link{
-       color: #6bc9fd;
+        color: #8be9fd;
     }
     &:visited{
-        color: #4b99fd;
+        color: #8be9fd;
     }
 }
