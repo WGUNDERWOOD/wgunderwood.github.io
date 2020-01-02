@@ -2,3 +2,7 @@
 * Move some github work into a post
 * Move some of abstract into a post
 * Add some courses which I have studied
+* modes-of-convergence post
+** TikzJax
+** Consistent fonts
+** Run mathjax only on posts

@@ -10,10 +10,6 @@ This is a short article and diagram on the probabilistic notion of
 The original PDF and source code files are available on
 [GitHub](https://github.com/WGUNDERWOOD/convergence-modes/).
 
-<div style="display:none">
-  $\newcommand \dP {\;\mathrm{d}\mathbb{P}}$
-</div>
-
 
 
 ## Introduction
@@ -27,6 +23,10 @@ real-valued random variables on some complete probability space
 $(\Omega, \mathcal{F}, \mathbb{P})$.
 
 ## Definitions
+
+<div style="display:none">
+  $\newcommand \dP {\;\mathrm{d}\mathbb{P}}$
+</div>
 
 Below are definitions for a few of the more
 commonly-used modes of convergence.
