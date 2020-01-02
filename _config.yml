@@ -38,8 +38,9 @@ minima:
 
 header_pages:
   - index.markdown
-  - links.markdown
   - publications.markdown
+  - links.markdown
+  - contact.markdown
 
 github_username: wgunderwood
 linkedin_username: will--underwood
