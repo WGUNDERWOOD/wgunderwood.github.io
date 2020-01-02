@@ -4,6 +4,7 @@
 
 layout: home
 title: Home
+description: Welcome to my homepage.
 ---
 
 <img style="float: right; padding-left: 30px; padding-top: 3px;"
