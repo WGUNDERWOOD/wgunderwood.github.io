@@ -35,12 +35,12 @@ plugins:
 
 minima:
   date_format: "%d %b %Y"
-  social_links:
-    github:WGUNDERWOOD
 
 header_pages:
  - index.markdown
 
+github_username: WGUNDERWOOD
+linkedin_username: will--underwood
 
 # Exclude from processing.
 # The following items will not be processed, by default.
