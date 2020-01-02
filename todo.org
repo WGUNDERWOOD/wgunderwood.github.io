@@ -1,7 +1,6 @@
 * Add Google Scholar link somewhere
 * Talk about work at Cardiff
 * Add CV
-* Add 'last modified' to footer
 * Add photo and/or logo
 * Move some github work into a post
 * Move some of abstract into a post

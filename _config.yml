@@ -32,9 +32,10 @@ show_excerpts: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-last-modified-at
 
 minima:
-  date_format: "%d %b %Y"
+  date_format: "%d %B %Y"
 
 header_pages:
   - index.markdown
