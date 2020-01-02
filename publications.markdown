@@ -8,7 +8,7 @@ permalink: /publications/
 
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood] and [M. Cucuringu][mcucuringu] <br>
-*Complex Networks 2019 Book of Abstracts* <br>
+[*Complex Networks 2019 Book of Abstracts*](https://www.complexnetworks.org/) <br>
 December 2019
 
 - **Simple Poisson PCA: an algorithm for (sparse) feature extraction
