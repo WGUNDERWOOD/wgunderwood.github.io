@@ -37,7 +37,9 @@ minima:
   date_format: "%d %b %Y"
 
 header_pages:
- - index.markdown
+  - index.markdown
+  - about.markdown
+  - publications.markdown
 
 github_username: WGUNDERWOOD
 linkedin_username: will--underwood
