@@ -7,7 +7,7 @@ categories: mathematics math probability analysis
 
 This is a short article and diagram on the probabilistic notion of
 *modes of convergence*.
-The original PDF and $\mathrm{\TeX}$ files are available on
+The original PDF and source code files are available on
 [GitHub](https://github.com/WGUNDERWOOD/convergence-modes/).
 
 <div style="display:none">
