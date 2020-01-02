@@ -28,6 +28,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
+show_excerpts: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -39,7 +40,6 @@ minima:
 
 header_pages:
  - index.markdown
-show_excerpts: true
 
 
 # Exclude from processing.

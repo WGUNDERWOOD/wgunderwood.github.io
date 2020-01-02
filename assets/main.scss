@@ -1,14 +1,19 @@
 ---
-#
+# main.scss
 ---
 
 @import "minima";
+
+body{
+    background-color: #282a36;
+    color: #f8f8f2;
+}
 
 .site-header{
     border-top: 0px solid black;
     border-bottom: 0px solid black;
     min-height: 55px;
-    background: #282a36;
+    background: #44475a;
 }
 
 .site-title{
@@ -18,10 +23,33 @@
     }
 }
 
+.page-heading{
+    font-size: 36px;
+    height: 36px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.post-title{
+    font-size: 36px;
+}
+
 .page-link{
     &,
     &:visited{
         color: white;
     }
+}
 
+h1{
+    color: #bd93f9;
+}
+
+a{
+    &:link{
+       color: #6bc9fd;
+    }
+    &:visited{
+        color: #4b99fd;
+    }
 }
