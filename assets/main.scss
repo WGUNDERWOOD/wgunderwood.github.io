@@ -1,0 +1,27 @@
+---
+#
+---
+
+@import "minima";
+
+.site-header{
+    border-top: 0px solid black;
+    border-bottom: 0px solid black;
+    min-height: 55px;
+    background: #424242;
+}
+
+.site-title{
+    &,
+    &:visited{
+        color:white;
+    }
+}
+
+.page-link{
+    &,
+    &:visited{
+        color: white;
+    }
+
+}
