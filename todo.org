@@ -5,4 +5,3 @@
 * modes-of-convergence post
 ** TikzJax
 ** Consistent fonts
-** Run mathjax only on posts
