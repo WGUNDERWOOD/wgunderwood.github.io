@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Courses
+permalink: /courses/
 ---
 
 A list of courses which I have studied
