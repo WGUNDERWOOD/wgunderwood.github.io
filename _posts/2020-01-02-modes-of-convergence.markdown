@@ -15,11 +15,13 @@ The original PDF and source code files are available on
 
 
 
+
 {% include mathjax.html %}
 
 <div style="display:none">
   $\newcommand \dP {\;\mathrm{d}\mathbb{P}}$
 </div>
+
 
 
 
@@ -40,35 +42,42 @@ commonly-used modes of convergence.
 
 ### Almost sure convergence ($a.s.$)
 
-$X_n \xrightarrow{a.s.} X$
-if
+$X_n \xrightarrow{a.s.} X \text{ if}$
+
 $$\mathbb{P}(X_n \to X \text{ as } n \to \infty) = 1$$
 
 ### Convergence in probability ($\mathbb{P}$)
 
-$X_n \xrightarrow{\mathbb{P}} X$
-if for all $\epsilon > 0$,
-as $n \to \infty$,
+$X_n \xrightarrow{\mathbb{P}} X
+\text{ if for all }
+\epsilon > 0,
+\text{ as }
+n \to \infty,$
+
 $$\mathbb{P}(|X_n - X| > \epsilon) \to 0$$
 
 ### Convergence in distribution ($d$)
 
-$X_n \xrightarrow{d} X$
-if whenever $\mathbb{P}(X \leq \,\boldsymbol{\cdot}\,)$ is continuous at $x$,
-then as $n \to \infty$,
+$X_n \xrightarrow{d} X
+\text{ if whenever } \mathbb{P}(X \leq \,\boldsymbol{\cdot}\,)
+\text{ is continuous at } x,
+\text{ then as } n \to \infty,$
+
 $$\mathbb{P}(X_n \leq x) \to \mathbb{P}(X \leq x)$$
 
 ### Convergence in $L^p$, for $1 \leq p < \infty$
 
-$X_n \xrightarrow{L^p} X$
-if as $n \to \infty$,
+$X_n \xrightarrow{L^p} X
+\text{ if as } n \to \infty$,
+
 $$\mathbb{E}[|X_n - X|^p] \to 0$$
 
 ### Convergence in $L^\infty$
 
-First define $\\|X\\|_\infty = \inf\\{M: |X| \leq M$ almost surely$\\}$.
-Then $X_n \xrightarrow{L^\infty} X$
-if as $n \to \infty$,
+$\text{ First define } \\|X\\|_\infty = \inf\\{M: |X| \leq M \text{ almost surely}\\}.
+\text{ Then } X_n \xrightarrow{L^\infty} X
+\text{ if as } n \to \infty,$
+
 $$\|X_n - X\|_\infty \to 0$$
 
 ### Notes on definitions
@@ -107,6 +116,7 @@ src="/assets/graphics/posts/images_modes-of-convergence/diagram.png">
 A proof is given for each arrow in Figure 1.
 
 ### 1. $L^\infty$ convergence implies $L^p$ convergence
+
 $$
 \begin{align*}
   \mathbb{E}[|X_n - X|^p]
@@ -139,15 +149,21 @@ $$
 $$
 
 ### 4. Convergence in probability implies convergence in $L^1$, in a uniformly integrable family
-Assuming $(X_n)$ is uniformly integrable; for any $\epsilon > 0$,
-there is a $\delta > 0$ such that for
-any $B \in \mathcal{F}$,
+$\text{Assuming } (X_n) \text{ is uniformly integrable;
+for any } \epsilon > 0,
+\text{ there is a } \delta > 0 \text{ such that}$
+$\text{for
+any } B \in \mathcal{F},$
+
 $$\mathbb{P}(B) < \delta \implies \int_\Omega |X_n - X| \, \mathbb{I}_B \dP < \frac{\epsilon}{2}$$
 
-Also, $X_n \xrightarrow{\mathbb{P}} X$ so there is an $N \in \mathbb{N}$ such that
+$\text{Also, } X_n \xrightarrow{\mathbb{P}} X
+\text{ so there is an } N \in \mathbb{N}
+\text{ such that}$
+
 $$n \geq N \implies \mathbb{P}\left(|X_n - X| \geq \frac{\epsilon}{2}\right) < \delta$$
 
-Putting these together:
+$\text{Putting these together:}$
 
 $$
 \begin{align*}
@@ -161,11 +177,13 @@ $$
 
 
 ### 5. $L^\infty$ convergence implies almost sure convergence
-Since $\\|X_n - X\\|_\infty \to 0$;
-for any $\epsilon>0$ there is an $N \in \mathbb{N}$ such that
+$\text{Since } \\|X_n - X\\|_\infty \to 0;
+\text{ for any } \epsilon>0 \text{ there is an } N \in \mathbb{N}
+\text{ such that}$
+
 $$n \geq N \implies \|X_n - X\|_\infty < \epsilon$$
 
-So by the definition of $\\|\cdot\\|_\infty$,
+$\text{So by the definition of } \\|\cdot\\|_\infty,$
 
 $$
 \begin{align*}
@@ -178,13 +196,16 @@ $$
 $$
 
 ### 6. Almost sure convergence implies convergence in probability
-Fix $\epsilon$ and let
-$A_N = \{|X_n - X| < \epsilon \text{ for all } n \geq N\}$.
-Note that $A_N$ increases to
+$\text{Fix an } \epsilon > 0
+\text{ and let }
+A_N = \\{|X_n - X| < \epsilon \text{ for all } n \geq N\\}.
+\text{ Note that } A_N
+\text{ increases to}$
+
 $$\bigcup_{N=1}^\infty A_N = \{|X_n - X| < \epsilon \text{ eventually}\}
 \supseteq \{X_n \to X\}$$
 
-Therefore
+$\text{Therefore}$
 
 $$
 \begin{align*}
@@ -197,8 +218,10 @@ $$
 $$
 
 ### 7. Convergence in probability implies convergence in distribution
-Take $x$ to be a continuity point of $\mathbb{P}(X \leq \,\boldsymbol{\cdot}\,)$, and
-fix an $\epsilon > 0$. Then
+$\text{Take } x \text{ to be a continuity point of }
+\mathbb{P}(X \leq \,\boldsymbol{\cdot}\,),
+\text{ and fix an } \epsilon > 0. \text{ Then}$
+
 $$
 \begin{align*}
   \mathbb{P}(X_n \leq x)
@@ -207,7 +230,7 @@ $$
 \end{align*}
 $$
 
-Similarly
+$\text{Similarly}$
 
 $$
 \begin{align*}
@@ -217,4 +240,5 @@ $$
 \end{align*}
 $$
 
-So $\mathbb{P}(X_n \leq x) \to \mathbb{P}(X \leq x)$, by continuity at $x$.
+$\text{So } \mathbb{P}(X_n \leq x) \to \mathbb{P}(X \leq x),
+\text{ by continuity at } x.$
