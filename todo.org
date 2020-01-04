@@ -1,6 +1,4 @@
 * Talk about work at Cardiff
 * Move some github work into a post
 * Move some of abstract into a post
-* Add some courses which I have studied
 * Cantarell font
-* Blank page

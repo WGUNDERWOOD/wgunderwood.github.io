@@ -15,3 +15,6 @@ permalink: /blank/
 
 <br>
 #### That's why it's called a blank page.
+
+<br>
+##### [Now you can go to my homepage.](/)
