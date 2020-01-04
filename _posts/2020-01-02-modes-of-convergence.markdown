@@ -5,10 +5,11 @@ date:   2020-01-02 21:17:31 +0000
 categories: mathematics math probability analysis
 ---
 
-This is a short article on the probabilistic notion of
-*modes of convergence*.
-In particular it focuses on the relative strengths of these convergences,
+The notion of *modes of convergence* is central to
+probability theory.
+This short article focuses on the relative strengths of these convergences,
 and includes a helpful diagram.
+
 The original PDF and source code files are available on
 [GitHub](https://github.com/WGUNDERWOOD/convergence-modes/).
 
