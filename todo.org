@@ -1,4 +1,5 @@
 * Talk about work at Cardiff
-* Move some github work into a post
-* Move some of abstract into a post
-* Cantarell font
+* Post ideas
+** Set theory
+** github work
+** motifs abstract
