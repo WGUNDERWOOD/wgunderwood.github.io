@@ -39,6 +39,7 @@ minima:
 header_pages:
   - index.markdown
   - publications.markdown
+  - courses.markdown
   - links.markdown
   - contact.markdown
 
