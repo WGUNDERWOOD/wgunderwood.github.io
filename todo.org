@@ -1,5 +1,8 @@
 * Talk about work at Cardiff
 * Post ideas
 ** Set theory
-** github work
+** martingales and pdes
+** mandelbrot set
+** hitting times
 ** motifs abstract
+** intro to probability
