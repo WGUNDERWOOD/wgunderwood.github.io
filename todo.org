@@ -1,6 +1,5 @@
 * Talk about work at Cardiff
 * Remove social links
-* Rewrite intro to modes of convergence post
 * Post ideas
 ** Set theory
 ** martingales and pdes
