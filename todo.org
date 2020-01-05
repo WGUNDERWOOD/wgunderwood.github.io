@@ -1,5 +1,7 @@
 * Talk about work at Cardiff
 * Remove social links
+* Format post names
+* Further reading and references links on posts
 * Post ideas
 ** Set theory
 ** martingales and pdes
