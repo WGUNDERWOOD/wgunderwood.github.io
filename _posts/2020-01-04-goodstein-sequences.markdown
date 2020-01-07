@@ -9,6 +9,11 @@ But a neat application of ordinal arithmetic gives a surprising result.
 
 {% include mathjax.html %}
 
+<div style="display:none">
+  $\newcommand \om \omega}$
+</div>
+
+
 ## Cantor normal form
 
 Before we define the Goodstein sequences,
@@ -93,7 +98,7 @@ $$G_{10} = (
   1937434592
 )$$
 
-## Goodstein's Theorem
+### Goodstein's Theorem
 
 It is tempting to conjecture that all the Goodstein sequences started from
 some $N \geq 5$ diverge to infinity. However, this is not true, due to
@@ -103,7 +108,76 @@ a remarkable theorem of Goodstein TODO link this
 
 Every Goodstein sequence converges to zero!
 
-### Ordinal numbers
+## Ordinal numbers
 
-Before we attempt a proof of Goodstein's theorem, it is helpful to introduce
-ordinal numbers.
+Before we attempt a proof of Goodstein's theorem,
+it is helpful to introduce ordinal numbers.
+
+An ordinal number is a certain type of set which is very
+important in set theory.
+Rather than define ordinals in detail, we instead just introduce the
+few ordinal numbers which we will actually need for Goodstein's theorem.
+
+The intuition we require is that:
+- The empty set is an ordinal, and we write it as $0$.
+- Every ordinal is the set of ordinals smaller than it.
+
+### Construction
+
+Let's build some ordinals.
+$0$ is an ordinal, and we can put it in a set.
+This new set is $\\{0\\}$, and is called $1$.
+Likewise, the following are all ordinals:
+- $0$
+- $\\{0\\} = 1$
+- $\\{0,1\\} = 2$
+- $\\{0,1,2\\} = 3$ <br>
+  $\vdots$
+
+But why stop there? We can put all of these ordinals
+in a set, and call it $\om$. Then the following are ordinals, too:
+- $\\{0,1,2,3,\ldots\\} = \om$
+- $\\{0,1,2,3,\ldots, \om\\} = \om + 1$
+- $\\{0,1,2,3,\ldots, \om, \om+1\\} = \om + 2$ <br>
+  $\vdots$
+
+Putting all of these in a set gives $\om + \om$, or $\om \cdot 2$.
+Then we can form $\om \cdot 3$, and so on.
+But these are all ordinals too, so everything so far
+can again be put in a set, called $\om \cdot \om$ or $\om^2$:
+- $\om$ <br>
+  $\vdots$
+- $\om \cdot 2$ <br>
+  $\vdots$
+- $\om \cdot 3$ <br>
+  $\vdots$ <br>
+  $\vdots \ \vdots$
+- $\om^2$
+
+Now we can just keep going up to
+$\om^2 + \om^2$, written $\om^2 \cdot 2$.
+Then we can reach $\om^2 \cdot 3$ and so on,
+and put everything so far in another set called $\om^3$.
+
+Now I'm sure you can see how to reach $\om^4$, and eventually $\om^\om$.
+We still need more ordinals, so we continue to $\om^{\om^\om}$ and
+finally to $\om^{\om^{\cdot^{\cdot^\cdot}}}$, which is called $\epsilon_0$.
+This is enough ordinals for now.
+
+### Foundation
+
+The axiom of foundation is part of ZF set theory TODO link, and gives
+the following useful proposition about ordinals.
+
+#### Proposition 1
+
+There is no infinite strictly decreasing sequence of sets,
+$A_0 \ni A_1 \ni A_2 \ni \cdots$
+
+However, we already know that each ordinal contains all the previous ordinals.
+Hence:
+
+#### Proposition 2
+
+There is no strictly decreasing sequence of ordinals,
+$\alpha_0 > \alpha_1 > \alpha_2 > \cdots$
