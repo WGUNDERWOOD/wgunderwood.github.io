@@ -48,6 +48,9 @@ $\vdots$
   Replace every $k$ with a $k+1$, and subtract $1$. <br>
 $\vdots$
 
+We repeat this and stop if and when a $0$ appears.
+TODO reword this
+
 ### Example
 
 Take $N=5$.
@@ -67,7 +70,8 @@ Take $N=5$.
 - $467 = 3 \cdot 5^3 + 3 \cdot 5^2 + 3 \cdot 5 + 2$ <br>
   $\to 3 \cdot 6^3 + 3 \cdot 6^2 + 3 \cdot 6 + 1$ <br>
   $= 775$ <br>
-$\vdots$<br>
+  $\vdots$<br>
+  TODO align these better
 
 So we see that this sequence grows at each step.
 In fact the first eight elements
@@ -81,7 +85,8 @@ $$G_5 = (
   775,
   1197,
   1751,
-  2454
+  2454,
+  \ldots
 )$$
 
 The growth is even faster when we start with a larger number,
@@ -95,22 +100,23 @@ $$G_{10} = (
   279935,
   4215754,
   84073323,
-  1937434592
+  1937434592,
+  \ldots
 )$$
 
-### Goodstein's Theorem
+### Goodstein's theorem
 
 It is tempting to conjecture that all the Goodstein sequences started from
-some $N \geq 5$ diverge to infinity. However, this is not true, due to
-a remarkable theorem of Goodstein TODO link this
+some $N \geq 4$ diverge to infinity. However, this is not at all true, due to
+a remarkable theorem due to [Goodstein](https://en.wikipedia.org/wiki/Goodstein%27s_theorem).
 
 #### Theorem (Goodstein, 1944)
 
-Every Goodstein sequence converges to zero!
+Every Goodstein sequence eventually hits zero!
 
 ## Ordinal numbers
 
-Before we attempt a proof of Goodstein's theorem,
+Before we attempt to prove Goodstein's theorem,
 it is helpful to introduce ordinal numbers.
 
 An ordinal number is a certain type of set which is very
@@ -119,7 +125,7 @@ Rather than define ordinals in detail, we instead just introduce the
 few ordinal numbers which we will actually need for Goodstein's theorem.
 
 The intuition we require is that:
-- The empty set is an ordinal, and we write it as $0$.
+- The empty set $\\{\\}$ is an ordinal, and we write it as $0$.
 - Every ordinal is the set of ordinals smaller than it.
 
 ### Construction
@@ -128,56 +134,146 @@ Let's build some ordinals.
 $0$ is an ordinal, and we can put it in a set.
 This new set is $\\{0\\}$, and is called $1$.
 Likewise, the following are all ordinals:
-- $0$
-- $\\{0\\} = 1$
-- $\\{0,1\\} = 2$
-- $\\{0,1,2\\} = 3$ <br>
-  $\vdots$
+
+$$
+\begin{align*}
+\{\} &= 0 \\
+\{0\} &= 1 \\
+\{0,1\} &= 2 \\
+\{0,1,2\} &= 3 \\
+&\vdots
+\end{align*}
+$$
 
 But why stop there? We can put all of these ordinals
 in a set, and call it $\om$. Then the following are ordinals, too:
-- $\\{0,1,2,3,\ldots\\} = \om$
-- $\\{0,1,2,3,\ldots, \om\\} = \om + 1$
-- $\\{0,1,2,3,\ldots, \om, \om+1\\} = \om + 2$ <br>
-  $\vdots$
+
+$$
+\begin{align*}
+\{0,1,2,3,\ldots\} &= \om \\
+\{0,1,2,3,\ldots, \om\} &= \om + 1 \\
+\{0,1,2,3,\ldots, \om, \om+1\} &= \om + 2 \\
+&\vdots
+\end{align*}
+$$
 
 Putting all of these in a set gives $\om + \om$, or $\om \cdot 2$.
 Then we can form $\om \cdot 3$, and so on.
 But these are all ordinals too, so everything so far
-can again be put in a set, called $\om \cdot \om$ or $\om^2$:
-- $\om$ <br>
-  $\vdots$
-- $\om \cdot 2$ <br>
-  $\vdots$
-- $\om \cdot 3$ <br>
-  $\vdots$ <br>
-  $\vdots \ \vdots$
-- $\om^2$
+can again be put in a set, called $\om \cdot \om$ or $\om^2$.
+
+$$
+\begin{align*}
+&\om \\
+&\vdots \\
+&\om \cdot 2 \\
+&\vdots \\
+&\om \cdot 3 \\
+&\vdots \\
+&\vdots \\
+&\om^2 \\
+&\end{align*} \\
+$$
 
 Now we can just keep going up to
 $\om^2 + \om^2$, written $\om^2 \cdot 2$.
-Then we can reach $\om^2 \cdot 3$ and so on,
-and put everything so far in another set called $\om^3$.
-
-Now I'm sure you can see how to reach $\om^4$, and eventually $\om^\om$.
+Then we can reach $\om^2 \cdot 3$ and so on.
+Now I'm sure you can see how to reach $\om^3$, and eventually $\om^\om$.
 We still need more ordinals, so we continue to $\om^{\om^\om}$ and
-finally to $\om^{\om^{\cdot^{\cdot^\cdot}}}$, which is called $\epsilon_0$.
+finally to $\om^{\om^{\om^{\cdot^{\cdot^\cdot}}}}$, which is called $\epsilon_0$.
 This is enough ordinals for now.
+
+### Note on ordinals
+
+It may appear initially that $\om$ and $\om+1$ are the same number.
+After all they are both countably infinite.
+While it is true that the two sets are of the same size,
+(which is never the case for two finite ordinals),
+the ordinals $\om$ and $\om+1$ are genuinely different.
+For example, $\omega+1$ has an ordinal "just before it",
+namely $\om$.
+This is of course not true for $\om$,
+since there is no largest finite ordinal.
+
+It is also interesting to note that despite the huge size of $\epsilon_0$,
+it is still a countably infinte set
+(since we can obtain it with countably many unions of countable sets),
+containing no more elements than $\om$!
+
+However, [Hartogs' theorem](https://en.wikipedia.org/wiki/Hartogs_number)
+guarantees the existence of uncountable
+ordinals in [ZF set theory](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory).
 
 ### Foundation
 
-The axiom of foundation is part of ZF set theory TODO link, and gives
+The [axiom of foundation](https://en.wikipedia.org/wiki/Axiom_of_regularity)
+is part of ZF set theory, and gives
 the following useful proposition about ordinals.
+This is what we will use to prove Goodstein's theorem.
 
-#### Proposition 1
+#### Proposition
 
 There is no infinite strictly decreasing sequence of sets,
 $A_0 \ni A_1 \ni A_2 \ni \cdots$
 
-However, we already know that each ordinal contains all the previous ordinals.
-Hence:
-
-#### Proposition 2
-
-There is no strictly decreasing sequence of ordinals,
+Hence, as each ordinal contains all the previous ordinals,
+there is no strictly decreasing sequence of ordinals,
 $\alpha_0 > \alpha_1 > \alpha_2 > \cdots$
+
+
+## A proof of Goodstein's theorem
+
+We will illustrate our proof with an example, started from $N=100$.
+Firstly we write $N$ in Cantor normal form with base $2$,
+and find an ordinal upper bound by replacing every $2$ by an $\om$:
+
+$$
+\begin{align*}
+100 &= 2^{2^2+2} + 2^{2^2+1}+ 2^2 \\
+&\leq \om^{\om^\om+\om} + \om^{\om^\om+1}+ \om^\om \\
+\end{align*}
+$$
+
+Next we replace every $2$ by a $3$,
+and the inequality still holds:
+
+$$
+3^{3^3+3} + 3^{3^3+1}+ 3^3 \leq \om^{\om^\om+\om} + \om^{\om^\om+1}+ \om^\om \\
+$$
+
+Then we subtract $1$ and find the Cantor expansion in base $3$.
+At this point we find a new ordinal upper bound, by replacing each $3$ with
+an $\om$.
+
+$$
+\begin{align*}
+3^{3^3+3} + 3^{3^3+1}+ 3^3 - 1 &= 3^{3^3+3} + 3^{3^3+1}+ 2*3^2 + 2*3 + 2 \\
+&\leq 3^{3^3+3} + \om^{\om^\om+1}+ 2*\om^2 + 2*\om + 2
+\end{align*}
+$$
+
+Now importantly, the ordinal upper bound has *decreased*.
+In fact it will strictly decrease at every step,
+giving a strictly decreasing sequence of ordinal upper bounds $\alpha_0, \alpha_1, \ldots$
+
+$$
+\begin{align*}
+N = G_N(0) &\leq \alpha_0 \\
+G_N(1) &\leq \alpha_1 \\
+G_N(2) &\leq \alpha_2 \\
+&\vdots
+\end{align*}
+$$
+
+But there is no strictly decreasing sequence of ordinals,
+so in fact the Goodstein sequence $G_N$ must hit $0$
+after some finite number of steps.
+
+## Conclusion
+
+Although we have proven that every Goodstein sequence eventually hits $0$,
+it may take a *very* long time to do so.
+While $G_3$ hits $0$ after 5 steps,
+$G_4$ takes an enormous $3 \cdot 2^{402653211} − 3$ steps to do so.
+After that, exact lengths of the sequences are unknown,
+although some bounds are available.
