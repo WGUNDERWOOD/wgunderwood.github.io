@@ -74,7 +74,7 @@ $$
   &\mapsto 3 \cdot 6^3 + 3 \cdot 6^2 + 3 \cdot 6 + 2 - 1 \\
   &= 775 \\ \\
 
-  775 &= \cdots \\
+  775 &= \cdots \\ \\
 
 \end{align*}
 $$
@@ -169,17 +169,7 @@ But these are all ordinals too, so everything so far
 can again be put in a set, called $\om \cdot \om$ or $\om^2$.
 
 $$
-\begin{align*}
-&\om \\
-&\om + 1 \\
-&\cdots \\
-&\om \cdot 2 \\
-&\cdots \\
-&\om \cdot 3 \\
-&\cdots \\
-&\cdots \\
-&\om^2 \\
-&\end{align*} \\
+\om , \om+1, \ldots, \om \cdot 2, \ldots, \om \cdot 3, \ldots \ldots, \om^2
 $$
 
 Now we can just keep going up to
@@ -202,7 +192,7 @@ This is of course not true for $\om$,
 since there is no largest finite ordinal.
 
 It is also interesting to note that despite the huge size of $\epsilon_0$,
-it is still a countably infinte set
+it is still a countably infinite set
 (since we can obtain it with countably many unions of countable sets),
 so has the same cardinality as $\om$.
 
