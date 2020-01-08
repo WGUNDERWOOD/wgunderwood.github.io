@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Goodstein Sequences"
-date:   2020-01-08 14:44:28 -0500
+date:   2020-01-08
 ---
 
 Goodstein sequences grow fast and appear to diverge to infinity.
