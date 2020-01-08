@@ -16,7 +16,7 @@ But a neat application of ordinal arithmetic gives a surprising result.
 
 ## Cantor normal form
 
-Before we define the Goodstein sequences,
+Before we define Goodstein sequences,
 we need to know how to write a number $n$ in Cantor normal form with base $b$.
 
 To do this, first expand $n$ in base $b$.
@@ -43,37 +43,43 @@ Now we can define a Goodstein sequence, started from $N$:
 
 - Then write $N$ in Cantor normal form, base $3$. <br>
   Replace every $3$ with a $4$, and subtract $1$. <br>
-$\vdots$
+$\cdots$
+
 - Then write $N$ in Cantor normal form, base $k$. <br>
   Replace every $k$ with a $k+1$, and subtract $1$. <br>
-$\vdots$
+$\cdots$
 
-We repeat this and stop if and when a $0$ appears.
-TODO reword this
+We repeat this and stop if and when the sequence hits $0$.
 
 ### Example
 
 Take $N=5$.
 
-- $5 = 2^2 + 1$ <br>
-  $\to 3^3 + 1 - 1$ <br>
-  $= 27$
+$$
+\begin{align*}
 
-- $27 = 3^3$ <br>
-  $\to 4^4 - 1$ <br>
-  $= 255$
+  5 &= 2^2 + 1 \\
+  &\mapsto 3^3 + 1 - 1 \\
+  &= 27 \\ \\
 
-- $255 = 3 \cdot 4^3 + 3 \cdot 4^2 + 3 \cdot 4 + 3$ <br>
-  $\to 3 \cdot 5^3 + 3 \cdot 5^2 + 3 \cdot 5 + 3 - 1$ <br>
-  $= 467$
+  27 &= 3^3 \\
+  &\mapsto 4^4 - 1 \\
+  &= 255 \\ \\
 
-- $467 = 3 \cdot 5^3 + 3 \cdot 5^2 + 3 \cdot 5 + 2$ <br>
-  $\to 3 \cdot 6^3 + 3 \cdot 6^2 + 3 \cdot 6 + 1$ <br>
-  $= 775$ <br>
-  $\vdots$<br>
-  TODO align these better
+  255 &= 3 \cdot 4^3 + 3 \cdot 4^2 + 3 \cdot 4 + 3 \\
+  &\mapsto 3 \cdot 5^3 + 3 \cdot 5^2 + 3 \cdot 5 + 3 - 1 \\
+  &= 467 \\ \\
 
-So we see that this sequence grows at each step.
+  467 &= 3 \cdot 5^3 + 3 \cdot 5^2 + 3 \cdot 5 + 2 \\
+  &\mapsto 3 \cdot 6^3 + 3 \cdot 6^2 + 3 \cdot 6 + 2 - 1 \\
+  &= 775 \\ \\
+
+  775 &= \cdots \\
+
+\end{align*}
+$$
+
+We see that this sequence grows at each step.
 In fact the first eight elements
 of the Goodstein sequence started at 5 are:
 
@@ -141,7 +147,7 @@ $$
 \{0\} &= 1 \\
 \{0,1\} &= 2 \\
 \{0,1,2\} &= 3 \\
-&\vdots
+&\cdots
 \end{align*}
 $$
 
@@ -153,7 +159,7 @@ $$
 \{0,1,2,3,\ldots\} &= \om \\
 \{0,1,2,3,\ldots, \om\} &= \om + 1 \\
 \{0,1,2,3,\ldots, \om, \om+1\} &= \om + 2 \\
-&\vdots
+&\cdots
 \end{align*}
 $$
 
@@ -165,12 +171,13 @@ can again be put in a set, called $\om \cdot \om$ or $\om^2$.
 $$
 \begin{align*}
 &\om \\
-&\vdots \\
+&\om + 1 \\
+&\cdots \\
 &\om \cdot 2 \\
-&\vdots \\
+&\cdots \\
 &\om \cdot 3 \\
-&\vdots \\
-&\vdots \\
+&\cdots \\
+&\cdots \\
 &\om^2 \\
 &\end{align*} \\
 $$
@@ -183,12 +190,11 @@ We still need more ordinals, so we continue to $\om^{\om^\om}$ and
 finally to $\om^{\om^{\om^{\cdot^{\cdot^\cdot}}}}$, which is called $\epsilon_0$.
 This is enough ordinals for now.
 
-### Note on ordinals
+### Notes on ordinals
 
 It may appear initially that $\om$ and $\om+1$ are the same number.
-After all they are both countably infinite.
 While it is true that the two sets are of the same size,
-(which is never the case for two finite ordinals),
+(which is never the case for two distinct finite ordinals),
 the ordinals $\om$ and $\om+1$ are genuinely different.
 For example, $\omega+1$ has an ordinal "just before it",
 namely $\om$.
@@ -198,11 +204,12 @@ since there is no largest finite ordinal.
 It is also interesting to note that despite the huge size of $\epsilon_0$,
 it is still a countably infinte set
 (since we can obtain it with countably many unions of countable sets),
-containing no more elements than $\om$!
+so has the same cardinality as $\om$.
 
 However, [Hartogs' theorem](https://en.wikipedia.org/wiki/Hartogs_number)
 guarantees the existence of uncountable
 ordinals in [ZF set theory](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory).
+The smallest of these is called $\om_1$.
 
 ### Foundation
 
@@ -225,7 +232,9 @@ $\alpha_0 > \alpha_1 > \alpha_2 > \cdots$
 
 We will illustrate our proof with an example, started from $N=100$.
 Firstly we write $N$ in Cantor normal form with base $2$,
-and find an ordinal upper bound by replacing every $2$ by an $\om$:
+and find an ordinal upper bound by replacing every $2$ by an $\om$.
+Note that this ordinal is one which we constructed earlier,
+as it is less than $\epsilon_0$.
 
 $$
 \begin{align*}
@@ -247,21 +256,22 @@ an $\om$.
 
 $$
 \begin{align*}
-3^{3^3+3} + 3^{3^3+1}+ 3^3 - 1 &= 3^{3^3+3} + 3^{3^3+1}+ 2*3^2 + 2*3 + 2 \\
-&\leq 3^{3^3+3} + \om^{\om^\om+1}+ 2*\om^2 + 2*\om + 2
+3^{3^3+3} + 3^{3^3+1}+ 3^3 - 1 &= 3^{3^3+3} + 3^{3^3+1}+ 2 \cdot 3^2 + 2 \cdot 3 + 2 \\
+&\leq \om^{\om^\om+\om} + \om^{\om^\om+1}+ 2 \cdot \om^2 + 2 \cdot \om + 2
 \end{align*}
 $$
 
 Now importantly, the ordinal upper bound has *decreased*.
-In fact it will strictly decrease at every step,
-giving a strictly decreasing sequence of ordinal upper bounds $\alpha_0, \alpha_1, \ldots$
+In fact it will decrease at every step,
+giving a strictly decreasing sequence of ordinal upper bounds $(\alpha_0, \alpha_1,\ldots)$
+with
 
 $$
 \begin{align*}
 N = G_N(0) &\leq \alpha_0 \\
 G_N(1) &\leq \alpha_1 \\
 G_N(2) &\leq \alpha_2 \\
-&\vdots
+&\cdots
 \end{align*}
 $$
 
@@ -272,8 +282,20 @@ after some finite number of steps.
 ## Conclusion
 
 Although we have proven that every Goodstein sequence eventually hits $0$,
-it may take a *very* long time to do so.
+it may take a [*very*](https://googology.wikia.org/wiki/Goodstein_sequence)
+long time to do so.
 While $G_3$ hits $0$ after 5 steps,
 $G_4$ takes an enormous $3 \cdot 2^{402653211} − 3$ steps to do so.
 After that, exact lengths of the sequences are unknown,
 although some bounds are available.
+
+## References
+
+- The [Wikipedia](https://en.wikipedia.org/wiki/Goodstein%27s_theorem)
+  page gives a good introduction to Goodstein's theorem.
+- [Googology](https://googology.wikia.org/wiki/Goodstein_sequence)
+  is a online encyclopedia about large numbers, and contains bounds on the lengths
+  of Goodstein sequences.
+- Goodstein's
+  [original paper](https://www.jstor.org/stable/2268019?seq=1#metadata_info_tab_contents)
+  from 1944.
