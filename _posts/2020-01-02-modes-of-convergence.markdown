@@ -242,3 +242,14 @@ $$
 
 $\text{So } \mathbb{P}(X_n \leq x) \to \mathbb{P}(X \leq x),
 \text{ by continuity at } x.$
+
+
+## References
+
+- The [Wikipedia page](https://en.wikipedia.org/wiki/Convergence_of_random_variables)
+  for convergence of random variables gives a (rather messy) list
+  of properties.
+
+- Terence Tao's
+  [blog](https://terrytao.wordpress.com/2010/10/02/245a-notes-4-modes-of-convergence/)
+  gives a good summary of the common modes of convergence.

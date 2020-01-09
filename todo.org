@@ -1,6 +1,4 @@
 * Talk about work at Cardiff
-* Format post names
-* Further reading and references links on posts
 * Post ideas
 ** martingales and pdes
 ** mandelbrot set
