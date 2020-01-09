@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "My New Website"
-date:   2020-01-01 22:07:51 +0000
-categories: website introduction hello world
+date:   2020-01-01
 ---
 
 Here is my new website, built using [Jekyll](https://jekyllrb.com/)

@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Modes of Convergence"
-date:   2020-01-02 21:17:31 +0000
-categories: mathematics math probability analysis
+date:   2020-01-02
 ---
 
 The notion of *modes of convergence* is central to
