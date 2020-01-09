@@ -1,6 +1,6 @@
-* Talk about work at Cardiff
 * Post ideas
 ** martingales and pdes
+** Cardiff work
 ** mandelbrot set
 ** hitting times
 ** motifs abstract
