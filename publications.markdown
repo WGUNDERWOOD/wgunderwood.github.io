@@ -33,7 +33,7 @@ June 2019 <br>
 March 2017
 
 
-[wgunderwood]: ./index.html
+[wgunderwood]: /
 [mcucuringu]: https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en
 [aartemiou]: http://www.google.com/url?q=http%3A%2F%2Fartemioua.com%2F&sa=D&sntz=1&usg=AFQjCNFGen68J9EmhvGCbaFRcl6fqTxuRQ
 [lsmallman]: https://scholar.google.co.uk/citations?user=B1A0KykAAAAJ&hl=en
