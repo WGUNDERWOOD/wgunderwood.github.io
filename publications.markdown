@@ -4,6 +4,9 @@ title: Publications
 permalink: /publications/
 ---
 
+A list of my current and past publications.
+Also available as a [BibTeX file](./assets/files/WGUnderwood.bib).
+
 ## Articles
 
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
