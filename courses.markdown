@@ -55,7 +55,7 @@ in reverse chronological order.
 
 ### First Year
 
-  - I: Linear Algebra Groups and Group Actions
+  - I: Linear Algebra, Groups and Group Actions
   - II: Real Analysis
   - III: Probability, Statistics, Introductory Calculus and Data Analysis
   - IV: Geometry, Dynamics and Constructive Mathematics
