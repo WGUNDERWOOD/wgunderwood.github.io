@@ -19,7 +19,7 @@ with simultaneous dimension determination** <br>
 [L. Smallman][lsmallman],
 [W. G. Underwood][wgunderwood] and
 [A. Artemiou][aartemiou] <br>
-*Computational Statistics* <br>
+[*Computational Statistics*](https://link.springer.com/journal/180) <br>
 June 2019 <br>
 [doi:10.1007/s00180-019-00903-0](https://doi.org/doi:10.1007/s00180-019-00903-0)
 
