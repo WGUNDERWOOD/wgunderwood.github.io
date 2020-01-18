@@ -28,7 +28,7 @@ June 2019 <br>
 ## Presentations
 
 - **The Borel-Kolmogorov Paradox** <br>
-[W.G. Underwood][wgunderwood] <br>
+[W. G. Underwood][wgunderwood] <br>
 *St John's College Mathematics Seminar, University of Oxford* <br>
 March 2017
 
