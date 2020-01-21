@@ -14,7 +14,7 @@ my research interests include stochastic analysis, probability and mathematical 
 
 Previously I obtained my MMath in Mathematics & Statistics from the
 [Department of Statistics](https://www.stats.ox.ac.uk/),
-University of Oxford, where I was supervised by
+at the University of Oxford, where I was supervised by
 [Professor Mihai Cucuringu](https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en).
 My master's dissertation was on Motif-Based Spectral Clustering of
 Weighted Directed Networks.
