@@ -22,9 +22,9 @@ Weighted Directed Networks.
 Contact me by
 [email](mailto:wgu2@princeton.edu)
 with any questions!
-My
-[CV](/assets/files/WGUnderwood.pdf)
-is available, and you can also find me on
+You can find me on
 [Google Scholar](https://scholar.google.co.uk/citations?user=4rtNN4wAAAAJ&hl=en),
-[GitHub](https://github.com/WGUNDERWOOD), and
-[LinkedIn](https://www.linkedin.com/in/will--underwood/).
+[GitHub](https://github.com/WGUNDERWOOD) and
+[LinkedIn](https://www.linkedin.com/in/will--underwood/),
+and also download my
+[CV](/assets/files/WGUnderwood.pdf).
