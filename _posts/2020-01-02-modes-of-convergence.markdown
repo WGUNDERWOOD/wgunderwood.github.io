@@ -128,6 +128,7 @@ $$
 
 
 ### 2. $L^p$ convergence implies $L^1$ convergence
+
 $$
 \begin{align*}
   \mathbb{E}[|X_n - X|]^p
@@ -138,6 +139,7 @@ $$
 $$
 
 ### 3. $L^1$ convergence implies convergence in probability
+
 $$
 \begin{align*}
   \mathbb{P}(|X_n - X| > \epsilon)
