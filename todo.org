@@ -1,5 +1,6 @@
 * Post ideas
 ** martingales and pdes
+** gaussian process regression
 ** Cardiff work
 ** mandelbrot set
 ** hitting times
