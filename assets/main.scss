@@ -68,6 +68,18 @@ li.p-name{
     fill: #f8f8f2;
 }
 
+figure {
+    display: inline-block;
+}
+
+figure img {
+    vertical-align: top;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
 .svg-icon{
     vertical-align: text-bottom;
     padding-bottom: 2px;
@@ -86,7 +98,7 @@ h3{
 }
 
 h4{
-    color: #ff5555;
+    color: #ff6677;
 }
 
 a{
