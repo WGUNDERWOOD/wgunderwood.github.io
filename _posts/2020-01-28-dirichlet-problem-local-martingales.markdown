@@ -451,7 +451,7 @@ in particular what is known as the *generator* of a Markov process.
 In the case of Brownian motion, this generator is $\frac{1}{2} \nabla^2$,
 the same operator which is seen in the Dirichlet problem.
 Other stochastic processes have different generators, and so can be used
-to construct solutions to diferent PDEs.
+to construct solutions to different PDEs.
 
 
 ## References
