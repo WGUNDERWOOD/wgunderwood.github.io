@@ -114,7 +114,7 @@ $$G_{10} = (
 
 It is tempting to conjecture that all the Goodstein sequences started from
 some $N \geq 4$ diverge to infinity. However, this is not at all true, due to
-a remarkable theorem due to [Goodstein](https://en.wikipedia.org/wiki/Goodstein%27s_theorem).
+a remarkable theorem of [Goodstein](https://en.wikipedia.org/wiki/Goodstein%27s_theorem).
 
 #### Theorem (Goodstein, 1944)
 
