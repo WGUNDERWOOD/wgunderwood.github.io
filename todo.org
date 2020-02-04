@@ -6,3 +6,4 @@
 ** hitting times
 ** motifs abstract
 ** intro to probability
+** ill-posed DEs
