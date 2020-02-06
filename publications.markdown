@@ -11,7 +11,7 @@ Also available as a [BibTeX file](./assets/files/WGUnderwood.bib).
 
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood] and [M. Cucuringu][mcucuringu] <br>
-[*Complex Networks 2019 Book of Abstracts*](https://www.complexnetworks.org/) <br>
+*[Complex Networks 2019](https://www.complexnetworks.org/2019), Book of Abstracts* <br>
 December 2019
 
 - **Simple Poisson PCA: an algorithm for (sparse) feature extraction
@@ -20,12 +20,19 @@ with simultaneous dimension determination** <br>
 [W. G. Underwood][wgunderwood] and
 [A. Artemiou][aartemiou] <br>
 [*Computational Statistics*](https://link.springer.com/journal/180) <br>
-June 2019 <br>
-[doi:10.1007/s00180-019-00903-0](https://doi.org/doi:10.1007/s00180-019-00903-0)
+[doi:10.1007/s00180-019-00903-0](https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
+June 2019
 
 
 
 ## Presentations
+
+- **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
+[W. G. Underwood][wgunderwood] and [M. Cucuringu][mcucuringu] <br>
+*[Complex Networks 2019](https://www.complexnetworks.org/2019), Poster Session* <br>
+Presented by [M. Cucuringu](mcucuringu) <br>
+December 2019
+
 
 - **The Borel-Kolmogorov Paradox** <br>
 [W. G. Underwood][wgunderwood] <br>
