@@ -258,7 +258,7 @@ $$
   &= \mathbb{E}[X^x_ 0] \\
   &= \mathbb{E}[f(B^x_ 0)] \\
   &= \mathbb{E}[f(x)] \\
-  &= f(x)]
+  &= f(x)
   \end{align*}
 $$
 
