@@ -17,7 +17,7 @@ USA
 
 ### Other links
 - [Google Scholar](https://scholar.google.co.uk/citations?user=4rtNN4wAAAAJ&hl=en)
-- [CV](/assets/files/WGUnderwood.pdf)
+- [CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf)
 - [GitHub](https://github.com/WGUNDERWOOD)
 - [LinkedIn](https://www.linkedin.com/in/will--underwood/)
 - [Keybase](https://keybase.io/wgunderwood)

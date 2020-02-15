@@ -4,8 +4,13 @@ title: Publications
 permalink: /publications/
 ---
 
-A list of my current and past publications.
-Also available as a [BibTeX file](./assets/files/WGUnderwood.bib).
+A list of my current and past publications,
+as in my
+[CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf).
+Also available in
+[BibTeX](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.bib).
+
+
 
 ## Articles
 

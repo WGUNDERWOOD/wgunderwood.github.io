@@ -26,5 +26,5 @@ You can find me on
 [Google Scholar](https://scholar.google.co.uk/citations?user=4rtNN4wAAAAJ&hl=en),
 [GitHub](https://github.com/WGUNDERWOOD) and
 [LinkedIn](https://www.linkedin.com/in/will--underwood/),
-and also download my
-[CV](/assets/files/WGUnderwood.pdf).
+and also read my
+[CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf).
