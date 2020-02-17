@@ -12,8 +12,11 @@ in reverse chronological order.
 ### First Year
 
   - ORF 522: Linear and Nonlinear Optimization
+  - ORF 523: Convex and Conic Optimization
   - ORF 524: Statistical Theory and Methods
+  - ORF 525: Statistical Foundations of Data Science
   - ORF 526: Probability Theory
+  - ORF 527: Stochastic Calculus
 
 ## University of Oxford
 
