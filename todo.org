@@ -2,7 +2,6 @@
 ** gaussian process regression
 ** Cardiff work
 ** mandelbrot set
-** goodstein calculator
 ** hitting times
 ** motifs abstract
 ** intro to probability
