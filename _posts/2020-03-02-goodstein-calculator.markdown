@@ -34,14 +34,14 @@ The optional flag `--colorize` adds colour to the terminal output, making it eas
 The Goodstein calculator started from 3 returns just
 6 values before the sequence hits zero.
 
-### An fast-growing sequence
+### A fast-growing sequence
 
 ```python3 goodstein_calculator.py 4 1000 --colorize```
 
 The Goodstein sequence started from 4 reaches
 a million in the first one thousand terms.
 
-### An *very* fast-growing sequence
+### A *very* fast-growing sequence
 
 ```python3 goodstein_calculator.py 10 1000 --colorize```
 
