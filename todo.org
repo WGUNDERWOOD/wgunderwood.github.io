@@ -6,3 +6,6 @@
 ** motifs abstract
 ** intro to probability
 ** ill-posed DEs
+* Other
+** Add Orcid ID
+** Update publications
