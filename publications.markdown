@@ -39,7 +39,7 @@ June 2019
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood]
 and [M. Cucuringu][mcucuringu] <br>
-*[Complex Networks 2019](https://www.complexnetworks.org/2019)* <br>
+*[The 8th International Conference on Complex Networks and their Applications](https://www.2019.complexnetworks.org/)* <br>
 Presented by [M. Cucuringu](mcucuringu). Abstract available <br>
 December 2019
 
