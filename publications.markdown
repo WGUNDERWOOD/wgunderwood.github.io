@@ -17,12 +17,6 @@ My Orcid ID is
 
 ## Articles
 
-- **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
-[W. G. Underwood][wgunderwood],
-[A. Elliott][aelliott],
-and [M. Cucuringu][mcucuringu] <br>
-Submitted March 2020
-
 - **Simple Poisson PCA: an algorithm for (sparse) feature extraction
 with simultaneous dimension determination** <br>
 [L. Smallman][lsmallman],
@@ -31,6 +25,16 @@ and [A. Artemiou][aartemiou] <br>
 [*Computational Statistics*](https://link.springer.com/journal/180) <br>
 [doi:10.1007/s00180-019-00903-0](https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 June 2019
+
+
+
+## Preprints
+
+- **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
+[W. G. Underwood][wgunderwood],
+[A. Elliott][aelliott],
+and [M. Cucuringu][mcucuringu] <br>
+Submitted March 2020
 
 
 
