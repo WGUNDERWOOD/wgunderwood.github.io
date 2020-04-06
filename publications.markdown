@@ -34,7 +34,8 @@ June 2019
 [W. G. Underwood][wgunderwood],
 [A. Elliott][aelliott],
 and [M. Cucuringu][mcucuringu] <br>
-Submitted March 2020
+[arXiv:2004.01293](https://arxiv.org/abs/2004.01293) <br>
+April 2020
 
 
 
