@@ -20,5 +20,5 @@ USA
 - [CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf)
 - [GitHub](https://github.com/WGUNDERWOOD)
 - [LinkedIn](https://www.linkedin.com/in/william--underwood/)
-- [Keybase](https://keybase.io/wgunderwood)
+- [Keybase](https://keybase.io/wgunderwood/chat)
 - [Orcid](https://orcid.org/0000-0003-4604-1548)
