@@ -4,6 +4,10 @@
 
 @import "minima";
 
+.wrapper{
+    max-width: -webkit-calc(900px - (30px * 2))
+}
+
 body{
     background-color: #282a36;
     color: #f8f8f2;
