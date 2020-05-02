@@ -36,6 +36,6 @@ at the
 [University of Oxford](http://www.ox.ac.uk/).
 I was supervised there by
 [Mihai Cucuringu](https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en),
-and wrote master's dissertation on
+and wrote my master's dissertation on
 Motif-Based Spectral Clustering of
 Weighted Directed Networks.
