@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "motifcluster"
+date:   2020-05-08
+---
+
+TODO sticker
+
+A [software package](https://github.com/WGUNDERWOOD/motifcluster)
+for motif-based spectral clustering
+of weighted directed networks.
+
+First written for my master's thesis under
+[Mihai Cucuringu](mcucuringu)
+at the
+[Department of Statistics](https://www.stats.ox.ac.uk/),
+[University of Oxford](http://www.ox.ac.uk/),
+**motifcluster** was further developed alongside a preprint
+([arXiv:2004.01293](https://arxiv.org/abs/2004.01293))
+authored by
+[W. G. Underwood][wgunderwood],
+[A. Elliott][aelliott],
+and [M. Cucuringu][mcucuringu].
+
+The **motifcluster** packages for R and Python provide the capability for:
+
+- Building motif adjacency matrices
+- Sampling random weighted directed networks
+- Spectral embedding with motif adjacency matrices
+- Motif-based spectral clustering
+
+The methods are all designed to run quickly on large sparse networks,
+and are easy to install and use.
+
+## R package
+
+The **motifcluster** package
+was originally written in R.
+
+### Installation
+
+The R package can be installed from the GitHub master branch with:
+
+```
+install_github("wgunderwood/motifcluster/R")
+```
+
+### Documentation
+
+The package's manual and an instructional vignette are in the
+[R/doc](https://github.com/WGUNDERWOOD/motifcluster/tree/master/R/doc)
+directory on GitHub.
+R documentation files are provided for each function
+available in the package.
+
+TODO CRAN
+
+
+
+## Python
+
+The **motifcluster** package
+is now also available in Python.
+This offers some improved performance
+over the R package,
+though the functionality is the same.
+
+### Installation
+
+The Python package can be installed from PyPI with:
+
+```
+pip install motifcluster
+```
+
+### Documentation
+
+Full documentation is available at
+[motifcluster.readthedocs.io](https://motifcluster.readthedocs.io/).
+
+
+[wgunderwood]: /
+
+[mcucuringu]: https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en
+[aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
