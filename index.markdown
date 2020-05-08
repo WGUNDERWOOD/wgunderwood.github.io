@@ -39,3 +39,5 @@ I was supervised there by
 and wrote my master's dissertation on
 Motif-Based Spectral Clustering of
 Weighted Directed Networks.
+I was a member of
+[St John's College](https://www.sjc.ox.ac.uk/).
