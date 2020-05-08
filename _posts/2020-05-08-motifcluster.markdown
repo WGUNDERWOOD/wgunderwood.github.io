@@ -4,11 +4,15 @@ title:  "motifcluster"
 date:   2020-05-08
 ---
 
-TODO sticker
 
 A [software package](https://github.com/WGUNDERWOOD/motifcluster)
 for motif-based spectral clustering
 of weighted directed networks.
+
+
+<img style="float: right; padding-left: 30px; padding-top: 0px;"
+src="/assets/graphics/posts/images_motifcluster/hex_sticker_small.png">
+
 
 First written for my master's thesis under
 [Mihai Cucuringu](mcucuringu)
