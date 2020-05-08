@@ -45,9 +45,9 @@ was originally written in R.
 
 The R package can be installed from the GitHub master branch with:
 
-```
+{% highlight R %}
 install_github("wgunderwood/motifcluster/R")
-```
+{% endhighlight %}
 
 ### Documentation
 
@@ -73,9 +73,9 @@ though the functionality is the same.
 
 The Python package can be installed from PyPI with:
 
-```
+{% highlight shell %}
 pip install motifcluster
-```
+{% endhighlight %}
 
 ### Documentation
 

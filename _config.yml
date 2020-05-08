@@ -33,6 +33,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+highlighter: rouge
+
 minima:
   date_format: "%d %B %Y"
 
