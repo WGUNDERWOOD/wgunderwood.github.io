@@ -41,11 +41,11 @@ Now we can define a Goodstein sequence, started from $N$:
 - First write $N$ in Cantor normal form, base $2$. <br>
   Replace every $2$ with a $3$, and subtract $1$.
 
-- Then write $N$ in Cantor normal form, base $3$. <br>
+- Then write the result in Cantor normal form, base $3$. <br>
   Replace every $3$ with a $4$, and subtract $1$. <br>
 $\cdots$
 
-- Then write $N$ in Cantor normal form, base $k$. <br>
+- Then write the result in Cantor normal form, base $k$. <br>
   Replace every $k$ with a $k+1$, and subtract $1$. <br>
 $\cdots$
 

@@ -4,7 +4,7 @@ title:  "Goodstein Sequence Calculator"
 date:   2020-03-02
 ---
 
-To complement my earlier [post](/2020/01/08/goodstein-sequences.html)
+To complement [my earlier post](/2020/01/08/goodstein-sequences.html)
 on Goodstein sequences, I wrote a Python script to calculate them.
 
 The source code is available on

@@ -17,6 +17,7 @@ in reverse chronological order.
   - ORF 525: Statistical Foundations of Data Science
   - ORF 526: Probability Theory
   - ORF 527: Stochastic Calculus
+  - ORF 569: Network Games and Mean Field Interactions
 
 ## University of Oxford
 
