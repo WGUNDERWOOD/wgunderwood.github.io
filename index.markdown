@@ -16,6 +16,10 @@ department at
 [Princeton University](https://www.princeton.edu/),
 where my research interests include stochastic analysis
 and mathematical statistics.
+Currently I am working on
+statistical properties of series estimators and
+strong approximation theory with
+[Matias Cattaneo](https://cattaneo.princeton.edu).
 
 Contact me by
 [email](mailto:wgu2@princeton.edu)
@@ -39,5 +43,5 @@ I was supervised there by
 and wrote my master's dissertation on
 Motif-Based Spectral Clustering of
 Weighted Directed Networks.
-I was a member of
+I am an alumnus of
 [St John's College](https://www.sjc.ox.ac.uk/).
