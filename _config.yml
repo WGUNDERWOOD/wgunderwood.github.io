@@ -40,7 +40,6 @@ minima:
 
 header_pages:
   - publications.markdown
-  - software.markdown
   - posts.markdown
   - courses.markdown
   - contact.markdown
