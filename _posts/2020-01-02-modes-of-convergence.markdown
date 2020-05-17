@@ -104,12 +104,10 @@ Convergence in $L^\infty$ is the same as uniform convergence almost everywhere.
 All of the results are summarised in Figure 1.
 Arrows indicate strength of convergence.
 
-
-<img style="float: left; padding-bottom: 30px; padding-top: 5px;"
-src="/assets/graphics/posts/images_modes-of-convergence/diagram.png">
-
-
-
+<p align = "center">
+  <img style="float: center; padding-bottom: 30px; padding-top: 5px; width: 500px"
+  src="/assets/graphics/posts/images_modes-of-convergence/diagram.png"/>
+</p>
 
 ## Proofs
 

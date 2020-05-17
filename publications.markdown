@@ -4,7 +4,7 @@ title: Publications
 permalink: /publications/
 ---
 
-A list of my current and past publications,
+A list of my publications,
 as in my
 [CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf).
 Also available in

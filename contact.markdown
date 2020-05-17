@@ -17,8 +17,9 @@ USA
 
 ### Other links
 - [Google Scholar](https://scholar.google.co.uk/citations?user=4rtNN4wAAAAJ&hl=en)
-- [Curriculum Vitae](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf)
+- [CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf)
 - [GitHub](https://github.com/WGUNDERWOOD)
 - [LinkedIn](https://www.linkedin.com/in/william--underwood/)
 - [Keybase](https://keybase.io/wgunderwood/chat)
 - [Orcid](https://orcid.org/0000-0003-4604-1548)
+- [Bibliography](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.bib)

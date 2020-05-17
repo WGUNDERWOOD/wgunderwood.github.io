@@ -24,7 +24,7 @@ email: wgu2@princeton.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my homepage.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://wgunderwood.github.io/' # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
@@ -33,12 +33,13 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+highlighter: rouge
+
 minima:
   date_format: "%d %B %Y"
 
 header_pages:
   - publications.markdown
-  #- software.markdown
   - posts.markdown
   - courses.markdown
   - contact.markdown
@@ -51,14 +52,7 @@ header_pages:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+- Gemfile
+- Gemfile.lock
+- todo.org
