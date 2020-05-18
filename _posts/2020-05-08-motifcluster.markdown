@@ -43,10 +43,10 @@ was originally written in R.
 
 ### Installation
 
-The R package can be installed from the GitHub master branch with:
+The R package can be installed from CRAN with:
 
 {% highlight R %}
-install_github("wgunderwood/motifcluster/R")
+install.packages("motifcluster")
 {% endhighlight %}
 
 ### Documentation
@@ -57,8 +57,6 @@ directory on GitHub.
 An instructional vignette is in the
 [R/vignettes](https://github.com/WGUNDERWOOD/motifcluster/tree/master/R/vignettes)
 directory on GitHub.
-
-TODO CRAN
 
 
 

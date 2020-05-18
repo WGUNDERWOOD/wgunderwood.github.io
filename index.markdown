@@ -53,6 +53,3 @@ available in
 [R](https://cran.r-project.org/web/packages/motifcluster/index.html)
 and
 [Python](https://pypi.org/project/motifcluster/).
-
-All of my software projects can be found on
-[GitHub](https://github.com/WGUNDERWOOD).
