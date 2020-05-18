@@ -1,11 +1,15 @@
 * Post ideas
+** motifs
+** Julia sets
 ** gaussian process regression
 ** Cardiff work
 ** mandelbrot set
 ** hitting times
-** motifs abstract
 ** intro to probability
 ** ill-posed DEs
 * Other
 ** Add Orcid ID
 ** Update publications
+** motifcluster on CV
+** Teaching on home page
+** motifs paper in publications when accepted

@@ -47,10 +47,12 @@ I am an alumnus of
 ## Software
 
 I am an author of the
-[motifcluster]()
-TODO update link
+[motifcluster](https://github.com/WGUNDERWOOD/motifcluster)
 package for motif-based spectral clustering of weighted directed networks,
-available in R and Python.
+available in
+[R](https://cran.r-project.org/web/packages/motifcluster/index.html)
+and
+[Python](https://pypi.org/project/motifcluster/).
 
 All of my software projects can be found on
 [GitHub](https://github.com/WGUNDERWOOD).
