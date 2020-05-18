@@ -9,7 +9,6 @@
 ** ill-posed DEs
 * Other
 ** Add Orcid ID
-** Update publications
 ** motifcluster on CV
 ** Teaching on home page
 ** motifs paper in publications when accepted

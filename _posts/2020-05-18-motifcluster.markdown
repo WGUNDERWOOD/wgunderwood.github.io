@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "motifcluster"
-date:   2020-05-08
+date:   2020-05-18
 ---
 
 
-A [software package](https://github.com/WGUNDERWOOD/motifcluster)
+A software package
 for motif-based spectral clustering
 of weighted directed networks.
 
@@ -25,6 +25,12 @@ authored by
 [W. G. Underwood][wgunderwood],
 [A. Elliott][aelliott],
 and [M. Cucuringu][mcucuringu].
+It is available on
+[GitHub](https://github.com/WGUNDERWOOD/motifcluster)
+for
+[R](https://cran.r-project.org/web/packages/motifcluster/index.html)
+and
+[Python](https://pypi.org/project/motifcluster/).
 
 The **motifcluster** packages for R and Python provide the capability for:
 
