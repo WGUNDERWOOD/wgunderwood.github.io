@@ -4,7 +4,7 @@ title: Courses
 permalink: /courses/
 ---
 
-A list of university courses which I have studied,
+A list of university-level courses which I have studied,
 in reverse chronological order.
 
 ## Princeton University
