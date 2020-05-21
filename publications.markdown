@@ -55,6 +55,18 @@ St John's College Mathematics Seminar <br>
 March 2017
 
 
+
+## Software
+
+- **motifcluster** <br>
+Motif-based spectral clustering of weighted directed networks
+in R and Python <br>
+[W. G. Underwood][wgunderwood]
+and [A. Elliott][aelliott] <br>
+[doi:10.5281/zenodo.3832400](https://doi.org/10.5281/zenodo.3832400) <br>
+May 2020 <br>
+
+
 [wgunderwood]: /
 
 [aartemiou]: http://www.google.com/url?q=http%3A%2F%2Fartemioua.com%2F&sa=D&sntz=1&usg=AFQjCNFGen68J9EmhvGCbaFRcl6fqTxuRQ
