@@ -43,7 +43,7 @@ Then the Julia set of $f_c$ is
 $$
   J_c = \{ z \in \mathbb{C} \
           : \forall n \in \mathbb{N}, \
-          |z_n| \leq R_c
+          |f_c^n(z)| \leq R_c
         \}
 $$
 
@@ -76,17 +76,35 @@ TODO link
 and what better language to use than
 Julia?
 TODO link
-The plots produced make excellent desktop wallpapers, too.
+The plots produced make nice desktop wallpapers, too.
 
 
 ## The Mandelbrot set
 
 The Mandelbrot set can be thought of an
-"index" of Julia sets
-TODO definitions
+"index" of Julia sets in that instead of
+varying the initial point $z$,
+we vary the parameter $c$.
 
-TODO properties
+### Definition of the Mandelbrot set
+
+With the same notation for $f_c^n$ as above,
+the Mandelbrot set is
+
+$$
+  M = \{ c \in \mathbb{C} \
+          : \forall n \in \mathbb{N}, \
+          |f_c^n(0)| \leq 2
+        \}
+$$
+
+### Properties of the Mandelbrot set
+
+A point $c$ is in the Mandelbrot set precisely when
+the corresponding Julia set $J_c$ is connected.
 
 ### Plotting the Mandelbrot set
 
 ## References
+https://en.wikipedia.org/wiki/Mandelbrot_set
+https://en.wikipedia.org/wiki/Julia_set
