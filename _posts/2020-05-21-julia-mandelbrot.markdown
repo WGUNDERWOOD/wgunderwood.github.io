@@ -6,15 +6,27 @@ date:   2020-05-21
 
 Julia sets and the Mandelbrot set arise naturally in complex dynamics.
 We explore some of their properties and methods for plotting them.
-TODO mention julialang
 
 {% include mathjax.html %}
 
-TODO long intro
+I recently decided it would be nice to be able to procedurally generate
+unique wallpapers to use on my laptop,
+and fractals seemed an obvious choice.
+More specifically,
+I wanted to generate and plot quadratic Julia sets
+with randomised parameters.
+This also seemed a good opportunity to try a new language,
+so of course I wrote it in
+[Julia](https://julialang.org/).
+The source code is available on
+[GitHub](https://github.com/WGUNDERWOOD/julia-julia).
+
+
 
 ## Julia sets
 
-In this post we consider only the Julia sets of simple quadratic functions,
+In this post we consider only the Julia sets of a
+simple class of quadratic functions,
 though they can be defined for any holomorphic function.
 
 ### Definition of quadratic Julia sets
@@ -31,7 +43,7 @@ $n$th iterate of $f_c$ on $z$ inductively as
 
 $$
 \begin{align*}
-  f_c^0(z) &= 1 \\
+  f_c^1(z) &= f_c(z) \\
   f_c^{n+1}(z) &= f(f_c^n(z)) \\
 \end{align*}
 $$
@@ -54,10 +66,13 @@ $f_c$-orbits remain bounded by $R_c$.
 ### Properties of Julia sets
 
 Clearly the Julia set $J_c$ is $f_c$-invariant,
-and also $f_c^{-1}$-invariant.
+and it is also $f_c^{-1}$-invariant.
 In fact it is the smallest closed set which contains
 at least three points and has this property.
-TODO connectedness?
+If a Julia set is disconnected,
+then in fact it has infinitely many connected components,
+and is sometimes referred to as
+"Cantor dust".
 
 ### Plotting Julia sets
 
@@ -66,17 +81,26 @@ Fix $c$ and for each point in the plotting region,
 iterate it under $f_c$ until either it escapes
 the ball of radius $R_c$,
 or a maximum iteration count is reached.
-The complement of $J_c$ can further be coloured
+The complement of $J_c$ can then be coloured
 according to how many iterations it took
 for each point to escape.
 
 I have implemented this on
-GitHub,
-TODO link
+[GitHub](https://github.com/WGUNDERWOOD/julia-julia),
 and what better language to use than
-Julia?
-TODO link
-The plots produced make nice desktop wallpapers, too.
+[Julia](https://julialang.org/)?
+The plots produced indeed make nice desktop wallpapers,
+as hoped.
+
+Some care should be taken when randomly selecting
+$c$, as many choices will lead to "boring"
+Julia sets which either look like
+a slightly distorted circle,
+or are composed of extremely sparse
+isolated points.
+TODO explain how to avoid this
+
+
 
 
 ## The Mandelbrot set
@@ -102,8 +126,10 @@ $$
 
 A point $c$ is in the Mandelbrot set precisely when
 the corresponding Julia set $J_c$ is connected.
+TODO properties
 
 ### Plotting the Mandelbrot set
+TODO plotting
 
 ## References
 https://en.wikipedia.org/wiki/Mandelbrot_set
