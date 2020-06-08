@@ -25,6 +25,9 @@ The source code is available on
 
 ## Julia sets
 
+<img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
+src="/assets/graphics/posts/images_julia/julia.png">
+
 In this post we consider only the Julia sets of a
 simple class of quadratic functions,
 though they can be defined for any holomorphic function.
@@ -85,8 +88,8 @@ The complement of $J_c$ can then be coloured
 according to how many iterations it took
 for each point to escape.
 
-I have implemented this on
-[GitHub](https://github.com/WGUNDERWOOD/julia-julia),
+I have
+[implemented this](https://github.com/WGUNDERWOOD/julia-julia),
 and what better language to use than
 [Julia](https://julialang.org/)?
 The plots produced indeed make nice desktop wallpapers,
@@ -94,16 +97,18 @@ as hoped.
 
 Some care should be taken when randomly selecting
 $c$, as many choices will lead to "boring"
-Julia sets which either look like
-a slightly distorted circle,
-or are composed of extremely sparse
-isolated points.
-TODO explain how to avoid this
+Julia sets.
+We propose a method for avoiding this
+after introducing the
+Mandelbrot set.
 
 
 
 
 ## The Mandelbrot set
+
+<img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
+src="/assets/graphics/posts/images_julia/mandelbrot.png">
 
 The Mandelbrot set can be thought of an
 "index" of Julia sets in that instead of
@@ -122,15 +127,57 @@ $$
         \}
 $$
 
+That is, a point $c$ is in the Mandelbrot
+if its associated Julia set contains zero.
+
 ### Properties of the Mandelbrot set
 
 A point $c$ is in the Mandelbrot set precisely when
 the corresponding Julia set $J_c$ is connected.
-TODO properties
+While the Mandelbrot set has many other interesting
+properties,
+we focus instead on its relationship to Julia sets.
 
 ### Plotting the Mandelbrot set
-TODO plotting
+
+<img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
+src="/assets/graphics/posts/images_julia/buddhabrot.png">
+
+Again simpling by iterating a complex quadratic,
+we can plot the Mandelbrot set,
+with its complement coloured by the number of iterations
+until escape.
+I wrote a
+[Python notebook](https://github.com/WGUNDERWOOD/mandelbrot-buddhabrot)
+some time ago to demonstrate this.
+The notebook also contains a plot known as
+the Buddhabrot,
+which arises from colouring points by the number of
+escaping trajectories which pass through them.
+
+### Using the Mandelbrot set to find interesting Julia sets
+
+As promised,
+the Mandelbrot set can be used to find Julia sets which
+are visually appealing.
+The concept is that the "boring" Julia sets
+correspond to $c$ values which are far from
+the boundary of the Mandelbrot set
+(either inside or outside).
+For example, points deep inside the main bulb
+of the Mandelbrot set generate Julia sets
+which are slightly deformed circles,
+while those far outside the Mandelbrot set
+generate extremely sparse "dust".
+Hence for each randomly chosen $c$-value
+candidate,
+we iterate $f_c$ a few times
+started from zero and check that it
+does not converge quickly to zero
+or to infinity.
 
 ## References
 https://en.wikipedia.org/wiki/Mandelbrot_set
 https://en.wikipedia.org/wiki/Julia_set
+https://en.wikipedia.org/wiki/Buddhabrot
+http://superliminal.com/fractals/bbrot/bbrot.htm

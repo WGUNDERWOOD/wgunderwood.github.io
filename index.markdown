@@ -4,7 +4,6 @@ title: Home
 description: Welcome to my homepage.
 ---
 
-
 <img style="float: right; padding-left: 30px; padding-top: 0px; width: 150px"
 src="/assets/graphics/images_home/profile_small.png">
 
