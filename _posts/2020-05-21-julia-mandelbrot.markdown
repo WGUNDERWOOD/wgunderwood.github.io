@@ -47,7 +47,7 @@ $n$th iterate of $f_c$ on $z$ inductively as
 $$
 \begin{align*}
   f_c^1(z) &= f_c(z) \\
-  f_c^{n+1}(z) &= f(f_c^n(z)) \\
+  f_c^{n+1}(z) &= f_c(f_c^n(z)) \\
 \end{align*}
 $$
 
@@ -175,9 +175,15 @@ we iterate $f_c$ a few times
 started from zero and check that it
 does not converge quickly to zero
 or to infinity.
+Only when the validity of $c$ is validated
+do we proceed with generating the Julia set.
 
 ## References
-https://en.wikipedia.org/wiki/Mandelbrot_set
-https://en.wikipedia.org/wiki/Julia_set
-https://en.wikipedia.org/wiki/Buddhabrot
-http://superliminal.com/fractals/bbrot/bbrot.htm
+
+- The Wikipedia pages on
+  [Julia sets](https://en.wikipedia.org/wiki/Mandelbrot_set),
+  the [Mandelbrot set](https://en.wikipedia.org/wiki/Julia_set)
+  and the [Buddhabrot](https://en.wikipedia.org/wiki/Buddhabrot)
+- Melinda Green's original
+  [Buddhabrot technique](http://superliminal.com/fractals/bbrot/bbrot.htm)
+- Drakopoulos, Vasileios. (2002). Comparing Rendering Methods for Julia Sets
