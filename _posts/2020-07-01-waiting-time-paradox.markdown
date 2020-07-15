@@ -5,12 +5,13 @@ date:   2020-06-27
 ---
 
 Why is my train always late?
-Why do lightbulbs last so long?
-Are prison sentences too harsh?
+Do lightbulbs last longer than they should?
 
-These are some questions which can perhaps be answered with
-an understanding of the phenomenon underlying
-the waiting time paradox and the inspection paradox.
+These questions can perhaps be answered with
+an understanding of the phenomenon underlying the
+waiting time paradox
+and the
+inspection paradox.
 Source code for the simulations is available on
 [GitHub](https://github.com/WGUNDERWOOD/waiting-time/).
 
@@ -20,6 +21,9 @@ Source code for the simulations is available on
 
 <div style="display:none">
   $\newcommand \Exp {\mathrm{Exp}}$
+  $\newcommand \E {\mathbb{E}}$
+  $\newcommand \U {\mathcal{U}}$
+  $\newcommand \Gamma {\mathrm{Gamma}}$
 </div>
 
 
@@ -28,16 +32,19 @@ Source code for the simulations is available on
 
 Sometimes it feels like trains are always late.
 You know they arrive roughly every ten minutes,
-so why do you so often have to wait for fifteen or twenty?
+so why do you so often have to wait for fifteen or twenty minutes?
 Is this just bad luck,
 or is it probability theory?
-In fact this is possibly an example of a well-known phenomenon,
-known as the waiting time paradox.
+
+In fact this is an example of a well-known phenomenon
+called the
+*waiting time paradox*.
 In this post,
-the waiting time paradox and the related inspection paradox
+the waiting time paradox and the related *inspection paradox*
 are presented,
-and perhaps you can find examples of other circumstances
-under which they might be relevant.
+and perhaps after reading you can think of
+some other circumstances
+under which these paradoxes might occur.
 
 ## The Waiting Time Paradox
 
@@ -49,7 +56,8 @@ First let's define this question more rigorously.
 ### The problem
 
 Suppose that every day,
-trains start running at 4am,
+trains start running at 4am
+(call this $t=0$),
 and the gaps (in minutes)
 between trains arriving
 (the so-called *interarrival times*)
@@ -57,9 +65,39 @@ are independently distributed
 $\Exp(10)$.
 This means that the expected time interval
 between two trains is ten minutes.
-Every day you arrive at the station at 8am,
+Every day you reach the station at 9am
+($t=300$),
 and wait for a train to arrive.
-What is the expected amount of time you have to wait?
+
+Figure 1 shows a typical timeline:
+trains arrive at times
+$T_1, T_2, \ldots$,
+with independent interarrival times
+$Z_1, Z_2, \ldots \sim \Exp(10)$.
+You reach the station at time $300$,
+and take the $N$th train that day
+(note that $N$ is a random variable).
+$E$ minutes have elapsed since
+the train you just missed,
+and you have to wait for $W$
+minutes at the station.
+The total time interval between the train
+you missed and the train you catch is
+$I = Z_N$ minutes.
+
+We are interested in calculating the expected
+waiting time,
+$\E[W]$.
+
+<figure>
+<img style="float: center; width: 700px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
+src="/assets/graphics/posts/images_waiting/time_diagram.png">
+<figcaption>
+  Figure 1: A typical timeline
+</figcaption>
+</figure>
+
+
 
 ### An naive "solution"
 
@@ -69,79 +107,103 @@ and on average I get to the station right
 between two trains,
 so I should expect to wait five minutes."
 
-Before getting too technical,
-lets test this empirically and see if this reasoning is right.
-When running this experiment
-10 000
-times,
-I observed that the empirical average waiting time was
-10.1 minutes,
-with a standard error of 0.10.
-It seems as though our initial estimate
-of five minutes was wrong,
-and perhpas we conjecture that the correct answer
-is in fact ten minutes!
+In mathematical notation,
+this argument reads:
 
-### What went wrong?
+1. $Z_N$ is an interarrival time, so $\E[I] = \E[Z_N] = 10$
+2. Conditional on $I$, we have the uniform distribution $W\|I \sim \U[0, I]$
+3. Therefore by the tower law, $\E[W] = \E[\E[W\|I]] = \E[\U[0,I]] = \E[I/2] = 5$
 
-Let's examine both of our assumptions carefully,
-and verify them empirically.
+Lets test this empirically.
+Table 1 shows the guesses of variable values using the reasoning above,
+and also the empirical means of these values when simulating
+the scenario 100 000 times.
 
-#### "Trains arrive every ten minutes"
-
-The interarrival times are independently distributed
-$\Exp(10)$,
-so the average interval between trains is indeed
-10 minutes.
-When generating
-10 000
-random intervals,
-I observed that the empirical average interval was
-9.8 minutes,
-with a standard error of 0.10.
-Hence this assumption seems correct.
-
-#### "On average I get to the station right between two trains"
-
-For this assumption we need to check that
-on average when you get to the station,
-the difference between the time since the last train
-and the time until the next train
-is approximately 0.
-When running the experiment
-10 000
-times,
-I observed that the empirical average waiting time was
-0.10 minutes,
-with a standard error of 0.10.
-So this assumption also seems to be correct.
-
-This should be very concerning:
-both assumptions seem correct,
-so how did we get the wrong answer?
+While we correctly guessed the
+average gap $Z_1$ between the first two trains,
+and the number of trains to arrive $N$,
+we are underestimating the other times
+$I$, $E$ and $W$ by a factor of two!
 This is the waiting time paradox.
+
+
+| Variable | $Z_1$ | $I$ | $E$ | $W$ | $N$ |
+|:--:|
+| Naive guess | 10 | 10 | 5 | 5 | 30 |
+| Simulated | 9.97 | 20.05 | 9.99 | 10.06 | 30.00 |
+
+<center>Table 1: Naive guesses vs. simulation</center>
+<br>
+
+
 
 ### An intuitive explanation
 
-The reason for our errors is perhaps rather subtle,
-but should quickly become quite obvious.
-The key is that while indeed the average length of
-*some* interval is 10 minutes,
-the average length of the interval
-*during which we arrive at the station*
-is longer than this.
-We are unlikely to arrive during the tiny interval
-between two trains which arrive almost simultaneously,
-and likewise if there is a long gap between two trains,
-there's a good chance we get to the station sometime
-during it.
+Clearly the first error in our naive reasoning was in
+calculating $\E[I]$.
+While it is true that $I$ is an interarrival time
+(it is equal to $Z_N$),
+it is crucial to note that $N$ is *random*.
+Hence we cannot expect $Z_N$ to behave the same as
+$Z_1$.
 
-Hence what actually happens most of the time
-is that we get to the station in the middle of
-an unusually long gap between trains.
+Perhaps now an intuitive explanation becomes clear:
+you are likely to reach the station
+during a longer-than-average gap between trains.
+You are unlikely to get there during the tiny interval
+of time between two trains which arrive almost simultaneously.
 
 
+### Size-biased distributions
 
+Now that we know
+the distibution
+of $Z_N$
+cannot be
+$\Exp(10)$,
+what is it?
+With the previous comments in mind,
+it is natural to suggest the following procedure.
+Suppose $Z_1$ has probability density function $f_1$.
+Then because $Z_N$ is similar to $Z_1$,
+but with larger values being proportionally more likely,
+we suggest the density of $Z_N$ as
+$ f_N(x) \propto x f_1(x)$.
+To make this a genuine
+probability density function,
+we normalize it by
+$ f_N(x) = \frac{x f_1(x)}{\E[Z_1]}$.
+This is called the
+*size-biased*
+distribution based on $f_1$.
+
+For our case of
+$Z_1 \sim \Exp(10)$,
+we have
+$f_1(x) = \frac{1}{10} e^{-x/10}$
+and
+$\E[Z_1] = 10$,
+giving
+$f_N(x) = \frac{x}{100} e^{-x/10}$.
+This is in fact the probability
+density function of the
+$\Gamma(2,10)$ distribution,
+which as desired has expected value 20.
+
+
+### Asymptotic convergence
+
+Of course,
+if you reached the station at 4am every morning,
+you would be guaranteed to board the first train of
+the day, with no waiting at all!
+For this reason,
+the results we state are
+asymptotic:
+it is assumed that we reach the station
+long enough after the trains begin to run
+that the system has "forgotten"
+exactly when the first few trains arrived.
 
 
 TODO average time
