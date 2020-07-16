@@ -6,12 +6,12 @@ date:   2020-06-27
 
 Why is my train always late?
 Do lightbulbs last longer than they should?
-
-These questions can perhaps be answered with
-an understanding of the phenomenon underlying the
+These questions can be answered with
+the
 waiting time paradox
 and the
 inspection paradox.
+
 Source code for the simulations is available on
 [GitHub](https://github.com/WGUNDERWOOD/waiting-time/).
 
@@ -161,7 +161,7 @@ the distibution
 of $Z_N$
 cannot be
 $\Exp(10)$,
-what is it?
+what is its true distribution?
 With the previous comments in mind,
 it is natural to suggest the following procedure.
 Suppose $Z_1$ has probability density function $f_1$.
@@ -188,7 +188,8 @@ $f_N(x) = \frac{x}{100} e^{-x/10}$.
 This is in fact the probability
 density function of the
 $\Gamma(2,10)$ distribution,
-which as desired has expected value 20.
+which has expected value 20,
+consistent with the simulations.
 
 
 ### Asymptotic convergence
@@ -205,9 +206,87 @@ long enough after the trains begin to run
 that the system has "forgotten"
 exactly when the first few trains arrived.
 
+The two theorems below give
+(without proof)
+asymptotic
+corrected versions of our earlier incorrect assumptions.
 
-TODO average time
+#### Theorem 1 (Convergence in distribution of observed interval)
+
+Suppose that the interarrival times
+$Z_1, Z_2, \ldots$
+are independent
+and identically distributed continuous random variables
+with Lebesgue density $f_1$.
+Let $N_t$ be the train taken by someone
+who reaches the station at time $t$, and
+$I_t$ be the length of the gap between
+trains $N_{t-1}$ and $N_t$.
+That is,
+$I_t = T_{N_t} - T_{N_t-1}$.
+
+Then $I_t$ converges in distribution
+as $t \to \infty$ to
+the distribution with Lebesgue density
+$f(x) = \frac{x f_1(x)}{\E[Z_1]}$.
+
+
+
+#### Theorem 2 (Convergence in distribution of waiting time)
+
+Under the same conditions as the previous theorem,
+the waiting time $W_t$ converges in distibution
+as $t \to \infty$
+to $I_t U$,
+where $I_t$ is the total observed interval
+and $U \sim \U[0,1]$ is independent of $I_t$.
+
+
+
+### Summary
+
+TODO
+
+
+
+## The Inspection Paradox
+
+The inspection paradox is very closely
+related to the waiting time paradox,
+but with a slightly different interpretation.
+The scenario to imagine here is changing a lightbulb,
+and the observed effect is that most lightbulbs
+last an unusually long time before breaking.
+
+### The lightbulb scenario
+
+Suppose that lightbulbs have independently-distributed
+lifetimes
+$Z_1, Z_2, \ldots$
+where
+$Z_1$ is either one second or two years,
+with equal probability
+(to account for the fact that lightbulbs
+frequently break almost immediately).
+
+Then clearly the expected lifetime of a lightbulb
+is just over one year,
+but when ignoring bulbs that break immediately,
+the rest of the bulbs in fact last for two years,
+almost twice their expected lifespan.
+
+While this lightbulb example may seem
+contrived,
+it is representative of a great many situations
+in which a similar phenomenon occurs,
+perhaps more subtly.
+
+
+
 
 
 
 ## References
+
+Prisons?
+Oxford notes
