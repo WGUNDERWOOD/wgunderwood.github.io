@@ -17,6 +17,21 @@ body{
     color: #f8f8f2;
 }
 
+table{
+    color: #f8f8f2;
+    background-color: #282a36;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+table tr:nth-child(2n){
+    background-color: #282a36;
+}
+
+table th{
+    background-color: #44475a;
+}
+
 .site-header{
     border-top: 0px solid black;
     border-bottom: 0px solid black;
