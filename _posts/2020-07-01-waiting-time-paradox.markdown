@@ -12,7 +12,11 @@ waiting time paradox
 and the
 inspection paradox.
 
-Source code for the simulations is available on
+Source code for the simulations
+(Python)
+and the diagram
+(LaTeX)
+is available on
 [GitHub](https://github.com/WGUNDERWOOD/waiting-time/).
 
 
@@ -99,14 +103,13 @@ src="/assets/graphics/posts/images_waiting/time_diagram.png">
 
 
 
-### An naive "solution"
+### A naive and incorrect approach
 
 It seems very natural to perform the following calculation:
 "Trains arrive every ten minutes,
 and on average I get to the station right
 between two trains,
 so I should expect to wait five minutes."
-
 In mathematical notation,
 this argument reads:
 
@@ -132,14 +135,14 @@ This is the waiting time paradox.
 | Naive guess | 10 | 10 | 5 | 5 | 30 |
 | Simulated | 9.97 | 20.05 | 9.99 | 10.06 | 30.00 |
 
-<center>Table 1: Naive guesses vs. simulation</center>
+<center>Table 1: Disagreement between naive guesses and simulation</center>
 <br>
 
 
 
 ### An intuitive explanation
 
-Clearly the first error in our naive reasoning was in
+The first error in our naive reasoning was in
 calculating $\E[I]$.
 While it is true that $I$ is an interarrival time
 (it is equal to $Z_N$),
@@ -223,11 +226,12 @@ who reaches the station at time $t$, and
 $I_t$ be the length of the gap between
 trains $N_{t-1}$ and $N_t$.
 That is,
-$I_t = T_{N_t} - T_{N_t-1}$.
+$I_t = Z_{N_t} = T_{N_t} - T_{N_t-1}$.
 
 Then $I_t$ converges in distribution
 as $t \to \infty$ to
-the distribution with Lebesgue density
+$L$, which has
+a size-biased distribution with Lebesgue density
 $f(x) = \frac{x f_1(x)}{\E[Z_1]}$.
 
 
@@ -237,15 +241,13 @@ $f(x) = \frac{x f_1(x)}{\E[Z_1]}$.
 Under the same conditions as the previous theorem,
 the waiting time $W_t$ converges in distibution
 as $t \to \infty$
-to $I_t U$,
-where $I_t$ is the total observed interval
-and $U \sim \U[0,1]$ is independent of $I_t$.
+to $L U$,
+where $L$ has
+a size-biased distribution with Lebesgue density
+$f(x) = \frac{x f_1(x)}{\E[Z_1]}$,
+and $U \sim \U[0,1]$ is independent of $L$.
 
 
-
-### Summary
-
-TODO
 
 
 
@@ -284,9 +286,54 @@ perhaps more subtly.
 
 
 
+## Other examples
+
+The waiting time and inspection paradoxes
+occur whenever data taking large values
+are proportionately oversampled or overrepresented.
+We described this phenomenon mathematically
+using size-biased distributions.
+However this phenomenon is actually very common
+in statistics
+(it is a form of selection bias),
+and not just when dealing with
+point processes such as arrival times.
+Here are a few other examples of phenomena
+related to the waiting time and inspection
+paradoxes.
+
+* Radioactive decay almost perfectly exhibits
+exponential interarrival times, and so when a detector is
+first switched on,
+the expected time until the first detection is
+the same as the expected interarrival time
+(not half of this as might naively be suggested).
+
+* When asking students about the size of their class,
+large classes will submit more responses,
+and hence be overrepresented.
+
+* If you visit a prison,
+most people you meet will be serving
+longer-than-average sentences.
+
+* Most people you meet at the gym
+go there more often than you.
+
+* Most of your friends have more friends than you (sorry).
+
+
+
 
 
 ## References
 
-Prisons?
-Oxford notes
+* The University of Oxford's course in
+[Applied Probability](https://courses.maths.ox.ac.uk/node/42239/),
+taught by Paul Chleboun in 2017
+
+* A great post from
+[Jake VanderPlas' blog](http://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/)
+
+* Real-world examples from
+[Allen Downey's blog](http://allendowney.blogspot.com/2015/08/the-inspection-paradox-is-everywhere.html)
