@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Waiting Time Paradox"
-date:   2020-06-27
+date:   2020-07-19
 ---
 
 Why is my train always late?
@@ -28,6 +28,7 @@ is available on
   $\newcommand \E {\mathbb{E}}$
   $\newcommand \U {\mathcal{U}}$
   $\newcommand \Gamma {\mathrm{Gamma}}$
+  $\newcommand \dx {\,\mathrm{d}x}$
 </div>
 
 
@@ -40,7 +41,7 @@ so why do you so often have to wait for fifteen or twenty minutes?
 Is this just bad luck,
 or is it probability theory?
 
-In fact this is an example of a well-known phenomenon
+In fact this is an example of a phenomenon
 called the
 *waiting time paradox*.
 In this post,
@@ -54,7 +55,8 @@ under which these paradoxes might occur.
 
 Consider again the scenario of waiting for a train
 which arrives approximately every ten minutes.
-How long do you actually have to wait?
+Once you arrive at the station,
+how long do you actually have to wait?
 First let's define this question more rigorously.
 
 ### The problem
@@ -68,7 +70,7 @@ between trains arriving
 are independently distributed
 $\Exp(10)$.
 This means that the expected time interval
-between two trains is ten minutes.
+between two trains arriving is ten minutes.
 Every day you reach the station at 9am
 ($t=300$),
 and wait for a train to arrive.
@@ -87,7 +89,7 @@ and you have to wait for $W$
 minutes at the station.
 The total time interval between the train
 you missed and the train you catch is
-$I = Z_N$ minutes.
+$I = Z_N = E + W$ minutes.
 
 We are interested in calculating the expected
 waiting time,
@@ -107,15 +109,15 @@ src="/assets/graphics/posts/images_waiting/time_diagram.png">
 
 It seems very natural to perform the following calculation:
 "Trains arrive every ten minutes,
-and on average I get to the station right
+and on average you get to the station half way
 between two trains,
-so I should expect to wait five minutes."
+so you should expect to wait five minutes."
 In mathematical notation,
 this argument reads:
 
 1. $Z_N$ is an interarrival time, so $\E[I] = \E[Z_N] = 10$
 2. Conditional on $I$, we have the uniform distribution $W\|I \sim \U[0, I]$
-3. Therefore by the tower law, $\E[W] = \E[\E[W\|I]] = \E[\U[0,I]] = \E[I/2] = 5$
+3. Therefore by the tower law, $\E[W] = \E[\E[W\|I]] = \E[\U[0,I]] = \E[I/2] = 10/2 = 5$
 
 Lets test this empirically.
 Table 1 shows the guesses of variable values using the reasoning above,
@@ -124,10 +126,10 @@ the scenario 100 000 times.
 
 While we correctly guessed the
 average gap $Z_1$ between the first two trains,
-and the number of trains to arrive $N$,
+and the average number of trains to arrive $N$,
 we are underestimating the other times
 $I$, $E$ and $W$ by a factor of two!
-This is the waiting time paradox.
+This discrepancy is called the waiting time paradox.
 
 
 | Variable | $Z_1$ | $I$ | $E$ | $W$ | $N$ |
@@ -212,7 +214,8 @@ exactly when the first few trains arrived.
 The two theorems below give
 (without proof)
 asymptotic
-corrected versions of our earlier incorrect assumptions.
+corrected versions of our earlier incorrect assumptions,
+using size-biased distributions.
 
 #### Theorem 1 (Convergence in distribution of observed interval)
 
@@ -247,6 +250,35 @@ a size-biased distribution with Lebesgue density
 $f(x) = \frac{x f_1(x)}{\E[Z_1]}$,
 and $U \sim \U[0,1]$ is independent of $L$.
 
+
+### Summary
+
+Let's use these theorems to verify the simulated results
+in Table 1.
+Let $L$ have the size-biased distribution
+has Lebesgue density
+$f(x) = \frac{x f_1(x)}{\E[Z_1]} = \frac{x}{100} e^{-x/10}$.
+Then assuming that you arrive at the station
+a sufficient amount of time after the trains
+begin running:
+
+* $ \E[I]
+  \approx \E[L]
+  = \int_0^\infty x f(x) \dx
+  = \int_0^\infty \frac{x^2}{100} e^{-x/10} \dx = 20$
+* $ \E[W]
+  \approx \E[LU]
+  = \E[L] \E[U]
+  = 20 / 2
+  = 10$
+* $ \E[E]
+  \approx \E[L - LU]
+  = \E[L] \E[1-U]
+  = 20 / 2
+  = 10$
+
+These are now all consistent with the simulated results
+in Table 1.
 
 
 
@@ -293,7 +325,7 @@ occur whenever data taking large values
 are proportionately oversampled or overrepresented.
 We described this phenomenon mathematically
 using size-biased distributions.
-However this phenomenon is actually very common
+However this effect is actually very common
 in statistics
 (it is a form of selection bias),
 and not just when dealing with
