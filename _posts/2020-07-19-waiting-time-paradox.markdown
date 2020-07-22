@@ -256,7 +256,7 @@ and $U \sim \U[0,1]$ is independent of $L$.
 Let's use these theorems to verify the simulated results
 in Table 1.
 Let $L$ have the size-biased distribution
-has Lebesgue density
+which has Lebesgue density
 $f(x) = \frac{x f_1(x)}{\E[Z_1]} = \frac{x}{100} e^{-x/10}$.
 Then assuming that you arrive at the station
 a sufficient amount of time after the trains

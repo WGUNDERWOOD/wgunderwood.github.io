@@ -45,8 +45,7 @@ I am an alumnus of
 
 ## Software
 
-I am an author of the
-[motifcluster](/2020/05/18/motifcluster.html)
+I am an author of the motifcluster
 package for motif-based spectral clustering of weighted directed networks,
 available on
 [GitHub](https://github.com/WGUNDERWOOD/motifcluster)
