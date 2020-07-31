@@ -22,8 +22,8 @@ strong approximation theory with
 
 ## Contact
 
-Contact me by
-[email](mailto:wgu2@princeton.edu)
+Contact me by email at
+[wgu2@princeton.edu](mailto:wgu2@princeton.edu)
 with any questions!
 Other contact details are available
 [here](/contact/).
