@@ -43,6 +43,14 @@ Weighted Directed Networks*.
 I am an alumnus of
 [St John's College](https://www.sjc.ox.ac.uk/).
 
+## Teaching
+
+I am an Assistant Instructor for
+the Fall 2020 class
+[ORF 363: Computing and Optimization](http://aaa.princeton.edu/orf363),
+taught by
+[Amir Ali Ahmadi](http://aaa.princeton.edu/).
+
 ## Software
 
 I am an author of the motifcluster
