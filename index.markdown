@@ -46,7 +46,7 @@ I am an alumnus of
 ## Teaching
 
 I am an Assistant Instructor for
-the Fall 2020 class
+the Princeton Fall 2020 class
 [ORF 363: Computing and Optimization](http://aaa.princeton.edu/orf363),
 taught by
 [Amir Ali Ahmadi](http://aaa.princeton.edu/).
