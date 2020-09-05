@@ -45,7 +45,7 @@ I am an alumnus of
 
 ## Teaching
 
-I am an Assistant Instructor for
+I am an Assistant in Instruction for
 the Princeton Fall 2020 class
 [ORF 363: Computing and Optimization](http://aaa.princeton.edu/orf363),
 taught by
