@@ -95,8 +95,8 @@ we can find a sequence of
 $(\mathcal{F}_ t)$-stopping times $(\tau_ k)$
 such that
 
-- $(\tau)_k$ is a.s. increasing
-- $(\tau)_k$ a.s. diverges to $\infty$
+- $(\tau_k)$ is a.s. increasing
+- $(\tau_k)$ a.s. diverges to $\infty$
 - $X_ {t \wedge \tau_k}$ is an $(\mathcal{F}_ t)$-martingale for each $k$
 
 The sequence $(\tau_ k)$ is called a *localising sequence*.
