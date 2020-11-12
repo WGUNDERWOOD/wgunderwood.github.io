@@ -16,7 +16,7 @@ department at
 where my research interests include mathematical statistics
 and probability theory.
 Currently I am working on
-statistical properties of series estimators and
+statistical properties of nonparametric estimators and
 strong approximation theory with
 [Matias Cattaneo](https://cattaneo.princeton.edu).
 
