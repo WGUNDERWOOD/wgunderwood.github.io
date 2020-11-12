@@ -175,7 +175,7 @@ we iterate $f_c$ a few times
 started from zero and check that it
 does not converge quickly to zero
 or to infinity.
-Only when the validity of $c$ is validated
+Only when the validity of $c$ is confirmed
 do we proceed with generating the Julia set.
 
 ## References
