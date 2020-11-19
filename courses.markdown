@@ -9,7 +9,14 @@ in reverse chronological order.
 
 ## Princeton University
 
-### First Year
+### Elective classes
+
+  - ELE 520: Mathematics of Data Science
+  - ORF 569: Theory and Practice of Deep Learning
+
+  - ORF 569: Network Games and Mean Field Interactions
+
+### Core classes
 
   - ORF 522: Linear and Nonlinear Optimization
   - ORF 523: Convex and Conic Optimization
@@ -17,7 +24,6 @@ in reverse chronological order.
   - ORF 525: Statistical Foundations of Data Science
   - ORF 526: Probability Theory
   - ORF 527: Stochastic Calculus
-  - ORF 569: Network Games and Mean Field Interactions
 
 ## University of Oxford
 
