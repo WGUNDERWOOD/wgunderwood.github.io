@@ -30,7 +30,6 @@ Other contact details are available
 
 ## Biography
 
-Originally from the UK,
 I obtained my MMath in Mathematics & Statistics from the
 [Department of Statistics](https://www.stats.ox.ac.uk/)
 at the
