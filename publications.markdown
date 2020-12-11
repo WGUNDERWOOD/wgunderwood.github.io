@@ -75,6 +75,11 @@ in R and Python <br>
 [W. G. Underwood][wgunderwood]
 and [A. Elliott][aelliott] <br>
 [doi:10.5281/zenodo.3832400](https://doi.org/10.5281/zenodo.3832400) <br>
+Available on
+[GitHub](https://github.com/WGUNDERWOOD/motifcluster),
+[CRAN](https://cran.r-project.org/web/packages/motifcluster/index.html)
+and
+[PyPI](https://pypi.org/project/motifcluster/). <br>
 May 2020 <br>
 
 

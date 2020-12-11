@@ -13,7 +13,6 @@ in reverse chronological order.
 
   - ELE 520: Mathematics of Data Science
   - ORF 569: Theory and Practice of Deep Learning
-
   - ORF 569: Network Games and Mean Field Interactions
 
 ### Core classes

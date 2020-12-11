@@ -44,19 +44,10 @@ I am an alumnus of
 
 ## Teaching
 
-I am an Assistant in Instruction for
-the Princeton Fall 2020 class
-[ORF 363: Computing and Optimization](http://aaa.princeton.edu/orf363),
-taught by
-[Amir Ali Ahmadi](http://aaa.princeton.edu/).
+I have served as an Assistant in Instruction
+for the following classes at Princeton University:
 
-## Software
-
-I am an author of the motifcluster
-package for motif-based spectral clustering of weighted directed networks,
-available on
-[GitHub](https://github.com/WGUNDERWOOD/motifcluster)
-for
-[R](https://cran.r-project.org/web/packages/motifcluster/index.html)
-and
-[Python](https://pypi.org/project/motifcluster/).
+- [ORF 363: Computing and Optimization](http://aaa.princeton.edu/orf363),
+  taught by
+  [Amir Ali Ahmadi](http://aaa.princeton.edu/),
+  Fall 2020.
