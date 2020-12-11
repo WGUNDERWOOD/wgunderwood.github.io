@@ -9,7 +9,7 @@ permalink: /contact/
 
 ### Office address
 William G Underwood <br>
-228 Sherrerd Hall <br>
+Sherrerd Hall <br>
 Princeton University <br>
 Princeton,
 NJ 08544 <br>
