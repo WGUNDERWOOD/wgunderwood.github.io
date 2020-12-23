@@ -50,4 +50,4 @@ for the following classes at Princeton University:
 - [ORF 363: Computing and Optimization](http://aaa.princeton.edu/orf363),
   taught by
   [Amir Ali Ahmadi](http://aaa.princeton.edu/),
-  Fall 2020.
+  Fall 2020
