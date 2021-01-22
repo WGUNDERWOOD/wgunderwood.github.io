@@ -97,7 +97,19 @@ the non-parametric problem.
 
 ## Linear regression
 
+
+Plot: linear fit to linear data
+
+Plot: linear fit to quadratic data
+
+
+
 ### Linear regression with transformed features
+
+
+Plot: quadratic fit to quadratic data
+
+Plot: quadratic fit to non-quadratic data
 
 ## The Nadaraya-Watson Estimator
 
