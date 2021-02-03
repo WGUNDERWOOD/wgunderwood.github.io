@@ -47,7 +47,12 @@ I am an alumnus of
 I have served as an Assistant in Instruction
 for the following classes at Princeton University:
 
-- [ORF 363: Computing and Optimization](http://aaa.princeton.edu/orf363),
+- ORF 245: Fundamentals of Statistics,
+  taught by
+  [Matias Cattaneo](https://cattaneo.princeton.edu),
+  Spring 2021
+
+- ORF 363: Computing and Optimization,
   taught by
   [Amir Ali Ahmadi](http://aaa.princeton.edu/),
   Fall 2020
