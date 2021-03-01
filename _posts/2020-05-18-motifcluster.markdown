@@ -15,7 +15,7 @@ src="/assets/graphics/posts/images_motifcluster/hex_sticker_small.png">
 
 
 First written for my master's thesis under
-[Mihai Cucuringu](mcucuringu)
+[Mihai Cucuringu][mcucuringu]
 at the
 [Department of Statistics](https://www.stats.ox.ac.uk/),
 [University of Oxford](http://www.ox.ac.uk/),
@@ -89,6 +89,5 @@ Full documentation is available at
 
 
 [wgunderwood]: /
-
 [mcucuringu]: https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en
 [aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
