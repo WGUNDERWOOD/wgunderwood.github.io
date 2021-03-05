@@ -16,11 +16,12 @@ NJ 08544 <br>
 USA
 
 ### Other links
-- [Google Scholar](https://scholar.google.co.uk/citations?user=4rtNN4wAAAAJ&hl=en)
+- [Bibliography](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.bib)
 - [CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf)
 - [GitHub](https://github.com/WGUNDERWOOD)
-- [LinkedIn](https://www.linkedin.com/in/william--underwood/)
+- [Google Scholar](https://scholar.google.co.uk/citations?user=4rtNN4wAAAAJ&hl=en)
+- [Kaggle](https://www.kaggle.com/wgunderwood)
 - [Keybase](https://keybase.io/wgunderwood/chat)
+- [LinkedIn](https://www.linkedin.com/in/william--underwood/)
 - [Orcid](https://orcid.org/0000-0003-4604-1548)
-- [Bibliography](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.bib)
 - [ResearchGate](https://www.researchgate.net/profile/William_Underwood6)
