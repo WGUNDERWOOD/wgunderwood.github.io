@@ -35,7 +35,7 @@ I obtained my MMath in Mathematics & Statistics from the
 at the
 [University of Oxford](http://www.ox.ac.uk/).
 I was supervised there by
-[Mihai Cucuringu](https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en),
+[Mihai Cucuringu](http://www.stats.ox.ac.uk/~cucuring/),
 and wrote my master's dissertation on
 *Motif-Based Spectral Clustering of
 Weighted Directed Networks*.
