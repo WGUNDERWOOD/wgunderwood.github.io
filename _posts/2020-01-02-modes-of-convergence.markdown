@@ -42,43 +42,50 @@ commonly-used modes of convergence.
 
 ### Almost sure convergence ($a.s.$)
 
-$X_n \xrightarrow{a.s.} X \text{ if}$
+$X_n \xrightarrow{a.s.} X$
+if
 
-$$\mathbb{P}(X_n \to X \text{ as } n \to \infty) = 1$$
+$$\mathbb{P}(X_n \to X \text{ as } n \to \infty) = 1.$$
 
 ### Convergence in probability ($\mathbb{P}$)
 
-$X_n \xrightarrow{\mathbb{P}} X
-\text{ if for all }
-\epsilon > 0,
-\text{ as }
-n \to \infty,$
+$X_n \xrightarrow{\mathbb{P}} X$
+if for all
+$\epsilon > 0$,
+as
+$n \to \infty$,
 
-$$\mathbb{P}(|X_n - X| > \epsilon) \to 0$$
+$$\mathbb{P}(|X_n - X| > \epsilon) \to 0.$$
 
 ### Convergence in distribution ($d$)
 
-$X_n \xrightarrow{d} X
-\text{ if whenever } \mathbb{P}(X \leq \,\boldsymbol{\cdot}\,)
-\text{ is continuous at } x,
-\text{ then as } n \to \infty,$
+$X_n \xrightarrow{d} X$
+if whenever
+$\mathbb{P}(X \leq \,\boldsymbol{\cdot}\,)$
+is continuous at $x$,
+then as
+$n \to \infty$,
 
-$$\mathbb{P}(X_n \leq x) \to \mathbb{P}(X \leq x)$$
+$$\mathbb{P}(X_n \leq x) \to \mathbb{P}(X \leq x).$$
 
 ### Convergence in $L^p$, for $1 \leq p < \infty$
 
-$X_n \xrightarrow{L^p} X
-\text{ if as } n \to \infty$,
+$X_n \xrightarrow{L^p} X$
+if as
+$n \to \infty$,
 
-$$\mathbb{E}[|X_n - X|^p] \to 0$$
+$$\mathbb{E}[|X_n - X|^p] \to 0.$$
 
 ### Convergence in $L^\infty$
 
-$\text{ First define } \\|X\\|_\infty = \inf\\{M: |X| \leq M \text{ almost surely}\\}.
-\text{ Then } X_n \xrightarrow{L^\infty} X
-\text{ if as } n \to \infty,$
+First define
+$\\|X\\|_\infty = \inf\\{M: |X| \leq M \text{ almost surely}\\}$.
+Then
+$X_n \xrightarrow{L^\infty} X$
+if as
+$n \to \infty$,
 
-$$\|X_n - X\|_\infty \to 0$$
+$$\|X_n - X\|_\infty \to 0.$$
 
 ### Notes on definitions
 

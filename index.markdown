@@ -4,10 +4,10 @@ title: Home
 description: Welcome to my homepage.
 ---
 
-<img style="float: right; padding-left: 30px; padding-top: 0px; width: 150px"
-src="/assets/graphics/images_home/profile_small.png">
-
 ## About
+
+<img style="float: right; padding-left: 30px; padding-top: 0px; width: 160px"
+src="/assets/graphics/images_home/profile_small.png">
 
 I am a PhD candidate in the
 [Operations Research & Financial Engineering](https://orfe.princeton.edu/)
@@ -15,18 +15,11 @@ department at
 [Princeton University](https://www.princeton.edu/),
 where my research interests include mathematical statistics
 and probability theory.
-Currently I am working on
-statistical properties of nonparametric estimators and
-strong approximation theory with
-[Matias Cattaneo](https://cattaneo.princeton.edu).
-
-## Contact
-
-Contact me by email at
-[wgu2@princeton.edu](mailto:wgu2@princeton.edu)
-with any questions!
-Other contact details are available
-[here](/contact/).
+Currently I am working with my advisor
+[Matias Cattaneo](https://cattaneo.princeton.edu)
+on using strong approximation theory
+to develop provably robust inference procedures
+for nonparametric estimators.
 
 ## Biography
 
@@ -42,10 +35,25 @@ Weighted Directed Networks*.
 I am an alumnus of
 [St John's College](https://www.sjc.ox.ac.uk/).
 
+## Contact
+
+Contact me by email at
+[wgu2@princeton.edu](mailto:wgu2@princeton.edu)
+with any questions!
+Other contact details are available
+[here](/contact/).
+
+## CV
+
+My curriculum vitae
+can be found
+[here](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf).
+
+
 ## Teaching
 
 I have served as an Assistant in Instruction
-for the following classes at Princeton University:
+for these classes at Princeton University:
 
 - ORF 245: Fundamentals of Statistics,
   taught by
