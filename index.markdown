@@ -48,6 +48,7 @@ Other contact details are available
 My curriculum vitae
 can be found
 [here](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf).
+You may wish to download the file before viewing.
 
 
 ## Teaching
