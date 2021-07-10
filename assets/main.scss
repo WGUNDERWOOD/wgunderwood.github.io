@@ -127,6 +127,11 @@ figure figcaption {
     font-size: 18px;
 }
 
+img.border{
+    float: right;
+    padding-top: 50px;
+}
+
 .svg-icon{
     vertical-align: text-bottom;
     padding-bottom: 2px;
@@ -185,6 +190,28 @@ code{
     display: inline;
 }
 
+.column {
+    float: left;
+}
+
+.left {
+    width: 75%;
+}
+
+.right {
+    width: 25%;
+}
+
+.row{
+    padding-bottom: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 
 /* Code Highlighting

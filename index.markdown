@@ -4,56 +4,129 @@ title: Home
 description: Welcome to my homepage.
 ---
 
-## About
 
-<img style="float: right; padding-left: 30px; padding-top: 0px; width: 160px"
-src="/assets/graphics/images_home/profile_small.png">
+<div class="row">
+
+<div class="column left">
+
+<h2> About </h2>
 
 I am a PhD candidate in the
-[Operations Research & Financial Engineering](https://orfe.princeton.edu/)
+<a href="https://orfe.princeton.edu/">Operations Research & Financial Engineering</a>
 department at
-[Princeton University](https://www.princeton.edu/),
+<a href="https://www.princeton.edu/">Princeton University</a>,
 where my research interests include mathematical statistics
 and probability theory.
 Currently I am working with my advisor
-[Matias Cattaneo](https://cattaneo.princeton.edu)
+<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>
 on using strong approximation theory
 to develop provably robust inference procedures
 for nonparametric estimators.
 
-<img style="float: right; padding-left: 30px; padding-top: 0px; width: 160px"
-src="/assets/graphics/images_home/princeton_logo_small_border.png">
+</div>
 
-## Biography
+<div class="column right">
+
+<img class="border"
+style="width: 160px;"
+src="/assets/graphics/general/profile_small_border.png">
+
+</div>
+
+</div>
 
 
-<img style="float: right; padding-left: 30px; padding-top: 0px; width: 160px"
-src="/assets/graphics/images_home/oxford2.png">
+
+
+
+
+<div class="row">
+
+<div class="column left">
+
+<h2> Biography </h2>
 
 I obtained my MMath in Mathematics & Statistics from the
-[Department of Statistics](https://www.stats.ox.ac.uk/)
+<a href="https://www.stats.ox.ac.uk/">Department of Statistics</a>
 at the
-[University of Oxford](http://www.ox.ac.uk/).
+<a href="http://www.ox.ac.uk/">University of Oxford</a>.
 I was supervised there by
-[Mihai Cucuringu](http://www.stats.ox.ac.uk/~cucuring/),
+<a href="http://www.stats.ox.ac.uk/~cucuring/">Mihai Cucuringu</a>,
 and wrote my master's dissertation on
-*Motif-Based Spectral Clustering of
-Weighted Directed Networks*.
+<em>Motif-Based Spectral Clustering of
+Weighted Directed Networks</em>.
 I am an alumnus of
-[St John's College](https://www.sjc.ox.ac.uk/).
+<a href="https://www.sjc.ox.ac.uk/">St John’s College</a>.
 
-## Contact
+</div>
+
+<div class="column right">
+
+<img class="border"
+style="width: 120px; padding-right: 20px"
+src="/assets/graphics/general/princeton_logo_border.png">
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="row">
+
+<div class="column left">
+
+<h2> Contact </h2>
 
 Contact me by email at
-[wgu2@princeton.edu](mailto:wgu2@princeton.edu)
+<a href="mailto:wgu2@princeton.edu">wgu2@princeton.edu</a>
 with any questions!
 Other contact details are available
-[here](/contact/).
+<a href="/contact/">here</a>.
+
+</div>
+
+<div class="column right">
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="row">
+
+<div class="column left">
+
+<h2> CV </h2>
+
+My curriculum vitae
+can be found
+<a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf">here</a>.
+You may wish to download the file before viewing.
+
+</div>
+
+<div class="column right">
+
+<img class="border"
+style="width: 120px; padding-right: 20px"
+src="/assets/graphics/general/cv_thumbnail.png">
+
+</div>
+
+</div>
+
+
 
 ## CV
 
-<img style="float: right; padding-left: 30px; padding-top: 0px; width: 160px"
-src="/assets/graphics/images_home/cv_thumbnail.png">
 
 My curriculum vitae
 can be found
@@ -75,3 +148,21 @@ for these classes at Princeton University:
   taught by
   [Amir Ali Ahmadi](http://aaa.princeton.edu/),
   Fall 2020
+
+
+
+<div class="row">
+
+<div class="column left">
+
+</div>
+
+<div class="column right">
+
+<img class="border"
+style="width: 160px;"
+src="/assets/graphics/general/profile_small_border.png">
+
+</div>
+
+</div>
