@@ -1,1 +1,69 @@
+#!/usr/bin/env sh
+
+dir=$PWD
+
+
+
+# CV
+#######################################
+
+cd $dir/assets/
+
+# download my current cv
+wget --output-document ./files/WGUnderwood.pdf https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.pdf
+
+# get first page of cv
+pdftk ./files/WGUnderwood.pdf cat 1 output ./files/WGUnderwood_page_1.pdf
+
+# get thumbnail of first page of cv
+convert ./files/WGUnderwood_page_1.pdf -resize 1000x250 -flatten ./graphics/images_home/cv_thumbnail.png
+
+# clean up files
+rm ./files/WGUnderwood_page_1.pdf
+
+
+
+# Profile picture
+#######################################
+
+cd $dir/assets/graphics/images_home/
+
+# shrink profile picture
+convert ./profile.png -resize 250x250 ./profile_small.png
+
+
+
+# Princeton logo
+#######################################
+
+cd $dir/assets/graphics/images_home/
+
+convert ./princeton.png -resize 250x250 -bordercolor white -border 6 -flatten ./princeton_small.png
+
+convert ./oxford.png -resize 250x250 -flatten ./oxford_small.png
+
+# shrink logo
+convert princeton_logo.png -resize 250x250 princeton_logo_small.png
+
+# add more space at edge
+convert princeton_logo_small.png -bordercolor none -border 10 pton_larger.png
+
+# get mask of shape
+convert pton_larger.png -compose Dst_In -border 0 pton_background.png
+
+# dilate the mask for use as background
+convert pton_background.png -morphology Dilate Disk:3 -fill "#777778" -colorize 100 pton_dilate.png
+
+# overlay logo on mask
+composite -gravity center princeton_logo_small.png pton_dilate.png princeton_logo_small_border.png
+
+
+# clean up files
+rm pton_larger.png pton_background.png pton_dilate.png princeton_logo_small.png
+
+exit
+
+# Build website
+#######################################
+
 JEKYLL_ENV=development bundle exec jekyll serve

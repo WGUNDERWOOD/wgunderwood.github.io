@@ -21,7 +21,14 @@ on using strong approximation theory
 to develop provably robust inference procedures
 for nonparametric estimators.
 
+<img style="float: right; padding-left: 30px; padding-top: 0px; width: 160px"
+src="/assets/graphics/images_home/princeton_logo_small_border.png">
+
 ## Biography
+
+
+<img style="float: right; padding-left: 30px; padding-top: 0px; width: 160px"
+src="/assets/graphics/images_home/oxford2.png">
 
 I obtained my MMath in Mathematics & Statistics from the
 [Department of Statistics](https://www.stats.ox.ac.uk/)
@@ -44,6 +51,9 @@ Other contact details are available
 [here](/contact/).
 
 ## CV
+
+<img style="float: right; padding-left: 30px; padding-top: 0px; width: 160px"
+src="/assets/graphics/images_home/cv_thumbnail.png">
 
 My curriculum vitae
 can be found
