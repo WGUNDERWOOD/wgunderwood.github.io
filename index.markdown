@@ -8,7 +8,7 @@ description: Welcome to my homepage.
 
 <a href="/">
 <img
-style="width: 180px;"
+style="width: 160px;"
 src="/assets/graphics/general/profile_small_border.png">
 </a>
 
@@ -36,7 +36,7 @@ for nonparametric estimators.
 
 <a href="https://www.princeton.edu">
 <img
-style="width: 180px;"
+style="width: 160px;"
 src="/assets/graphics/general/princeton_logo_border.png">
 </a>
 
@@ -44,7 +44,7 @@ src="/assets/graphics/general/princeton_logo_border.png">
 
 <a href="https://www.ox.ac.uk">
 <img
-style="width: 180px; padding-top: 10px"
+style="width: 160px; padding-top: 10px"
 src="/assets/graphics/general/oxford_logo_border.png">
 </a>
 
@@ -65,17 +65,12 @@ and wrote my master's dissertation on
 <em>Motif-Based Spectral Clustering of
 Weighted Directed Networks</em>.
 I am an alumnus of
-<a href="https://www.sjc.ox.ac.uk/">St John’s College</a>.
+<a href="https://www.sjc.ox.ac.uk/">St John’s College, Oxford</a>.
 
 
 
 
 
-
-<h2> CV </h2>
-
-Download my
-<a href="assets/files/WGUnderwood.pdf">curriculum vitae</a>.
 
 
 
@@ -94,21 +89,90 @@ on my
 
 
 
+<h2> CV </h2>
+
+Download my
+<a href="assets/files/WGUnderwood.pdf">CV</a>.
 
 
 
 
-## Teaching
+
+
+
+
+
+<h2> Teaching </h2>
 
 I have served as an Assistant in Instruction
 for these classes at Princeton University:
 
-- ORF 245: Fundamentals of Statistics,
-  taught by
-  [Matias Cattaneo](https://cattaneo.princeton.edu),
-  Spring 2021
+<ul>
+<li>
+<strong> ORF 245: </strong>
+Fundamentals of Statistics,
+taught by
+<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
+Spring 2021
+</li>
 
-- ORF 363: Computing and Optimization,
-  taught by
-  [Amir Ali Ahmadi](http://aaa.princeton.edu/),
-  Fall 2020
+<li>
+<strong> ORF 363: </strong>
+Computing and Optimization,
+taught by
+<a href="http://aaa.princeton.edu/">Amir Ali Ahmadi</a>,
+Fall 2020
+</li>
+</ul>
+
+
+
+
+<h2> Software </h2>
+
+I am an author of the
+<a href="https://github.com/WGUNDERWOOD/motifcluster">motifcluster</a>
+package for
+motif-based spectral clustering of weighted directed networks
+in R and Python.
+
+
+
+
+
+
+<h2> Awards </h2>
+
+<ul>
+<li>
+<strong>
+Francis Robbins Upton Fellowship in Engineering
+</strong> <br>
+Princeton University,
+September 2019
+</li>
+
+<li>
+<strong>
+Gibbs Statistics Prize
+</strong> <br>
+University of Oxford,
+July 2019
+</li>
+
+<li>
+<strong>
+Royal Statistical Society Prize
+</strong> <br>
+Royal Statistical Society & University of Oxford,
+July 2019
+</li>
+
+<li>
+<strong>
+Academic Exhibition
+</strong> <br>
+St John's College, University of Oxford,
+July 2016
+</li>
+</ul>

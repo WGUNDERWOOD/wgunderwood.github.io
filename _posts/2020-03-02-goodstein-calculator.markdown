@@ -10,12 +10,6 @@ on Goodstein sequences, I wrote a Python script to calculate them.
 The source code is available on
 [GitHub](https://github.com/WGUNDERWOOD/goodstein-calculator).
 
-{% include mathjax.html %}
-
-<div style="display:none">
-  $\newcommand \om \omega}$
-</div>
-
 ## Usage
 
 The python script takes two arguments:
