@@ -5,11 +5,10 @@ image_border_color="#444445"
 image_border_width=3
 
 
-# CV
-echo "Downloading CV..."
+# CV and bibliography
+echo "Downloading CV and bibliography..."
 cd $root_dir/assets/graphics/general/
 bash $root_dir/scripts/download_cv.sh
-
 
 # Logo
 #echo "Formatting logo..."
