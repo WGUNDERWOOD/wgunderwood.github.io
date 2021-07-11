@@ -4,10 +4,17 @@ title: Home
 description: Welcome to my homepage.
 ---
 
+<div class="frame">
 
-<div class="row">
+<a href="/">
+<img
+style="width: 180px;"
+src="/assets/graphics/general/profile_small_border.png">
+</a>
 
-<div class="column left">
+</div>
+
+
 
 <h2> About </h2>
 
@@ -23,29 +30,31 @@ on using strong approximation theory
 to develop provably robust inference procedures
 for nonparametric estimators.
 
+
+
+<div class="frame">
+
+<a href="https://www.princeton.edu">
+<img
+style="width: 180px;"
+src="/assets/graphics/general/princeton_logo_border.png">
+</a>
+
+<br>
+
+<a href="https://www.ox.ac.uk">
+<img
+style="width: 180px; padding-top: 10px"
+src="/assets/graphics/general/oxford_logo_border.png">
+</a>
+
 </div>
 
-<div class="column right">
 
-<img class="border"
-style="width: 160px;"
-src="/assets/graphics/general/profile_small_border.png">
-
-</div>
-
-</div>
-
-
-
-
-
-
-<div class="row">
-
-<div class="column left">
 
 <h2> Biography </h2>
 
+Before moving to Princeton,
 I obtained my MMath in Mathematics & Statistics from the
 <a href="https://www.stats.ox.ac.uk/">Department of Statistics</a>
 at the
@@ -58,27 +67,20 @@ Weighted Directed Networks</em>.
 I am an alumnus of
 <a href="https://www.sjc.ox.ac.uk/">St John’s College</a>.
 
-</div>
-
-<div class="column right">
-
-<img class="border"
-style="width: 120px; padding-right: 20px"
-src="/assets/graphics/general/princeton_logo_border.png">
-
-</div>
-
-</div>
 
 
 
 
 
+<h2> CV </h2>
+
+Download my
+<a href="assets/files/WGUnderwood.pdf">curriculum vitae</a>.
 
 
-<div class="row">
 
-<div class="column left">
+
+
 
 <h2> Contact </h2>
 
@@ -86,52 +88,14 @@ Contact me by email at
 <a href="mailto:wgu2@princeton.edu">wgu2@princeton.edu</a>
 with any questions!
 Other contact details are available
-<a href="/contact/">here</a>.
-
-</div>
-
-<div class="column right">
-</div>
-
-</div>
+on my
+<a href="/contact/">contact page</a>.
 
 
 
 
 
 
-<div class="row">
-
-<div class="column left">
-
-<h2> CV </h2>
-
-My curriculum vitae
-can be found
-<a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf">here</a>.
-You may wish to download the file before viewing.
-
-</div>
-
-<div class="column right">
-
-<img class="border"
-style="width: 120px; padding-right: 20px"
-src="/assets/graphics/general/cv_thumbnail.png">
-
-</div>
-
-</div>
-
-
-
-## CV
-
-
-My curriculum vitae
-can be found
-[here](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf).
-You may wish to download the file before viewing.
 
 
 ## Teaching
@@ -148,21 +112,3 @@ for these classes at Princeton University:
   taught by
   [Amir Ali Ahmadi](http://aaa.princeton.edu/),
   Fall 2020
-
-
-
-<div class="row">
-
-<div class="column left">
-
-</div>
-
-<div class="column right">
-
-<img class="border"
-style="width: 160px;"
-src="/assets/graphics/general/profile_small_border.png">
-
-</div>
-
-</div>
