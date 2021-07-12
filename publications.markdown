@@ -6,9 +6,9 @@ permalink: /publications/
 
 A list of my publications,
 as in my
-[CV](/assets/files/WGUnderwood.pdf).
+[CV](https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.pdf).
 Also available in
-[BibTeX](/assets/files/WGUnderwood.bib).
+[BibTeX](https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.bib).
 
 
 

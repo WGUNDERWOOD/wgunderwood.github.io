@@ -1,14 +1,17 @@
 #!/usr/bin/env sh
 
 root_dir=$(git rev-parse --show-toplevel)
-image_border_color="#444445"
-image_border_width=3
+
+
+# Image formatting variables
+#image_border_color="#444445"
+#image_border_width=3
 
 
 # CV and bibliography
-echo "Downloading CV and bibliography..."
-cd $root_dir/assets/graphics/general/
-bash $root_dir/scripts/download_cv.sh
+#echo "Downloading CV and bibliography..."
+#cd $root_dir/assets/graphics/general/
+#bash $root_dir/scripts/download_cv.sh
 
 # Logo
 #echo "Formatting logo..."
@@ -36,9 +39,6 @@ bash $root_dir/scripts/download_cv.sh
 #bash $root_dir/scripts/add_border.sh oxford_logo.png $image_border_color $image_border_width
 
 
-exit
-
 # Build website
-#######################################
-
+cd $root_dir
 JEKYLL_ENV=development bundle exec jekyll serve

@@ -92,7 +92,7 @@ on my
 <h2> CV </h2>
 
 Download my
-<a href="assets/files/WGUnderwood.pdf">CV</a>.
+<a href="https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.pdf">CV</a>.
 
 
 
