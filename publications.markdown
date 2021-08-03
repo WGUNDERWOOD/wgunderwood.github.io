@@ -46,6 +46,15 @@ and [M. Cucuringu][mcucuringu] <br>
 April 2020
 -->
 
+## Working papers
+
+- **Uniform Consistency and Inference with Dyadic Kernel Density Estimation** <br>
+[W. G. Underwood][wgunderwood],
+[M. D. Cattaneo][mdcattaneo],
+and [Y. Feng][yfeng] <br>
+In progress
+
+
 
 
 ## Presentations
@@ -85,5 +94,7 @@ May 2020 <br>
 
 [aartemiou]: http://www.google.com/url?q=http%3A%2F%2Fartemioua.com%2F&sa=D&sntz=1&usg=AFQjCNFGen68J9EmhvGCbaFRcl6fqTxuRQ
 [mcucuringu]: https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en
+[mdcattaneo]: https://cattaneo.princeton.edu/
+[yfeng]: https://sites.google.com/site/yingjieum/
 [aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
 [lsmallman]: https://scholar.google.co.uk/citations?user=B1A0KykAAAAJ&hl=en
