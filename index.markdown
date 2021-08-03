@@ -9,7 +9,7 @@ description: Welcome to my homepage.
 <a href="/">
 <img
 style="width: 160px;"
-src="/assets/graphics/general/profile_small_border.png">
+src="/assets/graphics/general/profile_maine_small_border.png">
 </a>
 
 </div>
