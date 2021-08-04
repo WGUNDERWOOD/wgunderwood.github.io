@@ -109,6 +109,14 @@ for these classes at Princeton University:
 
 <ul>
 <li>
+<strong> ORF 524: </strong>
+Statistical Theory and Methods,
+taught by
+<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
+Fall 2021
+</li>
+
+<li>
 <strong> ORF 245: </strong>
 Fundamentals of Statistics,
 taught by
