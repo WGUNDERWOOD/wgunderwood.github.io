@@ -28,7 +28,7 @@ Currently I am working with my advisor
 <a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>
 on using strong approximation theory
 to develop provably robust inference procedures
-for nonparametric estimators.
+for nonparametric network estimators.
 
 
 
