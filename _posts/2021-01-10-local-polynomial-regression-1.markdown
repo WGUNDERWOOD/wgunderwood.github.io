@@ -70,7 +70,7 @@ or any other source of noise.
 We impose the condition that
 $\E[\varepsilon_i | x_i] = 0$
 for each $i$
-to ensure that on average,
+to ensure that on average
 each error is zero,
 allowing $\mu$ to be identified.
 
@@ -85,7 +85,7 @@ then the problem is known as *parametric regression*.
 Otherwise, when we do not assume a certain form for $\mu$,
 the problem is called *non-parametric regression*.
 For example if we suppose that $\mu$ is a quadratic
-function (hence determined by its coefficients),
+function (hence determined by its three coefficients),
 the problem is parametric.
 In these posts we will focus on
 the more general setting of
