@@ -2,43 +2,6 @@
 
 root_dir=$(git rev-parse --show-toplevel)
 
-
-# Image formatting variables
-#image_border_color="#444445"
-#image_border_width=3
-
-
-# CV and bibliography
-#echo "Downloading CV and bibliography..."
-#cd $root_dir/assets/graphics/general/
-#bash $root_dir/scripts/download_cv.sh
-
-# Logo
-#echo "Formatting logo..."
-#cd $root_dir/assets/graphics/general/
-#convert ./logo.png -resize 50x50 ./logo_small.png
-#bash $root_dir/scripts/add_border.sh logo_small.png "#555556" 2
-
-
-# Profile picture
-#echo "Formatting profile picture..."
-#cd $root_dir/assets/graphics/general/
-#convert ./profile.png -resize 250x250 ./profile_small.png
-#bash $root_dir/scripts/add_border.sh profile_small.png $image_border_color $image_border_width
-
-
-# Princeton logo
-#echo "Formatting Princeton logo..."
-#cd $root_dir/assets/graphics/general/
-#bash $root_dir/scripts/add_border.sh princeton_logo.png $image_border_color $image_border_width
-
-
-# Oxford logo
-#echo "Formatting Oxford logo..."
-#cd $root_dir/assets/graphics/general/
-#bash $root_dir/scripts/add_border.sh oxford_logo.png $image_border_color $image_border_width
-
-
 # Build website
 cd $root_dir
 JEKYLL_ENV=development bundle exec jekyll serve

@@ -8,8 +8,8 @@ description: Welcome to my homepage.
 
 <a href="/">
 <img
-style="width: 160px;"
-src="/assets/graphics/general/profile_maine_small_border.png">
+style="width: 160px; border: 2px solid #111111"
+src="/assets/graphics/general/profile_maine_small.png">
 </a>
 
 </div>
@@ -36,16 +36,16 @@ for nonparametric network estimators.
 
 <a href="https://www.princeton.edu">
 <img
-style="width: 160px;"
-src="/assets/graphics/general/princeton_logo_border.png">
+style="width: 160px; border: 2px solid #333333"
+src="/assets/graphics/general/princeton_logo.png">
 </a>
 
 <br>
 
 <a href="https://www.ox.ac.uk">
 <img
-style="width: 160px; padding-top: 10px"
-src="/assets/graphics/general/oxford_logo_border.png">
+style="width: 160px; border: 2px solid #333333; margin-top: 15px;"
+src="/assets/graphics/general/oxford_logo.png">
 </a>
 
 </div>
