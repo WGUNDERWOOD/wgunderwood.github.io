@@ -18,6 +18,7 @@ and introduces the Nadaraya-Watson estimator.
   $\newcommand \E {\mathbb{E}}$
   $\newcommand \P {\mathbb{E}}$
   $\newcommand \R {\mathbb{R}}$
+  $\DeclareMathOperator{\MSE}{MSE}$
 </div>
 
 
@@ -40,11 +41,10 @@ For example, we might perform an experiment
 on $n = 100$ people to determine
 whether a drug helps to lower blood pressure.
 We could take
-$x_i$ as the pair containing both the
+$x_i$ as the
 amount of drug administered to person $i$,
-and also the age of person $i$.
-The change in blood pressure for person $i$
-would be represented by $y_i$.
+while $y_i$ could represent
+the change in blood pressure for person $i$.
 
 
 ### The model
@@ -78,7 +78,8 @@ allowing $\mu$ to be identified.
 
 The aim of regression is to use the data points
 $(x_i, y_i)$
-to estimate the function $\mu$.
+to calculate a function $\widehat \mu$
+which estimates the unknown regression function $\mu$.
 If we assume that $\mu$ is a specific type
 of function which can be determined by finitely many parameters,
 then the problem is known as *parametric regression*.
@@ -97,19 +98,72 @@ the non-parametric problem.
 
 ## Linear regression
 
+The simplest regression estimator
+is the parametric linear regression.
+This estimator gives $\widehat \mu$
+as the linear function which minimises
+the mean squared error (MSE)
+defined by
 
-Plot: linear fit to linear data
+$$
+\MSE(\widehat \mu)
+= \frac{1}{n} \sum_{i=1}^n
+\big(y_i - \widehat \mu(x_i) \big)^2.
+$$
 
-Plot: linear fit to quadratic data
+Figure TODO shows how
+linear regression can fit a straight line
+to the data.
+
+TODO plot: linear fit to linear data
+
+However
+if the regression function
+is not linear,
+this method can perform poorly,
+as seen in Figure TODO.
+
+
+
+TODO plot: linear fit to quadratic data
 
 
 
 ### Linear regression with transformed features
 
+One possible solution to this problem
+is to include transformations of $x_i$
+as extra features.
+For example,
+suppose that $x_i \in \R$,
+so that $d=1$.
+Then one could use not only the variables $x_i$
+but also $x_i^2$,
+allowing quadratic curves to be fitted to the data.
+This gives rise to so-called
+*polynomial regression*.
+Figure TODO shows how including $x_i^2$
+can give a much better fit to the data.
 
-Plot: quadratic fit to quadratic data
+TODO plot: quadratic fit to quadratic data
 
-Plot: quadratic fit to non-quadratic data
+
+However if the regression function is not
+a low-degree polynomial,
+this method can still perform poorly,
+as seen in Figure TODO.
+
+TODO plot: quadratic fit to non-quadratic data
+
+
+While it is tempting to use higher and higher-degree
+polynomials,
+this can lead to overfitting
+as shown in Figure TODO,
+especially when there are not many data points.
+
+TODO plot: high-degree polynomial fit to non-quadratic data (overfit)
+
 
 ## The Nadaraya-Watson Estimator
 
