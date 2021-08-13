@@ -111,21 +111,34 @@ $$
 \big(y_i - \widehat \mu(x_i) \big)^2.
 $$
 
-Figure TODO shows how
+Figure 1 shows how
 linear regression can fit a straight line
 to the data.
 
-TODO plot: linear fit to linear data
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/linear_fit_linear_data.png">
+<figcaption>
+  Fig. 1: Linear regression works well when the regression function is linear.
+</figcaption>
+</figure>
 
 However
 if the regression function
 is not linear,
 this method can perform poorly,
-as seen in Figure TODO.
+as seen in Figure 2.
 
 
-
-TODO plot: linear fit to quadratic data
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/linear_fit_quadratic_data.png">
+<figcaption>
+<br>
+  Fig. 2: Linear regression does not work well when the regression function
+  is non-linear.
+</figcaption>
+</figure>
 
 
 
@@ -142,27 +155,49 @@ but also $x_i^2$,
 allowing quadratic curves to be fitted to the data.
 This gives rise to so-called
 *polynomial regression*.
-Figure TODO shows how including $x_i^2$
+Figure 3 shows how including $x_i^2$
 can give a much better fit to the data.
 
-TODO plot: quadratic fit to quadratic data
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_quadratic_data.png">
+<figcaption>
+<br>
+  Fig. 3: Quadratic regression fits the quadratic regression function well.
+</figcaption>
+</figure>
 
 
 However if the regression function is not
 a low-degree polynomial,
 this method can still perform poorly,
-as seen in Figure TODO.
+as seen in Figure 4.
 
-TODO plot: quadratic fit to non-quadratic data
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_general_data.png">
+<figcaption>
+<br>
+  Fig. 4: Quadratic regression does not work well with non-quadratic regression functions.
+</figcaption>
+</figure>
 
 
 While it is tempting to use higher and higher-degree
 polynomials,
 this can lead to overfitting
-as shown in Figure TODO,
+as shown in Figure 5,
 especially when there are not many data points.
 
-TODO plot: high-degree polynomial fit to non-quadratic data (overfit)
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/polynomial_fit_general_data.png">
+<figcaption>
+<br>
+  Fig. 5: Polynomial regression can overfit.
+</figcaption>
+</figure>
 
 
 ## The Nadaraya-Watson Estimator
