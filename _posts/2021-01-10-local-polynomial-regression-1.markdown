@@ -96,7 +96,7 @@ the non-parametric problem.
 
 
 
-## Linear regression
+## Parametric linear regression
 
 The simplest regression estimator
 is the parametric linear regression.
@@ -200,9 +200,84 @@ src="/assets/graphics/posts/images_local-polynomial-regression/polynomial_fit_ge
 </figure>
 
 
-## The Nadaraya-Watson Estimator
+## Non-parametric local regression
+
+Non-parametric estimators attempt to solve these problems in
+a variety of ways.
+The idea behind *local* regression methods is that
+at each evaluation point
+the fitted regression function only needs to depend on the
+data points "nearby."
+This concept is made more concrete using kernels.
+
 
 ### Kernels
+
+A kernel $K$ is a function from $\R$ to $\R$ which allows
+us to quantify the local nature of a non-parametric estimator.
+If $x$ is a point at which we want to estimate the regression function
+and $x_i$ is a data point,
+then we can use
+
+$$
+K\left(\frac{x_i - x}{h}\right)
+$$
+
+as a measure of the influence of $x_i$ at $x$,
+where $h>0$ is a parameter called the *bandwidth*.
+Kernels must integrate to one,
+and are typically (though not always) symmetric
+non-negative functions.
+Figure 6 shows some typical examples.
+
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/kernels.png">
+<figcaption>
+<br>
+  Fig. 6: Some popular kernel functions.
+</figcaption>
+</figure>
+
+The bandwidth $h$ controls how much locality is present.
+If $h$ is very small then only data points which are very close to the evaluation
+point are used.
+If $h$ is larger then further-away points are used too.
+
+### The Nadaraya-Watson estimator
+
+The simplest local regression estimator is the Nadaraya-Watson estimator.
+This estimator works as follows:
+First pick a kernel and a bandwidth
+For each evaluation point $x$,
+find the "importance" of each data point $x_i$ using the kernel function
+and bandwidth.
+Then average all of the responses $y_i$, weighted according to this importance.
+As an equation, this gives
+
+$$
+\widehat \mu(x) =
+\frac{
+  \sum_{i=1}^n
+  y_i K\left(\frac{x_i-x}{h}\right)
+}
+{
+  \sum_{i=1}^n
+  K\left(\frac{x_i-x}{h}\right)
+}.
+$$
+
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/nadaraya_fit_general_data.png">
+<figcaption>
+<br>
+  Fig. 7: The Nadaraya-Watson estimator adapts to a broad class of functions.
+</figcaption>
+</figure>
+
 
 
 ## Next time
