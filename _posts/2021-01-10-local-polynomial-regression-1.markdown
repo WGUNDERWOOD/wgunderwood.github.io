@@ -26,7 +26,7 @@ and introduces the Nadaraya-Watson estimator.
 ## Regression
 
 Regression problems form a large class of problems
-which are central to statistical theory and methods.
+which are central to statistical theory and methodology.
 
 ### The data
 
@@ -74,6 +74,18 @@ to ensure that on average
 each error is zero,
 allowing $\mu$ to be identified.
 
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/data.png">
+<figcaption>
+  Fig. 1: The responses $y_i$ are plotted against the independent variables $x_i$. <br>
+  The line indicates the regression function.
+</figcaption>
+</figure>
+
+
+
 ### Parametric vs. non-parametric
 
 The aim of regression is to use the data points
@@ -83,14 +95,11 @@ which estimates the unknown regression function $\mu$.
 If we assume that $\mu$ is a specific type
 of function which can be determined by finitely many parameters,
 then the problem is known as *parametric regression*.
-Otherwise, when we do not assume a certain form for $\mu$,
+Otherwise, when we do not assume any particular form for $\mu$,
 the problem is called *non-parametric regression*.
 For example if we suppose that $\mu$ is a quadratic
 function (hence determined by its three coefficients),
 the problem is parametric.
-In these posts we will focus on
-the more general setting of
-the non-parametric problem.
 
 
 
@@ -247,8 +256,8 @@ If $h$ is larger then further-away points are used too.
 
 ### The Nadaraya-Watson estimator
 
-The simplest local regression estimator is the Nadaraya-Watson estimator.
-This estimator works as follows:
+The simplest local regression estimator is the Nadaraya-Watson estimator,
+which works as follows:
 First pick a kernel and a bandwidth
 For each evaluation point $x$,
 find the "importance" of each data point $x_i$ using the kernel function
