@@ -1,0 +1,32 @@
+* Post ideas
+** Local polynomial regression
+*** Part 1: Intro to non-parametric regression
+**** Problem set-up
+**** Linear regression doesn't work
+**** Transformed linear regression doesn't work
+**** Kernels
+**** The Nadaraya Watson estimator
+**** Leave open: bandwidth selection, boundary bias
+*** Part 2: Bandwidth selection
+**** Bandwidth selection theory
+**** MSE doesnt work
+**** LOO-CV
+**** GCV
+**** Lack of global bandwidth optimality
+*** Part 3: Local polynomial regression
+**** Revisit boundary bias
+**** Recap of linear regression
+**** The local linear smoother
+**** Demonstrate second-order bias
+**** The local polynomial estimator
+*** Part 4: Application
+**** Global warming data?
+** spline regression
+** gaussian process regression
+** bayesian optimization
+** hitting times
+** intro to probability
+** ill-posed DEs and non-deterministic mechanics
+** dragon curves
+** SLLN, CLT and LIL
+* Other
