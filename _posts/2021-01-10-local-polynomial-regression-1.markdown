@@ -258,8 +258,8 @@ If $h$ is larger then further-away points are used too.
 
 ### The Nadaraya-Watson estimator
 
-The simplest local regression estimator is the Nadaraya-Watson estimator.
-This estimator works as follows.
+The simplest local regression estimator is the Nadaraya-Watson estimator,
+which works as follows.
 First pick a kernel and a bandwidth.
 For each evaluation point $x$,
 find the "importance" of each data point $x_i$ using the kernel function
