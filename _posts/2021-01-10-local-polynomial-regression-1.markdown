@@ -75,6 +75,18 @@ to ensure that on average
 each error is zero,
 allowing $\mu$ to be identified.
 
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/data.png">
+<figcaption>
+  Fig. 1: The responses $y_i$ are plotted against the independent variables $x_i$. <br>
+  The line indicates the regression function.
+</figcaption>
+</figure>
+
+
+
 ### Parametric vs. non-parametric
 
 The aim of regression is to use the data points
@@ -246,8 +258,8 @@ If $h$ is larger then further-away points are used too.
 
 ### The Nadaraya-Watson estimator
 
-The simplest local regression estimator is the Nadaraya-Watson estimator.
-This estimator works as follows.
+The simplest local regression estimator is the Nadaraya-Watson estimator,
+which works as follows.
 First pick a kernel and a bandwidth.
 For each evaluation point $x$,
 find the "importance" of each data point $x_i$ using the kernel function
