@@ -11,7 +11,6 @@ covers the general problem setup
 and introduces the Nadaraya-Watson estimator.
 
 
-
 {% include mathjax.html %}
 
 <div style="display:none">
@@ -27,6 +26,8 @@ and introduces the Nadaraya-Watson estimator.
 
 Regression problems form a large class of problems
 which are central to statistical theory and methods.
+Their applications include prediction, variable selection
+and causality analysis.
 
 ### The data
 
@@ -83,12 +84,12 @@ which estimates the unknown regression function $\mu$.
 If we assume that $\mu$ is a specific type
 of function which can be determined by finitely many parameters,
 then the problem is known as *parametric regression*.
-Otherwise, when we do not assume a certain form for $\mu$,
+Otherwise, when we do not assume anything about the form of $\mu$,
 the problem is called *non-parametric regression*.
 For example if we suppose that $\mu$ is a quadratic
 function (hence determined by its three coefficients),
 the problem is parametric.
-In these posts we will focus on
+In these posts we will explore
 the more general setting of
 the non-parametric problem.
 
@@ -128,13 +129,15 @@ if the regression function
 is not linear,
 this method can perform poorly,
 as seen in Figure 2.
+Here the regression function is clearly some kind of curve,
+but our estimator is limited to straight lines.
+
 
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/linear_fit_quadratic_data.png">
 <figcaption>
-<br>
   Fig. 2: Linear regression does not work well when the regression function
   is non-linear.
 </figcaption>
@@ -163,29 +166,27 @@ can give a much better fit to the data.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_quadratic_data.png">
 <figcaption>
-<br>
   Fig. 3: Quadratic regression fits the quadratic regression function well.
 </figcaption>
 </figure>
 
 
-However if the regression function is not
-a low-degree polynomial,
-this method can still perform poorly,
+However if the regression function is not well-approximated
+by any low-degree polynomial,
+this reression method can still perform poorly,
 as seen in Figure 4.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_general_data.png">
 <figcaption>
-<br>
   Fig. 4: Quadratic regression does not work well with non-quadratic regression functions.
 </figcaption>
 </figure>
 
 
 While it is tempting to use higher and higher-degree
-polynomials,
+polynomials such as cubics, quartics and quintics,
 this can lead to overfitting
 as shown in Figure 5,
 especially when there are not many data points.
@@ -194,8 +195,7 @@ especially when there are not many data points.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/polynomial_fit_general_data.png">
 <figcaption>
-<br>
-  Fig. 5: Polynomial regression can overfit.
+  Fig. 5: A degree-50 polynomial regression will often overfit.
 </figcaption>
 </figure>
 
@@ -208,7 +208,7 @@ The idea behind *local* regression methods is that
 at each evaluation point
 the fitted regression function only needs to depend on the
 data points "nearby."
-This concept is made more concrete using kernels.
+This concept is made more concrete using the notion of a kernel function.
 
 
 ### Kernels
@@ -228,14 +228,13 @@ where $h>0$ is a parameter called the *bandwidth*.
 Kernels must integrate to one,
 and are typically (though not always) symmetric
 non-negative functions.
-Figure 6 shows some typical examples.
+Figure 6 shows some commonly-used examples.
 
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/kernels.png">
 <figcaption>
-<br>
   Fig. 6: Some popular kernel functions.
 </figcaption>
 </figure>
@@ -248,8 +247,8 @@ If $h$ is larger then further-away points are used too.
 ### The Nadaraya-Watson estimator
 
 The simplest local regression estimator is the Nadaraya-Watson estimator.
-This estimator works as follows:
-First pick a kernel and a bandwidth
+This estimator works as follows.
+First pick a kernel and a bandwidth.
 For each evaluation point $x$,
 find the "importance" of each data point $x_i$ using the kernel function
 and bandwidth.
@@ -268,18 +267,37 @@ $$
 }.
 $$
 
+Note how we do not assume anything about the form of the
+underlying regression function,
+though it is necessary to choose an appropriate bandwidth $h$.
+
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/nadaraya_fit_general_data.png">
 <figcaption>
-<br>
   Fig. 7: The Nadaraya-Watson estimator adapts to a broad class of functions.
 </figcaption>
 </figure>
 
-
+There are several interesting features in Figure 7.
+Firstly, note how $\widehat \mu$
+underestimates $\mu$ where $\mu$ is concave (around $x=1$) and
+overestimates $\mu$ where $\mu$ is convex (around $x=2$).
+Secondly, note how $\widehat \mu$
+overestimates $\mu$ at the left boundary and
+underestimates $\mu$ at the right boundary.
+These illustrate problems relating to the *bias*
+of the Nadaraya-Watson estimator,
+which will be investigated in later posts.
 
 ## Next time
 
+In the next post we will address the issue of
+how to choose an appropriate bandwidth
+for a local regression estimator,
+both in theory and in practice.
+
 ## References
+
+TODO
