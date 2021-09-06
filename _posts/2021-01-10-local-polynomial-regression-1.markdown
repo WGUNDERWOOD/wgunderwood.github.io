@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Local Polynomial Regression 1: Introduction"
-date:   2021-01-10
+date:   2021-09-05
 ---
 
 Local polynomial regression is an important statistical tool
@@ -67,7 +67,7 @@ observation $i$.
 This error could come from
 the drug affecting different people in different ways,
 from measurement error in the blood pressure reading,
-or any other source of noise.
+or from any other source of noise.
 We impose the condition that
 $\E[\varepsilon_i | x_i] = 0$
 for each $i$
@@ -114,7 +114,8 @@ the non-parametric problem.
 The simplest regression estimator
 is the parametric linear regression.
 This estimator gives $\widehat \mu$
-as the linear function which minimises
+as the linear function
+which minimises
 the mean squared error (MSE)
 defined by
 
@@ -124,7 +125,7 @@ $$
 \big(y_i - \widehat \mu(x_i) \big)^2.
 $$
 
-Figure 1 shows how
+Figure 2 shows how
 linear regression fits a straight line
 to the data.
 
@@ -132,7 +133,7 @@ to the data.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/linear_fit_linear_data.png">
 <figcaption>
-  Fig. 1: Linear regression works well when the regression function is linear.
+  Fig. 2: Linear regression works well when the regression function is linear.
 </figcaption>
 </figure>
 
@@ -140,7 +141,7 @@ However
 if the regression function
 is not linear,
 this method can perform poorly,
-as seen in Figure 2.
+as seen in Figure 3.
 Here the regression function is clearly some kind of curve,
 but our estimator is limited to straight lines.
 
@@ -150,7 +151,7 @@ but our estimator is limited to straight lines.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/linear_fit_quadratic_data.png">
 <figcaption>
-  Fig. 2: Linear regression does not work well when the regression function
+  Fig. 3: Linear regression does not work well when the regression function
   is non-linear.
 </figcaption>
 </figure>
@@ -170,7 +171,7 @@ but also $x_i^2$,
 allowing quadratic curves to be fitted to the data.
 This gives rise to so-called
 *polynomial regression*.
-Figure 3 shows how including $x_i^2$
+Figure 4 shows how including $x_i^2$
 can give a much better fit to the data.
 
 
@@ -178,7 +179,7 @@ can give a much better fit to the data.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_quadratic_data.png">
 <figcaption>
-  Fig. 3: Quadratic regression fits the quadratic regression function well.
+  Fig. 4: Quadratic regression fits the quadratic regression function well.
 </figcaption>
 </figure>
 
@@ -186,13 +187,13 @@ src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_qua
 However if the regression function is not well-approximated
 by any low-degree polynomial,
 this reression method can still perform poorly,
-as seen in Figure 4.
+as seen in Figure 5.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_general_data.png">
 <figcaption>
-  Fig. 4: Quadratic regression does not work well with non-quadratic regression functions.
+  Fig. 5: Quadratic regression does not work well with non-quadratic regression functions.
 </figcaption>
 </figure>
 
@@ -200,14 +201,14 @@ src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_gen
 While it is tempting to use higher and higher-degree
 polynomials such as cubics, quartics and quintics,
 this can lead to overfitting
-as shown in Figure 5,
+as shown in Figure 6,
 especially when there are not many data points.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/polynomial_fit_general_data.png">
 <figcaption>
-  Fig. 5: A degree-50 polynomial regression will often overfit.
+  Fig. 6: A degree-50 polynomial regression will often overfit.
 </figcaption>
 </figure>
 
@@ -240,14 +241,14 @@ where $h>0$ is a parameter called the *bandwidth*.
 Kernels must integrate to one,
 and are typically (though not always) symmetric
 non-negative functions.
-Figure 6 shows some commonly-used examples.
+Figure 7 shows some commonly-used examples.
 
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/kernels.png">
 <figcaption>
-  Fig. 6: Some popular kernel functions.
+  Fig. 7: Some popular kernel functions.
 </figcaption>
 </figure>
 
@@ -288,11 +289,11 @@ though it is necessary to choose an appropriate bandwidth $h$.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/nadaraya_fit_general_data.png">
 <figcaption>
-  Fig. 7: The Nadaraya-Watson estimator adapts to a broad class of functions.
+  Fig. 8: The Nadaraya-Watson estimator adapts to a broad class of functions.
 </figcaption>
 </figure>
 
-There are several interesting features in Figure 7.
+There are several interesting features in Figure 8.
 Firstly, note how $\widehat \mu$
 underestimates $\mu$ where $\mu$ is concave (around $x=1$) and
 overestimates $\mu$ where $\mu$ is convex (around $x=2$).
