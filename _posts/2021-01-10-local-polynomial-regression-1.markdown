@@ -125,7 +125,7 @@ $$
 $$
 
 Figure 1 shows how
-linear regression can fit a straight line
+linear regression fits a straight line
 to the data.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
@@ -309,7 +309,3 @@ In the next post we will address the issue of
 how to choose an appropriate bandwidth
 for a local regression estimator,
 both in theory and in practice.
-
-## References
-
-TODO
