@@ -1,18 +1,20 @@
 * Post ideas
 ** Local polynomial regression
-*** Part 1: Intro to non-parametric regression
-**** Problem set-up
-**** Linear regression doesn't work
-**** Transformed linear regression doesn't work
-**** Kernels
-**** The Nadaraya Watson estimator
-**** Leave open: bandwidth selection, boundary bias
+*** DONE Part 1: Intro to non-parametric regression
+**** DONE Problem set-up
+**** DONE Linear regression doesn't work
+**** DONE Transformed linear regression doesn't work
+**** DONE Kernels
+**** DONE The Nadaraya Watson estimator
+**** DONE Leave open: bandwidth selection, boundary bias
 *** Part 2: Bandwidth selection
-**** Bandwidth selection theory
-**** MSE doesnt work
-**** LOO-CV
-**** GCV
-**** Lack of global bandwidth optimality
+**** Theory
+***** Bias/variance
+**** Practice
+***** MSE doesnt work
+***** LOO-CV
+***** GCV
+***** Lack of global bandwidth optimality
 *** Part 3: Local polynomial regression
 **** Revisit boundary bias
 **** Recap of linear regression
