@@ -7,14 +7,14 @@
 **** DONE Kernels
 **** DONE The Nadaraya Watson estimator
 **** DONE Leave open: bandwidth selection, boundary bias
-*** Part 2: Bandwidth selection
-**** Theory
-***** Bias/variance
-**** Practice
-***** MSE doesnt work
-***** LOO-CV
-***** GCV
-***** Lack of global bandwidth optimality
+*** TODO Part 2: Bandwidth selection
+**** TODO Theory
+***** TODO Bias/variance
+**** TODO Practice
+***** TODO IMSE doesnt work
+***** TODO LOO-CV
+***** TODO GCV
+***** TODO Lack of global bandwidth optimality
 *** Part 3: Local polynomial regression
 **** Revisit boundary bias
 **** Recap of linear regression
