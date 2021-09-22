@@ -17,7 +17,7 @@ Also available in
 
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood],
-[A. Elliott][aelliott],
+[A. Elliott][aelliott]
 and [M. Cucuringu][mcucuringu] <br>
 [*Applied Network Science*](https://appliednetsci.springeropen.com/)
 5, 62 <br>
@@ -27,7 +27,7 @@ September 2020
 - **Simple Poisson PCA: an algorithm for (sparse) feature extraction
 with simultaneous dimension determination** <br>
 [L. Smallman][lsmallman],
-[W. G. Underwood][wgunderwood],
+[W. G. Underwood][wgunderwood]
 and [A. Artemiou][aartemiou] <br>
 [*Computational Statistics*](https://link.springer.com/journal/180)
 35, 559-577 <br>
@@ -40,7 +40,7 @@ June 2019
 
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood],
-[A. Elliott][aelliott],
+[A. Elliott][aelliott]
 and [M. Cucuringu][mcucuringu] <br>
 [arXiv:2004.01293](https://arxiv.org/abs/2004.01293) <br>
 April 2020
@@ -49,10 +49,9 @@ April 2020
 ## Working papers
 
 - **Uniform Consistency and Inference with Dyadic Kernel Density Estimation** <br>
-[W. G. Underwood][wgunderwood],
 [M. D. Cattaneo][mdcattaneo],
-and [Y. Feng][yfeng] <br>
-In progress
+[Y. Feng][yfeng]
+and [W. G. Underwood][wgunderwood]
 
 
 
