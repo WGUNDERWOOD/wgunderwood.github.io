@@ -35,24 +35,19 @@ and [A. Artemiou][aartemiou] <br>
 June 2019
 
 
-<!---
 ## Preprints
 
-- **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
-[W. G. Underwood][wgunderwood],
-[A. Elliott][aelliott]
-and [M. Cucuringu][mcucuringu] <br>
-[arXiv:2004.01293](https://arxiv.org/abs/2004.01293) <br>
-April 2020
--->
-
-## Working papers
-
-- **Uniform Consistency and Inference with Dyadic Kernel Density Estimation** <br>
+- **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
 [M. D. Cattaneo][mdcattaneo],
 [Y. Feng][yfeng]
-and [W. G. Underwood][wgunderwood]
+and [W. G. Underwood][wgunderwood] <br>
+[arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
+January 2022
 
+
+<!---
+## Working papers
+-->
 
 
 
