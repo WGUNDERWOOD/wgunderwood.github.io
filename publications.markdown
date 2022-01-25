@@ -9,6 +9,8 @@ as in my
 [CV](https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.pdf).
 Also available in
 [BibTeX](https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.bib).
+My software is available on
+[GitHub](https://github.com/WGUNDERWOOD).
 
 
 
@@ -57,7 +59,7 @@ January 2022
 [W. G. Underwood][wgunderwood]
 and [M. Cucuringu][mcucuringu] <br>
 *[The 8th International Conference on Complex Networks and their Applications](https://www.2019.complexnetworks.org/)* <br>
-Presented by [M. Cucuringu](mcucuringu). Abstract available <br>
+Presented by [M. Cucuringu](mcucuringu), abstract available <br>
 December 2019
 
 
@@ -70,6 +72,13 @@ March 2017
 
 ## Software
 
+- **DyadicKDE.jl** <br>
+Dyadic kernel density estimation in Julia <br>
+[W. G. Underwood][wgunderwood] <br>
+Available on
+[GitHub](https://github.com/WGUNDERWOOD/DyadicKDE.jl) <br>
+January 2022 <br>
+
 - **motifcluster** <br>
 Motif-based spectral clustering of weighted directed networks
 in R and Python <br>
@@ -80,7 +89,7 @@ Available on
 [GitHub](https://github.com/WGUNDERWOOD/motifcluster),
 [CRAN](https://cran.r-project.org/web/packages/motifcluster/index.html)
 and
-[PyPI](https://pypi.org/project/motifcluster/). <br>
+[PyPI](https://pypi.org/project/motifcluster/) <br>
 May 2020 <br>
 
 

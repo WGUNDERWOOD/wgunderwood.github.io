@@ -136,16 +136,6 @@ Fall 2020
 
 
 
-<h2> Software </h2>
-
-I am an author of the
-<a href="https://github.com/WGUNDERWOOD/motifcluster">motifcluster</a>
-package for
-motif-based spectral clustering of weighted directed networks
-in R and Python.
-
-
-
 
 
 
