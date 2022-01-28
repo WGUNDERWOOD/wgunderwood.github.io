@@ -72,11 +72,13 @@ March 2017
 
 ## Software
 
-- **DyadicKDE.jl** <br>
+- **DyadicKDE** <br>
 Dyadic kernel density estimation in Julia <br>
 [W. G. Underwood][wgunderwood] <br>
 Available on
-[GitHub](https://github.com/WGUNDERWOOD/DyadicKDE.jl) <br>
+[GitHub](https://github.com/WGUNDERWOOD/DyadicKDE.jl)
+and
+[JuliaHub](https://juliahub.com/ui/Packages/DyadicKDE/nvEg6/0.1.0) <br>
 January 2022 <br>
 
 - **motifcluster** <br>
