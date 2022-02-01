@@ -13,7 +13,7 @@ and coauthored with
 [Matias Cattaneo](https://cattaneo.princeton.edu)
 and
 [Yingjie Feng](https://sites.google.com/site/yingjieum/),
-is now available on at
+is now available at
 [arxiv:2201.05967](https://arxiv.org/abs/2201.05967)!
 
 An implementation of our methodology is provided in the
