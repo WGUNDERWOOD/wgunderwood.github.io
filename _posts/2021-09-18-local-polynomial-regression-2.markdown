@@ -197,9 +197,50 @@ $h \asymp n^{-1/5}$.
 
 ## Bandwidth selection in practice
 
-TODO Investigate some potential methods
+Since minimizing the IMSE is not feasible,
+we investigate some alternative methods for selecting
+the bandwidth.
 
 ### Minimizing the empirical integrated mean squared error
+
+A natural first attempt at practical bandwidth selection
+is to minimize some estimate of the IMSE.
+We can replace the true IMSE
+
+$$
+\IMSE(x)
+= \int_\R
+\E\Big[ \big(\widehat \mu(x) - \mu(x) \big)^2 \Big]
+\diff{x}
+$$
+
+with its (reweighted) sample version
+
+$$
+\widehat\IMSE(x)
+= \frac{1}{n} \sum_{i=1}^n
+\big(y_i - \widehat \mu(x_i) \big)^2
+$$
+
+and minimize this instead.
+However this does not work,
+since as $h \to 0$,
+we have
+$\widehat \mu(x_i) \to y_i$!
+To see this, note that whenever $h$ is less than
+the smallest gap between any two points $x_i$,
+then the kernel centered at $x_i$ cannot
+"see" any other points, so
+
+$$
+\widehat \mu(x) =
+\frac{y_i K\left(\frac{x_i-x}{h}\right)}
+{K\left(\frac{x_i-x}{h}\right)}
+= y_i.
+$$
+
+Therefore this naive method will always select $h \approx 0$.
+This phenomenon is illustrated in TODO
 
 TODO Does not work -- overfit
 TODO Plot this
