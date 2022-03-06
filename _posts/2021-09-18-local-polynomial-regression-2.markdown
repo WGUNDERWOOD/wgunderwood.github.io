@@ -226,7 +226,8 @@ and minimize this instead.
 However this does not work,
 since as $h \to 0$,
 we have
-$\widehat \mu(x_i) \to y_i$!
+$\widehat \mu(x_i) \to y_i$
+and so the MSE converges to zero!
 To see this, note that whenever $h$ is less than
 the smallest gap between any two points $x_i$,
 then the kernel centered at $x_i$ cannot
@@ -241,6 +242,24 @@ $$
 
 Therefore this naive method will always select $h \approx 0$.
 This phenomenon is illustrated in TODO
+
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/min_mse_data.png">
+<figcaption>
+  Fig. 1: With a small enough bandwidth, the data is interpolated.
+</figcaption>
+</figure>
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/min_mse_bandwidths.png">
+<figcaption>
+  Fig. 2: MSE decreases to zero as the bandwidth decreases to zero.
+</figcaption>
+</figure>
+
 
 TODO Does not work -- overfit
 TODO Plot this
