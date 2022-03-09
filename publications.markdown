@@ -47,10 +47,13 @@ and [W. G. Underwood][wgunderwood] <br>
 January 2022
 
 
-<!---
 ## Working papers
--->
 
+- **Martingale Coupling and Strong Approximation for Martingale Processes** <br>
+[M. D. Cattaneo][mdcattaneo],
+[R. P. Masini][rpmasini]
+and [W. G. Underwood][wgunderwood] <br>
+Working paper
 
 
 ## Presentations
@@ -101,3 +104,4 @@ May 2020 <br>
 [yfeng]: https://sites.google.com/site/yingjieum/
 [aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
 [lsmallman]: https://scholar.google.co.uk/citations?user=B1A0KykAAAAJ&hl=en
+[rpmasini]: https://masini.princeton.edu/
