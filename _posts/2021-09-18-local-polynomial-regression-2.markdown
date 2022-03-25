@@ -262,21 +262,28 @@ src="/assets/graphics/posts/images_local-polynomial-regression/min_mse_bandwidth
 
 
 TODO Does not work -- overfit
-TODO Plot this
 
 
 ### Leave-one-out cross-validation
 
 TODO Define LOO-CV
-TODO Plot this
+TODO swap these figures and in previous section?
 
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_data.png">
+<figcaption>
+  Fig. 3: LOO-CV is able to select a sensible bandwidth.
+</figcaption>
+</figure>
 
-
-
-### Estimating the mean squared error
-
-TODO Actually don't know how well this works...
-TODO Plot this
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_bandwidths.png">
+<figcaption>
+  Fig. 4: LOO-CV achieves a global minimum.
+</figcaption>
+</figure>
 
 
 
@@ -284,3 +291,17 @@ TODO Plot this
 
 TODO Sometimes there is no global optimal bandwidth
 TODO Solutions to this?
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/topologist_sine_curve.png">
+<figcaption>
+  Fig. 5: Some regression functions have no globally optimal bandwidth.
+</figcaption>
+</figure>
+
+
+## References
+
+
+## Next time
