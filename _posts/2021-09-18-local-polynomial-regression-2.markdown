@@ -27,6 +27,7 @@ and consider methods for selecting the bandwidth $h$.
   $\newcommand{\diff}[1]{\,\mathrm{d}#1}$
   $\DeclareMathOperator{\MSE}{MSE}$
   $\DeclareMathOperator{\IMSE}{IMSE}$
+  $\DeclareMathOperator{\LOOCV}{LOOCV}$
 </div>
 
 ## Bandwidth selection in theory
@@ -208,16 +209,16 @@ is to minimize some estimate of the IMSE.
 We can replace the true IMSE
 
 $$
-\IMSE(x)
+\IMSE(h)
 = \int_\R
 \E\Big[ \big(\widehat \mu(x) - \mu(x) \big)^2 \Big]
 \diff{x}
 $$
 
-with its (reweighted) sample version
+with a (reweighted) sample version
 
 $$
-\widehat\IMSE(x)
+\widehat\IMSE(h)
 = \frac{1}{n} \sum_{i=1}^n
 \big(y_i - \widehat \mu(x_i) \big)^2
 $$
@@ -234,9 +235,9 @@ then the kernel centered at $x_i$ cannot
 "see" any other points, so
 
 $$
-\widehat \mu(x) =
-\frac{y_i K\left(\frac{x_i-x}{h}\right)}
-{K\left(\frac{x_i-x}{h}\right)}
+\widehat \mu(x_i) =
+\frac{y_i K\left(\frac{x_i-x_i}{h}\right)}
+{K\left(\frac{x_i-x_i}{h}\right)}
 = y_i.
 $$
 
@@ -266,7 +267,41 @@ TODO Does not work -- overfit
 
 ### Leave-one-out cross-validation
 
-TODO Define LOO-CV
+A popular method for avoiding this phenomenon of overfitting is
+leave-one-out cross-validation (LOO-CV).
+The idea is to remove a point $(x_i,y_i)$ from the data set
+and fit the estimator on the remaining data.
+This estimator, denoted $\widehat \mu_{-i}(x)$, is then evaluated
+at the data point which was initially left out and its squared error is recorded.
+The leave-one-out cross-validation error is the average of these errors
+over removing each data point in turn.
+Formally,
+
+$$
+\LOOCV(h) = \frac{1}{n} \sum_{i=1}^n
+\big( y_i - \widehat \mu_{-i}(x_i) \big)^2.
+$$
+
+The advantage of minimizing LOO-CV is that the model is always trained
+and evaluated on different samples,
+so is unable to "memorize" the data set.
+This improves its generalization ability
+and avoids selecting bandwidths which are too small.
+Figure TODO shows how LOO-CV is minimized at a particular bandwidth value,
+and Figure TODO demonstrates this to be a reasonable choice.
+
+However LOO-CV requires fitting $n$ different models
+for each candidate bandwidth $h$.
+This can make it expensive to compute in practice,
+and its batch analogue, called $k$-fold cross-validation,
+is often preferred TODO(reference this).
+Generalized cross-validation offers an approximation
+for the LOO-CV error which even faster to compute.
+TODO(cite)
+
+
+
+
 TODO swap these figures and in previous section?
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
@@ -292,16 +327,27 @@ src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_bandwi
 TODO Sometimes there is no global optimal bandwidth
 TODO Solutions to this?
 
+In this post we saw how a bandwidth can be selected using leave-one-out cross-validation.
+However it is worth pointing out that sometimes a good bandwidth does not even exist,
+such as when the regression function $\mu(x)$ is much "smoother" at some points than at others,
+as seen in Figure TODO.
+Since the approximate bias term we derived depends on the curvature $\mu^{\prime\prime}(x)$,
+a larger bandwidth is preferred for smoother parts of the regression function.
+
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/topologist_sine_curve.png">
 <figcaption>
-  Fig. 5: Some regression functions have no globally optimal bandwidth.
+  Fig. 5: Some regression functions have no good global bandwidth.
 </figcaption>
 </figure>
 
 
-## References
-
 
 ## Next time
+
+In the next post we will return to the problem of boundary bias
+and show how local polynomial regression can help to alleviate it.
+
+
+## References
