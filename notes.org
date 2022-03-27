@@ -4,7 +4,6 @@
 **** DONE Problem set-up
 **** DONE Linear regression doesn't work
 **** DONE Transformed linear regression doesn't work
-***** TODO redo this plot
 **** DONE Kernels
 **** DONE The Nadaraya Watson estimator
 **** DONE Leave open: bandwidth selection, boundary bias
