@@ -6,10 +6,10 @@ date:   2021-09-18
 
 This post, the second in a series on local polynomial regression,
 investigates bandwidth selection procedures for the
-Nadaraya--Watson estimator introduced in
-[part one](/2021/09/05/local-polynomial-regression-1.html).
+Nadaraya--Watson estimator introduced previously.
 
-In the previous post we defined the Nadaraya--Watson estimator
+In [part one](/2021/09/05/local-polynomial-regression-1.html)
+we defined the Nadaraya--Watson estimator
 with kernel $K$ and bandwidth $h$
 and showed how it can be used to estimate a regression function.
 Throughout this post we will focus for simplicity on the
@@ -27,7 +27,7 @@ and consider methods for selecting the bandwidth $h$.
   $\newcommand{\diff}[1]{\,\mathrm{d}#1}$
   $\DeclareMathOperator{\MSE}{MSE}$
   $\DeclareMathOperator{\IMSE}{IMSE}$
-  $\DeclareMathOperator{\LOOCV}{LOOCV}$
+  $\DeclareMathOperator{\LOOCV}{LOO-CV}$
 </div>
 
 ## Bandwidth selection in theory
@@ -37,13 +37,14 @@ Intuitively, the bias of an estimator is the error it makes on average,
 while the variance is a measure of how unpredictable the estimator is.
 
 Crucially, a more "complex" estimator has less bias but more variance,
-while more data tends to reduce the variance and does not affect the bias.
+while increasing the number of data points tends to reduce the variance
+and does not affect the bias.
 As such, we can control the bias-variance tradeoff by increasing the complexity
-as more data becomes available.
+of the estimator as more data becomes available.
 
 Let $\widehat \mu(x)$ be an estimator of the regression function
 $\mu(x) = \E[y_i \mid x_i = x]$.
-Then the bias and variance of $\widehat \mu(x)$ are defined as
+Then the bias and variance of $\widehat \mu(x)$ are
 
 $$
 B(x) = \E\big[ \widehat \mu(x) \big] - \mu(x), \qquad
@@ -60,20 +61,17 @@ $$
 = B(x)^2 + V(x).
 $$
 
-This property is know as the *bias-variance decomposition*.
+This property is known as the *bias-variance decomposition*.
 Since we want an estimator which performs well over all points $x$,
-it is common to define the following integrated versions of the bias and variance.
+it is common to define the following integrated versions of the bias and variance:
 
 $$
 B^2 = \int_\R B(x)^2 \diff{x}, \qquad
 V = \int_\R V(x) \diff{x}.
 $$
 
-We can then aim to minimize the integrated MSE (IMSE)
-
-$$
-\IMSE = B^2 + V.
-$$
+We can then aim to minimize the integrated MSE given by
+$\IMSE = B^2 + V$.
 
 
 ### Theory of the Nadaraya--Watson estimator
@@ -124,7 +122,7 @@ so we say the model is homoscedastic)
 and $R_K = \int_\R K(x)^2 \diff{x}$
 then the variance can be approximated using
 $\Var[X/Y] \approx
-(\Var[X]\E[Y]^2 + \Var[Y]\E[X]^2 - 2\Cov[X,Y]\E[X]\E[Y])/\E[Y]^4$:
+(\Var[X]\E[Y]^2 + \Var[Y]\E[X]^2 - 2\Cov[X,Y]\E[X]\E[Y])/\E[Y]^4$.
 
 $$
 \begin{align*}
@@ -206,7 +204,7 @@ the bandwidth.
 
 A natural first attempt at practical bandwidth selection
 is to minimize some estimate of the IMSE.
-We can replace the true IMSE
+We could replace the true IMSE
 
 $$
 \IMSE(h)
@@ -215,21 +213,30 @@ $$
 \diff{x}
 $$
 
-with a (reweighted) sample version
+with a sample version
+known as the empirical IMSE,
 
 $$
 \widehat\IMSE(h)
 = \frac{1}{n} \sum_{i=1}^n
-\big(y_i - \widehat \mu(x_i) \big)^2
+\big(y_i - \widehat \mu(x_i) \big)^2,
 $$
 
 and minimize this instead.
-However this does not work,
-since as $h \to 0$,
-we have
-$\widehat \mu(x_i) \to y_i$
-and so the MSE converges to zero!
-To see this, note that whenever $h$ is less than
+However this does not work, as evidenced in Figure 1,
+since minimizing the empirical IMSE
+will always choose a bandwidth extremely close to zero!
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/min_mse_bandwidths.png">
+<figcaption>
+  Fig. 1: Empirical IMSE decreases to zero as the bandwidth decreases to zero.
+</figcaption>
+</figure>
+
+To see why this is,
+note that whenever $h$ is less than
 the smallest gap between any two points $x_i$,
 then the kernel centered at $x_i$ cannot
 "see" any other points, so
@@ -238,31 +245,24 @@ $$
 \widehat \mu(x_i) =
 \frac{y_i K\left(\frac{x_i-x_i}{h}\right)}
 {K\left(\frac{x_i-x_i}{h}\right)}
-= y_i.
+= y_i
 $$
 
-Therefore this naive method will always select $h \approx 0$.
-This phenomenon is illustrated in TODO
+and thus $\widehat\IMSE(h) = 0$.
+This phenomenon is illustrated in Figure 2,
+which shows how a small bandwidth causes severe overfitting.
 
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/min_mse_data.png">
 <figcaption>
-  Fig. 1: With a small enough bandwidth, the data is interpolated.
-</figcaption>
-</figure>
-
-<figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/min_mse_bandwidths.png">
-<figcaption>
-  Fig. 2: MSE decreases to zero as the bandwidth decreases to zero.
+  Fig. 2: With a small enough bandwidth, the data is interpolated.
 </figcaption>
 </figure>
 
 
-TODO Does not work -- overfit
+
 
 
 ### Leave-one-out cross-validation
@@ -287,43 +287,44 @@ and evaluated on different samples,
 so is unable to "memorize" the data set.
 This improves its generalization ability
 and avoids selecting bandwidths which are too small.
-Figure TODO shows how LOO-CV is minimized at a particular bandwidth value,
-and Figure TODO demonstrates this to be a reasonable choice.
+Figure 3 shows how LOO-CV is minimized at a particular bandwidth value,
+and Figure 4 demonstrates this to be a reasonable choice.
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_bandwidths.png">
+<figcaption>
+  Fig. 3: LOO-CV achieves a global minimum.
+</figcaption>
+</figure>
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_data.png">
+<figcaption>
+  Fig. 4: LOO-CV is able to select a sensible bandwidth.
+</figcaption>
+</figure>
 
 However LOO-CV requires fitting $n$ different models
 for each candidate bandwidth $h$.
 This can make it expensive to compute in practice,
 and its batch analogue, called $k$-fold cross-validation,
 is often preferred TODO(reference this).
-Generalized cross-validation offers an approximation
-for the LOO-CV error which even faster to compute.
+Another option is generalized cross-validation,
+which approximates the LOO-CV error and is even faster to compute.
 TODO(cite)
 
 
 
 
-TODO swap these figures and in previous section?
 
-<figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_data.png">
-<figcaption>
-  Fig. 3: LOO-CV is able to select a sensible bandwidth.
-</figcaption>
-</figure>
-
-<figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_bandwidths.png">
-<figcaption>
-  Fig. 4: LOO-CV achieves a global minimum.
-</figcaption>
-</figure>
 
 
 
 ## Concluding remarks
 
+TODO edit from here
 TODO Sometimes there is no global optimal bandwidth
 TODO Solutions to this?
 
