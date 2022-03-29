@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Local Polynomial Regression 2: Bandwidth Selection"
-date:   2021-09-18
+date:   2022-03-29
 ---
 
 This post, the second in a series on local polynomial regression,
@@ -310,10 +310,9 @@ However LOO-CV requires fitting $n$ different models
 for each candidate bandwidth $h$.
 This can make it expensive to compute in practice,
 and its batch analogue, called $k$-fold cross-validation,
-is often preferred TODO(reference this).
+is often preferred.
 Another option is generalized cross-validation,
 which approximates the LOO-CV error and is even faster to compute.
-TODO(cite)
 
 
 
@@ -324,14 +323,10 @@ TODO(cite)
 
 ## Concluding remarks
 
-TODO edit from here
-TODO Sometimes there is no global optimal bandwidth
-TODO Solutions to this?
-
 In this post we saw how a bandwidth can be selected using leave-one-out cross-validation.
 However it is worth pointing out that sometimes a good bandwidth does not even exist,
 such as when the regression function $\mu(x)$ is much "smoother" at some points than at others,
-as seen in Figure TODO.
+as seen in Figure 5.
 Since the approximate bias term we derived depends on the curvature $\mu^{\prime\prime}(x)$,
 a larger bandwidth is preferred for smoother parts of the regression function.
 
@@ -348,7 +343,17 @@ src="/assets/graphics/posts/images_local-polynomial-regression/topologist_sine_c
 ## Next time
 
 In the next post we will return to the problem of boundary bias
-and show how local polynomial regression can help to alleviate it.
+and show how local polynomial regression
+(in particular local linear regression)
+can help to alleviate it.
 
 
 ## References
+
+* The University of Oxford's course in
+Applied and Computational Statistics,
+taught by
+[Geoff Nicholls](http://www.stats.ox.ac.uk/%7Enicholls/) in 2018
+
+* [An Introduction to Statistical Learning](https://trevorhastie.github.io/ISLR/)
+by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani, 2013
