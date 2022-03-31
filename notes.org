@@ -7,14 +7,14 @@
 **** DONE Kernels
 **** DONE The Nadaraya Watson estimator
 **** DONE Leave open: bandwidth selection, boundary bias
-*** TODO Part 2: Bandwidth selection
-**** TODO Theory
-***** TODO Bias/variance
-**** TODO Practice
-***** TODO IMSE doesnt work
-***** TODO LOO-CV
-***** TODO GCV
-***** TODO Lack of global bandwidth optimality
+*** DONE Part 2: Bandwidth selection
+**** DONE Theory
+***** DONE Bias/variance
+**** DONE Practice
+***** DONE IMSE doesnt work
+***** DONE LOO-CV
+***** DONE GCV
+***** DONE Lack of global bandwidth optimality
 *** Part 3: Local polynomial regression
 **** Revisit boundary bias
 **** Recap of linear regression
@@ -23,12 +23,13 @@
 **** The local polynomial estimator
 *** Part 4: Application
 **** Global warming data?
-** spline regression
-** gaussian process regression
-** bayesian optimization
-** hitting times
-** intro to probability
-** ill-posed DEs and non-deterministic mechanics
-** dragon curves
+** Spline regression
+** Gaussian process regression
+** Bayesian optimization
+** Hitting times
+** Intro to probability
+** Ill-posed DEs and non-deterministic mechanics
+** Dragon curves
 ** SLLN, CLT and LIL
+** Tail bounds
 * Other
