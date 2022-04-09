@@ -12,7 +12,33 @@ style="width: 160px; border: 2px solid #111111"
 src="/assets/graphics/general/profile_boston_small.png">
 </a>
 
+<br>
+
+<a href="https://www.princeton.edu">
+<img
+style="width: 160px; border: 2px solid #111111; margin-top:22px;"
+src="/assets/graphics/general/princeton_logo.png">
+</a>
+
+<br>
+
+<a href="https://www.ox.ac.uk">
+<img
+style="width: 160px; border: 2px solid #111111; margin-top: 22px;"
+src="/assets/graphics/general/oxford_logo.png">
+</a>
+
+<br>
+
+<a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf">
+<img
+style="width: 160px; border: 2px solid #111111; margin-top: 22px;"
+src="https://github.com/WGUNDERWOOD/wgu-cv/raw/master/thumbnail.png">
+</a>
+
 </div>
+
+
 
 
 
@@ -31,24 +57,6 @@ to develop provably robust inference procedures
 for nonparametric network estimators.
 
 
-
-<div class="frame">
-
-<a href="https://www.princeton.edu">
-<img
-style="width: 160px; border: 2px solid #333333"
-src="/assets/graphics/general/princeton_logo.png">
-</a>
-
-<br>
-
-<a href="https://www.ox.ac.uk">
-<img
-style="width: 160px; border: 2px solid #333333; margin-top: 15px;"
-src="/assets/graphics/general/oxford_logo.png">
-</a>
-
-</div>
 
 
 
@@ -84,15 +92,17 @@ Contact me by email at
 with any questions!
 Other contact details are available
 on my
-<a href="/contact/">contact page</a>.
+<a href="/contact/">contact page</a>,
+and you can
+<a href="https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.pdf">download my CV here</a>.
 
 
 
 
-<h2> CV </h2>
 
-Download my
-<a href="https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.pdf">CV</a>.
+
+
+
 
 
 
