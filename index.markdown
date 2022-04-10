@@ -8,35 +8,14 @@ description: Welcome to my homepage.
 
 <a href="/">
 <img
-style="width: 160px; border: 2px solid #111111"
+style="width: 160px; border: 2px solid #111111; margin-top: 0px"
 src="/assets/graphics/general/profile_boston_small.png">
 </a>
 
-<br>
-
-<a href="https://www.princeton.edu">
-<img
-style="width: 160px; border: 2px solid #111111; margin-top:22px;"
-src="/assets/graphics/general/princeton_logo.png">
-</a>
-
-<br>
-
-<a href="https://www.ox.ac.uk">
-<img
-style="width: 160px; border: 2px solid #111111; margin-top: 22px;"
-src="/assets/graphics/general/oxford_logo.png">
-</a>
-
-<br>
-
-<a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf">
-<img
-style="width: 160px; border: 2px solid #111111; margin-top: 22px;"
-src="https://github.com/WGUNDERWOOD/wgu-cv/raw/master/thumbnail.png">
-</a>
-
 </div>
+
+
+
 
 
 
@@ -46,7 +25,7 @@ src="https://github.com/WGUNDERWOOD/wgu-cv/raw/master/thumbnail.png">
 
 I am a PhD candidate in the
 <a href="https://orfe.princeton.edu/">Operations Research & Financial Engineering</a>
-department at
+(ORFE) department at
 <a href="https://www.princeton.edu/">Princeton University</a>,
 where my research interests include mathematical statistics
 and probability theory.
@@ -57,12 +36,43 @@ to develop provably robust inference procedures
 for nonparametric network estimators.
 
 
+<div class="frame">
+
+<a href="https://www.princeton.edu">
+<img
+style="width: 160px; border: 2px solid #111111; margin-top: 0px;"
+src="/assets/graphics/general/princeton_logo.png">
+</a>
+
+<br>
+
+<a href="https://orfe.princeton.edu/">
+<img
+style="width: 160px; border: 2px solid #111111; margin-top: 5px;"
+src="/assets/graphics/general/orfe_logo_small.png">
+</a>
+
+<br>
+
+<a href="https://www.ox.ac.uk">
+<img
+style="width: 160px; border: 2px solid #111111; margin-top: 5px;"
+src="/assets/graphics/general/oxford_logo.png">
+</a>
+
+</div>
+
+
+
+
 
 
 
 <h2> Biography </h2>
 
-Before moving to Princeton,
+I received an MA degree in ORFE
+from Princeton in 2021.
+Before moving to New Jersey,
 I obtained my MMath in Mathematics & Statistics from the
 <a href="https://www.stats.ox.ac.uk/">Department of Statistics</a>
 at the
@@ -70,12 +80,9 @@ at the
 I was supervised there by
 <a href="http://www.stats.ox.ac.uk/~cucuring/">Mihai Cucuringu</a>,
 and wrote my master's dissertation on
-<em>Motif-Based Spectral Clustering of
-Weighted Directed Networks</em>.
+[Motif-Based Spectral Clustering of Weighted Directed Networks](https://github.com/WGUNDERWOOD/masters-dissertation/blob/master/writeup/main/main.pdf).
 I am an alumnus of
 <a href="https://www.sjc.ox.ac.uk/">St John’s College, Oxford</a>.
-
-
 
 
 
