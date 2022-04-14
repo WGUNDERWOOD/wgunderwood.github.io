@@ -23,7 +23,6 @@
 **** The local polynomial estimator
 *** Part 4: Application
 **** Global warming data?
-** Tail bounds
 ** Spline regression
 ** Gaussian process regression
 ** Bayesian optimization
@@ -32,4 +31,5 @@
 ** Ill-posed DEs and non-deterministic mechanics
 ** Dragon curves
 ** SLLN, CLT and LIL
+** Tail bounds
 * Other
