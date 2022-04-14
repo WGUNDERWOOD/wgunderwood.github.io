@@ -16,8 +16,8 @@ NJ 08544 <br>
 USA
 
 ### Other links
-- [BibTeX bibliography](https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.bib)
-- [CV](https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.pdf)
+- [BibTeX bibliography](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.bib)
+- [CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf)
 - [GitHub](https://github.com/WGUNDERWOOD)
 - [Google Scholar](https://scholar.google.co.uk/citations?user=4rtNN4wAAAAJ&hl=en)
 - [Kaggle](https://www.kaggle.com/wgunderwood)

@@ -101,7 +101,7 @@ Other contact details are available
 on my
 <a href="/contact/">contact page</a>,
 and you can
-<a href="https://github.com/WGUNDERWOOD/wgu-cv/raw/master/WGUnderwood.pdf">download my CV here</a>.
+<a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf">download my CV here</a>.
 
 
 
