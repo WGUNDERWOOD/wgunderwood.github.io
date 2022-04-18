@@ -8,7 +8,7 @@ Local polynomial regression is an important statistical tool
 for non-parametric regression.
 This post, the first in a short series,
 covers the general problem setup
-and introduces the Nadaraya-Watson estimator.
+and introduces the Nadaraya--Watson estimator.
 
 
 {% include mathjax.html %}
@@ -257,9 +257,9 @@ If $h$ is very small then only data points which are very close to the evaluatio
 point are used.
 If $h$ is larger then further-away points are used too.
 
-### The Nadaraya-Watson estimator
+### The Nadaraya--Watson estimator
 
-The simplest local regression estimator is the Nadaraya-Watson estimator,
+The simplest local regression estimator is the Nadaraya--Watson estimator,
 which works as follows.
 First pick a kernel and a bandwidth.
 For each evaluation point $x$,
@@ -289,7 +289,7 @@ though it is necessary to choose an appropriate bandwidth $h$.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/nadaraya_fit_general_data.png">
 <figcaption>
-  Fig. 8: The Nadaraya-Watson estimator adapts to a broad class of functions.
+  Fig. 8: The Nadaraya--Watson estimator adapts to a broad class of functions.
 </figcaption>
 </figure>
 
@@ -301,7 +301,7 @@ Secondly, note how $\widehat \mu$
 overestimates $\mu$ at the left boundary and
 underestimates $\mu$ at the right boundary.
 These illustrate problems relating to the *bias*
-of the Nadaraya-Watson estimator,
+of the Nadaraya--Watson estimator,
 which will be investigated in later posts.
 
 ## Next time
