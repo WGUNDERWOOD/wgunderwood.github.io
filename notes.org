@@ -32,4 +32,5 @@
 ** Dragon curves
 ** SLLN, CLT and LIL
 ** Tail bounds
+** Dots and boxes
 * Other
