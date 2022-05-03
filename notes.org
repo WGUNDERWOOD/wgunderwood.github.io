@@ -18,7 +18,7 @@
 *** Part 3: Local polynomial regression
 **** Revisit boundary bias
 **** Recap of linear regression
-**** The local linear smoother
+**** Local linear smoother
 **** Demonstrate second-order bias
 **** The local polynomial estimator
 *** Part 4: Application
