@@ -1,6 +1,6 @@
 ---
 permalink: /hm
-layout: error
+layout: hm
 ---
 
 <style type="text/css" media="screen">
@@ -19,9 +19,11 @@ layout: error
 
 <div class="container">
   <h1>OOPS</h1>
-  <img 
+  <img
   style="width: 500px;"
   src="assets/graphics/twirl.gif">
+</div>
 
+<div class="container">
   <h2><strong> looks like you got lost!</strong></h2>
 </div>
