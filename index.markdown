@@ -78,7 +78,7 @@ at the
 I was supervised there by
 <a href="http://www.stats.ox.ac.uk/~cucuring/">Mihai Cucuringu</a>,
 and wrote my master's dissertation on
-[Motif-Based Spectral Clustering of Weighted Directed Networks](https://github.com/WGUNDERWOOD/masters-dissertation/blob/master/writeup/main/main.pdf).
+[Motif-Based Spectral Clustering of Weighted Directed Networks](https://github.com/WGUNDERWOOD/masters-dissertation/blob/main/writeup/main/main.pdf).
 I am an alumnus of
 <a href="https://www.sjc.ox.ac.uk/">St John’s College, Oxford</a>.
 
@@ -99,7 +99,7 @@ Other contact details are available
 on my
 <a href="/contact/">contact page</a>,
 and you can
-<a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/master/WGUnderwood.pdf">download my CV here</a>.
+<a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.pdf">download my CV here</a>.
 
 
 

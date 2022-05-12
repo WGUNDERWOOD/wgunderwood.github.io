@@ -58,10 +58,10 @@ install.packages("motifcluster")
 ### Documentation
 
 The package's manual is in the
-[R/doc](https://github.com/WGUNDERWOOD/motifcluster/tree/master/R/doc)
+[R/doc](https://github.com/WGUNDERWOOD/motifcluster/tree/main/R/doc)
 directory on GitHub.
 An instructional vignette is in the
-[R/vignettes](https://github.com/WGUNDERWOOD/motifcluster/tree/master/R/vignettes)
+[R/vignettes](https://github.com/WGUNDERWOOD/motifcluster/tree/main/R/vignettes)
 directory on GitHub.
 
 
