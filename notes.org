@@ -33,4 +33,5 @@
 ** SLLN, CLT and LIL
 ** Tail bounds
 ** Dots and boxes
+** PDF renamer
 * Other
