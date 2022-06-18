@@ -82,6 +82,14 @@ and wrote my master's dissertation on
 I am an alumnus of
 <a href="https://www.sjc.ox.ac.uk/">St John’s College, Oxford</a>.
 
+In my spare time I enjoy
+choral singing,
+classical piano,
+chess and programming,
+as well as
+hiking,
+skiing
+and playing squash.
 
 
 
