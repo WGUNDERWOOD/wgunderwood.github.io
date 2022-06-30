@@ -35,4 +35,5 @@
 ** Dots and boxes
 ** PDF renamer
 ** Mondrian forests
+** Bracketing constant
 * Other
