@@ -58,17 +58,33 @@ Working paper
 
 ## Presentations
 
+- **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
+[M. D. Cattaneo][mdcattaneo],
+[Y. Feng][yfeng]
+and [W. G. Underwood][wgunderwood] <br>
+*Two Sigma PhD Research Symposium* <br>
+June 2022
+
+
+- **Uniform Approximation and Inference with Dyadic Kernel Density Estimation** <br>
+[M. D. Cattaneo][mdcattaneo],
+[Y. Feng][yfeng]
+and [W. G. Underwood][wgunderwood] <br>
+*Princeton Statistics Laboratory, Princeton University* <br>
+September 2021
+
+
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood]
 and [M. Cucuringu][mcucuringu] <br>
 *[The 8th International Conference on Complex Networks and their Applications](https://www.2019.complexnetworks.org/)* <br>
-Presented by [M. Cucuringu](mcucuringu), abstract available <br>
+Presented by [M. Cucuringu](mcucuringu) <br>
 December 2019
 
 
-- **The Borel-Kolmogorov Paradox** <br>
+- **The Borel--Kolmogorov Paradox** <br>
 [W. G. Underwood][wgunderwood] <br>
-St John's College Mathematics Seminar <br>
+*St John's College Mathematics Seminar* <br>
 March 2017
 
 
