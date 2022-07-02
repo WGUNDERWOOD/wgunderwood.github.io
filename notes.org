@@ -37,4 +37,3 @@
 ** Mondrian forests
 ** Bracketing constant
 * Other
-** TODO Check publications matches CV

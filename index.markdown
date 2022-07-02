@@ -136,6 +136,22 @@ for these classes at Princeton University:
 Statistical Theory and Methods,
 taught by
 <a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
+Fall 2022
+</li>
+
+<li>
+<strong> ORF 526: </strong>
+Probability Theory,
+taught by
+<a href="http://mykhaylo.princeton.edu/">Mykhaylo Shkolnikov</a>,
+Fall 2022
+</li>
+
+<li>
+<strong> ORF 524: </strong>
+Statistical Theory and Methods,
+taught by
+<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
 Fall 2021
 </li>
 
