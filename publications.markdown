@@ -78,7 +78,7 @@ September 2021
 [W. G. Underwood][wgunderwood]
 and [M. Cucuringu][mcucuringu] <br>
 *[The 8th International Conference on Complex Networks and their Applications](https://www.2019.complexnetworks.org/)* <br>
-Presented by [M. Cucuringu](mcucuringu) <br>
+Presented by [M. Cucuringu][mcucuringu] <br>
 December 2019
 
 

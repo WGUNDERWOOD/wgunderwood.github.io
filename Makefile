@@ -12,3 +12,6 @@ stop:
 
 view:
 	@firefox --new-window "localhost:4000"
+
+linkcheck:
+	@linkchecker "https://wgunderwood.github.io/"
