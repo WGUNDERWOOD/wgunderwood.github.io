@@ -43,7 +43,7 @@ below the true function at the left edge of the plot.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/boundary_bias.png">
 <figcaption>
-  Fig. 1: TODO.
+  Fig. 1: The Nadaraya--Watson estimator exhibits boundary bias.
 </figcaption>
 </figure>
 
@@ -67,7 +67,6 @@ of the regression function at the right boundary.
 
 
 ## Local linear smoother
-TODO
 
 A popular method to fix the issue of boundary bias is to use
 a *local linear smoother*.
@@ -97,8 +96,15 @@ $$
 \big(P(x)^\T W(x) P(x)\big)^{-1} P(x)^\T W(x) Y
 $$
 
-where $e_1 = (1, 0, \ldots, 0) \in \R$ TODO,
-where $P(x) \in \R$ with $P(x)_{}$ TODO,
+where $e_1 = (1, 0)^\T \in \R^2$
+is a standard basis vector,
+$P(x) \in \R^{n \times 2}$
+with
+$P(x)\_{i1} = 1$
+and $P(x)\_{i2} = \frac{X\_i - x}{h}$,
+and $W(x) \in \R^{n \times n}$
+is diagonal with
+$W(x)\_{ii} = \frac{1}{h} K\left(\frac{X_i - x}{h}\right)$.
 
 
 
@@ -107,10 +113,22 @@ where $P(x) \in \R$ with $P(x)_{}$ TODO,
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/boundary_bias_fixed.png">
 <figcaption>
-  Fig. 2: TODO boundary bias fixed with loc lin
+  Fig. 2: The local linear smoother has much less boundary bias.
 </figcaption>
 </figure>
 
+
+As seen in Figure 2, the local linear smoother is able to
+reproduce the linear trend at boundaries and thus
+account for boundary bias much better than the
+Nadaraya--Watson estimator.
+
 ## The local polynomial estimator
+
+A subtle bias problem still remains with the estimator
+depicted in Figure 2.
+TODO second order
+
+TODO
 Generalization
 Give formula for local polynomial smoother
