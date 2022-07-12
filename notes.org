@@ -15,12 +15,12 @@
 ***** DONE LOO-CV
 ***** DONE GCV
 ***** DONE Lack of global bandwidth optimality
-*** Part 3: Local polynomial regression
-**** Revisit boundary bias
-**** Recap of linear regression
-**** Local linear smoother
-**** Demonstrate second-order bias
-**** The local polynomial estimator
+*** DONE Part 3: Local polynomial regression
+**** DONE Revisit boundary bias
+**** DONE Recap of linear regression
+**** DONE Local linear smoother
+**** DONE Demonstrate second-order bias
+**** DONE The local polynomial estimator
 *** Part 4: Application
 **** Global warming data?
 ** Spline regression
