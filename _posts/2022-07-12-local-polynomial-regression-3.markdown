@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Local Polynomial Regression 3: Correcting Bias"
-date:   2022-04-14
+date:   2022-07-12
 ---
 
 This post is the third in a series on local polynomial regression,
@@ -12,7 +12,7 @@ Towards the end of
 we briefly noted some potential problems
 regarding the bias of the Nadaraya--Watson estimator.
 In this post we will finally introduce the local polynomial estimator
-and show how it can alleviate these problems.
+and show how it can alleviate these issues.
 As in
 [part two](/2022/03/29/local-polynomial-regression-2.html)
 we focus on the Epanechnikov kernel,
@@ -38,8 +38,8 @@ to better display the effects of bias.
 ## Boundary bias
 
 The Nadaraya--Watson is susceptible to *boundary bias*,
-a phenomenon where an estimator consistently over or underestimates
-the true regression function at the edge of the data.
+where an estimator consistently over or underestimates
+the true regression function at the edge of the support of the data.
 Note how in Figure 1 the estimated function lies significantly
 below the true function at the left edge of the plot.
 
@@ -48,7 +48,7 @@ below the true function at the left edge of the plot.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/boundary_bias.png">
 <figcaption>
-  Fig. 1: The Nadaraya--Watson estimator exhibits boundary bias.
+  Fig. 1: The Nadaraya-Watson estimator exhibits boundary bias.
 </figcaption>
 </figure>
 
@@ -63,12 +63,12 @@ on average lower than would be expected if the data were to continue
 beyond the edge of the plot.
 As a result, the estimator is downward biased at the left edge.
 
-This effect worsens with the bandwidth since a wider kernel
-accesses data which is more biased.
-Note that this phenomenon also appears at the right edge of
+This effect worsens as the bandwidth increases since a wider kernel
+uses data further from the point of interest.
+Note that this phenomenon also appears at the right boundary of
 Figure 1, but to a lesser extent,
 due to the relatively small positive gradient
-of the regression function at the right boundary.
+of the regression function at the right edge.
 
 
 ## Local linear smoother
@@ -76,7 +76,7 @@ of the regression function at the right boundary.
 A popular method to fix the issue of boundary bias is to use
 a *local linear smoother*.
 Recall that the Nadaraya--Watson estimator is a local average,
-with locality measured by the kernel function.
+with locality measured by the kernel function:
 
 $$
 \widehat \mu(x) =
@@ -92,7 +92,7 @@ $$
 
 Suppose that at each evaluation point we fit a
 local linear model rather than a simple local average.
-This is equivalent to weighted least-squares regression
+This is equivalent to weighted least-squares regression,
 with the weights given by the kernel,
 and yields the following formulation:
 
@@ -125,14 +125,14 @@ src="/assets/graphics/posts/images_local-polynomial-regression/boundary_bias_fix
 
 As seen in Figure 2, the local linear smoother is able to
 reproduce the linear trend at boundaries and thus
-account for boundary bias much better than the
+accounts for boundary bias much better than the
 Nadaraya--Watson estimator.
 
 ## The local polynomial estimator
 
 A subtle bias problem still remains with the estimator
 depicted in Figure 2.
-Note how in the center of the plot,
+Note how in the center of the plot
 the estimator is significantly above the regression function.
 This is because we used a linear (first-order) smoother
 which is unable to take into account the second-order curvature of
@@ -162,7 +162,7 @@ $W(x)\_{ii} = \frac{1}{h} K\left(\frac{X_i - x}{h}\right)$.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/second_order_bias_fixed.png">
 <figcaption>
-  Fig. 3: TODO
+  Fig. 3: The local quadratic smoother removes second-order bias.
 </figcaption>
 </figure>
 
@@ -176,15 +176,16 @@ $p=1$ (Nadaraya--Watson)
 or $p=2$ (local linear smoother)
 to avoid overfitting.
 
-The bandwidth can be selected by leave-one-out cross-validation (LOO-CV),
-presented in
+The bandwidth for a local polynomial estimator
+can be selected by leave-one-out cross-validation (LOO-CV),
+as was presented in
 [part two](/2022/03/29/local-polynomial-regression-2.html).
 
 
 ## Next time
 
-Next time we will apply the concepts discussed over the last three
-posts to some real-world data and discuss the conclusions.
+In the next and final post we will apply the concepts discussed during the previous three
+parts to some real-world data and discuss the conclusions.
 
 ## References
 
