@@ -22,6 +22,7 @@ and show how it can alleviate these problems.
   $\newcommand \R {\mathbb{R}}$
   $\newcommand \Var {\mathrm{Var}}$
   $\newcommand \Cov {\mathrm{Cov}}$
+  $\newcommand \T {\mathsf{T}}$
   $\newcommand{\diff}[1]{\,\mathrm{d}#1}$
   $\DeclareMathOperator{\MSE}{MSE}$
   $\DeclareMathOperator{\IMSE}{IMSE}$
@@ -67,15 +68,46 @@ of the regression function at the right boundary.
 
 ## Local linear smoother
 TODO
-Recap of linear regression with formula
-Give formula for local linear smoother
-DONE Plot: boundary bias fixed with linear smoother
+
+A popular method to fix the issue of boundary bias is to use
+a *local linear smoother*.
+Recall that the Nadaraya--Watson estimator is a local average,
+with locality measured by the kernel function.
+
+$$
+\widehat \mu(x) =
+\frac{
+  \sum_{i=1}^n
+  y_i K\left(\frac{x_i-x}{h}\right)
+}
+{
+  \sum_{i=1}^n
+  K\left(\frac{x_i-x}{h}\right)
+}.
+$$
+
+Suppose that at each evaluation point we fit a
+local linear model rather than a simple local average.
+This is equivalent to weighted least-squares regression
+with the weights given by the kernel,
+and yields the following formulation:
+
+$$
+\widehat \mu(x) = e_1^\T
+\big(P(x)^\T W(x) P(x)\big)^{-1} P(x)^\T W(x) Y
+$$
+
+where $e_1 = (1, 0, \ldots, 0) \in \R$ TODO,
+where $P(x) \in \R$ with $P(x)_{}$ TODO,
+
+
+
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/boundary_bias_fixed.png">
 <figcaption>
-  Fig. 2: TODO.
+  Fig. 2: TODO boundary bias fixed with loc lin
 </figcaption>
 </figure>
 
