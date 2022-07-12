@@ -13,6 +13,12 @@ we briefly noted some potential problems
 regarding the bias of the Nadaraya--Watson estimator.
 In this post we will finally introduce the local polynomial estimator
 and show how it can alleviate these problems.
+As in
+[part two](/2022/03/29/local-polynomial-regression-2.html)
+we focus on the Epanechnikov kernel,
+and in this post the plots will be significantly oversmoothed
+(bandwidth too large)
+to better display the effects of bias.
 
 {% include mathjax.html %}
 
@@ -36,7 +42,6 @@ a phenomenon where an estimator consistently over or underestimates
 the true regression function at the edge of the data.
 Note how in Figure 1 the estimated function lies significantly
 below the true function at the left edge of the plot.
-
 
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
@@ -127,8 +132,67 @@ Nadaraya--Watson estimator.
 
 A subtle bias problem still remains with the estimator
 depicted in Figure 2.
-TODO second order
+Note how in the center of the plot,
+the estimator is significantly above the regression function.
+This is because we used a linear (first-order) smoother
+which is unable to take into account the second-order curvature of
+the regression function.
 
-TODO
-Generalization
-Give formula for local polynomial smoother
+We could address this issue by using a local quadratic smoother
+or even a higher-order polynonial.
+This leads to the *degree-p local polynomial estimator*,
+defined analogously to the local linear smoother as
+
+$$
+\widehat \mu(x) = e_1^\T
+\big(P(x)^\T W(x) P(x)\big)^{-1} P(x)^\T W(x) Y
+$$
+
+where $e_p = (1, 0, \ldots, 0)^\T \in \R^{p+1}$
+is a basis vector,
+$P(x) \in \R^{n \times (p+1)}$
+with
+$P(x)\_{i1} = 1$
+and $P(x)\_{ij} = \left(\frac{X\_i - x}{h}\right)^{j-1}$,
+and $W(x) \in \R^{n \times n}$
+is diagonal with
+$W(x)\_{ii} = \frac{1}{h} K\left(\frac{X_i - x}{h}\right)$.
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 500px; margin-left: auto; margin-right: auto;"
+src="/assets/graphics/posts/images_local-polynomial-regression/second_order_bias_fixed.png">
+<figcaption>
+  Fig. 3: TODO
+</figcaption>
+</figure>
+
+Figure 3 shows that indeed a second-order (quadratic) local polynomial
+estimator is able to remove the systematic underestimation due to
+curvature, but note how the fit is less smooth.
+This is a general principle: bias reduction comes at the expense
+of increased variance.
+Therefore in practice the degree is usually taken as
+$p=1$ (Nadaraya--Watson)
+or $p=2$ (local linear smoother)
+to avoid overfitting.
+
+The bandwidth can be selected by leave-one-out cross-validation (LOO-CV),
+presented in
+[part two](/2022/03/29/local-polynomial-regression-2.html).
+
+
+## Next time
+
+Next time we will apply the concepts discussed over the last three
+posts to some real-world data and discuss the conclusions.
+
+## References
+
+
+* The University of Oxford's course in
+Applied and Computational Statistics,
+taught by
+[Geoff Nicholls](http://www.stats.ox.ac.uk/%7Enicholls/) in 2018
+
+* The [Wikipedia article](https://en.wikipedia.org/wiki/Local_regression)
+on local regression
