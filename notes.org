@@ -22,7 +22,7 @@
 **** DONE Demonstrate second-order bias
 **** DONE The local polynomial estimator
 *** Part 4: Application
-**** Global warming data?
+**** Global warming data
 ** Spline regression
 ** Gaussian process regression
 ** Bayesian optimization
@@ -33,7 +33,6 @@
 ** SLLN, CLT and LIL
 ** Tail bounds
 ** Dots and boxes
-** PDF renamer
 ** Mondrian forests
 ** Bracketing constant
 * Other
