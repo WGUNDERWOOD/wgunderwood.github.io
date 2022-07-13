@@ -23,16 +23,16 @@
 **** DONE The local polynomial estimator
 *** Part 4: Application
 **** Global warming data
-** Spline regression
-** Gaussian process regression
-** Bayesian optimization
+** SLLN, CLT and LIL
 ** Hitting times
 ** Intro to probability
 ** Ill-posed DEs and non-deterministic mechanics
 ** Dragon curves
-** SLLN, CLT and LIL
 ** Tail bounds
 ** Dots and boxes
 ** Mondrian forests
 ** Bracketing constant
+** Gaussian process regression
+** Bayesian optimization
+** Spline regression
 * Other
