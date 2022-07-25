@@ -74,7 +74,8 @@ Before moving to New Jersey,
 I obtained my MMath in Mathematics & Statistics from the
 <a href="https://www.stats.ox.ac.uk/">Department of Statistics</a>
 at the
-<a href="http://www.ox.ac.uk/">University of Oxford</a>.
+<a href="http://www.ox.ac.uk/">University of Oxford</a>
+in 2019.
 I was supervised there by
 <a href="http://www.stats.ox.ac.uk/~cucuring/">Mihai Cucuringu</a>,
 and wrote my master's dissertation on
