@@ -21,11 +21,28 @@
 **** DONE Local linear smoother
 **** DONE Demonstrate second-order bias
 **** DONE The local polynomial estimator
-*** Part 4: Application
-**** Global warming data
-** SLLN, CLT and LIL
-** Hitting times
+*** TODO Part 4: Application
+**** TODO Global warming data
+** Probability limit theorems
+*** Part 1: LLN
+**** Markov's inequality
+**** Chebyshev's inequality
+**** Weak law, finite variance
+***** Proof by Chebyshev
+**** Borel-Cantelli lemma
+**** Strong law, finite 4th moment
+***** Proof by Borel-Cantelli
+**** Strong law, finite 1st moment
+***** Proof by backward martingales
+**** Simulation
+**** Remarks
+***** Settings other than iid
+***** Failure for Cauchy distribution
+***** Check Williams for more
+*** Part 2: CLT
+*** Part 3: LIL
 ** Intro to probability
+** Brownian hitting times
 ** Ill-posed DEs and non-deterministic mechanics
 ** Dragon curves
 ** Tail bounds
@@ -36,3 +53,6 @@
 ** Bayesian optimization
 ** Spline regression
 * Other
+** TODO Move code to website
+*** TODO Centralize plotting environments
+*** TODO Use the README to host links
