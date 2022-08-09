@@ -23,9 +23,11 @@
 **** DONE The local polynomial estimator
 *** TODO Part 4: Application
 **** TODO Global warming data
+** TODO Longer series on probability?
 ** Probability limit theorems
 *** Part 1: LLN
 **** Markov's inequality
+***** Diagram of first inequality in proof
 **** Chebyshev's inequality
 **** Weak law, finite variance
 ***** Proof by Chebyshev
