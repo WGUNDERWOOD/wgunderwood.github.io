@@ -360,8 +360,7 @@ go there more often than you.
 
 ## References
 
-* The University of Oxford's course in
-[Applied Probability](https://courses.maths.ox.ac.uk/node/42239/),
+* The University of Oxford's course in Applied Probability,
 taught by Paul Chleboun in 2017
 
 * A great post from

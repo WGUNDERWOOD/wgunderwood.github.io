@@ -287,5 +287,5 @@ although some bounds are available.
   is a online encyclopedia about large numbers, and contains bounds on the lengths
   of Goodstein sequences.
 - Goodstein's
-  [original paper](https://www.jstor.org/stable/2268019?seq=1#metadata_info_tab_contents)
+  [original paper](https://www.semanticscholar.org/paper/On-the-restricted-ordinal-theorem-Goodstein/4d96c256994f190617a34aac56c9b9bfb23f43d9)
   from 1944.

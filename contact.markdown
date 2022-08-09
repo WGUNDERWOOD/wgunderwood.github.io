@@ -24,4 +24,4 @@ USA
 - [Keybase](https://keybase.io/wgunderwood/chat)
 - [LinkedIn](https://www.linkedin.com/in/william--underwood/)
 - [Orcid](https://orcid.org/0000-0003-4604-1548)
-- [ResearchGate](https://www.researchgate.net/profile/William_Underwood6)
+- [ResearchGate](https://www.researchgate.net/profile/William-Underwood-4)
