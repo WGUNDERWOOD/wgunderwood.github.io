@@ -22,4 +22,4 @@ view:
 
 linkcheck:
 	@echo -e "\e[0;35m\033[1mChecking links...\e[0;30m\033[0m"
-	@linkchecker "https://wgunderwood.github.io/"
+	@linkchecker --check-extern "https://wgunderwood.github.io/"
