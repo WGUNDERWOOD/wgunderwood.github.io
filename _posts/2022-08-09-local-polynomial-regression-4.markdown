@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Local Polynomial Regression 4: Application to Global Warming"
-date:   2022-07-12
+date:   2022-08-09
 ---
 
 In this final post on local polynomial regression
 we apply the local polynomial estimator
-to NASA's global warming data.
+to global warming data from NASA.
 
 {% include mathjax.html %}
 
@@ -30,8 +30,8 @@ We use time-series data from
 The data set takes the form of yearly mesasurements
 of global temperature anomaly between 1880 and 2021,
 giving 142 samples in total.
-We set the independent variable as the measurement year
-and the dependent variable as the temperature anomaly,
+We set the independent variable $x_i$ as the measurement year
+and the dependent variable $y_i$ as the temperature anomaly,
 defined as the difference between the average yearly temperature
 and the average temperature between 1951 and 1980.
 
