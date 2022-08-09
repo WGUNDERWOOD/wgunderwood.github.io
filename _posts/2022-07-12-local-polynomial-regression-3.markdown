@@ -71,7 +71,7 @@ due to the relatively small positive gradient
 of the regression function at the right edge.
 
 
-## Local linear smoother
+## The local linear smoother
 
 A popular method to fix the issue of boundary bias is to use
 a *local linear smoother*.
@@ -172,8 +172,8 @@ curvature, but note how the fit is less smooth.
 This is a general principle: bias reduction comes at the expense
 of increased variance.
 Therefore in practice the degree is usually taken as
-$p=1$ (Nadaraya--Watson)
-or $p=2$ (local linear smoother)
+$p=0$ (Nadaraya--Watson)
+or $p=1$ (local linear smoother)
 to avoid overfitting.
 
 The bandwidth for a local polynomial estimator

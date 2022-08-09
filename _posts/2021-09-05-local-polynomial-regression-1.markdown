@@ -289,7 +289,7 @@ though it is necessary to choose an appropriate bandwidth $h$.
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
 src="/assets/graphics/posts/images_local-polynomial-regression/nadaraya_fit_general_data.png">
 <figcaption>
-  Fig. 8: The Nadaraya--Watson estimator adapts to a broad class of functions.
+  Fig. 8: The Nadaraya&ndash;Watson estimator adapts to a broad class of functions.
 </figcaption>
 </figure>
 
