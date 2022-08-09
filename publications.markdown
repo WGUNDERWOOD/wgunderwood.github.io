@@ -9,7 +9,7 @@ as in my
 [CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.pdf).
 Also available in
 [BibTeX](https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.bib).
-My software is available on
+My software is hosted on
 [GitHub](https://github.com/WGUNDERWOOD).
 
 
