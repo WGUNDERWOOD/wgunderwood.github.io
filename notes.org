@@ -15,25 +15,46 @@
 ***** DONE LOO-CV
 ***** DONE GCV
 ***** DONE Lack of global bandwidth optimality
-*** Part 3: Local polynomial regression
-**** Revisit boundary bias
-**** Recap of linear regression
-**** Local linear smoother
-**** Demonstrate second-order bias
-**** The local polynomial estimator
-*** Part 4: Application
-**** Global warming data?
-** Spline regression
-** Gaussian process regression
-** Bayesian optimization
-** Hitting times
+*** DONE Part 3: Local polynomial regression
+**** DONE Revisit boundary bias
+**** DONE Recap of linear regression
+**** DONE Local linear smoother
+**** DONE Demonstrate second-order bias
+**** DONE The local polynomial estimator
+*** TODO Part 4: Application
+**** TODO Global warming data
+** TODO Longer series on probability?
+** Probability limit theorems
+*** Part 1: LLN
+**** Markov's inequality
+***** Diagram of first inequality in proof
+**** Chebyshev's inequality
+**** Weak law, finite variance
+***** Proof by Chebyshev
+**** Borel-Cantelli lemma
+**** Strong law, finite 4th moment
+***** Proof by Borel-Cantelli
+**** Strong law, finite 1st moment
+***** Proof by backward martingales
+**** Simulation
+**** Remarks
+***** Settings other than iid
+***** Failure for Cauchy distribution
+***** Check Williams for more
+*** Part 2: CLT
+*** Part 3: LIL
 ** Intro to probability
+** Brownian hitting times
 ** Ill-posed DEs and non-deterministic mechanics
 ** Dragon curves
-** SLLN, CLT and LIL
 ** Tail bounds
 ** Dots and boxes
-** PDF renamer
 ** Mondrian forests
 ** Bracketing constant
+** Gaussian process regression
+** Bayesian optimization
+** Spline regression
 * Other
+** TODO Move code to website
+*** TODO Centralize plotting environments
+*** TODO Use the README to host links
