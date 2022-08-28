@@ -55,6 +55,6 @@
 ** Bayesian optimization
 ** Spline regression
 * Other
-** TODO Move code to website
-*** TODO Centralize plotting environments
-*** TODO Use the README to host links
+** TODO Add subdirs in _posts for each post or post series
+*** TODO Keep code and assets here for each post
+*** TODO Use the README to host links to the files on gh
