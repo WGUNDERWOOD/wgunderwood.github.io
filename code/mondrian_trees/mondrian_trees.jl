@@ -163,4 +163,8 @@ animate_mondrian(m)
 
 println()
 
-# TODO make sequence of svg files, then animate with JS
+# TODO make sequence of svg files, then animate with CSS
+# TODO output a single SVG sprite to assets/graphics
+# TODO output a CSS file to _posts/mondrian_trees
+# TODO output an HTML file for the image to _posts/mondrian_trees
+# TODO load all the above from the post .markdown file
