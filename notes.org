@@ -41,5 +41,5 @@
 ** Spline regression
 * Other
 ** TODO Add subdirs in _posts for each post or post series
-*** TODO Keep code and assets here for each post
+*** TODO Keep code here for each post
 *** TODO Use the README to host links to the files on gh
