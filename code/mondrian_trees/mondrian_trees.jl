@@ -1,13 +1,6 @@
 using PyPlot
 using Random
 using Distributions
-
-
-#rcParams = PyPlot.PyDict(PyPlot.matplotlib."rcParams")
-#rcParams["text.usetex"] = true
-#rcParams["mathtext.fontset"]  = "cm";
-#rcParams["font.family"]  = "serif";
-#rcParams["font.serif"]  = "cm";
 plt.ioff()
 
 
@@ -78,63 +71,96 @@ function is_in(x::Vector{Float64}, c::Cell)
 end
 
 
+function is_subcell(c1::Cell, c2::Cell)
+    return all(c2.a .<= c1.a) && all(c1.b .<= c2.b)
+end
+
+
+function is_leaf(c::Cell, m::Vector{Cell})
+    return all([!is_subcell(c1, c) for c1 in m if c1 !== c])
+end
+
+
+function get_leaves(m::Vector{Cell})
+    return [c for c in m if is_leaf(c, m)]
+end
+
+
 function plot_mondrian(m::Vector{Cell}, t::Float64, filename::String)
 
     @assert length(m[1].a) == 2
     fig, ax = plt.subplots(figsize=(4,4))
     m_sorted = sort(m, by=(c -> minimum(c.b .- c.a)))
-    #color_gradient = cgrad([:white, :lightblue])
+    leaves = get_leaves([c for c in m if c.t <= t])
 
-    for c in m_sorted
-        if c.t <= t
-            min_length = minimum(c.b .- c.a)
-            dim_c = sum(c.b .- c.a)
-            xs = [c.a[1], c.b[1], c.b[1], c.a[1], c.a[1]]
-            ys = [c.a[2], c.a[2], c.b[2], c.b[2], c.a[2]]
-            x = [0.5 for j in 1:d]
-            ax.fill(xs, ys, facecolor="gray")
-            ax.plot(xs, ys, color="black")
-
-        #plot!(xs, ys, linecolor="black", lw=min_length*0)
-        end
+    for c in leaves
+        min_length = minimum(c.b .- c.a)
+        dim_c = sum(c.b .- c.a)
+        xs = [c.a[1], c.b[1], c.b[1], c.a[1], c.a[1]]
+        ys = [c.a[2], c.a[2], c.b[2], c.b[2], c.a[2]]
+        x = [0.5 for j in 1:d]
+        ax.fill(xs, ys, facecolor="gray")
+        ax.plot(xs, ys, color="black")
     end
 
-    PyPlot.savefig(filename)
+    ax.set_xlim([0,1])
+    ax.set_ylim([0,1])
+    plt.axis("off")
+    plt.tight_layout(pad=0)
+    savefig(filename, dpi=200)
     close("all")
     return nothing
 end
 
 
-d = 2
-lambda = 5.0
-c = Cell(d)
-m = sample_mondrian(c, lambda)
-display(m)
+function animate_mondrian(m::Vector{Cell})
 
-file = open("temp.sh", "w")
-write(file, "")
-close(file)
+    ts = sort(unique([c.t for c in m]))
 
-for i in 1:length(unique([c.t for c in m]))
-    if i <= 10
-        t = sort(unique([c.t for c in m]))[i]
-        filename = "temp_" * lpad(i, 2, "0")
-        p = plot_mondrian(m, t, filename * ".png")
-        file = open("temp.sh", "a")
-        write(file, "convert " * filename * ".png " * filename * ".gif\n")
-        close(file)
+    for i in 1:length(ts)
+        filename = "temp_" * lpad(i, 3, "0")
+        plot_mondrian(m, ts[i], filename * ".svg")
+        run(`convert $filename.svg $filename.gif`)
     end
+
+    run(`bash -c "gifsicle -l -d 50 temp_*.gif > mondrian_tree.gif"`)
+    run(`svgasm -o mondrian_tree.svg mondrian_tree.gif`)
+
+    return nothing
 end
 
+
+d = 2
+lambda = 3.0
+c = Cell(d)
+m = sample_mondrian(c, lambda)
+
+animate_mondrian(m)
+#run(`svgasm *.svg`)
+
+#file = open("temp.sh", "w")
+#write(file, "")
+#close(file)
+
+
+#file = open("temp.sh", "a")
+#write(file, "convert " * filename * ".svg " * filename * ".gif\n")
+#close(file)
 
 
 # make gif
 
-file = open("temp.sh", "a")
-write(file, "gifsicle -l -d 50 temp*.gif > mondrian.gif\n")
-write(file, "rm temp*.gif temp*.png\n")
-close(file)
+#file = open("temp.sh", "a")
+#write(file, "gifsicle -l -d 50 temp*.gif > mondrian.gif\n")
+#write(file, "rm temp*.gif temp*.png\n")
+#close(file)
 
-run(`bash temp.sh`)
+#run(`bash temp.sh`)
+#run(`rm temp.sh`)
+
+
+# https://stackoverflow.com/questions/48893587/simple-animate-multiple-svgs-in-sequence-like-a-looping-gif
 
 println()
+
+# TODO make sequence of svg files, then animate with JS

@@ -1,0 +1,53 @@
+#frame1 {
+visibility: hidden;
+animation: 1s show infinite;
+}
+
+#frame2 {
+visibility: hidden;
+animation: 1s show infinite;
+animation-delay: 0.125s;
+}
+
+#frame3 {
+visibility: hidden;
+animation: 1s show infinite;
+animation-delay: 0.25s;
+}
+
+#frame4 {
+visibility: hidden;
+animation: 1s show infinite;
+animation-delay: 0.375s;
+}
+
+#frame5 {
+visibility: hidden;
+animation: 1s show infinite;
+animation-delay: 0.5s;
+}
+
+#frame6 {
+visibility: hidden;
+animation: 1s show infinite;
+animation-delay: 0.625s;
+}
+
+#frame7 {
+visibility: hidden;
+animation: 1s show infinite;
+animation-delay: 0.75s;
+}
+
+#frame8 {
+visibility: hidden;
+animation: 1s show infinite;
+animation-delay: 0.865s;
+}
+
+@keyframes show {
+0%   { visibility: visible;}
+12.5%  { visibility: visible; }
+12.6%  { visibility: hidden; }
+100% { visibility: hidden; }
+}
