@@ -11,7 +11,7 @@ of weighted directed networks.
 
 
 <img style="float: right; padding-left: 30px; padding-top: 0px;"
-src="/assets/graphics/posts/images_motifcluster/hex_sticker_small.png">
+src="/assets/posts/motifcluster/hex_sticker.png">
 
 
 First written for my master's thesis under

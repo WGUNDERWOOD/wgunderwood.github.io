@@ -312,7 +312,7 @@ $$ \phi(x,y) = x^2 + y + 10 \\ $$
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/region.png">
+src="/assets/posts/dirichlet_problem_local_martingales/region.png">
 <figcaption>
   Fig 1: The region $U$ and its boundary $\partial U$
 </figcaption>
@@ -321,7 +321,7 @@ src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/region.pn
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/boundary.png">
+src="/assets/posts/dirichlet_problem_local_martingales/boundary.png">
 <figcaption>
   Fig 2: The boundary condition $\phi$
 </figcaption>
@@ -364,7 +364,7 @@ The time step used was $\delta = 0.001$.
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/flat.png">
+src="/assets/posts/dirichlet_problem_local_martingales/flat.png">
 <figcaption>
   Fig 3: Two sample Brownian motion paths
 </figcaption>
@@ -372,7 +372,7 @@ src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/flat.png"
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/paths.png">
+src="/assets/posts/dirichlet_problem_local_martingales/paths.png">
 <figcaption>
   Fig 4: Including $\phi$ values at escape
 </figcaption>
@@ -409,7 +409,7 @@ as the estimates converge towards a surface of least energy.
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/surf1.png">
+src="/assets/posts/dirichlet_problem_local_martingales/surf1.png">
 <figcaption>
   Fig 5: $\epsilon=0.2, M=1$
 </figcaption>
@@ -417,7 +417,7 @@ src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/surf1.png
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/surf2.png">
+src="/assets/posts/dirichlet_problem_local_martingales/surf2.png">
 <figcaption>
   Fig 6: $\epsilon=0.2, M=30$
 </figcaption>
@@ -425,7 +425,7 @@ src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/surf2.png
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/surf3.png">
+src="/assets/posts/dirichlet_problem_local_martingales/surf3.png">
 <figcaption>
   Fig 7: $\epsilon=0.1, M=1$
 </figcaption>
@@ -433,7 +433,7 @@ src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/surf3.png
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/graphics/posts/images_dirichlet-problem-local-martingales/surf4.png">
+src="/assets/posts/dirichlet_problem_local_martingales/surf4.png">
 <figcaption>
   Fig 8: $\epsilon=0.1, M=30$
 </figcaption>

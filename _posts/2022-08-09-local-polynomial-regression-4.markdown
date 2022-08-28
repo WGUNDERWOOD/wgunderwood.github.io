@@ -68,7 +68,7 @@ with more bias and less variance.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-    src="/assets/graphics/posts/images_local-polynomial-regression/global_warming_small.gif">
+    src="/assets/posts/local_polynomial_regression/global_warming_small.gif">
 <figcaption>
   Fig. 1: Local linear estimation of global warming with
   varying bandwidth
@@ -84,7 +84,7 @@ in this series yields Figure 2.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-    src="/assets/graphics/posts/images_local-polynomial-regression/global_warming_loocv.png">
+    src="/assets/posts/local_polynomial_regression/global_warming_loocv.png">
 <figcaption>
   Fig. 2: Local linear estimation of global warming with
   LOO-CV bandwidth

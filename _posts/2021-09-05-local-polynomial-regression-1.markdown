@@ -78,7 +78,7 @@ allowing $\mu$ to be identified.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/data.png">
+src="/assets/posts/local_polynomial_regression/data.png">
 <figcaption>
   Fig. 1: The responses $y_i$ are plotted against the independent variables $x_i$. <br>
   The line indicates the regression function.
@@ -131,7 +131,7 @@ to the data.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/linear_fit_linear_data.png">
+src="/assets/posts/local_polynomial_regression/linear_fit_linear_data.png">
 <figcaption>
   Fig. 2: Linear regression works well when the regression function is linear.
 </figcaption>
@@ -149,7 +149,7 @@ but our estimator is limited to straight lines.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/linear_fit_quadratic_data.png">
+src="/assets/posts/local_polynomial_regression/linear_fit_quadratic_data.png">
 <figcaption>
   Fig. 3: Linear regression does not work well when the regression function
   is non-linear.
@@ -177,7 +177,7 @@ can give a much better fit to the data.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_quadratic_data.png">
+src="/assets/posts/local_polynomial_regression/quadratic_fit_quadratic_data.png">
 <figcaption>
   Fig. 4: Quadratic regression fits the quadratic regression function well.
 </figcaption>
@@ -191,7 +191,7 @@ as seen in Figure 5.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/quadratic_fit_general_data.png">
+src="/assets/posts/local_polynomial_regression/quadratic_fit_general_data.png">
 <figcaption>
   Fig. 5: Quadratic regression does not work well with non-quadratic regression functions.
 </figcaption>
@@ -206,7 +206,7 @@ especially when there are not many data points.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/polynomial_fit_general_data.png">
+src="/assets/posts/local_polynomial_regression/polynomial_fit_general_data.png">
 <figcaption>
   Fig. 6: A degree-50 polynomial regression will often overfit.
 </figcaption>
@@ -246,7 +246,7 @@ Figure 7 shows some commonly-used examples.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/kernels.png">
+src="/assets/posts/local_polynomial_regression/kernels.png">
 <figcaption>
   Fig. 7: Some popular kernel functions.
 </figcaption>
@@ -287,7 +287,7 @@ though it is necessary to choose an appropriate bandwidth $h$.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/nadaraya_fit_general_data.png">
+src="/assets/posts/local_polynomial_regression/nadaraya_fit_general_data.png">
 <figcaption>
   Fig. 8: The Nadaraya&ndash;Watson estimator adapts to a broad class of functions.
 </figcaption>

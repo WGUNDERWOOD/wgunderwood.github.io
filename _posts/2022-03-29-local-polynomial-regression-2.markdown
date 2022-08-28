@@ -229,7 +229,7 @@ will always choose a bandwidth extremely close to zero!
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/min_mse_bandwidths.png">
+src="/assets/posts/local_polynomial_regression/min_mse_bandwidths.png">
 <figcaption>
   Fig. 1: Empirical IMSE decreases to zero as the bandwidth decreases to zero.
 </figcaption>
@@ -255,7 +255,7 @@ which shows how a small bandwidth causes severe overfitting.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/min_mse_data.png">
+src="/assets/posts/local_polynomial_regression/min_mse_data.png">
 <figcaption>
   Fig. 2: With a small enough bandwidth, the data is interpolated.
 </figcaption>
@@ -292,7 +292,7 @@ and Figure 4 demonstrates this to be a reasonable choice.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_bandwidths.png">
+src="/assets/posts/local_polynomial_regression/min_loo_cv_bandwidths.png">
 <figcaption>
   Fig. 3: LOO-CV achieves a global minimum.
 </figcaption>
@@ -300,7 +300,7 @@ src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_bandwi
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/min_loo_cv_data.png">
+src="/assets/posts/local_polynomial_regression/min_loo_cv_data.png">
 <figcaption>
   Fig. 4: LOO-CV is able to select a sensible bandwidth.
 </figcaption>
@@ -332,7 +332,7 @@ a larger bandwidth is preferred for smoother parts of the regression function.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 500px; margin-left: auto; margin-right: auto;"
-src="/assets/graphics/posts/images_local-polynomial-regression/topologist_sine_curve.png">
+src="/assets/posts/local_polynomial_regression/topologist_sine_curve.png">
 <figcaption>
   Fig. 5: Some regression functions have no good global bandwidth.
 </figcaption>

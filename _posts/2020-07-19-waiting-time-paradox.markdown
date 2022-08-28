@@ -97,7 +97,7 @@ $\E[W]$.
 
 <figure>
 <img style="float: center; width: 700px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/graphics/posts/images_waiting/time_diagram.png">
+src="/assets/posts/waiting_time_paradox/time_diagram.png">
 <figcaption>
   Figure 1: A typical timeline
 </figcaption>

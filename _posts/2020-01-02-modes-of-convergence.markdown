@@ -113,7 +113,7 @@ Arrows indicate strength of convergence.
 
 <p align = "center">
   <img style="float: center; padding-bottom: 30px; padding-top: 5px; width: 500px"
-  src="/assets/graphics/posts/images_modes-of-convergence/diagram.png"/>
+  src="/assets/posts/modes_of_convergence/diagram.png"/>
 </p>
 
 ## Proofs

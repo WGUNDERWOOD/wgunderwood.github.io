@@ -26,7 +26,7 @@ The source code is available on
 ## Julia sets
 
 <img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
-src="/assets/graphics/posts/images_julia/julia.png">
+src="/assets/posts/julia_mandelbrot/julia.png">
 
 In this post we consider only the Julia sets of a
 simple class of quadratic functions,
@@ -108,7 +108,7 @@ Mandelbrot set.
 ## The Mandelbrot set
 
 <img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
-src="/assets/graphics/posts/images_julia/mandelbrot.png">
+src="/assets/posts/julia_mandelbrot/mandelbrot.png">
 
 The Mandelbrot set can be thought of an
 "index" of Julia sets in that instead of
@@ -141,7 +141,7 @@ we focus instead on its relationship to Julia sets.
 ### Plotting the Mandelbrot set
 
 <img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
-src="/assets/graphics/posts/images_julia/buddhabrot.png">
+src="/assets/posts/julia_mandelbrot/buddhabrot.png">
 
 Again simpling by iterating a complex quadratic,
 we can plot the Mandelbrot set,
