@@ -29,7 +29,10 @@ header_pages:
 
 # Exclude from build
 exclude:
+- code
 - Gemfile
 - Gemfile.lock
-- todo.org
+- Makefile
+- notes.org
+- README.md
 - vendor

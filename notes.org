@@ -1,5 +1,6 @@
 * Post ideas
-** TODO Series on probability
+** Mondrian forests
+** Probability theory
 *** Probability spaces
 **** Sample spaces
 **** Sigma algebras
@@ -28,14 +29,12 @@
 ***** Check Williams for more
 *** CLT
 *** LIL
-** Intro to probability
 ** Brownian hitting times
 ** Bootstrapping
 ** Ill-posed DEs and non-deterministic mechanics
 ** Dragon curves
 ** Tail bounds
 ** Dots and boxes
-** Mondrian forests
 ** Bracketing constant
 ** Gaussian process regression
 ** Bayesian optimization
