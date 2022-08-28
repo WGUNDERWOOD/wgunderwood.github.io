@@ -409,7 +409,7 @@ as the estimates converge towards a surface of least energy.
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/posts/dirichlet_problem_local_martingales/surf1.png">
+src="/assets/posts/dirichlet_problem_local_martingales/surf_M1_f20.png">
 <figcaption>
   Fig 5: $\epsilon=0.2, M=1$
 </figcaption>
@@ -417,7 +417,7 @@ src="/assets/posts/dirichlet_problem_local_martingales/surf1.png">
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/posts/dirichlet_problem_local_martingales/surf2.png">
+src="/assets/posts/dirichlet_problem_local_martingales/surf_M30_f20.png">
 <figcaption>
   Fig 6: $\epsilon=0.2, M=30$
 </figcaption>
@@ -425,7 +425,7 @@ src="/assets/posts/dirichlet_problem_local_martingales/surf2.png">
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/posts/dirichlet_problem_local_martingales/surf3.png">
+src="/assets/posts/dirichlet_problem_local_martingales/surf_M1_f10.png">
 <figcaption>
   Fig 7: $\epsilon=0.1, M=1$
 </figcaption>
@@ -433,7 +433,7 @@ src="/assets/posts/dirichlet_problem_local_martingales/surf3.png">
 
 <figure>
 <img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/posts/dirichlet_problem_local_martingales/surf4.png">
+src="/assets/posts/dirichlet_problem_local_martingales/surf_M30_f10.png">
 <figcaption>
   Fig 8: $\epsilon=0.1, M=30$
 </figcaption>

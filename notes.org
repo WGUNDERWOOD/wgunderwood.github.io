@@ -40,6 +40,7 @@
 ** Bayesian optimization
 ** Spline regression
 * Other
-** TODO Add subdirs in _posts for each post or post series
+** Site organization
+*** DONE Add subdirs in _posts for each post or post series
 *** TODO Keep code here for each post
-*** TODO Use the README to host links to the files on gh
+*** TODO Use the README to host links to code

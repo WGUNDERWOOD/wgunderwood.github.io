@@ -4,3 +4,5 @@ _site
 .jekyll-metadata
 vendor
 .bundle/
+_posts/**/*.png
+__pycache__/
