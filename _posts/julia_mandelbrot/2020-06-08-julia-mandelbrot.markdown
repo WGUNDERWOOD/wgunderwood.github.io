@@ -89,7 +89,7 @@ according to how many iterations it took
 for each point to escape.
 
 I have
-[implemented this](https://github.com/WGUNDERWOOD/julia-julia),
+[implemented this](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/julia_mandelbrot)
 and what better language to use than
 [Julia](https://julialang.org/)?
 The plots produced indeed make nice desktop wallpapers,
