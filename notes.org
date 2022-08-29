@@ -42,5 +42,7 @@
 * Other
 ** Site organization
 *** DONE Add subdirs in _posts for each post or post series
-*** TODO Keep code here for each post
+*** TODO Keep code in _posts/POSTNAME/ for each post
 *** TODO Use the README to host links to code
+*** TODO Protect main branch on gh
+*** TODO Delete old repos on gh

@@ -13,7 +13,8 @@ continuous local martingales.
 In this post, we explore the mathematical connections between the Dirichlet problem
 and continuous local martingales, and compute an example using Python.
 The source code is available on
-[GitHub](https://github.com/WGUNDERWOOD/dirichlet-problem-local-martingales).
+[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/dirichlet_problem_local_martingales).
+
 
 
 {% include mathjax.html %}
