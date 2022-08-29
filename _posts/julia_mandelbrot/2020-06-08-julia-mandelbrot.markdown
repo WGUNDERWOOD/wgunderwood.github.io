@@ -19,7 +19,7 @@ This also seemed a good opportunity to try a new language,
 so of course I wrote it in
 [Julia](https://julialang.org/).
 The source code is available on
-[GitHub](https://github.com/WGUNDERWOOD/julia-julia).
+[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/julia_mandelbrot).
 
 
 

@@ -187,7 +187,7 @@ end
 
 
 
-function julia_plot(nx, ny, max_iter, ver_num, filename)
+function julia_plot(nx, ny, max_iter, filename)
 
     interesting_max_iter = 100
     ubound = 5
@@ -216,54 +216,10 @@ end
 
 
 
-function format_latex(c)
-
-    x = real(c)
-    y = imag(c)
-
-    xstr = string(abs(x) + 0.0005, "00000")[1:5]
-    ystr = string(abs(y) + 0.0005, "00000")[1:5]
-
-    if (sign(x) < 0) & (xstr != "0.000")
-        xstr = string("-", xstr)
-    end
-
-    if sign(y) >= 0
-        latex_str = string("c = ", xstr, " + ", ystr, "\\,i")
-    else
-        latex_str = string("c = ", xstr, " - ", ystr, "\\,i")
-    end
-
-    return latex_str
-end
-
-
-
-
-# read version number
-println("Reading current version number...")
-io = open("data/vernum.txt", "r")
-ver_num = parse(Int, read(io, String))
-close(io)
 
 # save plot
 println("Starting Julia set plot...")
 const nx = 2560
 const ny = 1440
 const max_iter = 2000
-julia_plot(nx, ny, max_iter, ver_num, "./plots/julia_set.png")
-
-# save c parameter
-println("Saving c value...")
-c_label = format_latex(c)
-io = open("data/c.txt", "w")
-println(io, c_label)
-close(io)
-
-# save color
-col_string = hex(fg_color, :rrggbb)
-println("Saving color (#", col_string, ")...")
-col_string = string("\\definecolor{fgcolor}{HTML}{", col_string, "}")
-io = open("data/color.txt", "w")
-println(io, col_string)
-close(io)
+julia_plot(nx, ny, max_iter, "./julia_set.png")
