@@ -6,11 +6,8 @@ date:   2020-01-02
 
 The notion of *modes of convergence* is central to
 probability theory.
-This short article focuses on the relative strengths of these convergences,
+This short article focuses on the relative strengths of these convergences
 and includes a helpful diagram.
-
-The original PDF and source code files are available on
-[GitHub](https://github.com/WGUNDERWOOD/convergence-modes/).
 
 
 
