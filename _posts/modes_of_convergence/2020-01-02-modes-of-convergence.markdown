@@ -111,9 +111,16 @@ Convergence in $L^\infty$ is the same as uniform convergence almost everywhere.
 All of the results are summarised in Figure 1.
 Arrows indicate strength of convergence.
 
+<figure>
+<img style="align: middle; width: 500px; padding-bottom: 10px; padding-top: 5px; padding-right: 130px; padding-left: 130px;"
+  src="/assets/posts/modes_of_convergence/diagram.svg"/>
+<figcaption>
+<br>
+  Figure 1: Modes of convergence
+</figcaption>
+</figure>
+
 <p align = "center">
-  <img style="float: center; padding-bottom: 30px; padding-top: 5px; width: 500px"
-  src="/assets/posts/modes_of_convergence/diagram.png"/>
 </p>
 
 ## Proofs

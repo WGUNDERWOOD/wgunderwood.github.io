@@ -5,4 +5,6 @@ _site
 vendor
 .bundle/
 _posts/**/*.png
+_posts/**/*.svg
+_posts/**/*.pdf
 __pycache__/
