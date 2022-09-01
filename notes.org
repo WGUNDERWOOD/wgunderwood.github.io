@@ -41,5 +41,4 @@
 ** Spline regression
 * Other
 ** Site organization
-*** TODO Protect main branch on gh
 *** TODO Delete old repos on gh
