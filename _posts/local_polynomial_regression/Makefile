@@ -4,6 +4,10 @@ all: plots compress copy
 
 plots:
 	python local_polynomial_regression_1.py
+	latexmk -pdf -quiet pgf.tex
+	pdf2svg pgf.pdf pgf_large.svg
+	svgcleaner pgf_large.svg pgf.svg
+	rm pgf_large.svg
 
 #compress:
 	#mogrify -path . -resize 500x500 *.png

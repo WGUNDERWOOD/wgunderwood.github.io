@@ -9,8 +9,13 @@ def format_plot(ax):
     ax.spines["right"].set_color("white")
     ax.set_xticks(range(4))
     ax.set_yticks(range(4))
-    ax.set_xlabel("$x$", color="white")
-    ax.set_ylabel("$y$", color="white")
+    ax.set_xlabel("$x$", color="white", size=16)
+    ax.set_ylabel("$y$", color="white", size=16)
+
+    ticks, labels = plt.xticks()
+    plt.xticks(ticks, labels = [str(l) for l in ticks], size=12)
+    ticks, labels = plt.yticks()
+    plt.yticks(ticks, labels = [str(l) for l in ticks], size=12)
 
     legend = plt.legend(edgecolor="white")
     legend.get_frame().set_alpha(None)
@@ -55,4 +60,4 @@ def plot_muhat(ax, data, estimator):
 
 def save_plot(filename):
 
-    plt.savefig(filename, dpi=200, transparent=True)
+    plt.savefig(filename, dpi=200, transparent=True, format="pgf")

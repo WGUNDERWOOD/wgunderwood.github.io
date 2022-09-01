@@ -11,7 +11,7 @@ plt.rcParams["xtick.color"] = "white"
 plt.rcParams["ytick.color"] = "white"
 
 
-plt.rcParams["text.usetex"]  = True
+plt.rcParams["text.usetex"] = True
 plt.rc('text.latex', preamble=r'\usepackage[sfdefault, light]{inter}')
 
 
@@ -42,9 +42,9 @@ fig, ax = plt.subplots(figsize=(6,4))
 plots.plot_mu(ax, data)
 plots.plot_data(ax, data)
 plots.format_plot(ax)
-plots.save_plot("data.png")
+plots.save_plot("data.pgf")
 
-
+exit()
 
 # linear fit linear data
 # ---------------------------------------
