@@ -10,6 +10,9 @@ This post, the first in a short series,
 covers the general problem setup
 and introduces the Nadaraya--Watson estimator.
 
+The Python code is available on
+[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/local_polynomial_regression).
+
 
 {% include mathjax.html %}
 
