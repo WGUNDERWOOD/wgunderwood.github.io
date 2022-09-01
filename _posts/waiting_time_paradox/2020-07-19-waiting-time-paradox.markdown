@@ -17,7 +17,7 @@ Source code for the simulations
 and the diagram
 (LaTeX)
 is available on
-[GitHub](https://github.com/WGUNDERWOOD/waiting-time-paradox/).
+[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/waiting_time_paradox).
 
 
 
