@@ -7,4 +7,6 @@ vendor
 _posts/**/*.png
 _posts/**/*.svg
 _posts/**/*.pdf
+_posts/**/*.pgf
+_posts/**/*.gif
 __pycache__/

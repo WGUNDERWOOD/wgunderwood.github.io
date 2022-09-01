@@ -10,18 +10,6 @@ plt.rcParams["axes.labelcolor"] = "white"
 plt.rcParams["xtick.color"] = "white"
 plt.rcParams["ytick.color"] = "white"
 
-
-plt.rcParams["text.usetex"] = True
-plt.rc('text.latex', preamble=r'\usepackage[sfdefault, light]{inter}')
-
-
-plt.rcParams["font.family"]  = "sans-serif"
-plt.rcParams["mathtext.default"] = "regular"
-#plt.rcParams["font.sans-serif"]  = "Inter"
-#plt.rcParams["axes.labelweight"] = "light"
-#plt.rcParams["font.weight"] = "light"
-#plt.rcParams["mathtext.fontset"]  = "regular";
-
 # data plot
 # ---------------------------------------
 
@@ -43,8 +31,6 @@ plots.plot_mu(ax, data)
 plots.plot_data(ax, data)
 plots.format_plot(ax)
 plots.save_plot("data.pgf")
-
-exit()
 
 # linear fit linear data
 # ---------------------------------------
@@ -71,7 +57,7 @@ plots.plot_data(ax, data)
 plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, polynomial_regression)
 plots.format_plot(ax)
-plots.save_plot("linear_fit_linear_data.png")
+plots.save_plot("linear_fit_linear_data.pgf")
 
 
 
@@ -100,7 +86,7 @@ plots.plot_data(ax, data)
 plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, polynomial_regression)
 plots.format_plot(ax)
-plots.save_plot("linear_fit_quadratic_data.png")
+plots.save_plot("linear_fit_quadratic_data.pgf")
 
 
 
@@ -129,7 +115,7 @@ plots.plot_data(ax, data)
 plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, polynomial_regression)
 plots.format_plot(ax)
-plots.save_plot("quadratic_fit_quadratic_data.png")
+plots.save_plot("quadratic_fit_quadratic_data.pgf")
 
 
 
@@ -158,7 +144,7 @@ plots.plot_data(ax, data)
 plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, polynomial_regression)
 plots.format_plot(ax)
-plots.save_plot("quadratic_fit_general_data.png")
+plots.save_plot("quadratic_fit_general_data.pgf")
 
 
 
@@ -192,7 +178,7 @@ plots.plot_data(ax, data)
 plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, polynomial_regression)
 plots.format_plot(ax)
-plots.save_plot("polynomial_fit_general_data.png")
+plots.save_plot("polynomial_fit_general_data.pgf")
 
 
 
@@ -206,9 +192,9 @@ ys_gaussian = 1/np.sqrt(2 * np.pi) * np.exp(-xs**2/2)
 
 title_offset = -0.3
 fig, (ax1, ax2, ax3) = plt.subplots(ncols=3, figsize=(6,2))
-ax1.plot(xs, ys_uniform, color="gray")
-ax2.plot(xs, ys_epanechnikov, color="gray")
-ax3.plot(xs, ys_gaussian, color="gray")
+ax1.plot(xs, ys_uniform, color="#8be9fd")
+ax2.plot(xs, ys_epanechnikov, color="#8be9fd")
+ax3.plot(xs, ys_gaussian, color="#8be9fd")
 
 ax1.set_title("Uniform", y=title_offset)
 ax2.set_title("Epanechnikov", y=title_offset)
@@ -218,8 +204,12 @@ for ax in [ax1, ax2, ax3]:
     ax.tick_params(axis="both", which="both", bottom=False,
                    left=False, labelleft=False, labelbottom=False)
 
-plt.tight_layout()
-plt.savefig("kernels.png", dpi=200, bbox_inches="tight")
+    ax.spines["bottom"].set_color("white")
+    ax.spines["top"].set_color("white")
+    ax.spines["left"].set_color("white")
+    ax.spines["right"].set_color("white")
+
+plots.save_plot("kernels.pgf")
 
 
 
@@ -249,4 +239,4 @@ plots.plot_data(ax, data)
 plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, local_regression)
 plots.format_plot(ax)
-plots.save_plot("nadaraya_fit_general_data.png")
+plots.save_plot("nadaraya_fit_general_data.pgf")

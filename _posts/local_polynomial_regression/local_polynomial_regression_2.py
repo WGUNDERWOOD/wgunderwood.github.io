@@ -1,15 +1,14 @@
 import sys
 import numpy as np
 from matplotlib import pyplot as plt
-sys.path.append("../source")
 import data_generation as dg
 import estimation
 import plots
 
-plt.rcParams.update({"text.color": "white"})
-plt.rcParams.update({"axes.labelcolor": "white"})
-plt.rcParams.update({"xtick.color": "white"})
-plt.rcParams.update({"ytick.color": "white"})
+plt.rcParams["text.color"] = "white"
+plt.rcParams["axes.labelcolor"] = "white"
+plt.rcParams["xtick.color"] = "white"
+plt.rcParams["ytick.color"] = "white"
 
 # min mse bandwidths
 # ---------------------------------------
@@ -30,9 +29,11 @@ local_regression.fit_mse(data,
     num_bandwidths=100, search_orders=3)
 
 fig, ax = plt.subplots(figsize=(6,4))
-ax.plot(local_regression.bandwidths, local_regression.mses, "k")
+ax.plot(local_regression.bandwidths, local_regression.mses, "#8be9fd")
 plots.format_bandwidths_plot(ax)
-plots.save_plot("../../plots/min_mse_bandwidths.png")
+ax.set_ylabel("Empirical IMSE", color="white", size=14)
+ax.yaxis.labelpad = 10
+plots.save_plot("min_mse_bandwidths.pgf")
 
 
 
@@ -60,7 +61,7 @@ plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, local_regression)
 plots.format_plot(ax)
 ax.set_ylim((0,3.2))
-plots.save_plot("../../plots/min_mse_data.png")
+plots.save_plot("min_mse_data.pgf")
 
 
 
@@ -83,9 +84,11 @@ local_regression.fit_loo_cv(data,
     num_bandwidths=100, search_orders=1.5)
 
 fig, ax = plt.subplots(figsize=(6,4))
-ax.plot(local_regression.bandwidths, local_regression.loo_cv_mses, "k")
+ax.plot(local_regression.bandwidths, local_regression.loo_cv_mses, "#8be9fd")
+ax.set_ylabel("LOO-CV", color="white", size=14)
 plots.format_bandwidths_plot(ax)
-plots.save_plot("../../plots/min_loo_cv_bandwidths.png")
+ax.yaxis.labelpad = 10
+plots.save_plot("min_loo_cv_bandwidths.pgf")
 
 
 
@@ -113,7 +116,7 @@ plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, local_regression)
 plots.format_plot(ax)
 ax.set_ylim((0,3.2))
-plots.save_plot("../../plots/min_loo_cv_data.png")
+plots.save_plot("min_loo_cv_data.pgf")
 
 
 
@@ -134,6 +137,18 @@ data.generate_y_gaussian(sigma)
 
 fig, ax = plt.subplots(figsize=(6,4))
 ax.scatter(data.x_train, data.y_train, 10, color="mediumpurple", label="Data $(x_i, y_i)$")
-ax.plot(data.x_test, data.mu_test, color="k", label="True regression function $\mu$")
-plots.format_plot(ax)
-plots.save_plot("../../plots/topologist_sine_curve.png")
+ax.plot(data.x_test, data.mu_test, color="#50ea7b",
+        label="True regression function $\mu$")
+ax.spines["bottom"].set_color("white")
+ax.spines["top"].set_color("white")
+ax.spines["left"].set_color("white")
+ax.spines["right"].set_color("white")
+ax.set_xlabel("$x$", color="white", size=14)
+ax.set_ylabel("$y$", color="white", size=14)
+plt.xticks([0, 1, 2, 3], size=10)
+plt.yticks([0, 1, 2], size=10)
+legend = plt.legend(edgecolor="white")
+legend.get_frame().set_facecolor((0, 0, 0, 0))
+legend.get_frame().set_alpha(None)
+legend.get_frame().set_edgecolor((1, 1, 1, 0.7))
+plots.save_plot("topologist_sine_curve.pgf")

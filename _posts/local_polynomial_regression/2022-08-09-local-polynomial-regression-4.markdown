@@ -67,8 +67,8 @@ As expected, larger bandwidths give a smoother curve
 with more bias and less variance.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 500px; margin-left: auto; margin-right: auto;"
-    src="/assets/posts/local_polynomial_regression/global_warming_small.gif">
+<img style="width: 700px; margin-left: auto; margin-right: auto;"
+    src="/assets/posts/local_polynomial_regression/global_warming.gif">
 <figcaption>
   Fig. 1: Local linear estimation of global warming with
   varying bandwidth
@@ -83,8 +83,8 @@ in this series yields Figure 2.
 
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 500px; margin-left: auto; margin-right: auto;"
-    src="/assets/posts/local_polynomial_regression/global_warming_loocv.png">
+<img style="width: 700px; margin-left: auto; margin-right: auto;"
+    src="/assets/posts/local_polynomial_regression/global_warming_loocv.svg">
 <figcaption>
   Fig. 2: Local linear estimation of global warming with
   LOO-CV bandwidth

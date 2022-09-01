@@ -1,15 +1,14 @@
 import numpy as np
 from matplotlib import pyplot as plt
 import sys
-sys.path.append("../source/")
 import data_generation as dg
 import estimation as es
 import plots
 
-plt.rcParams.update({"text.color": "white"})
-plt.rcParams.update({"axes.labelcolor": "white"})
-plt.rcParams.update({"xtick.color": "white"})
-plt.rcParams.update({"ytick.color": "white"})
+plt.rcParams["text.color"] = "white"
+plt.rcParams["axes.labelcolor"] = "white"
+plt.rcParams["xtick.color"] = "white"
+plt.rcParams["ytick.color"] = "white"
 
 # boundary bias
 # ---------------------------------------
@@ -37,7 +36,7 @@ plots.plot_data(ax, data)
 plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, local_regression)
 plots.format_plot(ax)
-plots.save_plot("../../plots/boundary_bias.png")
+plots.save_plot("boundary_bias.pgf")
 
 
 
@@ -68,7 +67,7 @@ plots.plot_data(ax, data)
 plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, local_regression)
 plots.format_plot(ax)
-plots.save_plot("../../plots/boundary_bias_fixed.png")
+plots.save_plot("boundary_bias_fixed.pgf")
 
 
 
@@ -98,4 +97,4 @@ plots.plot_data(ax, data)
 plots.plot_mu(ax, data)
 plots.plot_muhat(ax, data, local_regression)
 plots.format_plot(ax)
-plots.save_plot("../../plots/second_order_bias_fixed.png")
+plots.save_plot("second_order_bias_fixed.pgf")
