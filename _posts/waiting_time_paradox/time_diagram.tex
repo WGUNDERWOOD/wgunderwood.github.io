@@ -1,0 +1,46 @@
+\documentclass{standalone}
+
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\tikzset{draw={color=white}}
+
+\newcommand{\interval}[4]{
+  \draw[decorate, decoration={brace, amplitude=3mm,
+    pre=moveto, pre length=0.3mm,
+    post=moveto, post length=0.3mm},
+        yshift=#3]
+      (#1,0) -- node[above=3.5mm] {#4} (#2,0);}
+
+\newcommand{\timepoint}[2]{
+  \draw (#1, 2mm) -- (#1, -2mm);
+  \node at (#1,-5mm) {#2};
+}
+
+
+\begin{document}
+\begin{tikzpicture}[draw=white, text=white]
+
+
+  \draw (0,0) -- (3,0);
+  \timepoint{0}{$0$}
+  \timepoint{1.5}{$T_1$}
+  \timepoint{2.5}{$T_2$}
+  \timepoint{5}{$T_{N-1}$}
+  \timepoint{6.3}{$300$}
+  \timepoint{8}{$T_N$}
+
+  \draw[dashed] (3,0) -- (4.5,0);
+
+  \draw (4.5,0) -- (8.5,0);
+
+  \interval{0}{1.5}{4mm}{$Z_1$}
+  \interval{1.5}{2.5}{4mm}{$Z_2$}
+  \interval{5}{6.3}{4mm}{$E$}
+  \interval{6.3}{8}{4mm}{$W$}
+  \interval{5}{8}{13mm}{$I$}
+
+
+
+\end{tikzpicture}
+\end{document}

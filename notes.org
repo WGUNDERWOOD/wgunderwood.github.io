@@ -45,6 +45,9 @@
 *** TODO Keep code in _posts/POSTNAME/ for each post
 **** DONE dplm
 **** DONE julia_mandelbrot
+**** DONE locpol
+**** DONE modes
+**** DONE waiting time
 *** TODO Use the README to host links to code
 *** TODO Protect main branch on gh
 *** TODO Delete old repos on gh
