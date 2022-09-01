@@ -5,7 +5,8 @@ import sys
 import data_generation as dg
 import estimation as es
 import plots
-import imageio
+#import imageio
+from PIL import Image
 import os
 
 plt.rcParams["text.color"] = "white"
@@ -36,8 +37,9 @@ data.eps_train = data.y_train
 
 # estimator, range of bandwidths
 # ---------------------------------------
+gif_dpi = 600
 # TODO num=30
-bandwidths = np.logspace(np.log10(1), np.log10(50), num=3)
+bandwidths = np.logspace(np.log10(1), np.log10(50), num=2)
 
 for b in range(len(bandwidths)):
     print(f"{b} / {len(bandwidths) - 1}")
@@ -64,27 +66,47 @@ for b in range(len(bandwidths)):
     ax.spines["left"].set_color("white")
     ax.spines["right"].set_color("white")
     plt.tight_layout()
-    plt.savefig(f"global_warming_bandwidth{b}.png", dpi=600,
+    plt.savefig(f"global_warming_bandwidth{b}.png", dpi=gif_dpi,
                 transparent=True, bbox_inches="tight")
     plt.close()
 
 
 # build gif
 # ---------------------------------------
-fps = 3
-with imageio.get_writer(f"global_warming_large.gif", mode="I", fps=fps) as writer:
-    for b in range(len(bandwidths)):
-        filename = f"global_warming_bandwidth{b}.png"
-        print(filename)
-        image = imageio.v3.imread(filename)
-        writer.append_data(image)
-        os.remove(filename)
+def generate_frame(filename):
+    im = Image.open(filename)
+    alpha = im.getchannel("A")
+    im = im.convert("RGB").convert("P", palette=Image.Palette.ADAPTIVE,
+                                   colors=255)
+    mask = Image.eval(alpha, lambda a: 255 if a <=128 else 0)
+    im.paste(255, mask)
+    im.info["transparency"] = 255
+    return im
+
+ims = [generate_frame(f"global_warming_bandwidth{b}.png")
+       for b in range(len(bandwidths))]
+
+ims[0].save("global_warming_large.gif", save_all=True,
+            append_images=ims[1:len(bandwidths)],
+            loop=0, optimize=False, duration=200, dpi=(gif_dpi, gif_dpi),
+            disposal=2)
+
+
+
+
+#fps = 3
+#with imageio.get_writer(f"global_warming_large.gif", mode="I", fps=fps) as writer:
+    #for b in range(len(bandwidths)):
+        #filename = f"global_warming_bandwidth{b}.png"
+        #image = imageio.v3.imread(filename)
+        #writer.append_data(image)
+        #os.remove(filename)
 
 
 
 # estimator, loo-cv
 # ---------------------------------------
-bandwidth = 3
+bandwidth = 2
 # TODO num = 20
 num_bandwidths = 2
 search_orders = 1
