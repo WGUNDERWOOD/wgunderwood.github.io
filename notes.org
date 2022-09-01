@@ -40,5 +40,3 @@
 ** Bayesian optimization
 ** Spline regression
 * Other
-** Site organization
-*** TODO Delete old repos on gh
