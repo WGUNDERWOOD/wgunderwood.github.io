@@ -2,9 +2,11 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-profile.png
-profile_maine.png
-logo.png
 vendor
-assets/files/auto
 .bundle/
+_posts/**/*.png
+_posts/**/*.svg
+_posts/**/*.pdf
+_posts/**/*.pgf
+_posts/**/*.gif
+__pycache__/

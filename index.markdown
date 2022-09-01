@@ -9,7 +9,7 @@ description: Welcome to my homepage.
 <a href="/">
 <img
 style="width: 160px; border: 2px solid #111111; margin-top: 0px"
-src="/assets/graphics/general/profile_boston_small.png">
+src="/assets/general/profile_boston.png">
 </a>
 
 </div>
@@ -39,7 +39,7 @@ martingale coupling theory and random forest procedures.
 <a href="https://www.princeton.edu">
 <img
 style="width: 160px; border: 2px solid #111111; margin-top: 0px;"
-src="/assets/graphics/general/princeton_logo.png">
+src="/assets/general/princeton_logo.png">
 </a>
 
 <br>
@@ -47,7 +47,7 @@ src="/assets/graphics/general/princeton_logo.png">
 <a href="https://orfe.princeton.edu/">
 <img
 style="width: 160px; border: 2px solid #111111; margin-top: 5px;"
-src="/assets/graphics/general/orfe_logo_small.png">
+src="/assets/general/orfe_logo.png">
 </a>
 
 <br>
@@ -55,7 +55,7 @@ src="/assets/graphics/general/orfe_logo_small.png">
 <a href="https://www.ox.ac.uk">
 <img
 style="width: 160px; border: 2px solid #111111; margin-top: 5px;"
-src="/assets/graphics/general/oxford_logo.png">
+src="/assets/general/oxford_logo.png">
 </a>
 
 </div>

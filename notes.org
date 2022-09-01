@@ -1,31 +1,17 @@
 * Post ideas
-** Local polynomial regression
-*** DONE Part 1: Intro to non-parametric regression
-**** DONE Problem set-up
-**** DONE Linear regression doesn't work
-**** DONE Transformed linear regression doesn't work
-**** DONE Kernels
-**** DONE The Nadaraya Watson estimator
-**** DONE Leave open: bandwidth selection, boundary bias
-*** DONE Part 2: Bandwidth selection
-**** DONE Theory
-***** DONE Bias/variance
-**** DONE Practice
-***** DONE IMSE doesnt work
-***** DONE LOO-CV
-***** DONE GCV
-***** DONE Lack of global bandwidth optimality
-*** DONE Part 3: Local polynomial regression
-**** DONE Revisit boundary bias
-**** DONE Recap of linear regression
-**** DONE Local linear smoother
-**** DONE Demonstrate second-order bias
-**** DONE The local polynomial estimator
-*** TODO Part 4: Application
-**** TODO Global warming data
-** TODO Longer series on probability?
-** Probability limit theorems
-*** Part 1: LLN
+** Mondrian forests
+** Probability theory
+*** Probability spaces
+**** Sample spaces
+**** Sigma algebras
+**** Probability measures
+*** Measure theory
+**** Caratheodory theorem
+**** Pi-lambda theorem
+**** Existence of sequences of rvs
+*** Integration and expectation
+*** ...
+*** LLN
 **** Markov's inequality
 ***** Diagram of first inequality in proof
 **** Chebyshev's inequality
@@ -41,20 +27,16 @@
 ***** Settings other than iid
 ***** Failure for Cauchy distribution
 ***** Check Williams for more
-*** Part 2: CLT
-*** Part 3: LIL
-** Intro to probability
+*** CLT
+*** LIL
 ** Brownian hitting times
+** Bootstrapping
 ** Ill-posed DEs and non-deterministic mechanics
 ** Dragon curves
 ** Tail bounds
 ** Dots and boxes
-** Mondrian forests
 ** Bracketing constant
 ** Gaussian process regression
 ** Bayesian optimization
 ** Spline regression
 * Other
-** TODO Add subdirs in _posts for each post or post series
-*** TODO Keep code and assets here for each post
-*** TODO Use the README to host links to the files on gh
