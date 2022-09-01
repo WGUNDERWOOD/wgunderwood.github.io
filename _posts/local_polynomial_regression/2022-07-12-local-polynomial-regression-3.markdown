@@ -45,7 +45,7 @@ below the true function at the left edge of the plot.
 
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 700px; margin-left: auto; margin-right: auto;"
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/boundary_bias.svg">
 <figcaption>
   Fig. 1: The Nadaraya-Watson estimator exhibits boundary bias.
@@ -115,7 +115,7 @@ $W(x)\_{ii} = \frac{1}{h} K\left(\frac{X_i - x}{h}\right)$.
 
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 700px; margin-left: auto; margin-right: auto;"
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/boundary_bias_fixed.svg">
 <figcaption>
   Fig. 2: The local linear smoother has much less boundary bias.
@@ -159,7 +159,7 @@ is diagonal with
 $W(x)\_{ii} = \frac{1}{h} K\left(\frac{X_i - x}{h}\right)$.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 700px; margin-left: auto; margin-right: auto;"
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/second_order_bias_fixed.svg">
 <figcaption>
   Fig. 3: The local quadratic smoother removes second-order bias.

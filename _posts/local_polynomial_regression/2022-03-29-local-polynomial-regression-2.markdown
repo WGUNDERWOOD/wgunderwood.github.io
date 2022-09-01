@@ -228,7 +228,7 @@ since minimizing the empirical IMSE
 will always choose a bandwidth extremely close to zero!
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 700px; margin-left: auto; margin-right: auto;"
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/min_mse_bandwidths.svg">
 <figcaption>
   Fig. 1: Empirical IMSE decreases to zero as the bandwidth decreases to zero.
@@ -254,7 +254,7 @@ which shows how a small bandwidth causes severe overfitting.
 
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 700px; margin-left: auto; margin-right: auto;"
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/min_mse_data.svg">
 <figcaption>
   Fig. 2: With a small enough bandwidth, the data is interpolated.
@@ -291,7 +291,7 @@ Figure 3 shows how LOO-CV is minimized at a particular bandwidth value,
 and Figure 4 demonstrates this to be a reasonable choice.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 700px; margin-left: auto; margin-right: auto;"
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/min_loo_cv_bandwidths.svg">
 <figcaption>
   Fig. 3: LOO-CV achieves a global minimum.
@@ -299,7 +299,7 @@ src="/assets/posts/local_polynomial_regression/min_loo_cv_bandwidths.svg">
 </figure>
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 700px; margin-left: auto; margin-right: auto;"
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/min_loo_cv_data.svg">
 <figcaption>
   Fig. 4: LOO-CV is able to select a sensible bandwidth.
@@ -331,7 +331,7 @@ Since the approximate bias term we derived depends on the curvature $\mu^{\prime
 a larger bandwidth is preferred for smoother parts of the regression function.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 700px; margin-left: auto; margin-right: auto;"
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/topologist_sine_curve.svg">
 <figcaption>
   Fig. 5: Some regression functions have no good global bandwidth.
