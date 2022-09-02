@@ -229,19 +229,19 @@ def plot_region(n_draw_samples, dpi):
     ax = fig.add_subplot(111)
 
     # region
-    plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], linewidth=0, color='lightsteelblue')
+    plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], linewidth=0, color="#44475a")
 
     # boundary
-    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color='slateblue', linewidth=0, s=5, zorder=4, alpha=1)
+    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color="#8be9fd", linewidth=0, s=5, zorder=4, alpha=1)
 
     # text
-    ax.text(x=3.6, y=-0.4, s='$U$', fontsize=20, zorder=6)
-    ax.text(x=4, y=-5, s='$\partial U$', fontsize=20, zorder=6)
+    ax.text(x=3.6, y=-0.4, s='$U$', fontsize=20, zorder=6, color="white")
+    ax.text(x=4, y=-5, s='$\partial U$', fontsize=20, zorder=6, color="white")
 
     # save
     plt.axis('off')
     plt.tight_layout(pad=0)
-    plt.savefig("./region.png", dpi=dpi)
+    plt.savefig("./region.png", dpi=dpi, transparent=True)
 
 
 def plot_region_and_boundary_condition(n_draw_samples, dpi):

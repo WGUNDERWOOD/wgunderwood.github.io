@@ -6,12 +6,12 @@ plots:
 	python script.py
 
 trim:
-	magick boundary.png -shave 60x60 boundary.png
-	magick paths.png -shave 60x60 paths.png
-	magick surf_M1_f10.png -shave 60x60 surf_M1_f10.png
-	magick surf_M1_f20.png -shave 60x60 surf_M1_f20.png
-	magick surf_M30_f10.png -shave 60x60 surf_M30_f10.png
-	magick surf_M30_f20.png -shave 60x60 surf_M30_f20.png
+	#magick boundary.png -shave 60x60 boundary.png
+	#magick paths.png -shave 60x60 paths.png
+	#magick surf_M1_f10.png -shave 60x60 surf_M1_f10.png
+	#magick surf_M1_f20.png -shave 60x60 surf_M1_f20.png
+	#magick surf_M30_f10.png -shave 60x60 surf_M30_f10.png
+	#magick surf_M30_f20.png -shave 60x60 surf_M30_f20.png
 
 compress:
 	mogrify -path . -resize 500x500 *.png
