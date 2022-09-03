@@ -6,6 +6,8 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import matplotlib.cm as cm
 from matplotlib.colors import Normalize
 
+plt.rcParams["text.usetex"] = True
+
 # drawing
 # --------------------------------------------------------------------
 
@@ -256,10 +258,10 @@ def plot_region_and_boundary_condition(n_draw_samples, dpi):
     ax = fig.add_subplot(111, projection='3d')
 
     # region
-    ax.add_collection3d(plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], 0, color='lightsteelblue', linewidth=0, zorder=0))
+    ax.add_collection3d(plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], 0, color="#44475a", linewidth=0, zorder=0))
 
     # region boundary
-    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color='slateblue', linewidth=0, s=5, zorder=4, alpha=1)
+    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color="#8be9fd", linewidth=0, s=5, zorder=4, alpha=1)
 
     # phi values
     cmap = cm.rainbow
@@ -272,9 +274,9 @@ def plot_region_and_boundary_condition(n_draw_samples, dpi):
     ax.add_collection3d(data_to_polygon(boundary_coords[n_draw_samples:,:], boundary_values[n_draw_samples:,:], 0, 'k', alpha=0.1))
 
     # text
-    ax.text(x=3.5, y=0, z=0, s='$U$', fontsize=20, zorder=6)
-    ax.text(x=4, y=-5, z=0, s='$\partial U$', fontsize=20, zorder=6)
-    ax.text(x=-1, y=8.5, z=2, s='$\phi(\partial U)$', fontsize=20, zorder=6)
+    ax.text(x=3.5, y=0, z=0, s='$U$', fontsize=20, zorder=6, color="white")
+    ax.text(x=4, y=-5, z=0, s='$\partial U$', fontsize=20, zorder=6, color="white")
+    ax.text(x=-1, y=8.5, z=2, s='$\phi(\partial U)$', fontsize=20, zorder=6, color="white")
 
     # axis limits
     ax.set_xlim([-4,6])
@@ -286,7 +288,7 @@ def plot_region_and_boundary_condition(n_draw_samples, dpi):
     ax.view_init(elev=50, azim=250)
 
     plt.tight_layout(pad=0)
-    plt.savefig("./boundary.png", dpi=dpi)
+    plt.savefig("./boundary.png", dpi=dpi, transparent=True)
 
     return
 
@@ -304,10 +306,10 @@ def plot_flat_bm_paths(n_draw_samples, timestep, total_time, dpi):
     ax = fig.add_subplot(111)
 
     # region
-    plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], linewidth=0, color='lightsteelblue')
+    plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], linewidth=0, color="#44475a")
 
     # boundary
-    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color='slateblue', linewidth=0, s=5, zorder=4, alpha=1)
+    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color="#8be9fd", linewidth=0, s=5, zorder=4, alpha=1)
 
     # start value
     xy = [3,0]
@@ -324,7 +326,7 @@ def plot_flat_bm_paths(n_draw_samples, timestep, total_time, dpi):
     terminal_values = terminal_values_stopped_bms(stopped_bms)
 
     for i in range(n_paths):
-        col = ['red','green'][i]
+        col = ["#ff79c6","#50fa7b"][i]
 
         # terminal values
         ax.plot(terminal_xys[i,0], terminal_xys[i,1], '-o', markersize=5, zorder=8, linewidth=2, color=col)
@@ -335,7 +337,7 @@ def plot_flat_bm_paths(n_draw_samples, timestep, total_time, dpi):
     # save
     plt.axis('off')
     plt.tight_layout(pad=0)
-    plt.savefig("./flat.png", dpi=dpi)
+    plt.savefig("./flat.png", dpi=dpi, transparent=True)
 
 
 def plot_few_bm_paths(n_draw_samples, timestep, total_time, dpi):
@@ -351,14 +353,14 @@ def plot_few_bm_paths(n_draw_samples, timestep, total_time, dpi):
     ax = fig.add_subplot(111, projection='3d')
 
     # region
-    ax.add_collection3d(plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], 0, color='lightsteelblue', linewidth=0))
+    ax.add_collection3d(plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], 0, color="#44475a", linewidth=0))
 
     # vertical shading
     ax.add_collection3d(data_to_polygon(boundary_coords[0:n_draw_samples,:], boundary_values[0:n_draw_samples], 0, 'k', alpha = 0.1))
     ax.add_collection3d(data_to_polygon(boundary_coords[n_draw_samples:,:], boundary_values[n_draw_samples:,:], 0, 'k', alpha = 0.1))
 
     # region boundary
-    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color='slateblue', linewidth=0, s=5, zorder=4, alpha=1)
+    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color="#8be9fd", linewidth=0, s=5, zorder=4, alpha=1)
 
     # phi values
     cmap = cm.rainbow
@@ -381,7 +383,7 @@ def plot_few_bm_paths(n_draw_samples, timestep, total_time, dpi):
     terminal_values = terminal_values_stopped_bms(stopped_bms)
 
     for i in range(n_paths):
-        col = ['red','green'][i]
+        col = ["#ff79c6","#50fa7b"][i]
 
         # terminal values
         ax.plot(2*[terminal_xys[i,0]], 2*[terminal_xys[i,1]], [0, terminal_values[i]], '-o', markersize=5, zorder=8, linewidth=2, color=col)
@@ -399,7 +401,7 @@ def plot_few_bm_paths(n_draw_samples, timestep, total_time, dpi):
     ax.view_init(elev=60, azim=250)
 
     plt.tight_layout(pad=0)
-    plt.savefig("./paths.png", dpi=dpi)
+    plt.savefig("./paths.png", dpi=dpi, transparent=True)
 
     return
 
@@ -420,14 +422,14 @@ def plot_final_surface(n_monte_carlo, timestep, fidelity, total_time, n_draw_sam
     ax = fig.add_subplot(111, projection='3d')
 
     # region
-    ax.add_collection3d(plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], 0, color='lightsteelblue', linewidth=0))
+    ax.add_collection3d(plt.fill_between(boundary_coords[:,0], boundary_coords[:,1], 0, color="#44475a", linewidth=0))
 
     # vertical shading
     ax.add_collection3d(data_to_polygon(boundary_coords[0:n_draw_samples,:], boundary_values[0:n_draw_samples], 0, 'k', alpha = 0.1))
     ax.add_collection3d(data_to_polygon(boundary_coords[n_draw_samples:,:], boundary_values[n_draw_samples:,:], 0, 'k', alpha = 0.1))
 
     # region boundary
-    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color='slateblue', linewidth=0, s=5, zorder=4, alpha=1)
+    ax.scatter(boundary_coords[:,0], boundary_coords[:,1], color="#8be9fd", linewidth=0, s=5, zorder=4, alpha=1)
 
     # phi values
     cmap = cm.rainbow
@@ -451,6 +453,6 @@ def plot_final_surface(n_monte_carlo, timestep, fidelity, total_time, n_draw_sam
     ax.view_init(elev=60, azim=250)
 
     plt.tight_layout(pad=0)
-    plt.savefig("./surf_M{}_f{}.png".format(n_monte_carlo, int(100*fidelity)), dpi=dpi)
+    plt.savefig("./surf_M{}_f{}.png".format(n_monte_carlo, int(100*fidelity)), dpi=dpi, transparent=True)
 
     return
