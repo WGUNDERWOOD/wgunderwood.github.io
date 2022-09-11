@@ -115,23 +115,23 @@ end
 
 function animate_mondrian(m::Vector{Cell})
 
+	  run(`bash -c "rm -f temp_*.svg"`)
     ts = sort(unique([c.t for c in m]))
 
     for i in 1:length(ts)
-        filename = "temp_" * lpad(i, 3, "0")
+        println(i, " / ", length(ts))
+        filename = "temp_" * lpad(i, 5, "0")
         plot_mondrian(m, ts[i], filename * ".svg")
     end
 
-    #run(`bash -c "convert -append temp_*.svg mondrian_tree.svg"`)
-    run(`montage -mode concatenate -tile x1 temp_"*".svg mondrian_tree.svg`)
-    run(`bash -c "rm temp_*.svg"`)
+	  run(`bash -c "svgasm -d 1/10 temp_*.svg > mondrian_tree.svg"`)
 
     return nothing
 end
 
 
 d = 2
-lambda = 3.0
+lambda = 10.0
 c = Cell(d)
 m = sample_mondrian(c, lambda)
 
