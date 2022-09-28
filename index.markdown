@@ -184,6 +184,14 @@ Fall 2020
 <ul>
 <li>
 <strong>
+School of Engineering and Applied Science Award for Excellence
+</strong> <br>
+Princeton University,
+September 2022
+</li>
+
+<li>
+<strong>
 Francis Robbins Upton Fellowship in Engineering
 </strong> <br>
 Princeton University,

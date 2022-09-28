@@ -40,4 +40,5 @@
 ** Gaussian process regression
 ** Bayesian optimization
 ** Spline regression
+** Plotting topological surfaces
 * Other

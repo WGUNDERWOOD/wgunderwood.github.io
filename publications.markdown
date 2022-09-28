@@ -55,6 +55,12 @@ January 2022
 and [W. G. Underwood][wgunderwood] <br>
 Working paper
 
+- **Uniform Estimation and Inference with Mondrian Trees and Forests** <br>
+[M. D. Cattaneo][mdcattaneo],
+[J. M. Klusowski][jmklusowski]
+and [W. G. Underwood][wgunderwood] <br>
+Working paper
+
 
 ## Presentations
 
@@ -121,3 +127,4 @@ May 2020 <br>
 [aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
 [lsmallman]: https://scholar.google.co.uk/citations?user=B1A0KykAAAAJ&hl=en
 [rpmasini]: https://masini.princeton.edu/
+[jmklusowski]: https://jasonklusowski.github.io/
