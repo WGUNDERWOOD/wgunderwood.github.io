@@ -39,6 +39,13 @@ June 2019
 
 ## Preprints
 
+- **Yurinskii's Coupling for Martingales** <br>
+[M. D. Cattaneo][mdcattaneo],
+[R. P. Masini][rpmasini]
+and [W. G. Underwood][wgunderwood] <br>
+[arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
+October 2022
+
 - **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
 [M. D. Cattaneo][mdcattaneo],
 [Y. Feng][yfeng]
@@ -48,12 +55,6 @@ January 2022
 
 
 ## Working papers
-
-- **Martingale Coupling and Strong Approximation for Martingale Processes** <br>
-[M. D. Cattaneo][mdcattaneo],
-[R. P. Masini][rpmasini]
-and [W. G. Underwood][wgunderwood] <br>
-Working paper
 
 - **Uniform Estimation and Inference with Mondrian Trees and Forests** <br>
 [M. D. Cattaneo][mdcattaneo],
