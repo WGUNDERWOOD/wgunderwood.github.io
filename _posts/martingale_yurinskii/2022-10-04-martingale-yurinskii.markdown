@@ -13,7 +13,7 @@ and
 [Ricardo Masini](https://masini.princeton.edu).
 
 It can be found at
-[arxiv:2210.00362](https://arxiv.org/abs/2210.00362).
+[arXiv:2210.00362](https://arxiv.org/abs/2210.00362).
 
 {% include mathjax.html %}
 

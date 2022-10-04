@@ -14,7 +14,7 @@ and coauthored with
 and
 [Yingjie Feng](https://sites.google.com/site/yingjieum/),
 is now available at
-[arxiv:2201.05967](https://arxiv.org/abs/2201.05967)!
+[arXiv:2201.05967](https://arxiv.org/abs/2201.05967)!
 
 An implementation of our methodology is provided in the
 "DyadicKDE" Julia package, available on
