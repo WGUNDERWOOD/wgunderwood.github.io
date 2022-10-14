@@ -35,9 +35,10 @@
 ** Dragon curves
 ** Tail bounds
 ** Dots and boxes
-** Bracketing constant
+** Chaining/bracketing constant and tail bounds
 ** Gaussian process regression
 ** Bayesian optimization
 ** Spline regression
 ** Plotting topological surfaces
+** Easy Bernstein's inequality
 * Other
