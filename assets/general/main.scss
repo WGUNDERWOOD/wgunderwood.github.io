@@ -217,7 +217,7 @@ code{
  .highlight .kn { color: $col-pink } /* Keyword.Namespace */
  .highlight .kp { color: $col-pink } /* Keyword.Pseudo */
  .highlight .kr { color: $col-pink } /* Keyword.Reserved */
- .highlight .kt { color: $col-lightblue } /* Keyword.Type */
+ .highlight .kt { color: $col-purple } /* Keyword.Type */
  .highlight .ld { color: $col-fg } /* Literal.Date */
  .highlight .m { color: $col-purple } /* Literal.Number */
  .highlight .s { color: $col-yellow } /* Literal.String */
@@ -237,11 +237,11 @@ code{
  .highlight .nv { color: $col-lightblue; font-style: italic } /* Name.Variable */
  .highlight .ow { color: $col-pink } /* Operator.Word */
  .highlight .w { color: $col-fg } /* Text.Whitespace */
- .highlight .mb { color: $col-purple } /* Literal.Number.Bin */
- .highlight .mf { color: $col-purple } /* Literal.Number.Float */
- .highlight .mh { color: $col-purple } /* Literal.Number.Hex */
- .highlight .mi { color: $col-purple } /* Literal.Number.Integer */
- .highlight .mo { color: $col-purple } /* Literal.Number.Oct */
+ .highlight .mb { color: $col-lightblue } /* Literal.Number.Bin */
+ .highlight .mf { color: $col-lightblue } /* Literal.Number.Float */
+ .highlight .mh { color: $col-lightblue } /* Literal.Number.Hex */
+ .highlight .mi { color: $col-lightblue } /* Literal.Number.Integer */
+ .highlight .mo { color: $col-lightblue } /* Literal.Number.Oct */
  .highlight .sa { color: $col-yellow } /* Literal.String.Affix */
  .highlight .sb { color: $col-yellow } /* Literal.String.Backtick */
  .highlight .sc { color: $col-yellow } /* Literal.String.Char */
