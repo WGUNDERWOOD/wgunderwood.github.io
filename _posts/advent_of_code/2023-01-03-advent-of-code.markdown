@@ -352,12 +352,18 @@ This was the first day I found difficult,
 and also the first for which I used custom composite types.
 The goal is to imitate a simple file system which can run
 `cd` and `ls`.
-I used the following data structures:
+After some unsuccessful attempts at recursive types
+(directories in directories etc.),
+I settled on the following simple data structures,
+using full paths in the
+`name`{:.language-julia .highlight}
+fields.
 
 {% highlight julia %}
 mutable struct Directory
     name::String
     size::Real
+    parent::Union{String, Nothing}
 end
 
 struct File
@@ -372,7 +378,31 @@ mutable struct Filesystem
 end
 {% endhighlight %}
 
-TODO write this day
+Firstly I made a pass through the problem input to get the structure
+of the filesystem and the sizes of the files,
+setting each directory size to
+`NaN::Float64`{:.language-julia .highlight},
+Julia's "not a number" value.
+The main challenge was to then recursively
+propagate the file sizes up to the
+directories which contain them.
+I did this by looping over every directory
+in the file system
+and checking that
+
+* Its current `size` is
+`NaN::Float64`{:.language-julia .highlight}
+
+* All of its children have a `size` which is not
+`NaN::Float64`{:.language-julia .highlight}
+
+If so then the size of this directory is the sum of the sizes of
+its children.
+I repeated this process $d$ times where $d$ is the depth
+of the filesystem to ensure propagation has terminated.
+I'm sure there are better ways to do this, but it worked for me.
+
+TODO next day
 
 
 
