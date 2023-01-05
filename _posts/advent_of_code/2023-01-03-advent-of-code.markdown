@@ -7,6 +7,8 @@ date:   2023-01-03
 In 2022 I tackled Advent of Code for the first time,
 using the Julia language. Here are some of my thoughts.
 
+{% include mathjax.html %}
+
 ## First impressions
 
 Advent of Code (AoC) consists of twenty-five problems increasing in difficulty
@@ -226,31 +228,162 @@ This often allows one to reuse the same memory,
 modifying the entries of an array without copying the whole object.
 
 
-
-
-
-
-
-
-
-
-
-
 ## Day-by-day
 
 Some brief comments on each day's problems are given below.
 
-### Day 1
+TODO link to my gh
+TODO link to AoC each day
 
-TODO timings
+<h3> Day 1: Calorie Counting
+<span style="float: right; color: #777777; font-size: 24px;">
+(0.272s)
+</span>
+</h3>
 
+Iterating through the input lines allows us to calculate the
+total calories for each elf,
+storing the totals in a
+`Vector{Int}`{:.language-julia .highlight}.
+Finding the most calorific elf (part 1)
+and the most calorific three elves (part 2)
+is easy with the
+`maximum`{:.language-julia .highlight}
+and
+`sort`{:.language-julia .highlight}
+functions.
+
+
+
+<h3> Day 2: Rock Paper Scissors
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+For each part I kept a lookup table of type
+`Dict{String, Int}`{:.language-julia .highlight}
+for the score based on the input.
+For example for part 1 we have
+`"A X" => 1 + 3`{:.language-julia .highlight}
+and for part 2 we have
+`"A X" => 3 + 0`{:.language-julia .highlight}.
+Summing the scores over an iterator of the input file
+gives the answer without allocating much memory.
+
+
+<h3> Day 3: Rucksack Reorganization
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This problem is about finding common characters in several strings.
+While I could have just done this for two or three strings as required
+in the question, I wrote a recursive function to handle
+an arbitrary length
+`Vector{String}`{:.language-julia .highlight}
+based on intersecting the first pair repeatedly until only one
+string remains.
+
+
+<h3> Day 4: Camp Cleanup
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+For this question we are given a list of pairs of integer ranges
+and asked for how many pairs do the two ranges
+contain each other (part 1) or overlap (part 2).
+Despite the numbers in this question being quite small,
+it still seemed sensible to represent the ranges by their endpoints
+using a
+`Tuple{Int, Int}`{:.language-julia .highlight}
+rather than collecting all the values in between into a
+`Vector{Int}`{:.language-julia .highlight}.
+Given the endpoints it is easy to write
+functions to check if one contains the other or if they overlap.
+
+
+<h3> Day 5: Supply Stacks
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+Did someone say stacks?
+Moving one crate at a time (part 1) is easily achieved by using
+`push!`{:.language-julia .highlight}
+and
+`pop!`{:.language-julia .highlight}
+multiple times on the relevant
+`Vector{Char}`{:.language-julia .highlight}
+and this extends to moving multiple crates (part 2)
+by pushing them first to a
+temporary "holding array" and then to their final destinations.
+The hardest part was reading the oddly-formatted input.
+
+
+<h3> Day 6: Tuning Trouble
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This was the first puzzle where I predicted what the second part
+might be and planned accordingly.
+Both parts involve finding the first position in a string where
+the preceding $n$ characters are all distinct,
+with $n=4$ in the first part and $n=14$ in the second.
+As such I made sure the complexity of
+my solution did not depend much on the size of $n$.
+Using a simple loop through the string checking at each point if the
+preceding $n$ characters are distinct was enough to solve this.
+
+
+<h3> Day 7: No Space Left On Device
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This was the first day I found difficult,
+and also the first for which I used custom composite types.
+The goal is to imitate a simple file system which can run
+`cd` and `ls`.
+I used the following data structures:
+
+{% highlight julia %}
+mutable struct Directory
+    name::String
+    size::Real
+end
+
+struct File
+    name::String
+    size::Int
+    parent::String
+end
+
+mutable struct Filesystem
+    structure::Dict{String, Union{File, Directory}}
+    cwd::String
+end
+{% endhighlight %}
+
+TODO write this day
+
+
+
+
+'a':'z' is neat
+Dijkstra's algorithm -- Google trends spike Dec 12
+Guessing and preparing for part 2 -- did this in the 14 char day
+Representing lists/ranges without allocating (day 15)
+Dynamic allocation with growing arrays (day 17, 23)
 Day 23 was worried part 2 would take a huge amount of time but no
 Day 20 just tricky indexing
-Guessing and preparing for part 2 -- did this in the 14 char day
-Dijkstra's algorithm -- Google trends spike Dec 12
-Dynamic allocation with growing arrays (day 17, 23)
-
-Representing lists/ranges without allocating (day 15)
 
 ## Concluding remarks
 
