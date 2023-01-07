@@ -222,3 +222,22 @@ St John's College, University of Oxford,
 July 2016
 </li>
 </ul>
+
+
+
+<h2> Peer Review </h2>
+<ul>
+
+<li>
+Journal of the American Statistical Association
+</li>
+
+<li>
+Econometric Theory
+</li>
+
+<li>
+Journal of Business and Economic Statistics
+</li>
+
+</ul>
