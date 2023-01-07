@@ -42,3 +42,4 @@
 ** Plotting topological surfaces
 ** Easy Bernstein's inequality
 * Other
+** Remove Oxford logo from homepage
