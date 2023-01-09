@@ -402,18 +402,145 @@ I repeated this process $d$ times where $d$ is the depth
 of the filesystem to ensure propagation has terminated.
 I'm sure there are better ways to do this, but it worked for me.
 
+
+<h3> Day 8: Treetop Tree House
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+For this problem I wrote a running maximum function to keep track
+of the largest tree in a particular direction,
+and then used some simple logic to establish whether
+there is a line of sight from a tree to the edge of the grid.
+I handled the four different directions by permuting the input first
+using Julia's
+`reverse`{:.language-julia .highlight}
+and
+`permutedims`{:.language-julia .highlight}
+functions.
+
+Getting the scenic score for each tree was easily implemented
+by moving in each direction until finding a higher tree.
+
+<h3> Day 9: Rope Bridge
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+For this question I needed only two functions,
+one to move the head of the rope according to the instructions
+and another to adjust the tail to keep up with the head.
+To do this one needs only to check
+that the tail segment is two squares away (in $L^\infty$ norm)
+from the head and then adjust it with
+`tail += sign(head - tail)`{:.language-julia .highlight}.
+
+The extension to longer ropes was easy,
+making sure to adjust the rope from head to tail
+in order to propagate the motion correctly.
+Finally the
+`unique`{:.language-julia .highlight}
+function makes counting the visited squares trivial.
+
+
+<h3> Day 10: Cathode-Ray Tube
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+The following two simple functions carry out the bulk of
+the work for this question,
+with part 2 requiring some modular arithmetic
+to get the location of the cursor on the CRT.
+
+{% highlight julia %}
+function noop!(register::Vector{Int})
+    push!(register, register[end])
+    return nothing
+end
+
+function addx!(v::Int, register::Vector{Int})
+    noop!(register)
+    push!(register, register[end] + v)
+    return nothing
+end
+{% endhighlight %}
+
+
+<h3> Day 11: Monkey in the Middle
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+I found this problem quite difficult,
+and eventually settled on the following composite type
+for each monkey.
+In light of part 2, which requires modular arithmetic
+to prevent numbers growing too large,
+each item is stored as a dictionary of
+divisor -> remainder pairs.
+The `operation`{:.language-julia .highlight}
+field contains each monkey's operation as an anonymous function
+while `test`{:.language-julia .highlight}
+stores the divisor used for its divisibility test.
+The potential destination monkeys for the items are given in
+`dest`{:.language-julia .highlight},
+and we keep track of the number of times the monkey inspects an item in
+`inspections`{:.language-julia .highlight}.
+Once the input has been parsed, performing the rounds of
+throwing is quite straightforward.
+
+
+{% highlight julia %}
+mutable struct Monkey
+    id::Int
+    items::Vector{Dict{Int, Int}}
+    operation::Function
+    test::Int
+    dest::Dict{Bool, Int}
+    inspections::Int
+end
+{% endhighlight %}
+
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This is a classic shortest path problem,
+with the network edges determined by the heights of neighbouring squares.
+I solved this using Dijkstra's algorithm,
+keeping track of visited squares and their distances in
+auxiliary arrays.
+By running the algorithm to completion,
+not stopping after reaching the target square but
+rather finding the shortest path to all reachable squares,
+part 2 follows immediately without having to run
+the algorithm again.
+
+TODO include data structure snippet after renaming "Dijkstra" stuff
+
 TODO next day
 
 
 
 
+
+
 'a':'z' is neat
-Dijkstra's algorithm -- Google trends spike Dec 12
 Guessing and preparing for part 2 -- did this in the 14 char day
 Representing lists/ranges without allocating (day 15)
 Dynamic allocation with growing arrays (day 17, 23)
 Day 23 was worried part 2 would take a huge amount of time but no
 Day 20 just tricky indexing
+
+TODO check all code looks good
 
 ## Concluding remarks
 
