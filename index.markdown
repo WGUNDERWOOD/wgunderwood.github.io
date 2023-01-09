@@ -38,7 +38,7 @@ martingale coupling theory and random forest procedures.
 
 <a href="https://www.princeton.edu">
 <img
-style="width: 160px; border: 2px solid #111111; margin-top: 0px;"
+style="width: 160px; border: 2px solid #111111; margin-top: 2px;"
 src="/assets/general/princeton_logo.png">
 </a>
 
@@ -46,17 +46,11 @@ src="/assets/general/princeton_logo.png">
 
 <a href="https://orfe.princeton.edu/">
 <img
-style="width: 160px; border: 2px solid #111111; margin-top: 5px;"
+style="width: 160px; border: 2px solid #111111; margin-top: 15px;"
 src="/assets/general/orfe_logo.png">
 </a>
 
 <br>
-
-<a href="https://www.ox.ac.uk">
-<img
-style="width: 160px; border: 2px solid #111111; margin-top: 5px;"
-src="/assets/general/oxford_logo.png">
-</a>
 
 </div>
 
@@ -221,4 +215,23 @@ Academic Exhibition
 St John's College, University of Oxford,
 July 2016
 </li>
+</ul>
+
+
+
+<h2> Peer Review </h2>
+<ul>
+
+<li>
+Journal of the American Statistical Association
+</li>
+
+<li>
+Econometric Theory
+</li>
+
+<li>
+Journal of Business and Economic Statistics
+</li>
+
 </ul>
