@@ -703,9 +703,93 @@ TODO
 </span>
 </h3>
 
-This was one of the hardest problems.
+This was one of the hardest problems, involving a network search which
+was large enough to require some thought to get it to finish quickly.
+Firstly I did some preprocessing of the input,
+using Dijkstra's algorithm to get the shortest path length between any two
+valves, thus yielding a complete network.
+I then dropped all the valves (nodes) with a zero flow rate as there is no point
+going to them except en route to another valve.
 
-TODO write
+For part 1, I used a depth-first search (DFS),
+storing the state of each valve (open or closed),
+the amount of time used up,
+the total pressure relieved
+and the current position
+to describe each state.
+I found that using
+`UInt8`{:.language-julia .highlight}
+and `UInt16`{:.language-julia .highlight}
+where possible gave a noticeable speed-up over the more typical
+`Int64`{:.language-julia .highlight}.
+
+{% highlight julia %}
+struct State
+    opens::Vector{Bool}
+    time::UInt16
+    pressure::UInt16
+    position::UInt8
+end
+{% endhighlight %}
+
+For part 2, I first reasoned that there is no need for both you and the elephant
+to ever visit the same valve (in the processed complete network).
+Therefore I used a heuristic to find all of the "good" paths within the time limit,
+meaning those with a sufficiently high total pressure release,
+again using DFS.
+I then searched among these paths to find the best pair which visit
+disjoint sets of valves.
+The cutoff value for the good paths was chosen by trial and error,
+but could be found using a binary search.
+
+
+
+<h3>
+<a href="https://adventofcode.com/2022/day/17" style="color:#F1FA9C">
+Day 17: Pyroclastic Flow
+</a>
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This problem was fun to solve, especially the insights required for part 2.
+Part 1 invloved implementing
+[Tetris](https://en.wikipedia.org/wiki/Tetris)
+but without rotating the blocks.
+
+I represented the tower of blocks using a
+`Vector{Vector{Char}}`{:.language-julia .highlight}
+rather than a
+`Matrix{Char}`{:.language-julia .highlight}
+so I could easily push new rows onto the top to make the whole assembly taller.
+Replicating the behaviour was straightforward,
+checking which action needs to be applied at each time step.
+
+Part 2 was initially very challenging, asking to predict the height of the tower
+after 1000000000000 blocks had fallen.
+Obviously it is not possible to simulate this fully,
+but I realized that the pattern of jets and the block shapes are periodic.
+After checking that the top part of the tower of blocks is also periodic,
+the problem is much easier.
+The answer can be calculated by running the simulation for a few thousand iterations
+to observe the repeating section
+and then counting the number of repeats needed to reach
+1000000000000 blocks.
+
+
+<h3>
+<a href="https://adventofcode.com/2022/day/18" style="color:#F1FA9C">
+Day 18: Boiling Boulders
+</a>
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+
+
+
 
 
 
