@@ -528,6 +528,136 @@ TODO include data structure snippet after renaming "Dijkstra" stuff
 
 TODO next day
 
+<h3> Day 13: Distress Signal
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This problem involved parsing some possibly deeply-nested
+vectors of vectors of... of integers and comparing them
+to each other with some specific rules.
+My data structure probably wasn't the best for this day:
+I don't think Julia supports arbitrarily nested arrays as types,
+so I represented them with
+a `Vector{String}`{:.language-julia .highlight},
+that is, I only treated the outer-most array as a vector
+and just kept its elements as strings such as
+`"[[2],5]"`{:.language-julia .highlight}.
+Comparing using the rules was then fairly straightforward,
+recursing and unwrapping the strings into arrays until
+the comparison was determined.
+The unwrapping was done by counting opening and closing
+brackets to understand the depth of each element.
+
+Part 2 was easy once I could compare the objects,
+as I could pass the entire list into Julia's flexible
+`sort`{:.language-julia .highlight} function
+with a custom comparison function,
+using quick sort without having to implement it myself.
+
+
+<h3> Day 14: Regolith Reservoir
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This problem was fun to solve as it was easy to visualize and check everything
+is working properly.
+The first challenge was to parse the layout of the cave from the input,
+which amounted to modifying entries in a matrix along a line
+given the start and end points of that line.
+I then represented the cave using
+
+{% highlight julia %}
+mutable struct Cave
+    layout::Matrix{Char}
+    current::Tuple{Int, Int}
+    const start::Tuple{Int, Int}
+    terminated::Bool
+end
+{% endhighlight %}
+
+where `layout`{:.language-julia .highlight} function
+shows the cave structure as in the problem statement,
+`current`{:.language-julia .highlight}
+gives the current location of the falling unit of sand,
+`start`{:.language-julia .highlight}
+is the starting point of the sand and
+`terminated`{:.language-julia .highlight}
+determines whether to stop the simulation.
+Implementing the falling sand logic was not too hard,
+and for part 2 I simply added an extra path of solid rock
+to represent the floor,
+making it at least as wide as twice the height of the
+starting point.
+
+
+
+
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+<h3> Day 12: Hill Climbing Algorithm
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+
 
 
 
@@ -541,6 +671,11 @@ Day 23 was worried part 2 would take a huge amount of time but no
 Day 20 just tricky indexing
 
 TODO check all code looks good
+
+TODO check mutable / const
+
+TODO check tenses
+
 
 ## Concluding remarks
 
