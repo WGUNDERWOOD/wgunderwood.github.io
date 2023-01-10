@@ -4,8 +4,12 @@ title:  "Advent of Code 2022"
 date:   2023-01-03
 ---
 
-In 2022 I tackled Advent of Code for the first time,
+In 2022 I tackled
+[Advent of Code](https://adventofcode.com/)
+for the first time,
 using the Julia language. Here are some of my thoughts.
+My solutions are available on
+[GitHub](https://github.com/WGUNDERWOOD/advent-of-code-2022).
 
 {% include mathjax.html %}
 
@@ -34,8 +38,9 @@ TODO write this intro
 Since this was my first attempt at AoC,
 I decided to use a language which I am already comfortable with
 but wanted to learn more about.
-Julia is a high-level yet high-performance language which is as easy to write
-as Python and almost as fast as C TODO cite.
+Julia is a high-level yet high-performance language which is
+as easy to write as Python and
+[almost as fast as C](https://julialang.org/benchmarks/).
 Some of my favourite features
 which I tried to understand more fully during AoC include
 the following.
@@ -176,8 +181,8 @@ and
 
 ### Network algorithms
 
-While I had seen dynamic programming methods such as Dijkstra's algorithm
-TODO cite
+While I had seen dynamic programming methods such as
+[Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 for shortest paths before, I had no experience in implementing them.
 This turned out to be relatively straightforward,
 keeping track of temporary variables in a new array.
@@ -190,10 +195,11 @@ and ended up doing quite a bit of trial and error
 with various heuristics to keep the run time reasonable.
 Julia's
 `push!`{:.language-julia .highlight}
-and
-`pushfirst!`{:.language-julia .highlight}
+and `pushfirst!`{:.language-julia .highlight}
 functions allow easy switching between
-stacks and queues TODO cite,
+[stack](https://computersciencewiki.org/index.php/Stack)
+and [queue](https://computersciencewiki.org/index.php/Queue)
+behaviour,
 along with the analogous functions
 `pop!`{:.language-julia .highlight}
 and
@@ -231,11 +237,13 @@ modifying the entries of an array without copying the whole object.
 ## Day-by-day
 
 Some brief comments on each day's problems are given below.
+My solutions are available on
+[GitHub](https://github.com/WGUNDERWOOD/advent-of-code-2022).
 
-TODO link to my gh
-TODO link to AoC each day
-
-<h3> Day 1: Calorie Counting
+<h3>
+<a href="https://adventofcode.com/2022/day/1" style="color:#F1FA9C">
+Day 1: Calorie Counting
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 (0.272s)
 </span>
@@ -255,7 +263,10 @@ functions.
 
 
 
-<h3> Day 2: Rock Paper Scissors
+<h3>
+<a href="https://adventofcode.com/2022/day/2" style="color:#F1FA9C">
+Day 2: Rock Paper Scissors
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -272,7 +283,10 @@ Summing the scores over an iterator of the input file
 gives the answer without allocating much memory.
 
 
-<h3> Day 3: Rucksack Reorganization
+<h3>
+<a href="https://adventofcode.com/2022/day/3" style="color:#F1FA9C">
+Day 3: Rucksack Reorganization
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -287,7 +301,10 @@ based on intersecting the first pair repeatedly until only one
 string remains.
 
 
-<h3> Day 4: Camp Cleanup
+<h3>
+<a href="https://adventofcode.com/2022/day/4" style="color:#F1FA9C">
+Day 4: Camp Cleanup
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -306,7 +323,10 @@ Given the endpoints it is easy to write
 functions to check if one contains the other or if they overlap.
 
 
-<h3> Day 5: Supply Stacks
+<h3>
+<a href="https://adventofcode.com/2022/day/5" style="color:#F1FA9C">
+Day 5: Supply Stacks
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -325,7 +345,10 @@ temporary "holding array" and then to their final destinations.
 The hardest part was reading the oddly-formatted input.
 
 
-<h3> Day 6: Tuning Trouble
+<h3>
+<a href="https://adventofcode.com/2022/day/6" style="color:#F1FA9C">
+Day 6: Tuning Trouble
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -342,7 +365,10 @@ Using a simple loop through the string checking at each point if the
 preceding $n$ characters are distinct was enough to solve this.
 
 
-<h3> Day 7: No Space Left On Device
+<h3>
+<a href="https://adventofcode.com/2022/day/7" style="color:#F1FA9C">
+Day 7: No Space Left On Device
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -403,7 +429,10 @@ of the filesystem to ensure propagation has terminated.
 I'm sure there are better ways to do this, but it worked for me.
 
 
-<h3> Day 8: Treetop Tree House
+<h3>
+<a href="https://adventofcode.com/2022/day/8" style="color:#F1FA9C">
+Day 8: Treetop Tree House
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -423,7 +452,10 @@ functions.
 Getting the scenic score for each tree was easily implemented
 by moving in each direction until finding a higher tree.
 
-<h3> Day 9: Rope Bridge
+<h3>
+<a href="https://adventofcode.com/2022/day/9" style="color:#F1FA9C">
+Day 9: Rope Bridge
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -445,7 +477,10 @@ Finally the
 function makes counting the visited squares trivial.
 
 
-<h3> Day 10: Cathode-Ray Tube
+<h3>
+<a href="https://adventofcode.com/2022/day/10" style="color:#F1FA9C">
+Day 10: Cathode-Ray Tube
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -470,7 +505,10 @@ end
 {% endhighlight %}
 
 
-<h3> Day 11: Monkey in the Middle
+<h3>
+<a href="https://adventofcode.com/2022/day/11" style="color:#F1FA9C">
+Day 11: Monkey in the Middle
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -507,7 +545,10 @@ end
 {% endhighlight %}
 
 
-<h3> Day 12: Hill Climbing Algorithm
+<h3>
+<a href="https://adventofcode.com/2022/day/12" style="color:#F1FA9C">
+Day 12: Hill Climbing Algorithm
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -524,11 +565,27 @@ rather finding the shortest path to all reachable squares,
 part 2 follows immediately without having to run
 the algorithm again.
 
-TODO include data structure snippet after renaming "Dijkstra" stuff
+{% highlight julia %}
+struct Hill
+    heights::Matrix{Int}
+    distances::Matrix{Union{Int, Float64}}
+    visited::Matrix{Bool}
+    S::Tuple{Int, Int}
+    E::Tuple{Int, Int}
+end
+{% endhighlight %}
 
-TODO next day
+Note that each distance
+is of type
+`Union{Int, Float64}`{:.language-julia .highlight}
+to allow for the value
+`Inf::Float64`{:.language-julia .highlight}.
 
-<h3> Day 13: Distress Signal
+
+<h3>
+<a href="https://adventofcode.com/2022/day/13" style="color:#F1FA9C">
+Day 13: Distress Signal
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -557,7 +614,10 @@ with a custom comparison function,
 using quick sort without having to implement it myself.
 
 
-<h3> Day 14: Regolith Reservoir
+<h3>
+<a href="https://adventofcode.com/2022/day/14" style="color:#F1FA9C">
+Day 14: Regolith Reservoir
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
@@ -594,69 +654,58 @@ making it at least as wide as twice the height of the
 starting point.
 
 
-
-
-
-<h3> Day 12: Hill Climbing Algorithm
+<h3>
+<a href="https://adventofcode.com/2022/day/15" style="color:#F1FA9C">
+Day 15: Beacon Exclusion Zone
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
 </h3>
 
-<h3> Day 12: Hill Climbing Algorithm
+This day was quite tricky.
+The obvious thing to do is to represent the positions of everything in a
+`Matrix{Char}`{:.language-julia .highlight},
+as suggested by the example maps given in the problem.
+However when looking at the problem input it quickly becomes apparent
+that this won't work as the numbers involved
+(and hence the size of the matrix needed)
+are very large.
+Hence I looked for a solution which avoids allocating large amounts of memory,
+storing only the key properties of each sensor and
+using Julia's inbuilt
+`UnitRange{Int}`{:.language-julia .highlight}
+type to represent intervals of numbers.
+
+For part 1, I calculated the interval of points precluded by a given sensor
+at a given $y$ value,
+then wrote a function to simplify a collection of such intervals
+into disjoint intervals.
+Counting the number of points in disjoint intervals is then easy.
+
+It took me a long time to figure out Part 2.
+My final solution relies on the logic that if there is only one point
+which is not in any of the sensed regions,
+then it must be near a "corner" of two sensed regions.
+Thus it first calculates the intersection points of the boundaries
+of the sensed regions for each pair of sensors.
+It then searches the neighbours of these points to find a point
+which is in none of the sensed regions.
+
+
+
+<h3>
+<a href="https://adventofcode.com/2022/day/16" style="color:#F1FA9C">
+Day 16: Proboscidea Volcanium
+</a>
 <span style="float: right; color: #777777; font-size: 24px;">
 TODO
 </span>
 </h3>
 
-<h3> Day 12: Hill Climbing Algorithm
-<span style="float: right; color: #777777; font-size: 24px;">
-TODO
-</span>
-</h3>
+This was one of the hardest problems.
 
-<h3> Day 12: Hill Climbing Algorithm
-<span style="float: right; color: #777777; font-size: 24px;">
-TODO
-</span>
-</h3>
-
-<h3> Day 12: Hill Climbing Algorithm
-<span style="float: right; color: #777777; font-size: 24px;">
-TODO
-</span>
-</h3>
-
-<h3> Day 12: Hill Climbing Algorithm
-<span style="float: right; color: #777777; font-size: 24px;">
-TODO
-</span>
-</h3>
-
-<h3> Day 12: Hill Climbing Algorithm
-<span style="float: right; color: #777777; font-size: 24px;">
-TODO
-</span>
-</h3>
-
-<h3> Day 12: Hill Climbing Algorithm
-<span style="float: right; color: #777777; font-size: 24px;">
-TODO
-</span>
-</h3>
-
-<h3> Day 12: Hill Climbing Algorithm
-<span style="float: right; color: #777777; font-size: 24px;">
-TODO
-</span>
-</h3>
-
-<h3> Day 12: Hill Climbing Algorithm
-<span style="float: right; color: #777777; font-size: 24px;">
-TODO
-</span>
-</h3>
-
+TODO write
 
 
 
@@ -664,8 +713,6 @@ TODO
 
 
 'a':'z' is neat
-Guessing and preparing for part 2 -- did this in the 14 char day
-Representing lists/ranges without allocating (day 15)
 Dynamic allocation with growing arrays (day 17, 23)
 Day 23 was worried part 2 would take a huge amount of time but no
 Day 20 just tricky indexing
@@ -675,6 +722,10 @@ TODO check all code looks good
 TODO check mutable / const
 
 TODO check tenses
+
+TODO check US/UK
+
+TODO check links
 
 
 ## Concluding remarks
