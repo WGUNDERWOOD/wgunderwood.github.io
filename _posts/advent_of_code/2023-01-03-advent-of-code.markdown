@@ -6,9 +6,9 @@ date:   2023-01-03
 
 In 2022 I tackled
 [Advent of Code](https://adventofcode.com/)
-for the first time,
-using the Julia language. Here are some of my thoughts.
-My solutions are available on
+for the first time, using the Julia language.
+Here are some of my thoughts,
+and my code is on
 [GitHub](https://github.com/WGUNDERWOOD/advent-of-code-2022).
 
 {% include mathjax.html %}
@@ -786,6 +786,57 @@ Day 18: Boiling Boulders
 TODO
 </span>
 </h3>
+
+This was also a fun problem.
+Part 1 was easy, calculating the total area of all the cubes
+and then subtracting non-exposed faces:
+those which make contact with another cube.
+
+For part 2 I wrote a function to "complete" a set of cubes
+by filling in any internal cavities.
+This let me reuse my surface area function
+from part 1 to get the exterior surface area.
+The completion function works by drawing a box around the lava droplet
+and marking cubes on the boundary of this box as "outside" the droplet.
+I then mark any non-droplet neighbours of an
+"outside" cube as also being "outside",
+iterating with a DFS until termination.
+The completed droplet is then simply the union of the original droplet
+and the cubes which are not outside.
+
+
+<h3>
+<a href="https://adventofcode.com/2022/day/19" style="color:#F1FA9C">
+Day 19: Not Enough Minerals
+</a>
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+I thought this was the hardest problem on the calendar,
+and definitely took me the longest to solve.
+This was another network search-type problem,
+so I again went for a DFS approach.
+However this instance was significantly larger than that from Day 16,
+and I had to use the following pruning strategies to avoid
+searching too large a space.
+
+* If you can buy a geode bot, you must do so.
+
+* If in the previous state you could have bought bot X
+  but instead did nothing, then you should not buy bot X now.
+
+* Suppose in the current state you could spend the rest of the time
+  only building geode bots. If this doesn't get more geodes
+  than the current best strategy, then drop the current state.
+
+* If no object requires more than X of resource Y,
+  then don't buy more than X of bot Y.
+
+Thankfully this approach was good enough to solve both parts 1 and 2,
+but it took a lot of trial and error to work out which optimisations
+were worth using.
 
 
 
