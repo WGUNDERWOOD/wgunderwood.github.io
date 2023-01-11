@@ -23,6 +23,7 @@ Downey's
 Drakopoulos
 DyadicKDE
 Epanechnikov
+Expr
 Feng
 Filesystem
 Geoff
@@ -93,6 +94,7 @@ cubics
 cwd
 dest
 dirichlet
+eval
 favourite
 figcaption
 generalisations
@@ -104,6 +106,7 @@ homoscedastic
 honoured
 href
 html
+humn
 hyperparameter
 img
 integrable
@@ -114,6 +117,7 @@ julia
 li
 lil
 lln
+loc
 localising
 lsmallman
 mandelbrot
@@ -130,6 +134,7 @@ noopener
 noreferrer
 numpy
 optimisations
+optimise
 orfe
 overfit
 overfitting
@@ -141,6 +146,7 @@ png
 pointwise
 popfirst
 pre
+precompilation
 preprint
 princeton
 procedurally
@@ -149,6 +155,8 @@ py
 quartics
 quintics
 randomised
+realise
+realised
 recursing
 rpmasini
 src
@@ -162,6 +170,7 @@ undersmoothed
 untyped
 vectorisation
 vectorised
+visualise
 visualised
 wgunderwood
 writeup

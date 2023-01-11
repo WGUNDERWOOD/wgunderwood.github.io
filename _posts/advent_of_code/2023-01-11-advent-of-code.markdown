@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Advent of Code 2022"
-date:   2023-01-03
+date:   2023-01-11
 ---
 
 In 2022 I tackled
@@ -968,7 +968,7 @@ Here, `id` identifies each face uniquely,
 `board` provides the layout of open tiles and walls on the face,
 `face_coords` gives the coordinates in 3D space of the
 top-left, top-right and bottom-left corners of the face,
-and `cornerloc` records where the face is located on the original
+and `corner_loc` records where the face is located on the original
 input net.
 To parse the faces, I set the first face to have coordinates
 `[-1 1 -1 1; 1 1 -1 -1; 1 1 1 1]` and then
