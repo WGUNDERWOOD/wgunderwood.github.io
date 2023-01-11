@@ -841,6 +841,133 @@ but it took a lot of trial and error to work out which optimisations
 were worth using.
 
 
+<h3>
+<a href="https://adventofcode.com/2022/day/20" style="color:#F1FA9C">
+Day 20: Grove Positioning System
+</a>
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This problem was a welcome break, and was quite easy.
+The main challenge here was using the right indices
+and applying the correct modulo functions.
+I kept track of both the mixed list and the original
+index of each element in that list,
+making it easy to work out which element to move next.
+I was worried that part 2 might ask me to mix the list
+a huge number of times, but thankfully it didn't and
+I was able to use the same code for both parts.
+
+
+
+<h3>
+<a href="https://adventofcode.com/2022/day/21" style="color:#F1FA9C">
+Day 21: Monkey Math
+</a>
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+Part 1 of this problem was easy but
+after seeing part 2 I rewrote all my code,
+keeping track of expressions for each monkey rather than values.
+I then wrote a function to check for a given monkey whether
+both of its "child" monkeys (the monkey that will provide its inputs)
+have had their expressions parsed.
+If so, I can parse the current monkey by substituting the children's
+expressions into its own expression.
+Repeating this for all the monkeys until termination propagates
+the expressions right up to the `root` monkey.
+For part 1, this can then be directly evaluated using Julia's
+metaprogramming facilities:
+`Meta.parse`{:.language-julia .highlight}
+converts a
+`String`{:.language-julia .highlight}
+to an
+`Expr`{:.language-julia .highlight},
+and this is evaluated to a number with
+`eval`{:.language-julia .highlight}.
+
+For part 2 I retrieved the expressions of the two children of `root`.
+One of these evaluated to a number directly,
+and the other retained the variable `humn`.
+To find the value of `humn` which solves these equal to each other,
+I implemented a
+[binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm).
+This is probably not guaranteed to work in all situations,
+but was fine for my instance.
+
+
+<h3>
+<a href="https://adventofcode.com/2022/day/22" style="color:#F1FA9C">
+Day 22: Monkey Map
+</a>
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This was a challenging but fun problem.
+Part 1 was quite easy, especially since we have already solved
+a few of these "follow the rules on a grid"-type problems
+(day 9, day 14, day 17),
+with the only tricky task being to write down the rules for wrapping around
+to the other side of the map.
+
+Part 2 was much harder but also quite interesting.
+The central data structure I used was to represent each face of
+the cube by the following.
+
+{% highlight julia %}
+mutable struct Face
+    id::Int
+    board::Matrix{Char}
+    face_coords::Matrix{Int}
+    corner_loc::Tuple{Int, Int}
+end
+{% endhighlight %}
+
+Here, `id` identifies each face uniquely,
+`board` provides the layout of open tiles and walls on the face,
+`face_coords` gives the coordinates in 3D space of the
+top-left, top-right and bottom-left corners of the face,
+and `cornerloc` records where the face is located on the original
+input net.
+To parse the faces, I set the first face to have coordinates
+`[-1 1 -1 1; 1 1 -1 -1; 1 1 1 1]` and then
+traced over the net, applying the appropriate
+matrix operation every time I went over an edge to keep track of the
+coordinates of each face.
+The main part of the problem was then to handle the logic
+for going over an edge on the resulting cube.
+I did this in stages, first identifying the coordinates of the
+edge to cross, then matching this to determine which face we end up on.
+Again matching coordinates identifies which side of this face we emerge on,
+and we then have to work out where on this edge we appear,
+and which way we are then facing.
+It took me a long time to realise that I had forgotten the last stage:
+we have to check we don't emerge into a wall,
+as then we don't make the transition at all.
+My code ended up being pretty long, but I think it should work
+in generality -- I never "hard-coded" my cube's layout.
+
+
+<h3>
+<a href="https://adventofcode.com/2022/day/23" style="color:#F1FA9C">
+Day 23: Unstable Diffusion
+</a>
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+
+
+
+
 
 
 
@@ -863,6 +990,8 @@ TODO check tenses
 TODO check US/UK
 
 TODO check links
+
+TODO check longest code day 22?
 
 
 ## Concluding remarks
