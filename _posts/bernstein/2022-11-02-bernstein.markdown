@@ -4,6 +4,8 @@ title:  "Bernstein's Inequality"
 date:   2022-11-02
 ---
 
+This post is about Bernstein's inequality
+
 {% include mathjax.html %}
 
 <div style="display:none">

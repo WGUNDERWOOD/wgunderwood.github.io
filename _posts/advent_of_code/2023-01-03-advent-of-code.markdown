@@ -7,8 +7,8 @@ date:   2023-01-03
 In 2022 I tackled
 [Advent of Code](https://adventofcode.com/)
 for the first time, using the Julia language.
-Here are some of my thoughts,
-and my code is on
+Here are some of my thoughts;
+my code is on
 [GitHub](https://github.com/WGUNDERWOOD/advent-of-code-2022).
 
 {% include mathjax.html %}

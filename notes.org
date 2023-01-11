@@ -1,4 +1,5 @@
 * Post ideas
+** Advent of code
 ** Mondrian forests
 ** Probability theory
 *** Probability spaces
@@ -43,3 +44,6 @@
 ** Plotting topological surfaces
 ** Easy Bernstein's inequality
 * Other
+** spell checking
+** update makefile
+** todo finder
