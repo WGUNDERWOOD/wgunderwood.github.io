@@ -16,10 +16,12 @@ NJ 08544 <br>
 USA
 
 ### Other links
-- [BibTeX bibliography](https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.bib)
+- [BibTeX bibliography](https://github.com/WGUNDERWOOD/wgu-cv/
+  blob/main/WGUnderwood.bib)
 - [CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.pdf)
 - [GitHub](https://github.com/WGUNDERWOOD)
-- [Google Scholar](https://scholar.google.co.uk/citations?user=4rtNN4wAAAAJ&hl=en)
+- [Google Scholar](https://scholar.google.co.uk/
+  citations?user=4rtNN4wAAAAJ&hl=en)
 - [Kaggle](https://www.kaggle.com/wgunderwood)
 - [Keybase](https://keybase.io/wgunderwood/chat)
 - [LinkedIn](https://www.linkedin.com/in/william--underwood/)

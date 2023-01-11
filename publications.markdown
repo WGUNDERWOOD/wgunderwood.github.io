@@ -23,7 +23,8 @@ My software is hosted on
 and [M. Cucuringu][mcucuringu] <br>
 [*Applied Network Science*](https://appliednetsci.springeropen.com/)
 5, 62 <br>
-[doi:10.1007/s41109-020-00293-z](https://doi.org/doi:10.1007/s41109-020-00293-z) <br>
+[doi:10.1007/s41109-020-00293-z](
+https://doi.org/doi:10.1007/s41109-020-00293-z) <br>
 September 2020
 
 - **Simple Poisson PCA: an algorithm for (sparse) feature extraction
@@ -33,7 +34,8 @@ with simultaneous dimension determination** <br>
 and [A. Artemiou][aartemiou] <br>
 [*Computational Statistics*](https://link.springer.com/journal/180)
 35, 559-577 <br>
-[doi:10.1007/s00180-019-00903-0](https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
+[doi:10.1007/s00180-019-00903-0](
+https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 June 2019
 
 
@@ -73,7 +75,8 @@ and [W. G. Underwood][wgunderwood] <br>
 June 2022
 
 
-- **Uniform Approximation and Inference with Dyadic Kernel Density Estimation** <br>
+- **Uniform Approximation and Inference with
+Dyadic Kernel Density Estimation** <br>
 [M. D. Cattaneo][mdcattaneo],
 [Y. Feng][yfeng]
 and [W. G. Underwood][wgunderwood] <br>
@@ -84,7 +87,8 @@ September 2021
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood]
 and [M. Cucuringu][mcucuringu] <br>
-*[The 8th International Conference on Complex Networks and their Applications](https://www.2019.complexnetworks.org/)* <br>
+*[The 8th International Conference on Complex Networks and their Applications](
+https://www.2019.complexnetworks.org/)* <br>
 Presented by [M. Cucuringu][mcucuringu] <br>
 December 2019
 
@@ -121,7 +125,7 @@ May 2020 <br>
 
 [wgunderwood]: /
 
-[aartemiou]: http://www.google.com/url?q=http%3A%2F%2Fartemioua.com%2F&sa=D&sntz=1&usg=AFQjCNFGen68J9EmhvGCbaFRcl6fqTxuRQ
+[aartemiou]: https://artemioua.com/
 [mcucuringu]: https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en
 [mdcattaneo]: https://cattaneo.princeton.edu/
 [yfeng]: https://sites.google.com/site/yingjieum/

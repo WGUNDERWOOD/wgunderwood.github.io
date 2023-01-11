@@ -26,7 +26,8 @@ to global warming data from NASA.
 ## Data
 
 We use time-series data from
-[NASA's Goddard Institute for Space](https://climate.nasa.gov/vital-signs/global-temperature/).
+[NASA's Goddard Institute for Space](
+https://climate.nasa.gov/vital-signs/global-temperature/).
 The data set takes the form of yearly measurements
 of global temperature anomaly between 1880 and 2021,
 giving 142 samples in total.
@@ -113,5 +114,6 @@ though their methodology may be slightly different.
 ## References
 
 - Data from
-[NASA's Goddard Institute for Space](https://climate.nasa.gov/vital-signs/global-temperature/),
+[NASA's Goddard Institute for Space](
+https://climate.nasa.gov/vital-signs/global-temperature/),
 accessed July 2022

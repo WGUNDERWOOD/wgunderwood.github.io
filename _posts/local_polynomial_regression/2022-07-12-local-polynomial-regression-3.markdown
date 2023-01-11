@@ -184,7 +184,8 @@ as was presented in
 
 ## Next time
 
-In the next and final post we will apply the concepts discussed during the previous three
+In the next and final post we will apply the concepts
+discussed during the previous three
 parts to some real-world data and discuss the conclusions.
 
 ## References

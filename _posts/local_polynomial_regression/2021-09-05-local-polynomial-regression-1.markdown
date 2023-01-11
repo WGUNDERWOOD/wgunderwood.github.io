@@ -11,7 +11,8 @@ covers the general problem setup
 and introduces the Nadaraya--Watson estimator.
 
 The Python code is available on
-[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/local_polynomial_regression).
+[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/
+tree/main/_posts/local_polynomial_regression).
 
 
 {% include mathjax.html %}
@@ -83,7 +84,8 @@ allowing $\mu$ to be identified.
 <img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/data.svg">
 <figcaption>
-  Fig. 1: The responses $y_i$ are plotted against the independent variables $x_i$. <br>
+  Fig. 1: The responses $y_i$ are plotted against the
+  independent variables $x_i$. <br>
   The line indicates the regression function.
 </figcaption>
 </figure>
@@ -180,7 +182,8 @@ can give a much better fit to the data.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 600px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/local_polynomial_regression/quadratic_fit_quadratic_data.svg">
+src="/assets/posts/local_polynomial_regression/
+quadratic_fit_quadratic_data.svg">
 <figcaption>
   Fig. 4: Quadratic regression fits the quadratic regression function well.
 </figcaption>
@@ -194,9 +197,11 @@ as seen in Figure 5.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 600px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/local_polynomial_regression/quadratic_fit_general_data.svg">
+src="/assets/posts/local_polynomial_regression/
+quadratic_fit_general_data.svg">
 <figcaption>
-  Fig. 5: Quadratic regression does not work well with non-quadratic regression functions.
+  Fig. 5: Quadratic regression does not work well
+  with non-quadratic regression functions.
 </figcaption>
 </figure>
 
@@ -209,7 +214,8 @@ especially when there are not many data points.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 600px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/local_polynomial_regression/polynomial_fit_general_data.svg">
+src="/assets/posts/local_polynomial_regression/
+polynomial_fit_general_data.svg">
 <figcaption>
   Fig. 6: A degree-50 polynomial regression will often overfit.
 </figcaption>
@@ -256,7 +262,8 @@ src="/assets/posts/local_polynomial_regression/kernels.svg">
 </figure>
 
 The bandwidth $h$ controls how much locality is present.
-If $h$ is very small then only data points which are very close to the evaluation
+If $h$ is very small then only data points
+which are very close to the evaluation
 point are used.
 If $h$ is larger then further-away points are used too.
 
@@ -292,7 +299,8 @@ though it is necessary to choose an appropriate bandwidth $h$.
 <img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/local_polynomial_regression/nadaraya_fit_general_data.svg">
 <figcaption>
-  Fig. 8: The Nadaraya&ndash;Watson estimator adapts to a broad class of functions.
+  Fig. 8: The Nadaraya&ndash;Watson estimator
+  adapts to a broad class of functions.
 </figcaption>
 </figure>
 
