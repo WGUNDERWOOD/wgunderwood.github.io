@@ -20,7 +20,6 @@ The python script takes two arguments:
 The optional flag `--colorize` adds colour to the terminal output,
 making it easier to read.
 
-
 ## Examples
 
 ### A quickly terminating sequence
