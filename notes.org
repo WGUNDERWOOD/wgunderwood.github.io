@@ -1,5 +1,4 @@
 * Post ideas
-** Advent of code
 ** Mondrian forests
 ** Probability theory
 *** Probability spaces
