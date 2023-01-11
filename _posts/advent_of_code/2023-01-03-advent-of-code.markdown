@@ -15,19 +15,21 @@ my code is on
 
 ## First impressions
 
-Advent of Code (AoC) consists of twenty-five problems increasing in difficulty
-from 1st to 25th December.
+[Advent of Code](https://adventofcode.com/)
+(AoC) consists of twenty-five problems increasing in difficulty
+from the 1st to the 25th of December.
 I enjoyed solving all the problems,
 which were varied enough to avoid repetition,
-but also fell into a few distinct categories
+but which also fell into a few distinct categories
 giving some familiarity.
 The first few problems were very easy,
 typically requiring just a few lines of code
 and no particular insights -- the obvious solution "just worked."
 The later problems presented various challenges,
-including
-
-TODO write this intro
+including knowledge of network search algorithms,
+computational complexity
+and memory considerations,
+and plenty of general-purpose problem solving.
 
 
 
@@ -38,7 +40,8 @@ TODO write this intro
 Since this was my first attempt at AoC,
 I decided to use a language which I am already comfortable with
 but wanted to learn more about.
-Julia is a high-level yet high-performance language which is
+[Julia](https://julialang.org/)
+is a high-level yet high-performance language which is
 as easy to write as Python and
 [almost as fast as C](https://julialang.org/benchmarks/).
 Some of my favourite features
@@ -47,7 +50,8 @@ the following.
 
 ### First-class arrays
 
-Arrays in Julia are very easy to use,
+[Arrays](https://docs.julialang.org/en/v1/manual/arrays/)
+in Julia are very easy to use,
 working seamlessly with the rest of its type system
 and requiring no additional packages (I'm looking at you, numpy).
 For example, dimension is well-defined
@@ -81,26 +85,36 @@ pushing and popping.
 
 ### Just-in-time compilation
 
-Julia is compiled just-in-time (JIT),
+Julia is compiled
+[just-in-time](https://en.wikipedia.org/wiki/
+Just-in-time_compilation)
+(JIT),
 an approach offering a compromise between
-ahead-of-time (AOT) compilation
+[ahead-of-time](https://en.wikipedia.org/wiki/Compiler)
+compilation
 (where the program is first compiled to
 machine code and then executed, like C)
-and interpretation
-(where the program is run line by line, like Python).
+and
+[interpretation](https://en.wikipedia.org/wiki/
+Interpreter_(computing))
+(where the program is run line-by-line, like Python).
 This allows the program to be recompiled while it is running,
 so that the most performance-critical parts are made as fast as possible.
 
 ### Fast loops
 
-A great example of the benefit of JIT compilation is
-Julia's fast loops, which require no vectorisation
+A great example of the benefit of JIT compilation is Julia's
+[fast loop](https://julialang.org/benchmarks/)
+implementation,
+which requires no explicit vectorisation
 (unlike Python, where loops are painfully slow
-unless vectorised in numpy).
-Simply write out the loops you need and the compiler will handle
+unless vectorised with list comprehensions or numpy).
+Simply write out the loops you need and the JIT compiler will handle
 the execution.
-That said, Julia does have vectorisation macros which
-can allow for neater code.
+That said, Julia does have
+[vectorisation macros](https://docs.julialang.org/en/v1/
+manual/mathematical-operations/#man-dot-operators)
+which can allow for neater code.
 For example, to add one to the array
 `A::Vector{Int}`{:.language-julia .highlight},
 we write `A .+ 1`{:.language-julia .highlight},
@@ -109,8 +123,10 @@ the elements of `A`{:.language-julia .highlight}.
 
 ### Type annotation
 
-Julia's type system is another place where it combines the best of
-low-level AOT compiled languages and high-level interpreted languages.
+Julia's
+[type system](https://docs.julialang.org/en/v1/manual/types/)
+is another place where it combines the best of
+low-level compiled languages and high-level interpreted languages.
 Type annotations are *optional* in Julia.
 If you don't want to think about types,
 you can opt to leave variables and function arguments untyped,
@@ -118,15 +134,16 @@ as in Python or R.
 However adding type annotations such as
 `x::Float64`{:.language-julia .highlight}
 or `add_one(x::Float64) = x + 1`{:.language-julia .highlight}
-can help the compiler optimize your code better
+can help the compiler optimise your code better
 and prevent you from making mistakes such as passing the wrong
 object into a function.
 
 ### Multiple dispatch
 
-Julia allows the creation of composite types
-(also known as objects or structs).
-
+Julia allows the creation of
+[composite types](https://docs.julialang.org/en/v1/
+manual/types/#Composite-Types)
+(also known as structs or objects).
 
 {% highlight julia %}
 struct Elf
@@ -137,7 +154,9 @@ end
 
 However, unlike objected-oriented languages such as Python,
 Julia does not define methods for its objects.
-Instead, we write a normal function and annotate its arguments
+Instead, we write a regular
+[function](https://docs.julialang.org/en/v1/manual/functions/)
+and annotate its arguments
 to be of certain types.
 For example,
 `bmi(elf::Elf) = elf.weight / elf.height^2`{:.language-julia .highlight}
@@ -148,10 +167,17 @@ in order for the function to be called.
 
 
 There is plenty more to like about Julia,
-including its parametric type system,
+including its
+[parametric type system](https://docs.julialang.org/en/v1/
+manual/types/#Parametric-Types),
 its great standard libraries for
-multi-threading, linear algebra and statistics,
-its package manager and its testing functionality,
+[multi-threading](https://docs.julialang.org/en/v1/base/multi-threading/),
+[linear algebra](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/)
+and [statistics](https://docs.julialang.org/en/v1/stdlib/Statistics/),
+its [package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/)
+and its
+[testing](https://docs.julialang.org/en/v1/stdlib/Test/)
+functionality,
 but I won't go into any more detail here.
 
 
@@ -171,9 +197,13 @@ I would often be confused by the obsession with
 AoC definitely helped me appreciate this more -- in fact
 I think the hardest part of most of the problems was finding the right
 data structures to use.
-I became more familiar with hash maps
-(dictionaries) and tuples, and their respective strengths and weaknesses.
-Type unions were also useful, particularly for handling
+I became more familiar with
+[dictionaries](https://docs.julialang.org/en/v1/base/collections/#Dictionaries)
+(hash maps) and
+[tuples](https://docs.julialang.org/en/v1/manual/functions/#Tuples),
+and their respective strengths and weaknesses.
+[Type unions](https://docs.julialang.org/en/v1/manual/types/#Type-Unions)
+were also useful, particularly for handling
 missing or non-existent values through the
 `Nothing`{:.language-julia .highlight}
 and
@@ -188,8 +218,11 @@ This turned out to be relatively straightforward,
 keeping track of temporary variables in a new array.
 
 More challenging for me were the network search algorithms,
-including breadth-first search (BFS)
-and depth-first search (DFS).
+including
+[breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
+(BFS) and
+[depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
+(DFS).
 I didn't really understand which one to use in a given scenario
 and ended up doing quite a bit of trial and error
 with various heuristics to keep the run time reasonable.
@@ -224,7 +257,7 @@ This can help avoid storing huge integers.
 A similar challenge was to avoid copying large arrays.
 Julia uses exclamation marks to distinguish "in-place" functions
 such as
-`sort!`{:.language-julia .highlight}
+`sort!`{:.language-julia .highlight},
 which modify their arguments, from
 "returning" functions such as
 `sort`{:.language-julia .highlight}
@@ -236,7 +269,8 @@ modifying the entries of an array without copying the whole object.
 
 ## Day-by-day
 
-Some brief comments on each day's problems are given below.
+Some brief comments on each day's problems are given below,
+along with the approximate execution time after precompilation.
 My solutions are available on
 [GitHub](https://github.com/WGUNDERWOOD/advent-of-code-2022).
 
@@ -245,7 +279,7 @@ My solutions are available on
 Day 1: Calorie Counting
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-(0.272s)
+0.034 s
 </span>
 </h3>
 
@@ -268,7 +302,7 @@ functions.
 Day 2: Rock Paper Scissors
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.080 s
 </span>
 </h3>
 
@@ -277,7 +311,7 @@ For each part I kept a lookup table of type
 for the score based on the input.
 For example for part 1 we have
 `"A X" => 1 + 3`{:.language-julia .highlight}
-and for part 2 we have
+while for part 2 we have
 `"A X" => 3 + 0`{:.language-julia .highlight}.
 Summing the scores over an iterator of the input file
 gives the answer without allocating much memory.
@@ -288,7 +322,7 @@ gives the answer without allocating much memory.
 Day 3: Rucksack Reorganization
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.434 s
 </span>
 </h3>
 
@@ -306,7 +340,7 @@ string remains.
 Day 4: Camp Cleanup
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.173 s
 </span>
 </h3>
 
@@ -328,7 +362,7 @@ functions to check if one contains the other or if they overlap.
 Day 5: Supply Stacks
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.179 s
 </span>
 </h3>
 
@@ -350,7 +384,7 @@ The hardest part was reading the oddly-formatted input.
 Day 6: Tuning Trouble
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.020 s
 </span>
 </h3>
 
@@ -370,7 +404,7 @@ preceding $n$ characters are distinct was enough to solve this.
 Day 7: No Space Left On Device
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.548 s
 </span>
 </h3>
 
@@ -380,24 +414,14 @@ The goal is to imitate a simple file system which can run
 `cd` and `ls`.
 After some unsuccessful attempts at recursive types
 (directories in directories etc.),
-I settled on the following simple data structures,
-using full paths in the
-`name`{:.language-julia .highlight}
-fields.
+I settled on the following simple data structure,
+with structs
+`File`{:.language-julia .highlight}
+and `Directory`{:.language-julia .highlight}
+each containing
+`name`, `size` and `parent` fields:
 
 {% highlight julia %}
-mutable struct Directory
-    name::String
-    size::Real
-    parent::Union{String, Nothing}
-end
-
-struct File
-    name::String
-    size::Int
-    parent::String
-end
-
 mutable struct Filesystem
     structure::Dict{String, Union{File, Directory}}
     cwd::String
@@ -407,7 +431,7 @@ end
 Firstly I made a pass through the problem input to get the structure
 of the file system and the sizes of the files,
 setting each directory size to
-`NaN::Float64`{:.language-julia .highlight},
+`NaN`{:.language-julia .highlight},
 Julia's "not a number" value.
 The main challenge was to then recursively
 propagate the file sizes up to the
@@ -417,10 +441,10 @@ in the file system
 and checking that
 
 * Its current `size` is
-`NaN::Float64`{:.language-julia .highlight}
+`NaN`{:.language-julia .highlight}
 
 * All of its children have a `size` which is not
-`NaN::Float64`{:.language-julia .highlight}
+`NaN`{:.language-julia .highlight}
 
 If so then the size of this directory is the sum of the sizes of
 its children.
@@ -434,7 +458,7 @@ I'm sure there are better ways to do this, but it worked for me.
 Day 8: Treetop Tree House
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.266 s
 </span>
 </h3>
 
@@ -457,7 +481,7 @@ by moving in each direction until finding a higher tree.
 Day 9: Rope Bridge
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.186 s
 </span>
 </h3>
 
@@ -482,7 +506,7 @@ function makes counting the visited squares trivial.
 Day 10: Cathode-Ray Tube
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.157 s
 </span>
 </h3>
 
@@ -510,7 +534,7 @@ end
 Day 11: Monkey in the Middle
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.923 s
 </span>
 </h3>
 
@@ -550,13 +574,17 @@ end
 Day 12: Hill Climbing Algorithm
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+1.151 s
 </span>
 </h3>
 
 This is a classic shortest path problem,
 with the network edges determined by the heights of neighbouring squares.
-I solved this using Dijkstra's algorithm,
+For reading the data, Julia's
+`'a':'z'`{:.language-julia .highlight}
+syntax is a neat way to get the alphabet.
+I solved the main problem using
+[Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm),
 keeping track of visited squares and their distances in
 auxiliary arrays.
 By running the algorithm to completion,
@@ -580,9 +608,6 @@ is of type
 `Union{Int, Float64}`{:.language-julia .highlight}
 to allow for the value
 `Inf::Float64`{:.language-julia .highlight}.
-Julia's
-`'a':'z'`{:.language-julia .highlight}
-syntax is a neat way to get the alphabet.
 
 
 <h3>
@@ -590,7 +615,7 @@ syntax is a neat way to get the alphabet.
 Day 13: Distress Signal
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.271 s
 </span>
 </h3>
 
@@ -614,7 +639,9 @@ Part 2 was easy once I could compare the objects,
 as I could pass the entire list into Julia's flexible
 `sort`{:.language-julia .highlight} function
 with a custom comparison function,
-using quick sort without having to implement it myself.
+using
+[quicksort](https://en.wikipedia.org/wiki/Quicksort)
+without having to implement it myself.
 
 
 <h3>
@@ -622,11 +649,11 @@ using quick sort without having to implement it myself.
 Day 14: Regolith Reservoir
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.694 s
 </span>
 </h3>
 
-This problem was fun to solve as it was easy to visualize and check everything
+This problem was fun to solve as it was easy to visualise and check everything
 is working properly.
 The first challenge was to parse the layout of the cave from the input,
 which amounted to modifying entries in a matrix along a line
@@ -637,7 +664,7 @@ I then represented the cave using
 mutable struct Cave
     layout::Matrix{Char}
     current::Tuple{Int, Int}
-    const start::Tuple{Int, Int}
+    start::Tuple{Int, Int}
     terminated::Bool
 end
 {% endhighlight %}
@@ -662,7 +689,7 @@ starting point.
 Day 15: Beacon Exclusion Zone
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.264 s
 </span>
 </h3>
 
@@ -702,7 +729,7 @@ which is in none of the sensed regions.
 Day 16: Proboscidea Volcanium
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.923 s
 </span>
 </h3>
 
@@ -714,8 +741,9 @@ valves, thus yielding a complete network.
 I then dropped all the valves (nodes) with a zero flow rate as there is no point
 going to them except en route to another valve.
 
-For part 1, I used a depth-first search (DFS),
-storing the state of each valve (open or closed),
+For part 1, I used a
+[depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
+(DFS), storing the state of each valve (open or closed),
 the amount of time used up,
 the total pressure relieved
 and the current position
@@ -753,7 +781,7 @@ but could be found using a binary search.
 Day 17: Pyroclastic Flow
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.645 s
 </span>
 </h3>
 
@@ -771,9 +799,10 @@ Replicating the behaviour was straightforward,
 checking which action needs to be applied at each time step.
 
 Part 2 was initially very challenging, asking to predict the height of the tower
-after 1000000000000 blocks had fallen.
+after 1000000000000
+(yes, a trillion) blocks had fallen.
 Obviously it is not possible to simulate this fully,
-but I realized that the pattern of jets and the block shapes are periodic.
+but I realised that the pattern of jets and the block shapes are periodic.
 After checking that the top part of the tower of blocks is also periodic,
 the problem is much easier.
 The answer can be calculated by running the simulation
@@ -788,14 +817,14 @@ and then counting the number of repeats needed to reach
 Day 18: Boiling Boulders
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+1.176 s
 </span>
 </h3>
 
 This was also a fun problem.
 Part 1 was easy, calculating the total area of all the cubes
-and then subtracting non-exposed faces:
-those which make contact with another cube.
+and then subtracting non-exposed faces
+which make contact with another cube.
 
 For part 2 I wrote a function to "complete" a set of cubes
 by filling in any internal cavities.
@@ -815,7 +844,7 @@ and the cubes which are not outside.
 Day 19: Not Enough Minerals
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+1.062 s
 </span>
 </h3>
 
@@ -849,7 +878,7 @@ were worth using.
 Day 20: Grove Positioning System
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.274 s
 </span>
 </h3>
 
@@ -870,7 +899,7 @@ I was able to use the same code for both parts.
 Day 21: Monkey Math
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.366 s
 </span>
 </h3>
 
@@ -885,7 +914,8 @@ expressions into its own expression.
 Repeating this for all the monkeys until termination propagates
 the expressions right up to the `root` monkey.
 For part 1, this can then be directly evaluated using Julia's
-metaprogramming facilities:
+[metaprogramming](https://docs.julialang.org/en/v1/manual/metaprogramming/)
+facilities:
 `Meta.parse`{:.language-julia .highlight}
 converts a
 `String`{:.language-julia .highlight}
@@ -909,11 +939,12 @@ but was fine for my instance.
 Day 22: Monkey Map
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.863 s
 </span>
 </h3>
 
-This was a challenging but fun problem.
+This was a challenging but fun problem,
+requiring the most lines of code out of all of the problems.
 Part 1 was quite easy, especially since we have already solved
 a few of these "follow the rules on a grid"-type problems
 (day 9, day 14, day 17),
@@ -942,7 +973,8 @@ input net.
 To parse the faces, I set the first face to have coordinates
 `[-1 1 -1 1; 1 1 -1 -1; 1 1 1 1]` and then
 traced over the net, applying the appropriate
-matrix operation every time I went over an edge to keep track of the
+[matrix operation](https://en.wikipedia.org/wiki/Rotation_matrix)
+every time I went over an edge to keep track of the
 coordinates of each face.
 The main part of the problem was then to handle the logic
 for going over an edge on the resulting cube.
@@ -955,7 +987,7 @@ It took me a long time to realise that I had forgotten the last stage:
 we have to check we don't emerge into a wall,
 as then we don't make the transition at all.
 My code ended up being pretty long, but I think it should work
-in generality -- I never "hard-coded" my cube's layout.
+in generality as I never "hard-coded" my cube's net.
 
 
 <h3>
@@ -963,14 +995,15 @@ in generality -- I never "hard-coded" my cube's layout.
 Day 23: Unstable Diffusion
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+1.670 s
 </span>
 </h3>
 
 This problem was conceptually not too hard but seemed to need
 many lines of code.
-I initially tried using a dictionary of elves,
-but it turned out that iterating through this was too slow,
+I initially tried using a dictionary,
+but it turned out that iterating through this was too slow
+due to the number of elves,
 and in fact just keeping an array of all the possible locations
 was faster, since the operations are all local.
 I therefore used
@@ -1004,7 +1037,7 @@ checking at each step if any elf still had neighbours.
 Day 24: Blizzard Basin
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+1.711 s
 </span>
 </h3>
 
@@ -1044,13 +1077,15 @@ blizzards after each trip to get the total round trip time.
 Day 25: Full of Hot Air
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
-TODO
+0.105 s
 </span>
 </h3>
 
-This final problem turned out more tricky than I expected,
+This final problem turned out to be more tricky than I expected,
 though didn't need many lines in the end.
-Manipulating numbers in a different base didn't seem too bad,
+Manipulating numbers in a different
+[base](https://en.wikipedia.org/wiki/Radix)
+didn't seem too bad,
 but the inclusion of negative coefficients made this very confusing.
 Writing a
 `snafu_to_decimal`{:.language-julia .highlight}
@@ -1068,32 +1103,6 @@ I finally trimmed any leading zeros.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-TODO mention timing goals
-
-TODO check all code looks good
-
-TODO check mutable / const
-
-TODO check tenses
-
-TODO check US/UK
-
-TODO check links
-
-TODO check longest code day 22?
-
-
 ## Concluding remarks
 
 
@@ -1105,4 +1114,8 @@ One downside is that Julia is not a scripting language and has a poor
 startup time. This means that most of the time is spent
 compiling rather than running the program, and it is impossible
 to separate these two steps.
-Next time I might try to learn Rust TODO cite.
+I aimed for each solution to execute in around one second,
+and managed to get them all under two seconds,
+which I'm fairly happy with.
+Next time I might try to learn
+[Rust](https://www.rust-lang.org/).
