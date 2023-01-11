@@ -139,7 +139,7 @@ which is unable to take into account the second-order curvature of
 the regression function.
 
 We could address this issue by using a local quadratic smoother
-or even a higher-order polynonial.
+or even a higher-order polynomial.
 This leads to the *degree-p local polynomial estimator*,
 defined analogously to the local linear smoother as
 
@@ -153,7 +153,7 @@ is a basis vector,
 $P(x) \in \R^{n \times (p+1)}$
 with
 $P(x)\_{i1} = 1$
-and $P(x)\_{ij} = \left(\frac{X\_i - x}{h}\right)^{j-1}$,
+and $P(x)\_{i j} = \left(\frac{X\_i - x}{h}\right)^{j-1}$,
 and $W(x) \in \R^{n \times n}$
 is diagonal with
 $W(x)\_{ii} = \frac{1}{h} K\left(\frac{X_i - x}{h}\right)$.
@@ -184,7 +184,8 @@ as was presented in
 
 ## Next time
 
-In the next and final post we will apply the concepts discussed during the previous three
+In the next and final post we will apply the concepts
+discussed during the previous three
 parts to some real-world data and discuss the conclusions.
 
 ## References

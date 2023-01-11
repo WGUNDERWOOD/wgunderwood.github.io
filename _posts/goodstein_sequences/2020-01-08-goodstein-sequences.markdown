@@ -114,7 +114,8 @@ $$G_{10} = (
 
 It is tempting to conjecture that all the Goodstein sequences started from
 some $N \geq 4$ diverge to infinity. However, this is not at all true, due to
-a remarkable theorem of [Goodstein](https://en.wikipedia.org/wiki/Goodstein%27s_theorem).
+a remarkable theorem of
+[Goodstein](https://en.wikipedia.org/wiki/Goodstein%27s_theorem).
 
 #### Theorem (Goodstein, 1944)
 
@@ -177,7 +178,8 @@ $\om^2 + \om^2$, written $\om^2 \cdot 2$.
 Then we can reach $\om^2 \cdot 3$ and so on.
 Now I'm sure you can see how to reach $\om^3$, and eventually $\om^\om$.
 We still need more ordinals, so we continue to $\om^{\om^\om}$ and
-finally to $\om^{\om^{\om^{\cdot^{\cdot^\cdot}}}}$, which is called $\epsilon_0$.
+finally to $\om^{\om^{\om^{\cdot^{\cdot^\cdot}}}}$,
+which is called $\epsilon_0$.
 This is enough ordinals for now.
 
 ### Notes on ordinals
@@ -198,7 +200,8 @@ so has the same cardinality as $\om$.
 
 However, [Hartogs' theorem](https://en.wikipedia.org/wiki/Hartogs_number)
 guarantees the existence of uncountable
-ordinals in [ZF set theory](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory).
+ordinals in [ZF set theory](https://en.wikipedia.org/wiki/
+Zermelo%E2%80%93Fraenkel_set_theory).
 The smallest of these is called $\om_1$.
 
 ### Foundation
@@ -246,14 +249,16 @@ an $\om$.
 
 $$
 \begin{align*}
-3^{3^3+3} + 3^{3^3+1}+ 3^3 - 1 &= 3^{3^3+3} + 3^{3^3+1}+ 2 \cdot 3^2 + 2 \cdot 3 + 2 \\
+3^{3^3+3} + 3^{3^3+1}+ 3^3 - 1
+&= 3^{3^3+3} + 3^{3^3+1}+ 2 \cdot 3^2 + 2 \cdot 3 + 2 \\
 &\leq \om^{\om^\om+\om} + \om^{\om^\om+1}+ 2 \cdot \om^2 + 2 \cdot \om + 2
 \end{align*}
 $$
 
 Now importantly, the ordinal upper bound has *decreased*.
 In fact it will decrease at every step,
-giving a strictly decreasing sequence of ordinal upper bounds $(\alpha_0, \alpha_1,\ldots)$
+giving a strictly decreasing sequence of ordinal upper bounds
+$(\alpha_0, \alpha_1,\ldots)$
 with
 
 $$
@@ -284,8 +289,11 @@ although some bounds are available.
 - The [Wikipedia](https://en.wikipedia.org/wiki/Goodstein%27s_theorem)
   page gives a good introduction to Goodstein's theorem.
 - [Googology](https://googology.wikia.org/wiki/Goodstein_sequence)
-  is a online encyclopedia about large numbers, and contains bounds on the lengths
+  is a online encyclopedia about large numbers,
+  and contains bounds on the lengths
   of Goodstein sequences.
 - Goodstein's
-  [original paper](https://www.semanticscholar.org/paper/On-the-restricted-ordinal-theorem-Goodstein/4d96c256994f190617a34aac56c9b9bfb23f43d9)
+  [original paper](https://www.semanticscholar.org/paper/
+  On-the-restricted-ordinal-theorem-Goodstein/
+  4d96c256994f190617a34aac56c9b9bfb23f43d9)
   from 1944.

@@ -4,7 +4,8 @@ title:  "Goodstein Sequence Calculator"
 date:   2020-03-02
 ---
 
-To complement [my earlier post](/2020/01/08/goodstein-sequences.html)
+To complement
+[my earlier post](/2020/01/08/goodstein-sequences.html)
 on Goodstein sequences, I wrote a Python script to calculate them.
 
 The source code is available on
@@ -16,7 +17,8 @@ The python script takes two arguments:
 - `INITIAL_VALUE`, the initial value of the Goodstein sequence
 - `SEQUENCE_LENGTH`, the number of terms in the sequence to print
 
-The optional flag `--colorize` adds colour to the terminal output, making it easier to read.
+The optional flag `--colorize` adds colour to the terminal output,
+making it easier to read.
 
 ## Examples
 

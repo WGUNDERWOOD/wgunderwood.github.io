@@ -28,7 +28,8 @@ In probability theory, we use several notions of "convergence" for
 a sequence of random variables.
 Some of these notions are stronger than others, so it is natural to ask
 when one convergence implies another.
-In the following definitions and results, we assume that $X$ and $(X_n)_{n \geq 1}$ are all
+In the following definitions and results,
+we assume that $X$ and $(X_n)_{n \geq 1}$ are all
 real-valued random variables on some complete probability space
 $(\Omega, \mathcal{F}, \mathbb{P})$.
 
@@ -91,16 +92,20 @@ notion of pointwise convergence of functions.
 We simply require the convergence to occur at almost every point rather
 than at every point.
 
-Convergence in probability is (as we will see) weaker than this, and means that
+Convergence in probability is (as we will see) weaker than this,
+and means that
 with high probability, $(X_n)$ will not make large deviations from $X$.
 
 Convergence in distribution is even weaker, and depends only on the
 *distributions* of the random variables.
-The random variables do not even need to be defined on the same probability space.
+The random variables do not even need to be defined on
+the same probability space.
 
-The $L^p$ spaces define a whole family of modes of convergence, with a larger value of $p$ giving
+The $L^p$ spaces define a whole family of modes of convergence,
+with a larger value of $p$ giving
 stronger convergence.
-Convergence in $L^\infty$ is the same as uniform convergence almost everywhere.
+Convergence in $L^\infty$ is the same as uniform convergence
+almost everywhere.
 
 
 ## Results
@@ -109,7 +114,8 @@ All of the results are summarised in Figure 1.
 Arrows indicate strength of convergence.
 
 <figure>
-<img style="align: middle; width: 500px; padding-bottom: 10px; padding-top: 5px; padding-right: 130px; padding-left: 130px;"
+<img style="align: middle; width: 500px; padding-bottom: 10px;
+  padding-top: 5px; padding-right: 130px; padding-left: 130px;"
   src="/assets/posts/modes_of_convergence/diagram.svg"/>
 <figcaption>
 <br>
@@ -153,34 +159,41 @@ $$
 \begin{align*}
   \mathbb{P}(|X_n - X| > \epsilon)
   &= \int_\Omega \mathbb{I}\{|X_n - X| > \epsilon\} \dP \\
-  &\leq \int_\Omega \frac{1}{\epsilon} \, |X_n - X| \dP & \text{(Markov's inequality)} \\
+  &\leq \int_\Omega \frac{1}{\epsilon} \, |X_n - X| \dP
+  & \text{(Markov's inequality)} \\
   &\leq \frac{1}{\epsilon} \, \mathbb{E}[|X_n - X|] \\
   &\to 0
 \end{align*}
 $$
 
-### 4. Convergence in probability implies convergence in $L^1$, in a uniformly integrable family
+<h3> 4. Convergence in probability implies convergence in $L^1$
+in a uniformly integrable family </h3>
 $\text{Assuming } (X_n) \text{ is uniformly integrable;
 for any } \epsilon > 0,
 \text{ there is a } \delta > 0 \text{ such that}$
 $\text{for
 any } B \in \mathcal{F},$
 
-$$\mathbb{P}(B) < \delta \implies \int_\Omega |X_n - X| \, \mathbb{I}_B \dP < \frac{\epsilon}{2}$$
+$$\mathbb{P}(B) < \delta \implies
+\int_\Omega |X_n - X| \, \mathbb{I}_B \dP
+< \frac{\epsilon}{2}$$
 
 $\text{Also, } X_n \xrightarrow{\mathbb{P}} X
 \text{ so there is an } N \in \mathbb{N}
 \text{ such that}$
 
-$$n \geq N \implies \mathbb{P}\left(|X_n - X| \geq \frac{\epsilon}{2}\right) < \delta$$
+$$n \geq N \implies
+\mathbb{P}\left(|X_n - X| \geq \frac{\epsilon}{2}\right) < \delta$$
 
 $\text{Putting these together:}$
 
 $$
 \begin{align*}
   \mathbb{E}[|X_n - X|]
-  &= \int_\Omega |X_n - X| \, \mathbb{I}\left\{|X_n - X| < \frac{\epsilon}{2}\right\} \dP \\
-  &\qquad + \int_\Omega |X_n - X| \, \mathbb{I}\left\{|X_n - X| \geq \frac{\epsilon}{2}\right\} \dP \\
+  &= \int_\Omega |X_n - X| \,
+  \mathbb{I}\left\{|X_n - X| < \frac{\epsilon}{2}\right\} \dP \\
+  &\qquad + \int_\Omega |X_n - X| \,
+  \mathbb{I}\left\{|X_n - X| \geq \frac{\epsilon}{2}\right\} \dP \\
   &< \epsilon
 \end{align*}
 $$
@@ -198,10 +211,14 @@ $\text{So by the definition of } \\|\cdot\\|_\infty,$
 
 $$
 \begin{align*}
-  &\quad \,\, \mathbb{P}(|X_n - X| > \epsilon \text{ for some } n \geq N) \\
-  &\leq \mathbb{P}(|X_n - X| > \|X_n - X\|_\infty \text{ for some } n \geq N) \\
-  &= \mathbb{P}\Big(\bigcup_{n=1}^\infty \big\{|X_n - X| > \|X_n - X\|_\infty \big\} \Big) \\
-  &\leq \sum_{n=1}^\infty \mathbb{P}\big(|X_n - X| > \|X_n - X\|_\infty \big) \\
+  &\quad \,\, \mathbb{P}(|X_n - X| > \epsilon
+  \text{ for some } n \geq N) \\
+  &\leq \mathbb{P}(|X_n - X| > \|X_n - X\|_\infty
+  \text{ for some } n \geq N) \\
+  &= \mathbb{P}\Big(\bigcup_{n=1}^\infty
+  \big\{|X_n - X| > \|X_n - X\|_\infty \big\} \Big) \\
+  &\leq \sum_{n=1}^\infty
+  \mathbb{P}\big(|X_n - X| > \|X_n - X\|_\infty \big) \\
   &= 0
 \end{align*}
 $$
@@ -257,10 +274,12 @@ $\text{So } \mathbb{P}(X_n \leq x) \to \mathbb{P}(X \leq x),
 
 ## References
 
-- The [Wikipedia page](https://en.wikipedia.org/wiki/Convergence_of_random_variables)
+- The [Wikipedia page](https://en.wikipedia.org/wiki/
+  Convergence_of_random_variables)
   for convergence of random variables gives a (rather messy) list
   of properties.
 
 - Terence Tao's
-  [blog](https://terrytao.wordpress.com/2010/10/02/245a-notes-4-modes-of-convergence/)
+  [blog](https://terrytao.wordpress.com/2010/10/02/
+  245a-notes-4-modes-of-convergence/)
   gives a good summary of the common modes of convergence.

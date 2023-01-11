@@ -19,14 +19,16 @@ This also seemed a good opportunity to try a new language,
 so of course I wrote it in
 [Julia](https://julialang.org/).
 The source code is available on
-[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/julia_mandelbrot).
+[GitHub](https://github.com/WGUNDERWOOD/
+wgunderwood.github.io/tree/main/_posts/julia_mandelbrot).
 
 
 
 ## Julia sets
 
-<img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
-src="/assets/posts/julia_mandelbrot/julia.png">
+<img style="float: right; padding-left: 30px;
+  padding-top: 0px; width: 250px"
+  src="/assets/posts/julia_mandelbrot/julia.png">
 
 In this post we consider only the Julia sets of a
 simple class of quadratic functions,
@@ -89,7 +91,8 @@ according to how many iterations it took
 for each point to escape.
 
 I have
-[implemented this](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/julia_mandelbrot)
+[implemented this](https://github.com/WGUNDERWOOD/
+wgunderwood.github.io/tree/main/_posts/julia_mandelbrot)
 and what better language to use than
 [Julia](https://julialang.org/)?
 The plots produced indeed make nice desktop wallpapers,
@@ -107,8 +110,9 @@ Mandelbrot set.
 
 ## The Mandelbrot set
 
-<img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
-src="/assets/posts/julia_mandelbrot/mandelbrot.png">
+<img style="float: right; padding-left: 30px;
+  padding-top: 0px; width: 250px"
+  src="/assets/posts/julia_mandelbrot/mandelbrot.png">
 
 The Mandelbrot set can be thought of an
 "index" of Julia sets in that instead of
@@ -140,10 +144,11 @@ we focus instead on its relationship to Julia sets.
 
 ### Plotting the Mandelbrot set
 
-<img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
-src="/assets/posts/julia_mandelbrot/buddhabrot.png">
+<img style="float: right; padding-left: 30px;
+  padding-top: 0px; width: 250px"
+  src="/assets/posts/julia_mandelbrot/buddhabrot.png">
 
-Again simpling by iterating a complex quadratic,
+Again simply by iterating a complex quadratic,
 we can plot the Mandelbrot set,
 with its complement coloured by the number of iterations
 until escape.

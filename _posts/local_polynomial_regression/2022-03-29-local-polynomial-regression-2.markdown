@@ -32,14 +32,15 @@ and consider methods for selecting the bandwidth $h$.
 
 ## Bandwidth selection in theory
 
-A key concept in understanding bandwidth selection is the *bias-variance tradeoff*.
+A key concept in understanding bandwidth selection is the
+*bias-variance trade-off*.
 Intuitively, the bias of an estimator is the error it makes on average,
 while the variance is a measure of how unpredictable the estimator is.
 
 Crucially, a more "complex" estimator has less bias but more variance,
 while increasing the number of data points tends to reduce the variance
 and does not affect the bias.
-As such, we can control the bias-variance tradeoff by increasing the complexity
+As such, we can control the bias-variance trade-off by increasing the complexity
 of the estimator as more data becomes available.
 
 Let $\widehat \mu(x)$ be an estimator of the regression function
@@ -48,7 +49,7 @@ Then the bias and variance of $\widehat \mu(x)$ are
 
 $$
 B(x) = \E\big[ \widehat \mu(x) \big] - \mu(x), \qquad
-V(x) = \E\Big[ \big(\widehat \mu(x) - \E\big[ \widehat \mu(x) \big] \big)^2 \Big]
+V(x) = \E\Big[ \big(\widehat \mu(x) - \E\big[\widehat \mu(x)\big] \big)^2 \Big]
 $$
 
 respectively.
@@ -63,7 +64,8 @@ $$
 
 This property is known as the *bias-variance decomposition*.
 Since we want an estimator which performs well over all points $x$,
-it is common to define the following integrated versions of the bias and variance:
+it is common to define the following integrated versions
+of the bias and variance:
 
 $$
 B^2 = \int_\R B(x)^2 \diff{x}, \qquad
@@ -129,17 +131,17 @@ $$
 \Var\left[\frac{1}{n} \sum_{i=1}^n
 y_i \frac{1}{h} K\left(\frac{x_i-x}{h}\right)\right]
 &\approx
-\frac{1}{nh} f(x) R_K \big( \mu(x)^2 + \sigma_\varepsilon^2 \big), \\
+\frac{1}{n h} f(x) R_K \big( \mu(x)^2 + \sigma_\varepsilon^2 \big), \\
 \Var\left[\frac{1}{n} \sum_{i=1}^n
 \frac{1}{h} K\left(\frac{x_i-x}{h}\right)\right]
 &\approx
-\frac{1}{nh} f(x) R_K, \\
+\frac{1}{n h} f(x) R_K, \\
 \Cov\left[\frac{1}{n} \sum_{i=1}^n
 y_i \frac{1}{h} K\left(\frac{x_i-x}{h}\right),
 \frac{1}{n} \sum_{i=1}^n
 \frac{1}{h} K\left(\frac{x_i-x}{h}\right) \right]
 &\approx
-\frac{1}{nh} \mu(x) f(x) R_K
+\frac{1}{n h} \mu(x) f(x) R_K
 \end{align*}
 $$
 
@@ -150,7 +152,7 @@ $$
 \begin{align*}
 \Var\big[\widehat \mu(x)\big]
 &\approx
-\frac{1}{nh} \frac{R_K \sigma_\varepsilon^2}{f(x)}.
+\frac{1}{n h} \frac{R_K \sigma_\varepsilon^2}{f(x)}.
 \end{align*}
 $$
 
@@ -165,14 +167,14 @@ $$
 &\approx
 h^4 \sigma_K^4
 \left( \frac{\mu'(x)f'(x)}{f(x)} + \frac{\mu''(x)}{2} \right)^2
-+ \frac{1}{nh} \frac{R_K \sigma_\varepsilon^2}{f(x)}, \\
++ \frac{1}{n h} \frac{R_K \sigma_\varepsilon^2}{f(x)}, \\
 \IMSE
 &\approx
 h^4 \sigma_K^4
 \int_\R
 \left( \frac{\mu'(x)f'(x)}{f(x)} + \frac{\mu''(x)}{2} \right)^2
 \diff{x}
-+ \frac{1}{nh}
++ \frac{1}{n h}
 \int_\R
 \frac{R_K \sigma_\varepsilon^2}{f(x)}
 \diff{x}.
@@ -272,7 +274,8 @@ leave-one-out cross-validation (LOO-CV).
 The idea is to remove a point $(x_i,y_i)$ from the data set
 and fit the estimator on the remaining data.
 This estimator, denoted $\widehat \mu_{-i}(x)$, is then evaluated
-at the data point which was initially left out and its squared error is recorded.
+at the data point which was initially
+left out and its squared error is recorded.
 The leave-one-out cross-validation error is the average of these errors
 over removing each data point in turn.
 Formally,
@@ -323,11 +326,15 @@ which approximates the LOO-CV error and is even faster to compute.
 
 ## Concluding remarks
 
-In this post we saw how a bandwidth can be selected using leave-one-out cross-validation.
-However it is worth pointing out that sometimes a good bandwidth does not even exist,
-such as when the regression function $\mu(x)$ is much "smoother" at some points than at others,
+In this post we saw how a bandwidth can be selected using
+leave-one-out cross-validation.
+However it is worth pointing out that sometimes a
+good bandwidth does not even exist,
+such as when the regression function $\mu(x)$ is much
+"smoother" at some points than at others,
 as seen in Figure 5.
-Since the approximate bias term we derived depends on the curvature $\mu^{\prime\prime}(x)$,
+Since the approximate bias term we derived depends on the curvature
+$\mu^{\prime\prime}(x)$,
 a larger bandwidth is preferred for smoother parts of the regression function.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
@@ -355,5 +362,6 @@ Applied and Computational Statistics,
 taught by
 [Geoff Nicholls](http://www.stats.ox.ac.uk/%7Enicholls/) in 2018
 
-* [An Introduction to Statistical Learning](https://trevorhastie.github.io/ISLR/)
+* [An Introduction to Statistical Learning](
+https://trevorhastie.github.io/ISLR/)
 by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani, 2013

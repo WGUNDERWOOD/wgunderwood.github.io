@@ -1,12 +1,15 @@
-.PHONY: site stop view linkcheck
+.PHONY: site stop view linkcheck spell longlines
 
 default:
 	@make site
-	@sleep 3
+	@sleep 4
 	@make view
 
-all: default
+all:
+	@make spell
+	@make longlines
 	@make linkcheck
+	@make site
 
 site:
 	@echo -e "\e[0;35m\033[1mBuilding website...\e[0;30m\033[0m"
@@ -22,4 +25,20 @@ view:
 
 linkcheck:
 	@echo -e "\e[0;35m\033[1mChecking links...\e[0;30m\033[0m"
-	@linkchecker --ignore-url=researchgate.*William.*Underwood --check-extern "https://wgunderwood.github.io/"
+	@linkchecker --ignore-url=researchgate.*William.*Underwood \
+    --check-extern "https://wgunderwood.github.io/" --no-warnings
+
+spell:
+	@echo -e "\e[0;35m\033[1mChecking spelling...\e[0;30m\033[0m"
+	@for f in *.markdown; do spell_check $$f; done
+	@for f in _posts/**/*.markdown; do spell_check $$f; done
+
+longlines:
+	@echo -e "\e[0;35m\033[1mChecking for long lines...\e[0;30m\033[0m"
+	@for f in *.markdown; do longest_lines $$f; done
+	@for f in _posts/**/*.markdown; do longest_lines $$f; done
+
+todo:
+	@echo -e "\e[0;35m\033[1mChecking for todos...\e[0;30m\033[0m"
+	@for f in *.markdown; do todo_finder $$f; done
+	@for f in _posts/**/*.markdown; do todo_finder $$f; done

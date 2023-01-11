@@ -5,7 +5,7 @@ date:   2020-07-19
 ---
 
 Why is my train always late?
-Do lightbulbs last longer than they should?
+Do light bulbs last longer than they should?
 These questions can be answered with
 the
 waiting time paradox
@@ -17,7 +17,8 @@ Source code for the simulations
 and the diagram
 (LaTeX)
 is available on
-[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/waiting_time_paradox).
+[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/
+tree/main/_posts/waiting_time_paradox).
 
 
 
@@ -96,7 +97,8 @@ waiting time,
 $\E[W]$.
 
 <figure>
-<img style="float: center; width: 600px; padding-bottom: 10px; padding-top: 5px; padding-right: 40px; padding-left: 50px;"
+<img style="float: center; width: 600px; padding-bottom: 10px;
+  padding-top: 5px; padding-right: 40px; padding-left: 50px;"
 src="/assets/posts/waiting_time_paradox/time_diagram.svg">
 <figcaption>
   Figure 1: A typical timeline
@@ -117,7 +119,8 @@ this argument reads:
 
 1. $Z_N$ is an interarrival time, so $\E[I] = \E[Z_N] = 10$
 2. Conditional on $I$, we have the uniform distribution $W\|I \sim \U[0, I]$
-3. Therefore by the tower law, $\E[W] = \E[\E[W\|I]] = \E[\U[0,I]] = \E[I/2] = 10/2 = 5$
+3. Therefore by the tower law,
+$\E[W] = \E[\E[W\|I]] = \E[\U[0,I]] = \E[I/2] = 10/2 = 5$
 
 Lets test this empirically.
 Table 1 shows the guesses of variable values using the reasoning above,
@@ -162,7 +165,7 @@ of time between two trains which arrive almost simultaneously.
 ### Size-biased distributions
 
 Now that we know
-the distibution
+the distribution
 of $Z_N$
 cannot be
 $\Exp(10)$,
@@ -242,7 +245,7 @@ $f(x) = \frac{x f_1(x)}{\E[Z_1]}$.
 #### Theorem 2 (Convergence in distribution of waiting time)
 
 Under the same conditions as the previous theorem,
-the waiting time $W_t$ converges in distibution
+the waiting time $W_t$ converges in distribution
 as $t \to \infty$
 to $L U$,
 where $L$ has
@@ -288,28 +291,28 @@ in Table 1.
 The inspection paradox is very closely
 related to the waiting time paradox,
 but with a slightly different interpretation.
-The scenario to imagine here is changing a lightbulb,
-and the observed effect is that most lightbulbs
+The scenario to imagine here is changing a light bulb,
+and the observed effect is that most light bulbs
 last an unusually long time before breaking.
 
-### The lightbulb scenario
+### The light bulb scenario
 
-Suppose that lightbulbs have independently-distributed
+Suppose that light bulbs have independently-distributed
 lifetimes
 $Z_1, Z_2, \ldots$
 where
 $Z_1$ is either one second or two years,
 with equal probability
-(to account for the fact that lightbulbs
+(to account for the fact that light bulbs
 frequently break almost immediately).
 
-Then clearly the expected lifetime of a lightbulb
+Then clearly the expected lifetime of a light bulb
 is just over one year,
 but when ignoring bulbs that break immediately,
 the rest of the bulbs in fact last for two years,
 almost twice their expected lifespan.
 
-While this lightbulb example may seem
+While this light bulb example may seem
 contrived,
 it is representative of a great many situations
 in which a similar phenomenon occurs,
@@ -322,7 +325,7 @@ perhaps more subtly.
 
 The waiting time and inspection paradoxes
 occur whenever data taking large values
-are proportionately oversampled or overrepresented.
+are proportionately over-sampled or over-represented.
 We described this phenomenon mathematically
 using size-biased distributions.
 However this effect is actually very common
@@ -343,7 +346,7 @@ the same as the expected interarrival time
 
 * When asking students about the size of their class,
 large classes will submit more responses,
-and hence be overrepresented.
+and hence be over-represented.
 
 * If you visit a prison,
 most people you meet will be serving
@@ -364,7 +367,9 @@ go there more often than you.
 taught by Paul Chleboun in 2017
 
 * A great post from
-[Jake VanderPlas' blog](http://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/)
+[Jake VanderPlas' blog](http://jakevdp.github.io/blog/2018/09/13/
+waiting-time-paradox/)
 
 * Real-world examples from
-[Allen Downey's blog](http://allendowney.blogspot.com/2015/08/the-inspection-paradox-is-everywhere.html)
+[Allen Downey's blog](http://allendowney.blogspot.com/2015/08/
+the-inspection-paradox-is-everywhere.html)

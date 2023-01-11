@@ -24,7 +24,8 @@ src="/assets/general/profile_boston.png">
 <h2> About </h2>
 
 I am a PhD candidate in the
-<a href="https://orfe.princeton.edu/">Operations Research & Financial Engineering</a>
+<a href="https://orfe.princeton.edu/">
+Operations Research & Financial Engineering</a>
 (ORFE) department at
 <a href="https://www.princeton.edu/">Princeton University</a>,
 where my research interests include mathematical statistics
@@ -73,7 +74,9 @@ in 2019.
 I was supervised there by
 <a href="http://www.stats.ox.ac.uk/~cucuring/">Mihai Cucuringu</a>,
 and wrote my master's dissertation on
-[Motif-Based Spectral Clustering of Weighted Directed Networks](https://github.com/WGUNDERWOOD/masters-dissertation/blob/main/writeup/main/main.pdf).
+[Motif-Based Spectral Clustering of Weighted Directed Networks](
+https://github.com/WGUNDERWOOD/masters-dissertation/blob/
+main/writeup/main/main.pdf).
 I am an alumnus of
 <a href="https://www.sjc.ox.ac.uk/">St John’s College, Oxford</a>.
 
@@ -102,7 +105,8 @@ Other contact details are available
 on my
 <a href="/contact/">contact page</a>,
 and you can
-<a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.pdf">download my CV here</a>.
+<a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.pdf">
+download my CV here</a>.
 
 
 

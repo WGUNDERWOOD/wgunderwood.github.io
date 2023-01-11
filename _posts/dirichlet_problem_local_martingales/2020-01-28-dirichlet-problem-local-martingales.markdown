@@ -10,10 +10,12 @@ Although hard to solve analytically,
 we can construct probabilistic approximations using
 continuous local martingales.
 
-In this post, we explore the mathematical connections between the Dirichlet problem
+In this post, we explore the mathematical connections
+between the Dirichlet problem
 and continuous local martingales, and compute an example using Python.
 The source code is available on
-[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/tree/main/_posts/dirichlet_problem_local_martingales).
+[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/
+tree/main/_posts/dirichlet_problem_local_martingales).
 
 
 
@@ -48,14 +50,16 @@ differentiable $(\mathcal{C}^2)$ on $U$,
 and continuous on $\bar{U}$. <br>
 Let $\phi: \partial U \to \mathbb{R}$ be continuous.
 
-We say $f$ solves the Dirichlet problem on $U$ with boundary condition $\phi$ if
+We say $f$ solves the Dirichlet problem on $U$
+with boundary condition $\phi$ if
 
 - $\nabla^2 f = 0\ $ on $\ U$
 - $f = \phi\ $ on $\ \partial U$
 
 Recall that the Laplace operator is defined by
 
-$$\nabla^2 = \nabla \cdot \nabla = \sum_{i=1}^d \frac{\partial^2}{\partial x_i^2}$$
+$$\nabla^2 = \nabla \cdot \nabla
+= \sum_{i=1}^d \frac{\partial^2}{\partial x_i^2}$$
 
 ### Comments
 
@@ -105,7 +109,8 @@ The sequence $(\tau_ k)$ is called a *localising sequence*.
 ### Properties of continuous local martingales
 
 We will need to use two properties of continuous local martingales.
-The first is a simple extension of Doob's optional stopping theorem for martingales.
+The first is a simple extension of Doob's optional
+stopping theorem for martingales.
 The second is a property of stochastic integration,
 in which continuous local martingales play a central role.
 
@@ -133,9 +138,11 @@ $$
     &\text{(as } \tau_ k \to \infty \text{)} \\
   &= \lim_ {k \to \infty }\mathbb{E}[X_ {\tau \wedge \tau_ k}]
     &\text{(conditional DCT)} \\
-  &= \lim_ {k \to \infty }\mathbb{E}[\lim_ {t \to \infty} X_ {\tau \wedge \tau_ k \wedge t}]
+  &= \lim_ {k \to \infty }\mathbb{E}[\lim_ {t \to \infty}
+  X_ {\tau \wedge \tau_ k \wedge t}]
     &\text{(as } \tau < \infty \text{)} \\
-  &= \lim_ {k \to \infty }\lim_ {t \to \infty} \mathbb{E}[X_ {\tau \wedge \tau_ k \wedge t}]
+  &= \lim_ {k \to \infty }\lim_ {t \to \infty}
+  \mathbb{E}[X_ {\tau \wedge \tau_ k \wedge t}]
     &\text{(conditional DCT)} \\
   &= \mathbb{E}[X_0]
     &\qquad \text{(as } (X_ {t \wedge \tau_ k}) \text{ is a martingale)} \\
@@ -165,16 +172,17 @@ $$
 The proof is technical but is a standard result in stochastic analysis.
 
 
-### The Itô formula
+### The It&#0244; formula
 
-The Itô formula serves as a "chain rule" for stochastic calculus.
+The It&#0244; formula serves as a "chain rule" for stochastic calculus.
 Here we state a special form of it, for integrals against Brownian motion.
 
-#### Proposition 3 (Itô formula)
+#### Proposition 3 (It&#0244; formula)
 
 Let $\big(\Omega, \mathcal{F}, (\mathcal{F}_ t), \mathbb{P}\big)$
 be a complete filtered probability space,
-which carries a $d$-dimensional Brownian motion $(B_ t) = (B^1_ t, \ldots B^d_ t)$. <br>
+which carries a $d$-dimensional Brownian motion
+$(B_ t) = (B^1_ t, \ldots B^d_ t)$. <br>
 Let $f: \mathbb{R}^d \to \mathbb{R}$
 be in $\mathcal{C}^2$.
 Then
@@ -219,7 +227,7 @@ $(X^x_ t)$ is a continuous local martingale on $[0, \tau_ x)$.
 
 #### Proof
 
-By the Itô formula, for $0 \leq t < \tau_ x$
+By the It&#0244; formula, for $0 \leq t < \tau_ x$
 
 $$
   \begin{align*}
@@ -312,8 +320,9 @@ $$ \phi(x,y) = x^2 + y + 10 \\ $$
 
 
 <figure>
-<img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/posts/dirichlet_problem_local_martingales/region.png">
+<img style="float: left; width: 300px; padding-bottom: 10px;
+  padding-top: 5px; padding-right: 20px; padding-left: 20px;"
+  src="/assets/posts/dirichlet_problem_local_martingales/region.png">
 <figcaption>
   Fig 1: The region $U$ and its boundary $\partial U$
 </figcaption>
@@ -321,8 +330,9 @@ src="/assets/posts/dirichlet_problem_local_martingales/region.png">
 
 
 <figure>
-<img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/posts/dirichlet_problem_local_martingales/boundary.png">
+<img style="float: left; width: 300px; padding-bottom: 10px;
+  padding-top: 5px; padding-right: 20px; padding-left: 20px;"
+  src="/assets/posts/dirichlet_problem_local_martingales/boundary.png">
 <figcaption>
   Fig 2: The boundary condition $\phi$
 </figcaption>
@@ -364,16 +374,18 @@ The time step used was $\delta = 0.001$.
 
 
 <figure>
-<img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/posts/dirichlet_problem_local_martingales/flat.png">
+<img style="float: left; width: 300px; padding-bottom: 10px;
+  padding-top: 5px; padding-right: 20px; padding-left: 20px;"
+  src="/assets/posts/dirichlet_problem_local_martingales/flat.png">
 <figcaption>
   Fig 3: Two sample Brownian motion paths
 </figcaption>
 </figure>
 
 <figure>
-<img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/posts/dirichlet_problem_local_martingales/paths.png">
+<img style="float: left; width: 300px; padding-bottom: 10px;
+  padding-top: 5px; padding-right: 20px; padding-left: 20px;"
+  src="/assets/posts/dirichlet_problem_local_martingales/paths.png">
 <figcaption>
   Fig 4: Including $\phi$ values at escape
 </figcaption>
@@ -402,22 +414,25 @@ are simulated up to their escape times.
 This is repeated $M$ times, and the
 Monte Carlo estimate is computed separately for each $x$.
 
-Figures 5--8 show how decreasing $\epsilon$ improves the spatial fidelity of the estimate,
+Figures 5--8 show how decreasing $\epsilon$ improves the spatial
+fidelity of the estimate,
 while increasing $M$ reduces the variance.
 The "rubber sheet" analogy is very clear, especially in the last plot,
 as the estimates converge towards a surface of least energy.
 
 
 <figure>
-<img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
-src="/assets/posts/dirichlet_problem_local_martingales/surf_M1_f20.png">
+<img style="float: left; width: 300px; padding-bottom: 10px;
+  padding-top: 5px; padding-right: 20px; padding-left: 20px;"
+  src="/assets/posts/dirichlet_problem_local_martingales/surf_M1_f20.png">
 <figcaption>
   Fig 5: $\epsilon=0.2, M=1$
 </figcaption>
 </figure>
 
 <figure>
-<img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
+<img style="float: left; width: 300px; padding-bottom: 10px;
+padding-top: 5px; padding-right: 20px; padding-left: 20px;"
 src="/assets/posts/dirichlet_problem_local_martingales/surf_M30_f20.png">
 <figcaption>
   Fig 6: $\epsilon=0.2, M=30$
@@ -425,7 +440,8 @@ src="/assets/posts/dirichlet_problem_local_martingales/surf_M30_f20.png">
 </figure>
 
 <figure>
-<img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
+<img style="float: left; width: 300px; padding-bottom: 10px;
+padding-top: 5px; padding-right: 20px; padding-left: 20px;"
 src="/assets/posts/dirichlet_problem_local_martingales/surf_M1_f10.png">
 <figcaption>
   Fig 7: $\epsilon=0.1, M=1$
@@ -433,7 +449,8 @@ src="/assets/posts/dirichlet_problem_local_martingales/surf_M1_f10.png">
 </figure>
 
 <figure>
-<img style="float: left; width: 300px; padding-bottom: 10px; padding-top: 5px; padding-right: 20px; padding-left: 20px;"
+<img style="float: left; width: 300px; padding-bottom: 10px;
+padding-top: 5px; padding-right: 20px; padding-left: 20px;"
 src="/assets/posts/dirichlet_problem_local_martingales/surf_M30_f10.png">
 <figcaption>
   Fig 8: $\epsilon=0.1, M=30$
@@ -444,10 +461,11 @@ src="/assets/posts/dirichlet_problem_local_martingales/surf_M30_f10.png">
 
 This method for solving PDEs by constructing a suitable continuous local
 martingale is by no means restricted to the Dirichlet problem.
-The Feynman-Kac formula provides a more general method for solving
+The Feynman--Kac formula provides a more general method for solving
 second-order PDEs, by employing slightly more complex stochastic processes.
 
-These results hint at some of the deep connections between PDEs and stochastic processes,
+These results hint at some of the deep connections between
+PDEs and stochastic processes,
 in particular what is known as the *generator* of a Markov process.
 In the case of Brownian motion, this generator is $\frac{1}{2} \nabla^2$,
 the same operator which is seen in the Dirichlet problem.
@@ -458,8 +476,12 @@ to construct solutions to different PDEs.
 ## References
 
 - The Wikipedia page on the
-  [Feynman-Kac formula](https://en.wikipedia.org/wiki/Feynman%E2%80%93Kac_formula)
+  [Feynman--Kac formula](https://en.wikipedia.org/wiki/
+  Feynman%E2%80%93Kac_formula)
 - The Wikipedia page on
-  [stochastic processes and boundary value problems](https://en.wikipedia.org/wiki/Stochastic_processes_and_boundary_value_problems)
-- This [blog post](https://eventuallyalmosteverywhere.wordpress.com/2012/03/04/remarkable-fact-about-brownian-motion-4-the-dirichlet-problem/)
+  [stochastic processes and boundary value problems](
+  https://en.wikipedia.org/wiki/
+  Stochastic_processes_and_boundary_value_problems)
+- This [blog post](https://eventuallyalmosteverywhere.wordpress.com/
+  2012/03/04/remarkable-fact-about-brownian-motion-4-the-dirichlet-problem/)
   on Eventually Almost Everywhere
