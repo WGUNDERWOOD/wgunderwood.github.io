@@ -444,7 +444,7 @@ src="/assets/posts/dirichlet_problem_local_martingales/surf_M30_f10.png">
 
 This method for solving PDEs by constructing a suitable continuous local
 martingale is by no means restricted to the Dirichlet problem.
-The Feynman&ndash;Kac formula provides a more general method for solving
+The Feynman--Kac formula provides a more general method for solving
 second-order PDEs, by employing slightly more complex stochastic processes.
 
 These results hint at some of the deep connections between PDEs and stochastic processes,
@@ -458,7 +458,7 @@ to construct solutions to different PDEs.
 ## References
 
 - The Wikipedia page on the
-  [Feynman&ndash;Kac formula](https://en.wikipedia.org/wiki/Feynman%E2%80%93Kac_formula)
+  [Feynman--Kac formula](https://en.wikipedia.org/wiki/Feynman%E2%80%93Kac_formula)
 - The Wikipedia page on
   [stochastic processes and boundary value problems](https://en.wikipedia.org/wiki/Stochastic_processes_and_boundary_value_problems)
 - This [blog post](https://eventuallyalmosteverywhere.wordpress.com/2012/03/04/remarkable-fact-about-brownian-motion-4-the-dirichlet-problem/)
