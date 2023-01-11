@@ -44,6 +44,3 @@
 ** Plotting topological surfaces
 ** Easy Bernstein's inequality
 * Other
-** spell checking
-** update makefile
-** todo finder
