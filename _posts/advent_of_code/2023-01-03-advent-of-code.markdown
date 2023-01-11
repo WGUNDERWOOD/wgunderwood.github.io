@@ -580,6 +580,9 @@ is of type
 `Union{Int, Float64}`{:.language-julia .highlight}
 to allow for the value
 `Inf::Float64`{:.language-julia .highlight}.
+Julia's
+`'a':'z'`{:.language-julia .highlight}
+syntax is a neat way to get the alphabet.
 
 
 <h3>
@@ -964,6 +967,104 @@ TODO
 </span>
 </h3>
 
+This problem was conceptually not too hard but seemed to need
+many lines of code.
+I initially tried using a dictionary of elves,
+but it turned out that iterating through this was too slow,
+and in fact just keeping an array of all the possible locations
+was faster, since the operations are all local.
+I therefore used
+
+{% highlight julia %}
+mutable struct Elf
+    id::Int
+    prop_loc::Union{Tuple{Int, Int}, Nothing}
+end
+{% endhighlight %}
+
+and
+`Elves = Matrix{Union{Elf, Nothing}}`{:.language-julia .highlight}.
+Each round consisted of a few tasks:
+firstly I checked if any elves were near the edge of the array,
+extending the array in all directions by ten units if so.
+Then I found the proposed location for each elf according to the rules.
+Next I updated the locations, checking that
+no elves tried to go to the same location.
+Finally I reset all the proposed locations to
+`nothing`{:.language-julia .highlight}.
+
+For part 2 I was concerned that I might need a huge number of rounds
+before termination, but it ended up not being too bad
+and I could just reuse the code,
+checking at each step if any elf still had neighbours.
+
+
+<h3>
+<a href="https://adventofcode.com/2022/day/24" style="color:#F1FA9C">
+Day 24: Blizzard Basin
+</a>
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+One final network search problem, this time with
+a time-varying network.
+I stored the blizzard locations as
+`Blizzard = Matrix{Vector{Int}}`{:.language-julia .highlight},
+recording the number of blizzards in each direction at every location.
+
+For part 1 I first calculated all of the blizzard locations at each
+time step following the rules,
+up to some time limit chosen by trial and error.
+I then used DFS again for the main search problem,
+with the following state object:
+
+{% highlight julia %}
+struct State
+    loc::Tuple{Int, Int}
+    time::Int
+end
+{% endhighlight %}
+
+I used the following pruning strategy to reduce run-time.
+I noted that the blizzards are periodic with period given
+by the least common multiple of the dimensions of the valley.
+Thus if we are in the same location at the same time modulo this period,
+then the state has already been seen and can be discarded.
+
+For part 2 I used the same approach,
+swapping the start and end points and resuming the
+blizzards after each trip to get the total round trip time.
+
+
+
+<h3>
+<a href="https://adventofcode.com/2022/day/25" style="color:#F1FA9C">
+Day 25: Full of Hot Air
+</a>
+<span style="float: right; color: #777777; font-size: 24px;">
+TODO
+</span>
+</h3>
+
+This final problem turned out more tricky than I expected,
+though didn't need many lines in the end.
+Manipulating numbers in a different base didn't seem too bad,
+but the inclusion of negative coefficients made this very confusing.
+Writing a
+`snafu_to_decimal`{:.language-julia .highlight}
+function was straightforward,
+looking up the coefficients in a dictionary and
+calculating in base five.
+The `snafu_to_decimal`{:.language-julia .highlight}
+function was much harder,
+and my final solution is recursive,
+first finding a large enough power of five for the leading digit
+and calculating the coefficient, then
+calling the function again with the power reduced by one
+on the remainder to get the next digit.
+I finally trimmed any leading zeros.
 
 
 
@@ -976,10 +1077,9 @@ TODO
 
 
 
-'a':'z' is neat
-Dynamic allocation with growing arrays (day 17, 23)
-Day 23 was worried part 2 would take a huge amount of time but no
-Day 20 just tricky indexing
+
+
+TODO mention timing goals
 
 TODO check all code looks good
 
