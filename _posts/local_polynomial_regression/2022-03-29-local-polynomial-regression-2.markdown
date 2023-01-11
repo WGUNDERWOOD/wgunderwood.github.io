@@ -32,14 +32,14 @@ and consider methods for selecting the bandwidth $h$.
 
 ## Bandwidth selection in theory
 
-A key concept in understanding bandwidth selection is the *bias-variance tradeoff*.
+A key concept in understanding bandwidth selection is the *bias-variance trade-off*.
 Intuitively, the bias of an estimator is the error it makes on average,
 while the variance is a measure of how unpredictable the estimator is.
 
 Crucially, a more "complex" estimator has less bias but more variance,
 while increasing the number of data points tends to reduce the variance
 and does not affect the bias.
-As such, we can control the bias-variance tradeoff by increasing the complexity
+As such, we can control the bias-variance trade-off by increasing the complexity
 of the estimator as more data becomes available.
 
 Let $\widehat \mu(x)$ be an estimator of the regression function
@@ -129,17 +129,17 @@ $$
 \Var\left[\frac{1}{n} \sum_{i=1}^n
 y_i \frac{1}{h} K\left(\frac{x_i-x}{h}\right)\right]
 &\approx
-\frac{1}{nh} f(x) R_K \big( \mu(x)^2 + \sigma_\varepsilon^2 \big), \\
+\frac{1}{n h} f(x) R_K \big( \mu(x)^2 + \sigma_\varepsilon^2 \big), \\
 \Var\left[\frac{1}{n} \sum_{i=1}^n
 \frac{1}{h} K\left(\frac{x_i-x}{h}\right)\right]
 &\approx
-\frac{1}{nh} f(x) R_K, \\
+\frac{1}{n h} f(x) R_K, \\
 \Cov\left[\frac{1}{n} \sum_{i=1}^n
 y_i \frac{1}{h} K\left(\frac{x_i-x}{h}\right),
 \frac{1}{n} \sum_{i=1}^n
 \frac{1}{h} K\left(\frac{x_i-x}{h}\right) \right]
 &\approx
-\frac{1}{nh} \mu(x) f(x) R_K
+\frac{1}{n h} \mu(x) f(x) R_K
 \end{align*}
 $$
 
@@ -150,7 +150,7 @@ $$
 \begin{align*}
 \Var\big[\widehat \mu(x)\big]
 &\approx
-\frac{1}{nh} \frac{R_K \sigma_\varepsilon^2}{f(x)}.
+\frac{1}{n h} \frac{R_K \sigma_\varepsilon^2}{f(x)}.
 \end{align*}
 $$
 
@@ -165,14 +165,14 @@ $$
 &\approx
 h^4 \sigma_K^4
 \left( \frac{\mu'(x)f'(x)}{f(x)} + \frac{\mu''(x)}{2} \right)^2
-+ \frac{1}{nh} \frac{R_K \sigma_\varepsilon^2}{f(x)}, \\
++ \frac{1}{n h} \frac{R_K \sigma_\varepsilon^2}{f(x)}, \\
 \IMSE
 &\approx
 h^4 \sigma_K^4
 \int_\R
 \left( \frac{\mu'(x)f'(x)}{f(x)} + \frac{\mu''(x)}{2} \right)^2
 \diff{x}
-+ \frac{1}{nh}
++ \frac{1}{n h}
 \int_\R
 \frac{R_K \sigma_\varepsilon^2}{f(x)}
 \diff{x}.

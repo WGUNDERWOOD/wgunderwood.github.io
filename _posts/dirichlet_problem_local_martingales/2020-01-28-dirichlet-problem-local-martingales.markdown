@@ -165,12 +165,12 @@ $$
 The proof is technical but is a standard result in stochastic analysis.
 
 
-### The Itô formula
+### The It&#0244; formula
 
-The Itô formula serves as a "chain rule" for stochastic calculus.
+The It&#0244; formula serves as a "chain rule" for stochastic calculus.
 Here we state a special form of it, for integrals against Brownian motion.
 
-#### Proposition 3 (Itô formula)
+#### Proposition 3 (It&#0244; formula)
 
 Let $\big(\Omega, \mathcal{F}, (\mathcal{F}_ t), \mathbb{P}\big)$
 be a complete filtered probability space,
@@ -219,7 +219,7 @@ $(X^x_ t)$ is a continuous local martingale on $[0, \tau_ x)$.
 
 #### Proof
 
-By the Itô formula, for $0 \leq t < \tau_ x$
+By the It&#0244; formula, for $0 \leq t < \tau_ x$
 
 $$
   \begin{align*}
@@ -444,7 +444,7 @@ src="/assets/posts/dirichlet_problem_local_martingales/surf_M30_f10.png">
 
 This method for solving PDEs by constructing a suitable continuous local
 martingale is by no means restricted to the Dirichlet problem.
-The Feynman-Kac formula provides a more general method for solving
+The Feynman&ndash;Kac formula provides a more general method for solving
 second-order PDEs, by employing slightly more complex stochastic processes.
 
 These results hint at some of the deep connections between PDEs and stochastic processes,
@@ -458,7 +458,7 @@ to construct solutions to different PDEs.
 ## References
 
 - The Wikipedia page on the
-  [Feynman-Kac formula](https://en.wikipedia.org/wiki/Feynman%E2%80%93Kac_formula)
+  [Feynman&ndash;Kac formula](https://en.wikipedia.org/wiki/Feynman%E2%80%93Kac_formula)
 - The Wikipedia page on
   [stochastic processes and boundary value problems](https://en.wikipedia.org/wiki/Stochastic_processes_and_boundary_value_problems)
 - This [blog post](https://eventuallyalmosteverywhere.wordpress.com/2012/03/04/remarkable-fact-about-brownian-motion-4-the-dirichlet-problem/)

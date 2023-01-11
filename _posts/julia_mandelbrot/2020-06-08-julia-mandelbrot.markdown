@@ -143,7 +143,7 @@ we focus instead on its relationship to Julia sets.
 <img style="float: right; padding-left: 30px; padding-top: 0px; width: 250px"
 src="/assets/posts/julia_mandelbrot/buddhabrot.png">
 
-Again simpling by iterating a complex quadratic,
+Again simply by iterating a complex quadratic,
 we can plot the Mandelbrot set,
 with its complement coloured by the number of iterations
 until escape.

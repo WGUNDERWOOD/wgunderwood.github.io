@@ -189,7 +189,7 @@ src="/assets/posts/local_polynomial_regression/quadratic_fit_quadratic_data.svg"
 
 However if the regression function is not well-approximated
 by any low-degree polynomial,
-this reression method can still perform poorly,
+this regression method can still perform poorly,
 as seen in Figure 5.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
