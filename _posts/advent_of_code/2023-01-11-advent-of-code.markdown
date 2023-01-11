@@ -33,7 +33,13 @@ and plenty of general-purpose problem solving.
 
 
 
-
+<div class="frame">
+<a href="https://www.princeton.edu">
+<img
+style="width: 170px; margin-top: 25px; margin-left: 15px"
+src="/assets/posts/advent_of_code/julia.svg">
+</a>
+</div>
 
 ## The Julia language
 
