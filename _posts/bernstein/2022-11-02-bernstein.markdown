@@ -24,7 +24,7 @@ Note that $\E[X_i] = p$ and $\Var[X_i] = p(1-p)$,
 so by the central limit theorem we have
 
 $$
-\frac{1}{\sqrt{np(1-p)}}
+\frac{1}{\sqrt{n p(1-p)}}
 \sum_{i=1}^n (X_i - p)
 \xrightarrow{d} \cN(0,1).
 $$

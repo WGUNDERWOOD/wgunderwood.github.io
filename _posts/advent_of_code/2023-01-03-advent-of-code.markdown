@@ -94,12 +94,12 @@ so that the most performance-critical parts are made as fast as possible.
 ### Fast loops
 
 A great example of the benefit of JIT compilation is
-Julia's fast loops, which require no vectorization
+Julia's fast loops, which require no vectorisation
 (unlike Python, where loops are painfully slow
-unless vectorized in numpy).
+unless vectorised in numpy).
 Simply write out the loops you need and the compiler will handle
 the execution.
-That said, Julia does have vectorization macros which
+That said, Julia does have vectorisation macros which
 can allow for neater code.
 For example, to add one to the array
 `A::Vector{Int}`{:.language-julia .highlight},
@@ -208,7 +208,7 @@ and
 
 ### Avoiding unnecessary allocation and copying
 
-Many problems in AoC (particuarly part 2 of the problems)
+Many problems in AoC (particularly part 2 of the problems)
 contain inputs so large that the obvious solutions
 are impossible due to memory allocation.
 One common fix is to represent the data without allocating much memory,
@@ -405,7 +405,7 @@ end
 {% endhighlight %}
 
 Firstly I made a pass through the problem input to get the structure
-of the filesystem and the sizes of the files,
+of the file system and the sizes of the files,
 setting each directory size to
 `NaN::Float64`{:.language-julia .highlight},
 Julia's "not a number" value.
@@ -425,7 +425,7 @@ and checking that
 If so then the size of this directory is the sum of the sizes of
 its children.
 I repeated this process $d$ times where $d$ is the depth
-of the filesystem to ensure propagation has terminated.
+of the file system to ensure propagation has terminated.
 I'm sure there are better ways to do this, but it worked for me.
 
 
@@ -705,7 +705,7 @@ TODO
 
 This was one of the hardest problems, involving a network search which
 was large enough to require some thought to get it to finish quickly.
-Firstly I did some preprocessing of the input,
+Firstly I did some pre-processing of the input,
 using Dijkstra's algorithm to get the shortest path length between any two
 valves, thus yielding a complete network.
 I then dropped all the valves (nodes) with a zero flow rate as there is no point
@@ -734,7 +734,8 @@ end
 
 For part 2, I first reasoned that there is no need for both you and the elephant
 to ever visit the same valve (in the processed complete network).
-Therefore I used a heuristic to find all of the "good" paths within the time limit,
+Therefore I used a heuristic to find all of the "good"
+paths within the time limit,
 meaning those with a sufficiently high total pressure release,
 again using DFS.
 I then searched among these paths to find the best pair which visit
@@ -754,7 +755,7 @@ TODO
 </h3>
 
 This problem was fun to solve, especially the insights required for part 2.
-Part 1 invloved implementing
+Part 1 involved implementing
 [Tetris](https://en.wikipedia.org/wiki/Tetris)
 but without rotating the blocks.
 
@@ -772,7 +773,8 @@ Obviously it is not possible to simulate this fully,
 but I realized that the pattern of jets and the block shapes are periodic.
 After checking that the top part of the tower of blocks is also periodic,
 the problem is much easier.
-The answer can be calculated by running the simulation for a few thousand iterations
+The answer can be calculated by running the simulation
+for a few thousand iterations
 to observe the repeating section
 and then counting the number of repeats needed to reach
 1000000000000 blocks.
