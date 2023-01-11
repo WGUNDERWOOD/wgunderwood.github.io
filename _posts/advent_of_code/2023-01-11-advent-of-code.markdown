@@ -278,8 +278,11 @@ My solutions are available on
 <a href="https://adventofcode.com/2022/day/1" style="color:#F1FA9C">
 Day 1: Calorie Counting
 </a>
-<span style="float: right; color: #777777; font-size: 24px;">
+<span style="float: right; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day01.jl" style="color:#777777">
 0.034 s
+</a>
 </span>
 </h3>
 
@@ -302,7 +305,10 @@ functions.
 Day 2: Rock Paper Scissors
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day02.jl" style="color:#777777">
 0.080 s
+</a>
 </span>
 </h3>
 
@@ -322,7 +328,10 @@ gives the answer without allocating much memory.
 Day 3: Rucksack Reorganization
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day03.jl" style="color:#777777">
 0.434 s
+</a>
 </span>
 </h3>
 
@@ -340,7 +349,10 @@ string remains.
 Day 4: Camp Cleanup
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day04.jl" style="color:#777777">
 0.173 s
+</a>
 </span>
 </h3>
 
@@ -362,7 +374,10 @@ functions to check if one contains the other or if they overlap.
 Day 5: Supply Stacks
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day05.jl" style="color:#777777">
 0.179 s
+</a>
 </span>
 </h3>
 
@@ -384,7 +399,10 @@ The hardest part was reading the oddly-formatted input.
 Day 6: Tuning Trouble
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day06.jl" style="color:#777777">
 0.020 s
+</a>
 </span>
 </h3>
 
@@ -404,7 +422,10 @@ preceding $n$ characters are distinct was enough to solve this.
 Day 7: No Space Left On Device
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day07.jl" style="color:#777777">
 0.548 s
+</a>
 </span>
 </h3>
 
@@ -458,7 +479,10 @@ I'm sure there are better ways to do this, but it worked for me.
 Day 8: Treetop Tree House
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day08.jl" style="color:#777777">
 0.266 s
+</a>
 </span>
 </h3>
 
@@ -481,7 +505,10 @@ by moving in each direction until finding a higher tree.
 Day 9: Rope Bridge
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day09.jl" style="color:#777777">
 0.186 s
+</a>
 </span>
 </h3>
 
@@ -506,7 +533,10 @@ function makes counting the visited squares trivial.
 Day 10: Cathode-Ray Tube
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day10.jl" style="color:#777777">
 0.157 s
+</a>
 </span>
 </h3>
 
@@ -534,7 +564,10 @@ end
 Day 11: Monkey in the Middle
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day11.jl" style="color:#777777">
 0.923 s
+</a>
 </span>
 </h3>
 
@@ -574,7 +607,10 @@ end
 Day 12: Hill Climbing Algorithm
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day12.jl" style="color:#777777">
 1.151 s
+</a>
 </span>
 </h3>
 
@@ -615,7 +651,10 @@ to allow for the value
 Day 13: Distress Signal
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day13.jl" style="color:#777777">
 0.271 s
+</a>
 </span>
 </h3>
 
@@ -649,7 +688,10 @@ without having to implement it myself.
 Day 14: Regolith Reservoir
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day14.jl" style="color:#777777">
 0.694 s
+</a>
 </span>
 </h3>
 
@@ -689,7 +731,10 @@ starting point.
 Day 15: Beacon Exclusion Zone
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day15.jl" style="color:#777777">
 0.264 s
+</a>
 </span>
 </h3>
 
@@ -729,7 +774,10 @@ which is in none of the sensed regions.
 Day 16: Proboscidea Volcanium
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day16.jl" style="color:#777777">
 0.923 s
+</a>
 </span>
 </h3>
 
@@ -781,7 +829,10 @@ but could be found using a binary search.
 Day 17: Pyroclastic Flow
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day17.jl" style="color:#777777">
 0.645 s
+</a>
 </span>
 </h3>
 
@@ -817,7 +868,10 @@ and then counting the number of repeats needed to reach
 Day 18: Boiling Boulders
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day18.jl" style="color:#777777">
 1.176 s
+</a>
 </span>
 </h3>
 
@@ -844,7 +898,10 @@ and the cubes which are not outside.
 Day 19: Not Enough Minerals
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day19.jl" style="color:#777777">
 1.062 s
+</a>
 </span>
 </h3>
 
@@ -878,7 +935,10 @@ were worth using.
 Day 20: Grove Positioning System
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day20.jl" style="color:#777777">
 0.274 s
+</a>
 </span>
 </h3>
 
@@ -899,7 +959,10 @@ I was able to use the same code for both parts.
 Day 21: Monkey Math
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day21.jl" style="color:#777777">
 0.366 s
+</a>
 </span>
 </h3>
 
@@ -939,7 +1002,10 @@ but was fine for my instance.
 Day 22: Monkey Map
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day22.jl" style="color:#777777">
 0.863 s
+</a>
 </span>
 </h3>
 
@@ -995,7 +1061,10 @@ in generality as I never "hard-coded" my cube's net.
 Day 23: Unstable Diffusion
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day23.jl" style="color:#777777">
 1.670 s
+</a>
 </span>
 </h3>
 
@@ -1037,7 +1106,10 @@ checking at each step if any elf still had neighbours.
 Day 24: Blizzard Basin
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day24.jl" style="color:#777777">
 1.711 s
+</a>
 </span>
 </h3>
 
@@ -1077,7 +1149,10 @@ blizzards after each trip to get the total round trip time.
 Day 25: Full of Hot Air
 </a>
 <span style="float: right; color: #777777; font-size: 24px;">
+<a href="https://github.com/WGUNDERWOOD/
+advent-of-code-2022/blob/main/src/day25.jl" style="color:#777777">
 0.105 s
+</a>
 </span>
 </h3>
 
