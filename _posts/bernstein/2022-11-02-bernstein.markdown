@@ -4,9 +4,66 @@ title:  "Bernstein's Inequality"
 date:   2022-11-02
 ---
 
-This post is about Bernstein's inequality
+Bernstein's inequality is an important concentration inequality.
+In this post we motivate and prove it,
+and also show its approximate optimality
+through weak convergence.
 
 {% include mathjax.html %}
+
+<div style="display:none">
+  $ \newcommand \P {\mathbb{P}} $
+  $ \newcommand \E {\mathbb{E}} $
+</div>
+
+## Introduction
+
+Concentration inequalities are central to
+probability theory, mathematical statistics and the
+theory of machine learning,
+providing a mathematical framework to the notion that
+"with enough samples you eventually get the right answer."
+More precisely, they provide a bound on the probability
+that a sum of random variables deviates from its expected value
+by a certain quantity.
+We begin this post by giving some basic concentration
+inequalities and their proofs.
+
+## Basic concentration inequalities
+
+The following concentration inequalities are the
+building blocks of more sophisticated results,
+and help to build intuition.
+We start with Markov's inequality,
+the fundamental result on which
+almost all other concentration inequalities rest.
+
+<div class="box-rounded">
+
+<h4> Theorem 1 (Markov's inequality) </h4>
+
+Let $X \geq 0$ be a random variable
+and $t>0$. Then
+$
+\P\left(X > t\right)
+\leq \frac{1}{t} \E[X].
+$
+
+</div>
+
+
+
+
+
+Let $X_1, \ldots, X_n$ be independent and identically distributed
+(i.i.d.) random variables which are non-negative.
+Then
+
+
+
+a version of Bernstein's inequality
+which I think is easier to understand than the form usually presented.
+
 
 <div style="display:none">
   $\newcommand \N {\mathbb{N}}$
