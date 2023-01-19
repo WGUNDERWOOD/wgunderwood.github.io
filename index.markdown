@@ -131,9 +131,18 @@ for these classes at Princeton University:
 
 <ul>
 <li>
+<strong> ORF 363: </strong>
+Computing and Optimization,
+with
+<a href="https://orfe.princeton.edu/people/ioannis-akrotirianakis">
+Ioannis Akrotirianakis</a>,
+Spring 2023
+</li>
+
+<li>
 <strong> ORF 524: </strong>
 Statistical Theory and Methods,
-taught by
+with
 <a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
 Fall 2022
 </li>
@@ -141,7 +150,7 @@ Fall 2022
 <li>
 <strong> ORF 526: </strong>
 Probability Theory,
-taught by
+with
 <a href="http://mykhaylo.princeton.edu/">Mykhaylo Shkolnikov</a>,
 Fall 2022
 </li>
@@ -149,7 +158,7 @@ Fall 2022
 <li>
 <strong> ORF 524: </strong>
 Statistical Theory and Methods,
-taught by
+with
 <a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
 Fall 2021
 </li>
@@ -157,7 +166,7 @@ Fall 2021
 <li>
 <strong> ORF 245: </strong>
 Fundamentals of Statistics,
-taught by
+with
 <a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
 Spring 2021
 </li>
@@ -165,7 +174,7 @@ Spring 2021
 <li>
 <strong> ORF 363: </strong>
 Computing and Optimization,
-taught by
+with
 <a href="http://aaa.princeton.edu/">Amir Ali Ahmadi</a>,
 Fall 2020
 </li>
