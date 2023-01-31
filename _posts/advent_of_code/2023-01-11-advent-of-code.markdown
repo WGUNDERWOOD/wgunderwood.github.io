@@ -1173,7 +1173,7 @@ Writing a
 function was straightforward,
 looking up the coefficients in a dictionary and
 calculating in base five.
-The `snafu_to_decimal`{:.language-julia .highlight}
+The `decimal_to_snafu`{:.language-julia .highlight}
 function was much harder,
 and my final solution is recursive,
 first finding a large enough power of five for the leading digit
