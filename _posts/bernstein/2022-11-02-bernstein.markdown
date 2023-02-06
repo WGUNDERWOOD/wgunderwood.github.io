@@ -14,6 +14,8 @@ through weak convergence.
 <div style="display:none">
   $ \newcommand \P {\mathbb{P}} $
   $ \newcommand \E {\mathbb{E}} $
+  $ \newcommand \I {\mathbb{I}} $
+  $ \newcommand \V {\mathbb{V}} $
 </div>
 
 ## Introduction
@@ -43,13 +45,82 @@ almost all other concentration inequalities rest.
 <h4> Theorem 1 (Markov's inequality) </h4>
 
 Let $X \geq 0$ be a random variable
-and $t>0$. Then
+with $\mu = \E[X]$ and let $t>0$.
+Then
 $
 \P\left(X > t\right)
-\leq \frac{1}{t} \E[X].
+\leq \frac{\mu}{t}.
 $
 
+<h4 style="margin-top:5mm"> Proof </h4>
+
+With $\I$ an indicator function, note that
+$t \cdot \I\{X > t\} \leq X$
+and take expectations.
+
 </div>
+
+An immediate consequence of Markov's inequality is
+Chebyshev's inequality.
+This has many applications in statistics,
+including a weak law of large numbers.
+
+
+<div class="box-rounded">
+
+<h4> Theorem 2 (Chebyshev's inequality) </h4>
+
+Let $X$ be a random variable
+with $\mu = \E[X]$ and
+$\sigma^2 = \V[X]$,
+and let $t>0$.
+Then
+$
+\P\left(|X - \E[X]| > t\right)
+\leq \frac{\sigma^2}{t^2}.
+$
+
+<h4 style="margin-top:5mm"> Proof </h4>
+
+Apply Markov's inequality to
+$(X - \E[X])^2$.
+
+</div>
+
+The last of the basic inequalities presented here is
+the Chernoff bound.
+
+<div class="box-rounded">
+
+<h4> Theorem 3 (Chernoff bound) </h4>
+
+Let $X$ be a random variable
+and $t>0$.
+Then
+$
+\P\left(X > t\right)
+\leq
+\inf_{s > 0}
+\E[e^{sX}]
+e^{-st}.
+$
+
+<h4 style="margin-top:5mm"> Proof </h4>
+
+Apply Markov's inequality to
+$e^{sX}$ and take an infimum over $t > 0$.
+
+</div>
+
+Note how each of these bounds provides progressively sharper
+bounds on the tail of the random variable,
+while also making stronger assumptions:
+Markov's inequality decays at rate $1/t$
+and requires only one moment,
+Chebyshev's inequality decays as $1/t^2$
+assuming finite variance,
+and the Chernoff bound decays as $e^{-st}$
+provided that the moment generating function is finite at $s$.
 
 
 
