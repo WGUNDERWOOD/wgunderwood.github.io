@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "Bernstein's Inequality"
+title:  "Bernstein's Inequality 1: Introduction"
 date:   2022-11-02
 ---
 
 Bernstein's inequality is an important concentration inequality.
-In this post we motivate and prove it,
-and also show its approximate optimality
-through weak convergence.
+In this post, the first of a short series,
+we state and prove the main theorem.
 
 {% include mathjax.html %}
 
@@ -108,11 +107,11 @@ $
 <h4 style="margin-top:5mm"> Proof </h4>
 
 Apply Markov's inequality to
-$e^{sX}$ and take an infimum over $t > 0$.
+$e^{sX}$ and take an infimum over $s > 0$.
 
 </div>
 
-Note how each of these bounds provides progressively sharper
+Note how each of these inequalities provides progressively sharper
 bounds on the tail of the random variable,
 while also making stronger assumptions:
 Markov's inequality decays at rate $1/t$
@@ -121,6 +120,10 @@ Chebyshev's inequality decays as $1/t^2$
 assuming finite variance,
 and the Chernoff bound decays as $e^{-st}$
 provided that the moment generating function is finite at $s$.
+
+## Sums of random variables
+
+independent and identically distributed
 
 
 
