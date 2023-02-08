@@ -5,121 +5,98 @@ date:   2022-11-02
 ---
 
 Bernstein's inequality is an important concentration inequality.
-In this post, the first of a short series,
-we state and prove the main theorem.
+In this post we motivate, state and prove a
+version which I think
+is clearer than the usual formulation.
 
 {% include mathjax.html %}
 
 <div style="display:none">
+  $ \newcommand \R {\mathbb{R}} $
   $ \newcommand \P {\mathbb{P}} $
   $ \newcommand \E {\mathbb{E}} $
   $ \newcommand \I {\mathbb{I}} $
   $ \newcommand \V {\mathbb{V}} $
+  $ \newcommand \cX {\mathcal{X}} $
 </div>
 
 ## Introduction
 
 Concentration inequalities are central to
-probability theory, mathematical statistics and the
-theory of machine learning,
+probability theory, mathematical statistics and theoretical machine learning,
 providing a mathematical framework to the notion that
 "with enough samples you eventually get the right answer."
 More precisely, they provide a bound on the probability
-that a sum of random variables deviates from its expected value
-by a certain quantity.
-We begin this post by giving some basic concentration
-inequalities and their proofs.
+that a random variable deviates from its expected value
+by more than a specified amount.
+Bernstein's inequality allows tight control
+on the tail probabilities of a sum of random variables
+where variance and almost sure bounds on the summands are available.
 
-## Basic concentration inequalities
+## Setup
 
-The following concentration inequalities are the
-building blocks of more sophisticated results,
-and help to build intuition.
-We start with Markov's inequality,
-the fundamental result on which
-almost all other concentration inequalities rest.
+In many applications, we need to control the largest entry in a sum
+of possibly high-dimensional random vectors.
+For example,
+we might be proving uniform convergence
+of a statistical estimator,
+establishing consistency for a
+binary classifier under empirical risk minimization,
+or controlling the regret of an online learning algorithm.
 
-<div class="box-rounded">
+As such, we propose the following setup:
+for $n \geq 1$, let $X_1, \ldots, X_n$ be
+independent and identically distributed (i.i.d.)
+random variables taking values in $\R^d$ for some $d \geq 1$.
+We assume that $\E[X_1] = 0$ and consider the sum
+$\sum_{i=1}^n X_i$.
+Of course, we will need to make some further assumptions
+on the distribution of $X_1$.
+Firstly we insist that the variance of each component
+is bounded:
+$\max_{1 \leq j \leq d} \V[X_1]\_{jj} \leq \sigma^2$.
+This tells us about the approximate scale
+of the random variables,
+but in order to get better (exponential rather than $L^2$)
+bounds, we also make an assumption on the maximum size
+of any component:
+$\\\|X_1\\\|_\infty \leq M$ almost surely.
+These assumptions will be discussed more later in the post.
 
-<h4> Theorem 1 (Markov's inequality) </h4>
+## Bernstein's inequality
 
-Let $X \geq 0$ be a random variable
-with $\mu = \E[X]$ and let $t>0$.
-Then
-$
-\P\left(X > t\right)
-\leq \frac{\mu}{t}.
-$
-
-<h4 style="margin-top:5mm"> Proof </h4>
-
-With $\I$ an indicator function, note that
-$t \cdot \I\{X > t\} \leq X$
-and take expectations.
-
-</div>
-
-An immediate consequence of Markov's inequality is
-Chebyshev's inequality.
-This has many applications in statistics,
-including a weak law of large numbers.
-
-
-<div class="box-rounded">
-
-<h4> Theorem 2 (Chebyshev's inequality) </h4>
-
-Let $X$ be a random variable
-with $\mu = \E[X]$ and
-$\sigma^2 = \V[X]$,
-and let $t>0$.
-Then
-$
-\P\left(|X - \E[X]| > t\right)
-\leq \frac{\sigma^2}{t^2}.
-$
-
-<h4 style="margin-top:5mm"> Proof </h4>
-
-Apply Markov's inequality to
-$(X - \E[X])^2$.
-
-</div>
-
-The last of the basic inequalities presented here is
-the Chernoff bound.
+Now let's state the main result.
+The proof of Bernstein's inequality
+is provided later in the post,
+to avoid distracting from the discussion.
 
 <div class="box-rounded">
 
-<h4> Theorem 3 (Chernoff bound) </h4>
+<h4> Theorem  (Bernstein's inequality) </h4>
 
-Let $X$ be a random variable
-and $t>0$.
+For $n \geq 1$ and $d \geq 1$,
+let $X_1, \ldots, X_n$ be
+i.i.d. random variables taking values in $\R^d$.
+Suppose $\E[X_1] = 0$,
+$\max_{1 \leq j \leq d} \V[X_1]_{jj} \leq \sigma^2$
+and $\|X_1\|_\infty \leq M$ almost surely.
 Then
-$
-\P\left(X > t\right)
-\leq
-\inf_{s > 0}
-\E[e^{sX}]
-e^{-st}.
-$
 
-<h4 style="margin-top:5mm"> Proof </h4>
+$$
+\P\left(
+\left\|
+\sum_{i=1}^n
+X_i
+\right\|_\infty
+\geq
+\sqrt{4 n \sigma^2 (t + \log 4d)}
++ \frac{4}{3} M (t + \log 4d)
+\right)
+\leq e^{-t}.
+$$
 
-Apply Markov's inequality to
-$e^{sX}$ and take an infimum over $s > 0$.
 
 </div>
-
-Note how each of these inequalities provides progressively sharper
-bounds on the tail of the random variable,
-while also making stronger assumptions:
-Markov's inequality decays at rate $1/t$
-and requires only one moment,
-Chebyshev's inequality decays as $1/t^2$
-assuming finite variance,
-and the Chernoff bound decays as $e^{-st}$
-provided that the moment generating function is finite at $s$.
 
 ## Sums of random variables
 
