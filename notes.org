@@ -1,15 +1,15 @@
 * Post ideas
 ** Bernstein's inequality
 *** Introduce problem
-**** Tail bound for infinity norm of iid sum of high-dimensional vectors
-**** Applications?
-**** Assume variance and a.s. bounds
-**** No assumption on dependence between coordinates
+**** DONE Tail bound for infinity norm of iid sum of high-dimensional vectors
+**** DONE Applications?
+**** DONE Assume variance and a.s. bounds
+**** DONE No assumption on dependence between coordinates
 *** Main result: maximal Bernstein tail bound
-**** State this way for ease of use -- constants on left not right
-**** Subgaussian part
-**** Subexponential part
-**** Tightened even further with Bennett but only up to logs
+**** DONE State this way for ease of use -- constants on left not right
+**** DONE Subgaussian part
+**** DONE Subexponential part
+**** DONE Tightened even further with Bennett but only up to logs
 *** Examples
 **** Bernoulli(p)
 ***** CLT and union bound
