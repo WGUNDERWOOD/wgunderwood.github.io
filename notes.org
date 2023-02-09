@@ -18,6 +18,7 @@
 ***** Weak convergence to Poisson
 ***** Check Bernstein agrees
 **** Kernel estimator?
+*** Embed plotly interactive plot of tails and histogram
 ** Bernstein's inequality (old)
 *** Part 1: Introduction
 **** Intro
