@@ -253,40 +253,67 @@ so Hoeffding's inequality is fairly tight.
 
 ### Example 2: subexponential-type concentration
 
-
-
-
-Now let $X_{ij} \sim \Ber(p/n) - p/n$ be i.i.d. for $1 \leq i \leq n$
-and $1 \leq j \leq d$ where $p \in (0,1)$.
-Note that $\sum_{i=1}^n (X_{ij} + p/n) \sim \Bin(n, p/n)$
-for each $ 1\ \leq j \leq d$,
-so for any $k \in \N$ we have
+Now let $X_{ij} = M$ with probability $1/n$
+and $-\frac{M}{n-1}$ with probability $1 - 1/n$,
+i.i.d. for $1 \leq i \leq n$
+and $1 \leq j \leq d$.
+Following the approach from the previous example but
+this time using the elementary bound
+$\E[e^{tX_{ij}}] \leq 1 + \frac{e^{tM}}{n}$,
 
 $$
 \begin{align*}
-\P\left(\sum_{i=1}^n (X_{ij} + p/n) = k\right)
-&= \frac{n!}{k!(n-k)!}
-\left(\frac{p}{n}\right)^k
-\left(1 - \frac{p}{n}\right)^{n-k} \\
-&= \frac{p^k}{k!}
-\frac{n(n-1) \cdots (n-k+1)}{n^k}
-\left(1 - \frac{p}{n}\right)^n
-\left(1 - \frac{p}{n}\right)^{-k} \\
-&\to \frac{p^k e^{-p}}{k!}
+\E\left[
+\left\|
+\sum_{i=1}^n X_i
+\right\|_\infty
+\right]
+&\leq
+\frac{1}{t}
+\log
+\big(
+d \,
+\E\left[
+\exp
+X_{ij}
+\right]^n
+\big) \\
+&\leq
+\frac{1}{t}
+\log d
++ \frac{n}{t}
+\log\left(
+1 + \frac{e^{tM}}{n}
+\right) \\
+&\leq
+\frac{1}{t}
+\log d
++ \frac{1}{t} e^{tM}.
 \end{align*}
 $$
 
-and so
+Setting $t = 1/M$ gives
 
 $$
-\sum_{i=1}^n (X_{ij} + p/n)
-\xrightarrow{d} \Pois(p).
+\begin{align*}
+\E\left[
+\left\|
+\sum_{i=1}^n X_i
+\right\|_\infty
+\right]
+&\leq
+M (e + \log d)
+\leq 4 M \log 2d,
+\end{align*}
 $$
 
-Again by a union bound, this implies that
-TODO get a tail bound for the Poisson
+and so we have the second term in Bernstein's inequality.
+
+
+
 
 TODO format subgaussian etc
+TODO mention CLT, Poisson
 
 Refs
 1612 arxiv vershynin
