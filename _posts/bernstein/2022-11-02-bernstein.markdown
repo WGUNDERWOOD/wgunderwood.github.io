@@ -81,7 +81,7 @@ to avoid distracting from the discussion.
 
 <div class="box-rounded">
 
-<h4> Theorem  (Bernstein's inequality) </h4>
+<h4> Theorem  (Bernstein's maximal inequality) </h4>
 
 For $n \geq 1$ and $d \geq 1$,
 let $X_1, \ldots, X_n$ be
@@ -92,19 +92,15 @@ and $\|X_1\|_\infty \leq M$ almost surely.
 Then
 
 $$
-\P\left(
+\E\left[
 \left\|
-\sum_{i=1}^n
-X_i
+\sum_{i=1}^n X_i
 \right\|_\infty
-\geq
-\sqrt{4 n \sigma^2 (t + \log 4d)}
-+ \frac{4}{3} M (t + \log 4d)
-\right)
-\leq e^{-t}.
+\right]
+\leq
+\sqrt{24 n \sigma^2 \log 2d}
++ 4 M \log 2d.
 $$
-
-TODO can we do better? check where the proof gives the fraction-style version.
 
 </div>
 
@@ -121,31 +117,40 @@ These differences can be summarized as follow.
   This is to highlight the dependence of the resulting bound
   on the dimension $d$.
 
-- The lower bound inside the probability is rather complicated.
-  This is so one can explicitly see the typical size of the infinity norm.
+- This version is stated as an expectation rather than a tail probability.
+  In fact, this result can be easily strengthened to include the tail bound,
+  but this distracts from the main point of the post.
+
+- The terms on the right hand side are rather complicated
+  and perhaps unfamiliar,
+  but allow us to explicitly see the typical size of the infinity norm.
   The more standard version of Bernstein's inequality makes it difficult
-  to see this bound.
+  to read off this value.
 
 ### Interpreting the bound
 
 The resulting bound of
-$\sqrt{4 n \sigma^2 (t + \log 4d)} + \frac{4}{3} M (t + \log 4d)$
+$\sqrt{24 n \sigma^2 \log 2d} + 4 M \log 2d$
 consists of two terms
 which are worth discussing separately.
 
 - The first term is
-  $\sqrt{4 n \sigma^2 (t + \log 4d)}$.
+  $\sqrt{24 n \sigma^2 \log 2d}$.
   Note that this depends on $n$ and $\sigma^2$ but not $M$
-  and has a Gaussian-type dependence on the dimension.
+  and has a Gaussian-type dependence on the dimension
+  ($t \mapsto \sqrt{\log t}$ is the inverse of
+  $t \mapsto e^{-t^2}$, a term appearing in the Gaussian tail probability).
   This is very similar to the bound obtained if we assume that
-  $X_1$ is $\sigma^2$-subgaussian.
-  In fact, we will see that this term corresponds in some sense
-  to the central limit theorem for $\sum_{i=1}^n X_i$.
+  $X_1$ is $\sigma^2$-subgaussian,
+  and in fact this term corresponds in some sense
+  to the central limit theorem.
 
 - The second term is
-  $\frac{4}{3} M (t + \log 4d)$,
+  $4 M \log 2d$
   and depends on $M$ but not $n$ or $\sigma^2$.
-  This is a Poisson-type tail
+  This is an exponential-type tail
+  ($t \mapsto \log t$ is the inverse of
+  $t \mapsto e^{-t}$, the exponential tail probability).
   which captures rare event phenomena associated with
   bounded random variables.
   We will see that this term corresponds in some cases
@@ -157,7 +162,8 @@ which are worth discussing separately.
 It is worth remarking at this point that Bennett's inequality
 TODO cite
 provides a further refinement of Bernstein's inequality,
-but the difference is minor in many applications so we will not discuss it here.
+but the difference is minor in many
+applications so we will not discuss it here.
 
 
 
@@ -169,45 +175,83 @@ In this section we provide two explicit examples
 which show why each of the two terms discussed above are necessary.
 It is somewhat remarkable that these examples are so easy to find,
 providing a straightforward demonstration of the
-(approximate) optimality of Bernstein's inequality.
+(approximate) optimality of Bernstein's maximal inequality.
 
-### Example 1: the central limit theorem
+### Example 1: subgaussian-type concentration
 
-Let $X_{ij} \sim \Ber(p) - p$ be i.i.d. for $1 \leq i \leq n$
-and $1 \leq j \leq d$ where $p \in (0,1)$.
-Note that $\E[X_{ij}] = 0$ and $\sigma^2 = \V[X_{ij}] = p(1-p)$,
-so by the central limit theorem we have
-
-$$
-\frac{1}{\sqrt{n \sigma^2}}
-\sum_{i=1}^n X_{ij}
-\xrightarrow{d} \cN(0,1)
-$$
-
-for each $1 \leq j \leq d$.
-By a union bound,
-writing $X_i = (X_{i1}, \ldots, X_{id})$,
-we therefore have
+Let $X_{ij} = \pm \sigma$
+with equal probability
+and be i.i.d. for $1 \leq i \leq n$
+and $1 \leq j \leq d$.
+Note that $\E[X_{ij}] = 0$ and $\V[X_{ij}] = \sigma^2$.
+Further, by Hoeffding's inequality, TODO cite
+$\E[e^{tX_{ij}}] \leq e^{t^2 \sigma^2 / 2}$.
+So by Jensen's inequality on the concave logarithm function,
+writing $X_i = (X_{i1}, \ldots, X_{id})$ and for any $t > 0$,
 
 $$
-\P\left(
+\begin{align*}
+\E\left[
 \left\|
-\sum_{i=1}^n
-X_i
+\sum_{i=1}^n X_i
 \right\|_\infty
-\geq
-\sqrt{2 n \sigma^2 (t + \log 2d)}
-\right)
-\lesssim e^{-t},
+\right]
+&\leq
+\frac{1}{t}
+\log \E\left[
+\exp
+\left\|
+\sum_{i=1}^n X_i
+\right\|_\infty
+\right] \\
+&\leq
+\frac{1}{t}
+\log \E\left[
+\sum_{j=1}^d
+\exp
+\sum_{i=1}^n X_{ij}
+\right] \\
+&\leq
+\frac{1}{t}
+\log
+\big(
+d \,
+\E\left[
+\exp
+X_{ij}
+\right]^n
+\big) \\
+&\leq
+\frac{1}{t}
+\log d
++ \frac{n t \sigma^2}{2}.
+\end{align*}
 $$
 
-where we write $\lesssim$ for "approximately at most".
+Selecting $t = \sqrt{\frac{2 \log d}{n \sigma^2}}$
+gives
+
+$$
+\begin{align*}
+\E\left[
+\left\|
+\sum_{i=1}^n X_i
+\right\|_\infty
+\right]
+&\leq
+\sqrt{2 n \sigma^2 \log d}.
+\end{align*}
+$$
+
 Thus we recover the first term in Bernstein's inequality up to constants.
+Here we took advantage of the fact that the uniform bound $M$
+and the standard deviation $\sigma$ are actually equal,
+so Hoeffding's inequality is fairly tight.
 
 
 
 
-### Example 2: weak convergence to a Poisson distribution
+### Example 2: subexponential-type concentration
 
 
 
@@ -241,3 +285,9 @@ $$
 
 Again by a union bound, this implies that
 TODO get a tail bound for the Poisson
+
+TODO format subgaussian etc
+
+Refs
+1612 arxiv vershynin
+Patricks notes
