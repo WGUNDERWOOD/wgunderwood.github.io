@@ -141,7 +141,7 @@ which are worth discussing separately.
   ($t \mapsto \sqrt{\log t}$ is the inverse of
   $t \mapsto e^{-t^2}$, a term appearing in the Gaussian tail probability).
   This is very similar to the bound obtained if we assume that
-  $X_1$ is $\sigma^2$-subgaussian,
+  $X_1$ is $\sigma^2$-sub-Gaussian,
   and in fact this term corresponds in some sense
   to the central limit theorem.
 
@@ -159,8 +159,8 @@ which are worth discussing separately.
 
 ### Bennett's inequality
 
-It is worth remarking at this point that Bennett's inequality
-TODO cite
+It is worth remarking at this point that
+[Bennett's inequality](https://en.wikipedia.org/wiki/Bennett%27s_inequality)
 provides a further refinement of Bernstein's inequality,
 but the difference is minor in many
 applications so we will not discuss it here.
@@ -177,14 +177,15 @@ It is somewhat remarkable that these examples are so easy to find,
 providing a straightforward demonstration of the
 (approximate) optimality of Bernstein's maximal inequality.
 
-### Example 1: subgaussian-type concentration
+### Example 1: sub-Gaussian-type concentration
 
 Let $X_{ij} = \pm \sigma$
 with equal probability
 and be i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
 Note that $\E[X_{ij}] = 0$ and $\V[X_{ij}] = \sigma^2$.
-Further, by Hoeffding's inequality, TODO cite
+Further, by
+[Hoeffding's lemma](https://en.wikipedia.org/wiki/Hoeffding%27s_lemma),
 $\E[e^{tX_{ij}}] \leq e^{t^2 \sigma^2 / 2}$.
 So by Jensen's inequality on the concave logarithm function,
 writing $X_i = (X_{i1}, \ldots, X_{id})$ and for any $t > 0$,
@@ -251,7 +252,7 @@ so Hoeffding's inequality is fairly tight.
 
 
 
-### Example 2: subexponential-type concentration
+### Example 2: sub-exponential-type concentration
 
 Now let $X_{ij} = M$ with probability $1/n$
 and $-\frac{M}{n-1}$ with probability $1 - 1/n$,
@@ -309,12 +310,18 @@ $$
 
 and so we have the second term in Bernstein's inequality.
 
+## Appendix: proofs
 
 
 
-TODO format subgaussian etc
+
 TODO mention CLT, Poisson
 
-Refs
-1612 arxiv vershynin
-Patricks notes
+## References
+* [Four lectures on probabilistic
+  methods for data science](https://arxiv.org/abs/1612.06661)
+  by Roman Vershynin
+
+* The University of Oxford's course on Algorithmic Foundations of Learning,
+  taught by
+  [Patrick Rebeschini](https://www.stats.ox.ac.uk/~rebeschi/)
