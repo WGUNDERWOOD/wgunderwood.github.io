@@ -1,4 +1,4 @@
-using UnicodePlots
+using PyPlot
 
 function bernstein_bound(n, sigma, M, d)
     term1 = sqrt(24 * n * sigma^2 * log(2*d))
@@ -6,6 +6,18 @@ function bernstein_bound(n, sigma, M, d)
     return term1 + term2
 end
 
+ns = (1:100) .* ones(100)'
+ds = ones(100) .* (1:100)'
+sigma = 1
+M = 10
+
+bs = bernstein_bound.(ns, sigma, M, ds)
+fig = plt.figure()
+ax = fig.add_subplot(111, projection="3d")
+ax.plot_surface(ns, ds, bs)
+#lineplot(b)
+
+#=
 function sample_two_value(v1, p1, v2, p2)
     @assert p1 + p2 == 1
     r = rand()
@@ -46,3 +58,4 @@ end
 
 println(sum(norm_sample_sums) / n_reps)
 println(bernstein_bound(n, sigma, M, d))
+=#

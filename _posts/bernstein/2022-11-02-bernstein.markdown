@@ -23,6 +23,8 @@ is clearer than the usual formulation.
   $ \newcommand \Bin {\mathrm{Bin}} $
   $ \newcommand \cN {\mathcal{N}} $
   $ \newcommand \N {\mathbb{N}} $
+  $ \newcommand \diff {\,\mathrm{d}} $
+  $ \newcommand \erfc {\mathrm{erfc}} $
 </div>
 
 ## Introduction
@@ -311,6 +313,120 @@ $$
 and so we have the second term in Bernstein's inequality.
 
 ## Appendix: proofs
+
+<div class="box-rounded">
+
+<h4> Proof  (Bernstein's maximal inequality) </h4>
+
+We begin with the classical version of Bernstein's inequality
+TODO cite
+which states that for each $1 \leq j \leq d$
+and $t > 0$,
+
+$$
+\begin{align*}
+\P\left(
+\left| \sum_{i=1}^n X_{ij} \right|
+\geq t
+\right)
+&\leq
+2 \exp\left(
+\frac{-t^2/2}{n \sigma^2 + M t / 3}
+\right)
+\wedge 1 \\
+&\leq
+2 \exp\left(
+\frac{-t^2}{4 n \sigma^2}
+\right)
+\wedge 1
++ 2 \exp\left(
+\frac{-3t}{4 M}
+\right)
+\wedge 1,
+\end{align*}
+$$
+
+where we used $\frac{a}{b+c} \geq \frac{a}{2b} \wedge \frac{a}{2c}$
+for $a,b,c > 0$.
+A union bound over $1 \leq j \leq d$ yields
+
+$$
+\P\left(
+\left\| \sum_{i=1}^n X_i \right\|_\infty
+\geq t
+\right)
+\leq
+2d \exp\left(
+\frac{-t^2}{4 n \sigma^2}
+\right)
+\wedge 1
++ 2d \exp\left(
+\frac{-3t}{4 M}
+\right)
+\wedge 1.
+$$
+
+Integrating the tail probability gives
+
+$$
+\begin{align*}
+\E\left[
+\left\| \sum_{i=1}^n X_i \right\|_\infty
+\right]
+&\leq
+\int_0^\infty
+2d \exp\left(
+\frac{-t^2}{4 n \sigma^2}
+\right)
+\wedge 1
+\diff{t}
++ \int_0^\infty
+2d \exp\left(
+\frac{-3t}{4 M}
+\right)
+\wedge 1
+\diff{t} \\
+&=
+\sqrt{4 n \sigma^2 \log 2d}
++ \int_{\sqrt{4 n \sigma^2 \log 2d}}^\infty
+2d \exp\left(
+\frac{-t^2}{4 n \sigma^2}
+\right)
+\diff{t} \\
+&\quad+
+\frac{4 M}{3} \log 2d
++\int_{\frac{4M}{3} \log 2d}^\infty
+2d \exp\left(
+\frac{-3t}{4 M}
+\right)
+\diff{t} \\
+&=
+\sqrt{4 n \sigma^2 \log 2d}
++ 2d \sqrt{\pi n \sigma^2}
+\erfc\left(\sqrt{\log 2d}\right)
++ \frac{4 M}{3} \log 2d
++ \frac{4M}{3} \\
+&\leq
+\sqrt{4 n \sigma^2 \log 2d}
++ \sqrt{n \sigma^2}
++ \frac{4 M}{3} \log 2d
++ \frac{4M}{3} \\
+&\leq
+\sqrt{11 n \sigma^2 \log 2d}
++ 4 M \log 2d.
+\end{align*}
+$$
+
+where we used the fact that that the
+complementary error function is bounded by
+$\erfc(x)
+\leq \frac{2}{\sqrt\pi}
+\frac{e^{-x^2}}{x + \sqrt{x^2 + 4/\pi}}
+\leq \frac{e^{-x^2}}{\sqrt\pi}$
+for $x \geq \log 2$.
+$\quad\square$
+
+</div>
 
 
 
