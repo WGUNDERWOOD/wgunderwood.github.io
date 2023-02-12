@@ -6,7 +6,7 @@ date:   2022-11-02
 
 Bernstein's inequality is an important concentration inequality.
 In this post we motivate, state and prove a
-version which I think
+"maximal inequality "version which I think
 is clearer than the usual formulation.
 
 {% include mathjax.html %}
@@ -33,17 +33,17 @@ Concentration inequalities are central to
 probability theory, mathematical statistics and theoretical machine learning,
 providing a mathematical framework to the notion that
 "with enough samples you eventually get the right answer."
-More precisely, they provide a bound on the probability
-that a random variable deviates from its expected value
-by more than a specified amount.
-Bernstein's inequality allows tight control
-on the tail probabilities of a sum of random variables
+More precisely, they provide bounds on the
+typical deviations
+that a random variable makes away from its expected value.
+Bernstein's inequality allows us to control
+the size of a sum of random variables
 where variance and almost sure bounds on the summands are available.
 
 ## Motivation
 
-In many applications, we need to control the largest entry in a sum
-of possibly high-dimensional random vectors.
+In many applications, we need to control the maximum
+of many random variables.
 For example,
 we might be proving uniform convergence
 of a statistical estimator,
@@ -54,54 +54,55 @@ or controlling the regret of an online learning algorithm.
 ### Setup
 
 As such, we propose the following setup:
-for $n \geq 1$, let $X_1, \ldots, X_n$ be
+for each $1 \leq j \leq d$
+let $X_{1j}, \ldots, X_{nj}$ be
 independent and identically distributed (i.i.d.)
-random variables taking values in $\R^d$ for some $d \geq 1$.
-We assume that $\E[X_1] = 0$ and consider the sum
-$\sum_{i=1}^n X_i$.
+real-valued random variables.
+We assume that $\E[X_{1j}] = 0$ and consider the sum
+$\sum_{i=1}^n X_{ij}$.
 Of course, we will need to make some further assumptions
-on the distribution of $X_1$.
-Firstly we insist that the variance of each component
-is bounded:
-$\max_{1 \leq j \leq d} \V[X_1]\_{jj} \leq \sigma^2$.
+on the distribution of each $X_{1j}$.
+Firstly we insist that the variance is bounded:
+$\max_{1 \leq j \leq d} \V[X_{1j}] \leq \sigma^2$.
 This tells us about the approximate scale
 of the random variables,
-but in order to get better (exponential rather than $L^2$)
-bounds, we also make an assumption on the maximum size
-of any component:
-$\\\|X_1\\\|_\infty \leq M$ almost surely.
+but in order to get better bounds,
+we also make an assumption on the maximum size
+of any summand:
+$|X_{1j}|_\infty \leq M$ almost surely.
 Note that we do not make any assumptions
-on dependencies between the coordinates of $X_1$.
+on dependencies between different values of $j$.
 These assumptions will be discussed more later in the post.
 
 ## Bernstein's inequality
 
-Now let's state the main result.
-The proof of Bernstein's inequality
-is provided later in the post,
+Now let's state the main result,
+a maximal version of Bernstein's inequality.
+The proof is provided later in the post,
 to avoid distracting from the discussion.
 
 <div class="box-rounded">
 
-<h4> Theorem  (Bernstein's maximal inequality) </h4>
+<h4> Theorem (Bernstein's maximal inequality) </h4>
 
-For $n \geq 1$ and $d \geq 1$,
-let $X_1, \ldots, X_n$ be
-i.i.d. random variables taking values in $\R^d$.
-Suppose $\E[X_1] = 0$,
-$\max_{1 \leq j \leq d} \V[X_1]_{jj} \leq \sigma^2$
-and $\|X_1\|_\infty \leq M$ almost surely.
+For each $1 \leq j \leq d$,
+let $X_{1j}, \ldots, X_{nj}$ be
+i.i.d. real-valued random variables.
+Suppose $\E[X_{1j}] = 0$,
+$\max_{1 \leq j \leq d} \V[X_{1j}] \leq \sigma^2$
+and |$X_{1j}| \leq M$ almost surely.
 Then
 
 $$
 \E\left[
-\left\|
-\sum_{i=1}^n X_i
-\right\|_\infty
+\max_{1 \leq j \leq d}
+\left|
+\sum_{i=1}^n X_{ij}
+\right|
 \right]
 \leq
-\sqrt{24 n \sigma^2 \log 2d}
-+ 4 M \log 2d.
+\sqrt{2 n \sigma^2 \log 2d}
++ \frac{M}{3} \log 2d.
 $$
 
 </div>
@@ -114,52 +115,44 @@ and the usual formulation.
 These differences can be summarized as follow.
 
 
-- The result is stated for the infinity norm of a random vector,
-  rather than for a real random variable.
-  This is to highlight the dependence of the resulting bound
-  on the dimension $d$.
+- The result is stated for the maximum of $d$ random variables.
+  This is to highlight the dependence of the resulting bound on $d$.
 
-- This version is stated as an expectation rather than a tail probability.
-  In fact, this result can be easily strengthened to include the tail bound,
-  but this distracts from the main point of the post.
+- This version is stated as an expectation rather than a tail probability
+  to avoid notational complexity,
+  but can be easily strengthened to include the tail bound.
 
 - The terms on the right hand side are rather complicated
   and perhaps unfamiliar,
-  but allow us to explicitly see the typical size of the infinity norm.
+  but allow us to explicitly see the typical size of maximum.
   The more standard version of Bernstein's inequality makes it difficult
   to read off this value.
 
 ### Interpreting the bound
 
 The resulting bound of
-$\sqrt{24 n \sigma^2 \log 2d} + 4 M \log 2d$
+$\sqrt{2 n \sigma^2 \log 2d} + \frac{M}{3} \log 2d$
 consists of two terms
 which are worth discussing separately.
 
 - The first term is
-  $\sqrt{24 n \sigma^2 \log 2d}$.
-  Note that this depends on $n$ and $\sigma^2$ but not $M$
-  and has a Gaussian-type dependence on the dimension
-  ($t \mapsto \sqrt{\log t}$ is the inverse of
-  $t \mapsto e^{-t^2}$, a term appearing in the Gaussian tail probability).
-  This is very similar to the bound obtained if we assume that
-  $X_1$ is $\sigma^2$-sub-Gaussian,
-  and in fact this term corresponds in some sense
+  $\sqrt{2 n \sigma^2 \log 2d}$.
+  Note that this depends on $n$ and $\sigma^2$ but not $M$,
+  and has a sub-Gaussian-type dependence on the dimension.
+  This is exactly the bound obtained if we assume that
+  each $X_{1j}$ is $\sigma^2$-sub-Gaussian,
+  and this term corresponds in some sense
   to the central limit theorem.
 
 - The second term is
-  $4 M \log 2d$
+  $\frac{M}{3} \log 2d$
   and depends on $M$ but not $n$ or $\sigma^2$.
-  This is an exponential-type tail
-  ($t \mapsto \log t$ is the inverse of
-  $t \mapsto e^{-t}$, the exponential tail probability).
+  This is a sub-exponential-type tail
   which captures rare event phenomena associated with
   bounded random variables.
-  We will see that this term corresponds in some cases
+  This term corresponds in some cases
   to a Poisson weak convergence of
   $\sum_{i=1}^n X_i$.
-
-### Bennett's inequality
 
 It is worth remarking at this point that
 [Bennett's inequality](https://en.wikipedia.org/wiki/Bennett%27s_inequality)
@@ -181,6 +174,8 @@ providing a straightforward demonstration of the
 
 ### Example 1: sub-Gaussian-type concentration
 
+TODO these need to be lower bounds
+
 Let $X_{ij} = \pm \sigma$
 with equal probability
 and be i.i.d. for $1 \leq i \leq n$
@@ -190,29 +185,27 @@ Further, by
 [Hoeffding's lemma](https://en.wikipedia.org/wiki/Hoeffding%27s_lemma),
 $\E[e^{tX_{ij}}] \leq e^{t^2 \sigma^2 / 2}$.
 So by Jensen's inequality on the concave logarithm function,
-writing $X_i = (X_{i1}, \ldots, X_{id})$ and for any $t > 0$,
+for any $t > 0$,
 
 $$
 \begin{align*}
 \E\left[
-\left\|
-\sum_{i=1}^n X_i
-\right\|_\infty
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n X_{ij}
 \right]
 &\leq
 \frac{1}{t}
 \log \E\left[
 \exp
-\left\|
-\sum_{i=1}^n X_i
-\right\|_\infty
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n t X_{ij}
 \right] \\
 &\leq
 \frac{1}{t}
 \log \E\left[
 \sum_{j=1}^d
 \exp
-\sum_{i=1}^n X_{ij}
+\sum_{i=1}^n t X_{ij}
 \right] \\
 &\leq
 \frac{1}{t}
@@ -221,7 +214,7 @@ $$
 d \,
 \E\left[
 \exp
-X_{ij}
+t X_{ij}
 \right]^n
 \big) \\
 &\leq
@@ -237,19 +230,34 @@ gives
 $$
 \begin{align*}
 \E\left[
-\left\|
-\sum_{i=1}^n X_i
-\right\|_\infty
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n X_{ij}
 \right]
 &\leq
 \sqrt{2 n \sigma^2 \log d}.
 \end{align*}
 $$
 
-Thus we recover the first term in Bernstein's inequality up to constants.
+Finally we set $X_{i (d+j)} = -X_{ij}$ for $1 \leq j \leq d$
+to see that
+
+$$
+\begin{align*}
+\E\left[
+\max_{1 \leq j \leq d}
+\left|
+\sum_{i=1}^n X_{ij}
+\right|
+\right]
+&\leq
+\sqrt{2 n \sigma^2 \log 2d}.
+\end{align*}
+$$
+
+Thus we recover the first term in Bernstein's inequality.
 Here we took advantage of the fact that the uniform bound $M$
-and the standard deviation $\sigma$ are actually equal,
-so Hoeffding's inequality is fairly tight.
+and the standard deviation $\sigma$ are equal,
+so Hoeffding's lemma is fairly tight.
 
 
 
@@ -267,9 +275,8 @@ $\E[e^{tX_{ij}}] \leq 1 + \frac{e^{tM}}{n}$,
 $$
 \begin{align*}
 \E\left[
-\left\|
-\sum_{i=1}^n X_i
-\right\|_\infty
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n X_{ij}
 \right]
 &\leq
 \frac{1}{t}
@@ -278,7 +285,7 @@ $$
 d \,
 \E\left[
 \exp
-X_{ij}
+t X_{ij}
 \right]^n
 \big) \\
 &\leq
@@ -313,6 +320,8 @@ $$
 and so we have the second term in Bernstein's inequality.
 
 ## Appendix: proofs
+
+TODO do this with the MGF bound from patricks notes
 
 <div class="box-rounded">
 
@@ -424,7 +433,7 @@ $\erfc(x)
 \frac{e^{-x^2}}{x + \sqrt{x^2 + 4/\pi}}
 \leq \frac{e^{-x^2}}{\sqrt\pi}$
 for $x \geq \log 2$.
-$\quad\square$
+$\quad\hfill\square$
 
 </div>
 
