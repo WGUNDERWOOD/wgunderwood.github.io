@@ -264,6 +264,9 @@ so Hoeffding's lemma is fairly tight.
 
 ### Example 2: sub-exponential-type concentration
 
+TODO check
+arxiv.org/pdf/0903.4373.pdf
+
 Now let $X_{ij} = M$ with probability $1/n$
 and $-\frac{M}{n-1}$ with probability $1 - 1/n$,
 i.i.d. for $1 \leq i \leq n$
