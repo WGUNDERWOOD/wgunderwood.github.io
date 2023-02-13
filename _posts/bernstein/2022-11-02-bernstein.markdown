@@ -154,13 +154,6 @@ which are worth discussing separately.
   to a Poisson weak convergence of
   $\sum_{i=1}^n X_i$.
 
-It is worth remarking at this point that
-[Bennett's inequality](https://en.wikipedia.org/wiki/Bennett%27s_inequality)
-provides a further refinement of Bernstein's inequality,
-but the difference is minor in many
-applications so we will not discuss it here.
-
-
 
 
 
@@ -172,104 +165,52 @@ It is somewhat remarkable that these examples are so easy to find,
 providing a straightforward demonstration of the
 (approximate) optimality of Bernstein's maximal inequality.
 
-### Example 1: sub-Gaussian-type concentration
-
-TODO these need to be lower bounds
+### Example 1: central limit theorem
 
 Let $X_{ij} = \pm \sigma$
 with equal probability
 and be i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
 Note that $\E[X_{ij}] = 0$ and $\V[X_{ij}] = \sigma^2$.
-Further, by
-[Hoeffding's lemma](https://en.wikipedia.org/wiki/Hoeffding%27s_lemma),
-$\E[e^{tX_{ij}}] \leq e^{t^2 \sigma^2 / 2}$.
-So by Jensen's inequality on the concave logarithm function,
-for any $t > 0$,
+Further, by the central limit theorem as $n \to \infty$,
 
 $$
 \begin{align*}
-\E\left[
-\max_{1 \leq j \leq d}
-\sum_{i=1}^n X_{ij}
-\right]
-&\leq
-\frac{1}{t}
-\log \E\left[
-\exp
-\max_{1 \leq j \leq d}
-\sum_{i=1}^n t X_{ij}
-\right] \\
-&\leq
-\frac{1}{t}
-\log \E\left[
-\sum_{j=1}^d
-\exp
-\sum_{i=1}^n t X_{ij}
-\right] \\
-&\leq
-\frac{1}{t}
-\log
-\big(
-d \,
-\E\left[
-\exp
-t X_{ij}
-\right]^n
-\big) \\
-&\leq
-\frac{1}{t}
-\log d
-+ \frac{n t \sigma^2}{2}.
+\frac{1}{\sigma \sqrt n}
+\sum_{i=1}^n X_i
+\rightsquigarrow
+\cN(0,I_d)
 \end{align*}
 $$
 
-Selecting $t = \sqrt{\frac{2 \log d}{n \sigma^2}}$
-gives
+which implies that
+ gautamkamath.com/writings/gaussian_max.pdf
 
 $$
 \begin{align*}
+\liminf_{n \to \infty} \,
 \E\left[
 \max_{1 \leq j \leq d}
+\frac{1}{\sigma \sqrt n}
 \sum_{i=1}^n X_{ij}
 \right]
-&\leq
-\sqrt{2 n \sigma^2 \log d}.
-\end{align*}
+\geq
+\sqrt{\frac{\log d}{\pi \log 2}}
+\end{align*}.
 $$
 
-Finally we set $X_{i (d+j)} = -X_{ij}$ for $1 \leq j \leq d$
-to see that
 
-$$
-\begin{align*}
-\E\left[
-\max_{1 \leq j \leq d}
-\left|
-\sum_{i=1}^n X_{ij}
-\right|
-\right]
-&\leq
-\sqrt{2 n \sigma^2 \log 2d}.
-\end{align*}
-$$
+Thus the first term in Bernstein's maximal inequality
+is unimprovable up to constants.
 
-Thus we recover the first term in Bernstein's inequality.
-Here we took advantage of the fact that the uniform bound $M$
-and the standard deviation $\sigma$ are equal,
-so Hoeffding's lemma is fairly tight.
 
 
 
 
 ### Example 2: sub-exponential-type concentration
 
-TODO check
-arxiv.org/pdf/0903.4373.pdf
 
-TODO also Kimber: note on Poisson maxima
 
-TODO maybe just use Bennett inequality?
 
 Now let $X_{ij} = M$ with probability $1/n$
 and $-\frac{M}{n-1}$ with probability $1 - 1/n$,
@@ -325,6 +266,22 @@ M (e + \log d)
 $$
 
 and so we have the second term in Bernstein's inequality.
+
+
+
+TODO check
+arxiv.org/pdf/0903.4373.pdf
+
+TODO also Kimber: note on Poisson maxima
+
+
+It is worth remarking at this point that
+[Bennett's inequality](https://en.wikipedia.org/wiki/Bennett%27s_inequality)
+provides a further refinement of Bernstein's inequality,
+but the difference is minor in many
+applications so we will not discuss it here.
+TODO move this to poisson section
+
 
 ## Appendix: proofs
 
