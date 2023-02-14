@@ -171,8 +171,9 @@ Let $X_{ij} = \pm \sigma$
 with equal probability
 and be i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
-Note that $\E[X_{ij}] = 0$ and $\V[X_{ij}] = \sigma^2$.
-Further, by the central limit theorem as $n \to \infty$,
+Note $\E[X_{ij}] = 0$ and $\V[X_{ij}] = \sigma^2$.
+By the central limit theorem
+with $X_i = (X_{i1}, \ldots, X_{id})$,
 
 $$
 \begin{align*}
@@ -183,21 +184,28 @@ $$
 \end{align*}
 $$
 
-which implies that
- gautamkamath.com/writings/gaussian_max.pdf
+as $n \to \infty$.
+This implies that by a Gaussian
+lower bound in the appendix,
 
 $$
 \begin{align*}
-\liminf_{n \to \infty} \,
+\lim_{n \to \infty} \,
 \E\left[
 \max_{1 \leq j \leq d}
 \frac{1}{\sigma \sqrt n}
 \sum_{i=1}^n X_{ij}
-\right]
+ \right]
+=
+\E\big[
+\|\cN(0, I_d)\|_\infty
+\big]
 \geq
-\sqrt{\frac{\log d}{\pi \log 2}}
+\frac{1}{3}
+\sqrt{\log d}
 \end{align*}.
 $$
+
 
 
 Thus the first term in Bernstein's maximal inequality
@@ -216,56 +224,43 @@ Now let $X_{ij} = M$ with probability $1/n$
 and $-\frac{M}{n-1}$ with probability $1 - 1/n$,
 i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
-Following the approach from the previous example but
-this time using the elementary bound
-$\E[e^{tX_{ij}}] \leq 1 + \frac{e^{tM}}{n}$,
+Then, using moment generating functions,
+it is easy to see that
+
+
+
+
+Then with $X_i = (X_{i1}, \ldots, X_{id})$,
+it is easy to see that
+
 
 $$
 \begin{align*}
+\sum_{i=1}^n X_i
+\rightsquigarrow
+M (\Pois(1), \ldots, \Pois(1))
+\end{align*}
+$$
+
+Hence we conclude by
+TODO Kimber argument
+that for large enough $d$
+
+$$
+\begin{align*}
+\liminf_{n \to \infty} \,
 \E\left[
 \max_{1 \leq j \leq d}
 \sum_{i=1}^n X_{ij}
 \right]
-&\leq
-\frac{1}{t}
-\log
-\big(
-d \,
-\E\left[
-\exp
-t X_{ij}
-\right]^n
-\big) \\
-&\leq
-\frac{1}{t}
-\log d
-+ \frac{n}{t}
-\log\left(
-1 + \frac{e^{tM}}{n}
-\right) \\
-&\leq
-\frac{1}{t}
-\log d
-+ \frac{1}{t} e^{tM}.
-\end{align*}
+\geq
+\frac{M}{2}
+\frac{\log d}{\log \log d}
+\end{align*}.
 $$
 
-Setting $t = 1/M$ gives
+Hence also the second term is unimprovable up to constants.
 
-$$
-\begin{align*}
-\E\left[
-\left\|
-\sum_{i=1}^n X_i
-\right\|_\infty
-\right]
-&\leq
-M (e + \log d)
-\leq 4 M \log 2d,
-\end{align*}
-$$
-
-and so we have the second term in Bernstein's inequality.
 
 
 
@@ -280,7 +275,6 @@ It is worth remarking at this point that
 provides a further refinement of Bernstein's inequality,
 but the difference is minor in many
 applications so we will not discuss it here.
-TODO move this to poisson section
 
 
 ## Appendix: proofs
@@ -404,7 +398,7 @@ $\quad\hfill\square$
 
 
 
-TODO mention CLT, Poisson
+TODO CLT, Poisson proofs
 
 ## References
 * [Four lectures on probabilistic
