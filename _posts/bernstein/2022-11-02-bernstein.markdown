@@ -208,7 +208,7 @@ $$
 \|\cN(0, I_d)\|_\infty
 \big]
 \geq
-\frac{1}{3}
+\frac{1}{2}
 \sqrt{\log d}
 \end{align*}.
 $$
@@ -292,13 +292,16 @@ TODO also Kimber: note on Poisson maxima
 
 ## Appendix: proofs
 
+We begin by proving the main result
+of this post.
+
 <div class="box-rounded">
 
-<h4> Proof  (Bernstein's maximal inequality) </h4>
+<h4> Proof of Bernstein's maximal inequality </h4>
 
-We begin by bounding the moment generating function
+We first bound the moment generating function
 of $X_{ij}$. Let $t > 0$ and note that by
-the mean-zero property and by the variance
+the mean-zero property and the variance
 and almost sure bounds,
 
 $$
@@ -418,7 +421,97 @@ $$
 
 </div>
 
+Next we prove the Gaussian lower bound
+used in Example 1.
 
+<div class="box-rounded">
+
+<h4> Lemma (Gaussian lower bound) </h4>
+
+Let $X_1, \ldots, X_d$ be i.i.d.
+$\cN(0,1)$ random variables.
+Then
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq \frac{1}{2} \sqrt{\log d}.
+$$
+
+
+<h4> Proof </h4>
+
+For any $t > 0$, we have by Markov's
+inequality
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq t \, \P\left(
+\max_{1 \leq j \leq d}
+|X_j| \geq t
+\right)
+ =
+t \left(1 - \left(1 -
+\P\left(|X_j| \geq t \right)
+\right)^n \right).
+$$
+
+Now note that by the Gaussian
+density function and since
+$s^2 \leq 2(s-t)^2 + 2t^2$,
+
+$$
+\begin{align*}
+\P\left(|X_j| \geq t \right)
+&=
+\sqrt\frac{2}{\pi}
+\int_t^\infty e^{-s^2/2} \diff{s}
+\geq
+\sqrt\frac{2}{\pi}
+e^{-t^2}
+\int_t^\infty e^{-(s-t)^2} \diff{s}
+\geq
+e^{-t^2}.
+\end{align*}
+$$
+
+Hence because $1-x \leq e^{-x}$,
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq
+t \left(1 - \left(1 -
+e^{-t^2}
+\right)^d \right)
+\geq
+t \left(1 -
+\exp\left(-d e^{-t^2}
+\right) \right).
+$$
+
+Finally set $t = \sqrt{\log d}$
+to see
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq
+\sqrt{\log d} \left(1 - 1/e \right)
+\geq
+\frac{1}{2}\sqrt{\log d}.
+$$
+
+</div>
 
 
 TODO CLT, Poisson proofs
