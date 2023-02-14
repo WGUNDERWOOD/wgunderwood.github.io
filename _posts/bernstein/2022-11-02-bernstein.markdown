@@ -224,8 +224,7 @@ is unimprovable up to constants.
 
 ### Example 2: sub-exponential-type concentration
 
-
-
+TODO probability lam/n
 
 Now let $X_{ij} = M\left(1 - \frac{1}{n}\right)$
 with probability $1/n$
@@ -513,8 +512,29 @@ $$
 
 </div>
 
+Finally we establish the
+Poisson lower bound
+used in Example 2.
 
-TODO CLT, Poisson proofs
+<div class="box-rounded">
+
+<h4> Lemma (Poisson lower bound) </h4>
+
+Let $X_1, \ldots, X_d$ be i.i.d.
+$\Pois(\lambda)$ random variables.
+Then for large enough $d$,
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq \frac{\log d}{2 \log \log d}
+$$
+
+<h4> Proof </h4>
+
+</div>
 
 ## References
 * [Four lectures on probabilistic
