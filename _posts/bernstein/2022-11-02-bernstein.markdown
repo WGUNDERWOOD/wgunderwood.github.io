@@ -155,6 +155,13 @@ which are worth discussing separately.
   $\sum_{i=1}^n X_i$.
 
 
+It is worth remarking at this point that
+[Bennett's inequality](https://en.wikipedia.org/wiki/Bennett%27s_inequality)
+provides a further refinement of Bernstein's inequality,
+but the difference is minor in many
+applications so we will not discuss it here.
+
+
 
 
 ## Examples
@@ -220,31 +227,40 @@ is unimprovable up to constants.
 
 
 
-Now let $X_{ij} = M$ with probability $1/n$
-and $-\frac{M}{n-1}$ with probability $1 - 1/n$,
+Now let $X_{ij} = M\left(1 - \frac{1}{n}\right)$
+with probability $1/n$
+and $-\frac{M}{n}$ with probability $1 - 1/n$,
 i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
 Then, using moment generating functions,
-it is easy to see that
 
+$$
+\begin{align*}
+\P\left(\sum_{i=1}^n \left(\frac{X_{ij}}{M} + \frac{1}{n}\right) = k\right)
+&= \frac{n!}{k!(n-k)!}
+\left(\frac{1}{n}\right)^k
+\left(1 - \frac{1}{n}\right)^{n-k} \\
+&= \frac{1}{k!}
+\frac{n(n-1) \cdots (n-k+1)}{n^k}
+\left(1 - \frac{1}{n}\right)^n
+\left(1 - \frac{1}{n}\right)^{-k} \\
+&\to \frac{e^{-1}}{k!}
+\end{align*}
+$$
 
-
-
-Then with $X_i = (X_{i1}, \ldots, X_{id})$,
-it is easy to see that
-
+as $n \to \infty$.
+Thus with $X_i = (X_{i1}, \ldots, X_{id})$,
 
 $$
 \begin{align*}
 \sum_{i=1}^n X_i
 \rightsquigarrow
-M (\Pois(1), \ldots, \Pois(1))
+M (\Pois(1)-1, \ldots, \Pois(1)-1)
 \end{align*}
 $$
 
-Hence we conclude by
-TODO Kimber argument
-that for large enough $d$
+as $n \to \infty$ where each coordinate is independent.
+Hence by a Poisson lower bound given in the appendix,
 
 $$
 \begin{align*}
@@ -255,11 +271,13 @@ $$
 \right]
 \geq
 \frac{M}{2}
-\frac{\log d}{\log \log d}
-\end{align*}.
+\frac{\log d}{\log \log d}.
+\end{align*}
 $$
 
-Hence also the second term is unimprovable up to constants.
+for large enough $d$.
+Hence the second term in Bernstein's maximal inequality
+is also unimprovable up to constants.
 
 
 
@@ -270,128 +288,60 @@ arxiv.org/pdf/0903.4373.pdf
 TODO also Kimber: note on Poisson maxima
 
 
-It is worth remarking at this point that
-[Bennett's inequality](https://en.wikipedia.org/wiki/Bennett%27s_inequality)
-provides a further refinement of Bernstein's inequality,
-but the difference is minor in many
-applications so we will not discuss it here.
 
 
 ## Appendix: proofs
-
-TODO do this with the MGF bound from patricks notes
 
 <div class="box-rounded">
 
 <h4> Proof  (Bernstein's maximal inequality) </h4>
 
-We begin with the classical version of Bernstein's inequality
-TODO cite
-which states that for each $1 \leq j \leq d$
-and $t > 0$,
-
-$$
-\begin{align*}
-\P\left(
-\left| \sum_{i=1}^n X_{ij} \right|
-\geq t
-\right)
-&\leq
-2 \exp\left(
-\frac{-t^2/2}{n \sigma^2 + M t / 3}
-\right)
-\wedge 1 \\
-&\leq
-2 \exp\left(
-\frac{-t^2}{4 n \sigma^2}
-\right)
-\wedge 1
-+ 2 \exp\left(
-\frac{-3t}{4 M}
-\right)
-\wedge 1,
-\end{align*}
-$$
-
-where we used $\frac{a}{b+c} \geq \frac{a}{2b} \wedge \frac{a}{2c}$
-for $a,b,c > 0$.
-A union bound over $1 \leq j \leq d$ yields
-
-$$
-\P\left(
-\left\| \sum_{i=1}^n X_i \right\|_\infty
-\geq t
-\right)
-\leq
-2d \exp\left(
-\frac{-t^2}{4 n \sigma^2}
-\right)
-\wedge 1
-+ 2d \exp\left(
-\frac{-3t}{4 M}
-\right)
-\wedge 1.
-$$
-
-Integrating the tail probability gives
+We begin by bounding the moment generating function
+of $X_{ij}$. Let $t > 0$ and note that by
+the mean-zero property and by the variance
+and almost sure bounds,
 
 $$
 \begin{align*}
 \E\left[
-\left\| \sum_{i=1}^n X_i \right\|_\infty
+e^{t X_{ij}}
 \right]
-&\leq
-\int_0^\infty
-2d \exp\left(
-\frac{-t^2}{4 n \sigma^2}
-\right)
-\wedge 1
-\diff{t}
-+ \int_0^\infty
-2d \exp\left(
-\frac{-3t}{4 M}
-\right)
-\wedge 1
-\diff{t} \\
 &=
-\sqrt{4 n \sigma^2 \log 2d}
-+ \int_{\sqrt{4 n \sigma^2 \log 2d}}^\infty
-2d \exp\left(
-\frac{-t^2}{4 n \sigma^2}
-\right)
-\diff{t} \\
-&\quad+
-\frac{4 M}{3} \log 2d
-+\int_{\frac{4M}{3} \log 2d}^\infty
-2d \exp\left(
-\frac{-3t}{4 M}
-\right)
-\diff{t} \\
-&=
-\sqrt{4 n \sigma^2 \log 2d}
-+ 2d \sqrt{\pi n \sigma^2}
-\erfc\left(\sqrt{\log 2d}\right)
-+ \frac{4 M}{3} \log 2d
-+ \frac{4M}{3} \\
-&\leq
-\sqrt{4 n \sigma^2 \log 2d}
-+ \sqrt{n \sigma^2}
-+ \frac{4 M}{3} \log 2d
-+ \frac{4M}{3} \\
-&\leq
-\sqrt{11 n \sigma^2 \log 2d}
-+ 4 M \log 2d.
+1 + \sum_{k=2}^\infty
+\frac{t^k \E[X_{ij}^k]}{k!}
+\leq
+1 + t^2 \sigma^2
+\sum_{k=2}^\infty
+\frac{t^{k-2} M^{k-2}}{k!}.
 \end{align*}
 $$
 
-where we used the fact that that the
-complementary error function is bounded by
-$\erfc(x)
-\leq \frac{2}{\sqrt\pi}
-\frac{e^{-x^2}}{x + \sqrt{x^2 + 4/\pi}}
-\leq \frac{e^{-x^2}}{\sqrt\pi}$
-for $x \geq \log 2$.
-$\quad\hfill\square$
+Now since
+$k! \geq 2 \cdot 3^{k-2}$ for all $k \geq 2$
+and $1 + x \leq e^x$ for all $x$,
+we have for $t < 3/M$
+
+$$
+\begin{align*}
+\E\left[
+e^{t X_{ij}}
+\right]
+&\leq
+1 + \frac{t^2 \sigma^2}{2}
+\sum_{k=2}^\infty
+\left( \frac{tM}{3} \right)^{k-2}
+ =
+1 + \frac{t^2 \sigma^2/2}{1 - tM/3}
+\leq
+\exp\left(
+\frac{t^2 \sigma^2/2}{1 - tM/3}
+\right).
+\end{align*}
+$$
+
+Now we bound the expected maximum
+as follows.
+
 
 </div>
 
