@@ -339,8 +339,81 @@ e^{t X_{ij}}
 \end{align*}
 $$
 
-Now we bound the expected maximum
-as follows.
+Now we bound the expected maximum,
+using Jensen's inequality
+on the convex logarithm function,
+to see
+
+$$
+\begin{align*}
+\E\left[
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n X_{ij}
+\right]
+&\leq
+\frac{1}{t}
+\log \E\left[
+\exp
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n t X_{ij}
+\right] \\
+&\leq
+\frac{1}{t}
+\log \E\left[
+\sum_{j=1}^d
+\exp
+\sum_{i=1}^n t X_{ij}
+\right] \\
+&\leq
+\frac{1}{t}
+\log
+\big(
+d \,
+\E\left[
+\exp
+t X_{ij}
+\right]^n
+\big) \\
+&\leq
+\frac{1}{t}
+\log d
++ \frac{n \sigma^2 t}{2 - 2Mt/3}.
+\end{align*}
+$$
+
+Minimizing the bound using calculus
+by selecting
+$t = \frac{2}{2M/3 + \sqrt{2n \sigma^2 / \log d}}$
+gives
+
+$$
+\begin{align*}
+\E\left[
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n X_{ij}
+\right]
+&\leq
+\sqrt{2 n \sigma^2 \log d}
++ \frac{M}{3} \log d.
+\end{align*}
+$$
+
+Finally we set $X_{i (d+j)} = -X_{ij}$ for $1 \leq j \leq d$
+to see that
+
+$$
+\begin{align*}
+\E\left[
+\max_{1 \leq j \leq d}
+\left|
+\sum_{i=1}^n X_{ij}
+\right|
+\right]
+&\leq
+\sqrt{2 n \sigma^2 \log 2d}
++ \frac{M}{3} \log 2d.
+\end{align*}
+$$
 
 
 </div>
