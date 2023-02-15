@@ -224,8 +224,6 @@ is unimprovable up to constants.
 
 ### Example 2: sub-exponential-type concentration
 
-TODO probability lam/n
-
 Now let $X_{ij} = M\left(1 - \frac{1}{n}\right)$
 with probability $1/n$
 and $-\frac{M}{n}$ with probability $1 - 1/n$,
@@ -269,12 +267,13 @@ $$
 \sum_{i=1}^n X_{ij}
 \right]
 \geq
-\frac{M}{2}
-\frac{\log d}{\log \log d}.
+\frac{M}{16}
+\left(
+\frac{\log d}{\log \log d} - 1
+\right).
 \end{align*}
 $$
 
-for large enough $d$.
 Hence the second term in Bernstein's maximal inequality
 is also unimprovable up to constants.
 
@@ -457,7 +456,7 @@ $$
  =
 t \left(1 - \left(1 -
 \P\left(|X_j| \geq t \right)
-\right)^n \right).
+\right)^d \right).
 $$
 
 Now note that by the Gaussian
@@ -521,7 +520,7 @@ used in Example 2.
 <h4> Lemma (Poisson lower bound) </h4>
 
 Let $X_1, \ldots, X_d$ be i.i.d.
-$\Pois(\lambda)$ random variables.
+$\Pois(1)$ random variables.
 Then for large enough $d$,
 
 $$
@@ -529,10 +528,97 @@ $$
 \max_{1 \leq j \leq d}
 |X_j|
 \right]
-\geq \frac{\log d}{2 \log \log d}
+\geq \frac{\log d}{16 \log \log d}
 $$
 
 <h4> Proof </h4>
+
+As for the Gaussian lower bound, we have for any integer $t \geq 2$
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq
+t \left(1 - \left(1 -
+\P\left(|X_j| \geq t \right)
+\right)^d \right)
+\geq
+t \left(1 - \left(1 -
+\P\left(X_j \geq t \right)
+\right)^d \right).
+$$
+
+Now by Taylor's theorem with integral remainder
+for the exponential function,
+
+$$
+\begin{align*}
+\P\left(X_j \geq t \right)
+&=
+\frac{1}{e} \sum_{k=t}^\infty
+\frac{1}{k!} \\
+&=
+\frac{1}{e}
+\int_0^1 \frac{e^s}{(t-1)!}
+(1-s)^{t-1} \diff{s} \\
+&\geq
+\frac{1}{e}
+\int_0^{\frac{1}{t-1}} \frac{e^s}{(t-1)!}
+\left(1-\frac{1}{t-1}\right)^{t-1} \diff{s} \\
+&\geq
+\frac{e^{\frac{1}{t-1}} - 1}{e^2(t-1)!} \\
+&\geq
+\frac{1}{e^2 t!} \\
+&\geq
+\frac{1}{e^2 t^t},
+\end{align*}
+$$
+
+where we used $t! \leq t^t$.
+Hence setting
+$\frac{\log d}{2\log \log d} \leq t \leq \frac{\log d}{\log \log d}$
+gives
+
+$$
+\begin{align*}
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+&\geq
+t \left(1 - \left(1 -
+\frac{1}{e^2 t^t}
+\right)^d \right) \\
+&\geq
+t \left(1 - \left(1 -
+e^{-2}
+\exp(-t \log t)
+\right)^d \right) \\
+&\geq
+\frac{\log d}{2\log \log d}
+\left(1 - \left(1 -
+e^{-2}
+\exp\left(
+-\frac{\log d}{\log \log d}
+\log \frac{\log d}{\log \log d}
+\right)
+\right)^d \right) \\
+&\geq
+\frac{\log d}{2\log \log d}
+\left(1 - \left(1 -
+\frac{1}{e^2 d}
+\right)^d \right) \\
+&\geq
+\frac{\log d}{2\log \log d}
+\left(1 - e^{-1/e^2} \right) \\
+&\geq
+\frac{\log d}{16 \log \log d}.
+\end{align*}
+$$
+
+
 
 </div>
 
