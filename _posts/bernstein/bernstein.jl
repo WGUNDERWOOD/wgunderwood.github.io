@@ -3,11 +3,6 @@ using PyPlot
 using Random
 
 Random.seed!(314159)
-#rcParams = PyPlot.PyDict(PyPlot.matplotlib."rcParams")
-#rcParams["font.family"]  = "sans-serif"
-#rcParams["font.sans-serif"]  = "Inter"
-#plt.rcParams["axes.labelweight"] = "light"
-#plt.rcParams["font.weight"] = "light"
 plt.ioff()
 
 function make_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::String)
@@ -24,7 +19,7 @@ function make_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::String)
     end
 
     plt.bar(1:n, xs, color="#777777",
-            label="\$|X_d|\$")
+            label="\$|X_j|\$")
     ax.plot(1:n, maxs, color="#FFB86C",
             label="\$\\max_{1 \\leq j \\leq d} |X_d|\$")
 
@@ -49,7 +44,7 @@ function main()
         maxs = accumulate(max, xs)
     end
 
-    make_plot(xs[1:d], maxs[1:d], "../../assets/posts/bernstein/plot.pgf")
+    make_plot(xs[1:d], maxs[1:d], "bernstein.pgf")
 end
 
 main()

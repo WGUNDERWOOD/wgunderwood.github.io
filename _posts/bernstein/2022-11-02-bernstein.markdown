@@ -51,17 +51,15 @@ establishing consistency for a
 binary classifier under empirical risk minimization,
 or controlling the regret of an online learning algorithm.
 Understanding how this maximum behaves as a function
-of the number of variables
-(and other properties of the laws of each variable)
-is essential.
+of the number of variables is essential
+(Figure 1).
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 700px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/bernstein/plot.svg">
+src="/assets/posts/bernstein/bernstein.svg">
 <figcaption>
-  Fig. 1: With $X_j \sim \N(0,1)$ independent,
+  Fig. 1: With $X_j \sim \cN(0,1)$ independent,
   $\max_{1 \leq j \leq d} |X_j|$ grows with $d$.
-  The maximum of $d$ random variables increases with $d$.
 </figcaption>
 </figure>
 
