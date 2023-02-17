@@ -168,6 +168,13 @@ which are worth discussing separately.
   $\sum_{i=1}^n X_i$.
 
 
+It is worth remarking at this point that
+[Bennett's inequality](https://en.wikipedia.org/wiki/Bennett%27s_inequality)
+provides a further refinement of Bernstein's inequality,
+but the difference is minor in many
+applications so we will not discuss it here.
+
+
 
 
 ## Examples
@@ -184,8 +191,9 @@ Let $X_{ij} = \pm \sigma$
 with equal probability
 and be i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
-Note that $\E[X_{ij}] = 0$ and $\V[X_{ij}] = \sigma^2$.
-Further, by the central limit theorem as $n \to \infty$,
+Note $\E[X_{ij}] = 0$ and $\V[X_{ij}] = \sigma^2$.
+By the central limit theorem
+with $X_i = (X_{i1}, \ldots, X_{id})$,
 
 $$
 \begin{align*}
@@ -196,21 +204,28 @@ $$
 \end{align*}
 $$
 
-which implies that
- gautamkamath.com/writings/gaussian_max.pdf
+as $n \to \infty$.
+This implies that by a Gaussian
+lower bound in the appendix,
 
 $$
 \begin{align*}
-\liminf_{n \to \infty} \,
+\lim_{n \to \infty} \,
 \E\left[
 \max_{1 \leq j \leq d}
 \frac{1}{\sigma \sqrt n}
 \sum_{i=1}^n X_{ij}
-\right]
+ \right]
+=
+\E\big[
+\|\cN(0, I_d)\|_\infty
+\big]
 \geq
-\sqrt{\frac{\log d}{\pi \log 2}}
+\frac{1}{2}
+\sqrt{\log d}
 \end{align*}.
 $$
+
 
 
 Thus the first term in Bernstein's maximal inequality
@@ -222,16 +237,126 @@ is unimprovable up to constants.
 
 ### Example 2: sub-exponential-type concentration
 
-
-
-
-Now let $X_{ij} = M$ with probability $1/n$
-and $-\frac{M}{n-1}$ with probability $1 - 1/n$,
+Now let $X_{ij} = M\left(1 - \frac{1}{n}\right)$
+with probability $1/n$
+and $-\frac{M}{n}$ with probability $1 - 1/n$,
 i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
-Following the approach from the previous example but
-this time using the elementary bound
-$\E[e^{tX_{ij}}] \leq 1 + \frac{e^{tM}}{n}$,
+Then, using moment generating functions,
+
+$$
+\begin{align*}
+\P\left(\sum_{i=1}^n \left(\frac{X_{ij}}{M} + \frac{1}{n}\right) = k\right)
+&= \frac{n!}{k!(n-k)!}
+\left(\frac{1}{n}\right)^k
+\left(1 - \frac{1}{n}\right)^{n-k} \\
+&= \frac{1}{k!}
+\frac{n(n-1) \cdots (n-k+1)}{n^k}
+\left(1 - \frac{1}{n}\right)^n
+\left(1 - \frac{1}{n}\right)^{-k} \\
+&\to \frac{e^{-1}}{k!}
+\end{align*}
+$$
+
+as $n \to \infty$.
+Thus with $X_i = (X_{i1}, \ldots, X_{id})$,
+
+$$
+\begin{align*}
+\sum_{i=1}^n X_i
+\rightsquigarrow
+M (\Pois(1)-1, \ldots, \Pois(1)-1)
+\end{align*}
+$$
+
+as $n \to \infty$ where each coordinate is independent.
+Hence by a Poisson lower bound given in the appendix,
+
+$$
+\begin{align*}
+\liminf_{n \to \infty} \,
+\E\left[
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n X_{ij}
+\right]
+\geq
+\frac{M}{16}
+\left(
+\frac{\log d}{\log \log d} - 1
+\right).
+\end{align*}
+$$
+
+Hence the second term in Bernstein's maximal inequality
+is also unimprovable up to constants.
+
+
+
+
+TODO check
+arxiv.org/pdf/0903.4373.pdf
+
+TODO also Kimber: note on Poisson maxima
+
+
+
+
+## Appendix: proofs
+
+We begin by proving the main result
+of this post.
+
+<div class="box-rounded">
+
+<h4> Proof of Bernstein's maximal inequality </h4>
+
+We first bound the moment generating function
+of $X_{ij}$. Let $t > 0$ and note that by
+the mean-zero property and the variance
+and almost sure bounds,
+
+$$
+\begin{align*}
+\E\left[
+e^{t X_{ij}}
+\right]
+&=
+1 + \sum_{k=2}^\infty
+\frac{t^k \E[X_{ij}^k]}{k!}
+\leq
+1 + t^2 \sigma^2
+\sum_{k=2}^\infty
+\frac{t^{k-2} M^{k-2}}{k!}.
+\end{align*}
+$$
+
+Now since
+$k! \geq 2 \cdot 3^{k-2}$ for all $k \geq 2$
+and $1 + x \leq e^x$ for all $x$,
+we have for $t < 3/M$
+
+$$
+\begin{align*}
+\E\left[
+e^{t X_{ij}}
+\right]
+&\leq
+1 + \frac{t^2 \sigma^2}{2}
+\sum_{k=2}^\infty
+\left( \frac{tM}{3} \right)^{k-2}
+ =
+1 + \frac{t^2 \sigma^2/2}{1 - tM/3}
+\leq
+\exp\left(
+\frac{t^2 \sigma^2/2}{1 - tM/3}
+\right).
+\end{align*}
+$$
+
+Now we bound the expected maximum,
+using Jensen's inequality
+on the convex logarithm function,
+to see
 
 $$
 \begin{align*}
@@ -239,6 +364,20 @@ $$
 \max_{1 \leq j \leq d}
 \sum_{i=1}^n X_{ij}
 \right]
+&\leq
+\frac{1}{t}
+\log \E\left[
+\exp
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n t X_{ij}
+\right] \\
+&\leq
+\frac{1}{t}
+\log \E\left[
+\sum_{j=1}^d
+\exp
+\sum_{i=1}^n t X_{ij}
+\right] \\
 &\leq
 \frac{1}{t}
 \log
@@ -252,172 +391,249 @@ t X_{ij}
 &\leq
 \frac{1}{t}
 \log d
-+ \frac{n}{t}
-\log\left(
-1 + \frac{e^{tM}}{n}
-\right) \\
-&\leq
-\frac{1}{t}
-\log d
-+ \frac{1}{t} e^{tM}.
++ \frac{n \sigma^2 t}{2 - 2Mt/3}.
 \end{align*}
 $$
 
-Setting $t = 1/M$ gives
+Minimizing the bound using calculus
+by selecting
+$t = \frac{2}{2M/3 + \sqrt{2n \sigma^2 / \log d}}$
+gives
 
 $$
 \begin{align*}
 \E\left[
-\left\|
-\sum_{i=1}^n X_i
-\right\|_\infty
+\max_{1 \leq j \leq d}
+\sum_{i=1}^n X_{ij}
 \right]
 &\leq
-M (e + \log d)
-\leq 4 M \log 2d,
+\sqrt{2 n \sigma^2 \log d}
++ \frac{M}{3} \log d.
 \end{align*}
 $$
 
-and so we have the second term in Bernstein's inequality.
-
-
-
-TODO check
-arxiv.org/pdf/0903.4373.pdf
-
-TODO also Kimber: note on Poisson maxima
-
-
-It is worth remarking at this point that
-[Bennett's inequality](https://en.wikipedia.org/wiki/Bennett%27s_inequality)
-provides a further refinement of Bernstein's inequality,
-but the difference is minor in many
-applications so we will not discuss it here.
-TODO move this to poisson section
-
-
-## Appendix: proofs
-
-TODO do this with the MGF bound from patricks notes
-
-<div class="box-rounded">
-
-<h4> Proof  (Bernstein's maximal inequality) </h4>
-
-We begin with the classical version of Bernstein's inequality
-TODO cite
-which states that for each $1 \leq j \leq d$
-and $t > 0$,
-
-$$
-\begin{align*}
-\P\left(
-\left| \sum_{i=1}^n X_{ij} \right|
-\geq t
-\right)
-&\leq
-2 \exp\left(
-\frac{-t^2/2}{n \sigma^2 + M t / 3}
-\right)
-\wedge 1 \\
-&\leq
-2 \exp\left(
-\frac{-t^2}{4 n \sigma^2}
-\right)
-\wedge 1
-+ 2 \exp\left(
-\frac{-3t}{4 M}
-\right)
-\wedge 1,
-\end{align*}
-$$
-
-where we used $\frac{a}{b+c} \geq \frac{a}{2b} \wedge \frac{a}{2c}$
-for $a,b,c > 0$.
-A union bound over $1 \leq j \leq d$ yields
-
-$$
-\P\left(
-\left\| \sum_{i=1}^n X_i \right\|_\infty
-\geq t
-\right)
-\leq
-2d \exp\left(
-\frac{-t^2}{4 n \sigma^2}
-\right)
-\wedge 1
-+ 2d \exp\left(
-\frac{-3t}{4 M}
-\right)
-\wedge 1.
-$$
-
-Integrating the tail probability gives
+Finally we set $X_{i (d+j)} = -X_{ij}$ for $1 \leq j \leq d$
+to see that
 
 $$
 \begin{align*}
 \E\left[
-\left\| \sum_{i=1}^n X_i \right\|_\infty
+\max_{1 \leq j \leq d}
+\left|
+\sum_{i=1}^n X_{ij}
+\right|
 \right]
 &\leq
-\int_0^\infty
-2d \exp\left(
-\frac{-t^2}{4 n \sigma^2}
-\right)
-\wedge 1
-\diff{t}
-+ \int_0^\infty
-2d \exp\left(
-\frac{-3t}{4 M}
-\right)
-\wedge 1
-\diff{t} \\
-&=
-\sqrt{4 n \sigma^2 \log 2d}
-+ \int_{\sqrt{4 n \sigma^2 \log 2d}}^\infty
-2d \exp\left(
-\frac{-t^2}{4 n \sigma^2}
-\right)
-\diff{t} \\
-&\quad+
-\frac{4 M}{3} \log 2d
-+\int_{\frac{4M}{3} \log 2d}^\infty
-2d \exp\left(
-\frac{-3t}{4 M}
-\right)
-\diff{t} \\
-&=
-\sqrt{4 n \sigma^2 \log 2d}
-+ 2d \sqrt{\pi n \sigma^2}
-\erfc\left(\sqrt{\log 2d}\right)
-+ \frac{4 M}{3} \log 2d
-+ \frac{4M}{3} \\
-&\leq
-\sqrt{4 n \sigma^2 \log 2d}
-+ \sqrt{n \sigma^2}
-+ \frac{4 M}{3} \log 2d
-+ \frac{4M}{3} \\
-&\leq
-\sqrt{11 n \sigma^2 \log 2d}
-+ 4 M \log 2d.
+\sqrt{2 n \sigma^2 \log 2d}
++ \frac{M}{3} \log 2d.
 \end{align*}
 $$
 
-where we used the fact that that the
-complementary error function is bounded by
-$\erfc(x)
-\leq \frac{2}{\sqrt\pi}
-\frac{e^{-x^2}}{x + \sqrt{x^2 + 4/\pi}}
-\leq \frac{e^{-x^2}}{\sqrt\pi}$
-for $x \geq \log 2$.
-$\quad\hfill\square$
 
 </div>
 
+Next we prove the Gaussian lower bound
+used in Example 1.
+
+<div class="box-rounded">
+
+<h4> Lemma (Gaussian lower bound) </h4>
+
+Let $X_1, \ldots, X_d$ be i.i.d.
+$\cN(0,1)$ random variables.
+Then
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq \frac{1}{2} \sqrt{\log d}.
+$$
+
+
+<h4> Proof </h4>
+
+For any $t > 0$, we have by Markov's
+inequality
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq t \, \P\left(
+\max_{1 \leq j \leq d}
+|X_j| \geq t
+\right)
+ =
+t \left(1 - \left(1 -
+\P\left(|X_j| \geq t \right)
+\right)^d \right).
+$$
+
+Now note that by the Gaussian
+density function and since
+$s^2 \leq 2(s-t)^2 + 2t^2$,
+
+$$
+\begin{align*}
+\P\left(|X_j| \geq t \right)
+&=
+\sqrt\frac{2}{\pi}
+\int_t^\infty e^{-s^2/2} \diff{s}
+\geq
+\sqrt\frac{2}{\pi}
+e^{-t^2}
+\int_t^\infty e^{-(s-t)^2} \diff{s}
+\geq
+e^{-t^2}.
+\end{align*}
+$$
+
+Hence because $1-x \leq e^{-x}$,
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq
+t \left(1 - \left(1 -
+e^{-t^2}
+\right)^d \right)
+\geq
+t \left(1 -
+\exp\left(-d e^{-t^2}
+\right) \right).
+$$
+
+Finally set $t = \sqrt{\log d}$
+to see
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq
+\sqrt{\log d} \left(1 - 1/e \right)
+\geq
+\frac{1}{2}\sqrt{\log d}.
+$$
+
+</div>
+
+Finally we establish the
+Poisson lower bound
+used in Example 2.
+
+<div class="box-rounded">
+
+<h4> Lemma (Poisson lower bound) </h4>
+
+Let $X_1, \ldots, X_d$ be i.i.d.
+$\Pois(1)$ random variables.
+Then for large enough $d$,
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq \frac{\log d}{16 \log \log d}
+$$
+
+<h4> Proof </h4>
+
+As for the Gaussian lower bound, we have for any integer $t \geq 2$
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+\geq
+t \left(1 - \left(1 -
+\P\left(|X_j| \geq t \right)
+\right)^d \right)
+\geq
+t \left(1 - \left(1 -
+\P\left(X_j \geq t \right)
+\right)^d \right).
+$$
+
+Now by Taylor's theorem with integral remainder
+for the exponential function,
+
+$$
+\begin{align*}
+\P\left(X_j \geq t \right)
+&=
+\frac{1}{e} \sum_{k=t}^\infty
+\frac{1}{k!} \\
+&=
+\frac{1}{e}
+\int_0^1 \frac{e^s}{(t-1)!}
+(1-s)^{t-1} \diff{s} \\
+&\geq
+\frac{1}{e}
+\int_0^{\frac{1}{t-1}} \frac{e^s}{(t-1)!}
+\left(1-\frac{1}{t-1}\right)^{t-1} \diff{s} \\
+&\geq
+\frac{e^{\frac{1}{t-1}} - 1}{e^2(t-1)!} \\
+&\geq
+\frac{1}{e^2 t!} \\
+&\geq
+\frac{1}{e^2 t^t},
+\end{align*}
+$$
+
+where we used $t! \leq t^t$.
+Hence setting
+$\frac{\log d}{2\log \log d} \leq t \leq \frac{\log d}{\log \log d}$
+gives
+
+$$
+\begin{align*}
+\E\left[
+\max_{1 \leq j \leq d}
+|X_j|
+\right]
+&\geq
+t \left(1 - \left(1 -
+\frac{1}{e^2 t^t}
+\right)^d \right) \\
+&\geq
+t \left(1 - \left(1 -
+e^{-2}
+\exp(-t \log t)
+\right)^d \right) \\
+&\geq
+\frac{\log d}{2\log \log d}
+\left(1 - \left(1 -
+e^{-2}
+\exp\left(
+-\frac{\log d}{\log \log d}
+\log \frac{\log d}{\log \log d}
+\right)
+\right)^d \right) \\
+&\geq
+\frac{\log d}{2\log \log d}
+\left(1 - \left(1 -
+\frac{1}{e^2 d}
+\right)^d \right) \\
+&\geq
+\frac{\log d}{2\log \log d}
+\left(1 - e^{-1/e^2} \right) \\
+&\geq
+\frac{\log d}{16 \log \log d}.
+\end{align*}
+$$
 
 
 
-TODO mention CLT, Poisson
+</div>
 
 ## References
 * [Four lectures on probabilistic
