@@ -20,7 +20,7 @@ function make_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::String)
 
     plt.bar(1:d, xs, color="#54576a",
             label="\$|X_j|\$")
-    ax.plot(1:d, maxs, color="#ff5555",
+    ax.plot(1:d, maxs, color="#bd93f9",
             label="\$\\max_{1 \\leq j \\leq d} |X_d|\\ \\, \$")
 
     ax.set_yticks(0:1:2)
