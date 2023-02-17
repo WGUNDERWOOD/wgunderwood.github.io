@@ -45,14 +45,21 @@ where variance and almost sure bounds on the summands are available.
 In many applications we need to control the maximum
 of many random variables.
 For example,
-we might be proving uniform convergence
-of a statistical estimator,
+we might be proving uniform convergence of a
+[statistical estimator](https://en.wikipedia.org/wiki/Kernel_regression),
 establishing consistency for a
-binary classifier under empirical risk minimization,
-or controlling the regret of an online learning algorithm.
+[binary classifier](https://en.wikipedia.org/wiki/Binary_classification)
+under
+[empirical risk minimization](https://en.wikipedia.org/
+wiki/Empirical_risk_minimization),
+or controlling the regret of a
+[reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning)
+algorithm.
 Understanding how this maximum behaves as a function
 of the number of variables is essential
 (Figure 1).
+In this post we focus on maximal inequalities for
+sums of independent random variables.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 700px; margin-left: auto; margin-right: auto;"
@@ -66,26 +73,36 @@ src="/assets/posts/bernstein/bernstein.svg">
 
 ### Setup
 
-As such, we propose the following setup:
-for each $1 \leq j \leq d$
-let $X_{1j}, \ldots, X_{nj}$ be
-independent and identically distributed (i.i.d.)
-real-valued random variables.
-We assume that $\E[X_{1j}] = 0$ and consider the sum
-$\sum_{i=1}^n X_{ij}$.
-Of course, we will need to make some further assumptions
-on the distribution of each $X_{1j}$.
-Firstly we insist that the variance is bounded:
-$\max_{1 \leq j \leq d} \V[X_{1j}] \leq \sigma^2$.
-This tells us about the approximate scale
-of the random variables,
-but in order to get better bounds,
-we also make an assumption on the maximum size
-of any summand:
-$|X_{1j}|_\infty \leq M$ almost surely.
+We propose the following setup which is widely applicable
+in practice.
+
+- $X_{ij}$ are real-valued random variables for
+  $1 \leq i \leq n$ and $1 \leq j \leq d$.
+
+- $X_{1j}, \ldots, X_{nj}$ are
+  independent and identically distributed (i.i.d.)
+  for each $j$.
+
+- $\E[X_{1j}] = 0$ for each $j$.
+
+- $\max_{1 \leq j \leq d} \V[X_{1j}] \leq \sigma^2$.
+
+- $\max_{1 \leq j \leq d} \|X_{1j}\| \leq M$ almost surely (a.s.).
+
+- We will provide bounds for the variable
+  $\max_{1 \leq j \leq d} \left| \sum_{i=1}^n X_{ij} \right|$.
+
+A brief discussion is in order.
+Firstly, the mean-zero property and the variance bound
+tell us that
+$\max_{1 \leq j \leq d}
+\E\big[\left| \sum_{i=1}^n X_{ij} \right|\big] \leq \sqrt{n\sigma^2}$.
+However in order to put the maximum inside the sum,
+we will need greater control on the tails of the summands,
+achieved by imposing the almost sure bound.
 Note that we do not make any assumptions
 on dependencies between different values of $j$.
-These assumptions will be discussed more later in the post.
+
 
 ## Bernstein's inequality
 
@@ -101,10 +118,10 @@ to avoid distracting from the discussion.
 For each $1 \leq j \leq d$,
 let $X_{1j}, \ldots, X_{nj}$ be
 i.i.d. real-valued random variables.
-Suppose $\E[X_{1j}] = 0$,
+Suppose $\E[X_{1j}] = 0$ for each $j$,
 $\max_{1 \leq j \leq d} \V[X_{1j}] \leq \sigma^2$
-and |$X_{1j}| \leq M$ almost surely.
-Then
+and
+$\max_{1 \leq j \leq d} |X_{1j}| \leq M$ a.s. Then
 
 $$
 \E\left[
@@ -124,11 +141,10 @@ $$
 
 If you have seen Bernstein's inequality before,
 you may notice a few differences between this version
-and the usual formulation.
-These differences can be summarized as follow.
+and the usual formulation, including:
 
 
-- The result is stated for the maximum of $d$ random variables.
+- This result is stated for the maximum of $d$ random variables.
   This is to highlight the dependence of the resulting bound on $d$.
 
 - This version is stated as an expectation rather than a tail probability
@@ -137,7 +153,7 @@ These differences can be summarized as follow.
 
 - The terms on the right hand side are rather complicated
   and perhaps unfamiliar,
-  but allow us to explicitly see the typical size of maximum.
+  but allow us to more directly parse the bound on the maximum.
   The more standard version of Bernstein's inequality makes it difficult
   to read off this value.
 
@@ -149,8 +165,8 @@ consists of two terms
 which are worth discussing separately.
 
 - The first term is
-  $\sqrt{2 n \sigma^2 \log 2d}$.
-  Note that this depends on $n$ and $\sigma^2$ but not $M$,
+  $\sqrt{2 n \sigma^2 \log 2d}$,
+  which depends on $n$ and $\sigma^2$ but not $M$,
   and has a sub-Gaussian-type dependence on the dimension.
   This is exactly the bound obtained if we assume that
   each $X_{1j}$ is $\sigma^2$-sub-Gaussian,
@@ -165,7 +181,7 @@ which are worth discussing separately.
   bounded random variables.
   This term corresponds in some cases
   to a Poisson weak convergence of
-  $\sum_{i=1}^n X_i$.
+  $\sum_{i=1}^n X_{ij}$.
 
 
 It is worth remarking at this point that
@@ -183,7 +199,7 @@ In this section we provide two explicit examples
 which show why each of the two terms discussed above are necessary.
 It is somewhat remarkable that these examples are so easy to find,
 providing a straightforward demonstration of the
-(approximate) optimality of Bernstein's maximal inequality.
+near-optimality of Bernstein's maximal inequality.
 
 ### Example 1: central limit theorem
 
@@ -191,35 +207,39 @@ Let $X_{ij} = \pm \sigma$
 with equal probability
 and be i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
-Note $\E[X_{ij}] = 0$ and $\V[X_{ij}] = \sigma^2$.
-By the central limit theorem
-with $X_i = (X_{i1}, \ldots, X_{id})$,
+Note $\E[X_{ij}] = 0$, $\V[X_{ij}] = \sigma^2$
+and $|X_{ij}| = \sigma^2$ a.s.
+By the central limit theorem,
 
 $$
 \begin{align*}
 \frac{1}{\sigma \sqrt n}
-\sum_{i=1}^n X_i
+\sum_{i=1}^n
+(X_{i1}, \ldots, X_{id})
 \rightsquigarrow
-\cN(0,I_d)
+(Z_1, \ldots, Z_d)
 \end{align*}
 $$
 
-as $n \to \infty$.
+as $n \to \infty$,
+where $Z_j \sim \cN(0,1)$ are independent.
 This implies that by a Gaussian
-lower bound in the appendix,
+lower bound given in the appendix,
 
 $$
 \begin{align*}
 \lim_{n \to \infty} \,
 \E\left[
 \max_{1 \leq j \leq d}
+\left|
 \frac{1}{\sigma \sqrt n}
 \sum_{i=1}^n X_{ij}
+\right|
+\right]
+= \E\left[
+\max_{1 \leq j \leq d}
+|Z_j|
  \right]
-=
-\E\big[
-\|\cN(0, I_d)\|_\infty
-\big]
 \geq
 \frac{1}{2}
 \sqrt{\log d}
@@ -235,14 +255,17 @@ is unimprovable up to constants.
 
 
 
-### Example 2: sub-exponential-type concentration
+### Example 2: Poisson weak convergence
 
 Now let $X_{ij} = M\left(1 - \frac{1}{n}\right)$
 with probability $1/n$
-and $-\frac{M}{n}$ with probability $1 - 1/n$,
+and $-\frac{M}{n}$ with probability $1 - 1/n$ be
 i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
-Then, using moment generating functions,
+Note that $\E[X_{ij}] = 0$,
+$\V[X_{ij}] \sim \frac{M^2}{n}$
+and $|X_{ij}| \leq M$ a.s.
+Then
 
 $$
 \begin{align*}
@@ -254,31 +277,40 @@ $$
 \frac{n(n-1) \cdots (n-k+1)}{n^k}
 \left(1 - \frac{1}{n}\right)^n
 \left(1 - \frac{1}{n}\right)^{-k} \\
-&\to \frac{e^{-1}}{k!}
+&\to \frac{1}{ek!}
 \end{align*}
 $$
 
 as $n \to \infty$.
-Thus with $X_i = (X_{i1}, \ldots, X_{id})$,
+Thus we have the Poisson weak convergence
 
 $$
 \begin{align*}
-\sum_{i=1}^n X_i
+\sum_{i=1}^n
+(X_{i1}, \ldots, X_{id}),
 \rightsquigarrow
-M (\Pois(1)-1, \ldots, \Pois(1)-1)
+M (Z_1-1, \ldots, Z_d-1)
 \end{align*}
 $$
 
-as $n \to \infty$ where each coordinate is independent.
-Hence by a Poisson lower bound given in the appendix,
+as $n \to \infty$ where $Z_j \sim \Pois(1)$ are i.i.d.
+So by a Poisson lower bound in the appendix,
 
 $$
 \begin{align*}
-\liminf_{n \to \infty} \,
+\lim_{n \to \infty} \,
 \E\left[
 \max_{1 \leq j \leq d}
 \sum_{i=1}^n X_{ij}
 \right]
+= M
+\left(
+\E\left[
+\max_{1 \leq j \leq d}
+Z_j
+\right]
+- 1
+\right)
 \geq
 \frac{M}{16}
 \left(
@@ -287,8 +319,8 @@ $$
 \end{align*}
 $$
 
-Hence the second term in Bernstein's maximal inequality
-is unimprovable up to a factor of $\sqrt{\log \log d}$.
+Hence the second term in Bernstein's inequality
+is tight up to a factor of $\sqrt{\log \log d}$.
 
 
 
@@ -300,13 +332,14 @@ is unimprovable up to a factor of $\sqrt{\log \log d}$.
 * The University of Oxford's course on Algorithmic Foundations of Learning,
   taught by
   [Patrick Rebeschini](https://www.stats.ox.ac.uk/~rebeschi/)
+  in 2018.
 
 * [A note on the distribution of the maximum
   of a set of Poisson random variables](arxiv.org/abs/0903.4373)
-  by K. M. Briggs, L. Song and T. Prellberg, 2009
+  by K. M. Briggs, L. Song and T. Prellberg, 2009.
 
 * [A note on Poisson maxima](https://link.springer.com/article/10.1007/BF00533727),
-  by A.C. Kimber, 1983
+  by A.C. Kimber, 1983.
 
 
 
@@ -460,6 +493,7 @@ $$
 \geq \frac{1}{2} \sqrt{\log d}.
 $$
 
+TODO Z not X
 
 <h4> Proof </h4>
 
@@ -540,6 +574,8 @@ used in Example 2.
 <div class="box-rounded">
 
 <h4> Lemma (Poisson lower bound) </h4>
+
+TODO no abs
 
 Let $X_1, \ldots, X_d$ be i.i.d.
 $\Pois(1)$ random variables.
@@ -640,6 +676,6 @@ e^{-2}
 \end{align*}
 $$
 
-
-
 </div>
+
+TODO add more links

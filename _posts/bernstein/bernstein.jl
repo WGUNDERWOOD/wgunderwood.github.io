@@ -7,7 +7,7 @@ plt.ioff()
 
 function make_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::String)
 
-    n = length(xs)
+    d = length(xs)
 
     fig, ax = plt.subplots(figsize=(6,4))
     fig.patch.set_alpha(0)
@@ -18,15 +18,15 @@ function make_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::String)
         ax.spines[loc].set_color("white")
     end
 
-    plt.bar(1:n, xs, color="#777777",
+    plt.bar(1:d, xs, color="#54576a",
             label="\$|X_j|\$")
-    ax.plot(1:n, maxs, color="#FFB86C",
+    ax.plot(1:d, maxs, color="#ff5555",
             label="\$\\max_{1 \\leq j \\leq d} |X_d|\$")
 
     ax.set_yticks(0:1:2)
     ax.legend(framealpha = 0, labelcolor = "#FFFFFF")
     plt.xlabel("Number of variables \$d\$", color = "#FFFFFF", size=12)
-    plt.ylabel("Value of variables", color = "#FFFFFF", size=12)
+    plt.ylabel("Value of variables", color = "#FFFFFF", size=12, labelpad=12)
     PyPlot.savefig(filepath, bbox_inches="tight")
     close("all")
 end
@@ -44,7 +44,7 @@ function main()
         maxs = accumulate(max, xs)
     end
 
-    make_plot(xs[1:d], maxs[1:d], "bernstein.pgf")
+    make_plot(xs, maxs, "bernstein.pgf")
 end
 
 main()
