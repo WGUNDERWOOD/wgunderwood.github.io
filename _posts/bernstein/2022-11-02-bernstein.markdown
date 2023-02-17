@@ -57,9 +57,11 @@ is essential.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 700px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/bernstein/plot.png">
+src="/assets/posts/bernstein/plot.svg">
 <figcaption>
-  Fig. 1: The maximum of $d$ random variables increases with $d$.
+  Fig. 1: With $X_j \sim \N(0,1)$ independent,
+  $\max_{1 \leq j \leq d} |X_j|$ grows with $d$.
+  The maximum of $d$ random variables increases with $d$.
 </figcaption>
 </figure>
 
