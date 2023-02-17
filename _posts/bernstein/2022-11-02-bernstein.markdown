@@ -6,7 +6,7 @@ date:   2022-11-02
 
 Bernstein's inequality is an important concentration inequality.
 In this post we motivate, state and prove a
-"maximal inequality "version which I think
+"maximal inequality" version which I think
 is clearer than the usual formulation.
 
 {% include mathjax.html %}
@@ -42,7 +42,7 @@ where variance and almost sure bounds on the summands are available.
 
 ## Motivation
 
-In many applications, we need to control the maximum
+In many applications we need to control the maximum
 of many random variables.
 For example,
 we might be proving uniform convergence
@@ -50,6 +50,19 @@ of a statistical estimator,
 establishing consistency for a
 binary classifier under empirical risk minimization,
 or controlling the regret of an online learning algorithm.
+Understanding how this maximum behaves as a function
+of the number of variables
+(and other properties of the laws of each variable)
+is essential.
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 700px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/bernstein/plot.png">
+<figcaption>
+  Fig. 1: The maximum of $d$ random variables increases with $d$.
+</figcaption>
+</figure>
+
 
 ### Setup
 
