@@ -209,6 +209,9 @@ and be i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
 Note $\E[X_{ij}] = 0$, $\V[X_{ij}] = \sigma^2$
 and $|X_{ij}| = \sigma^2$ a.s.
+
+TODO give bernstein bound
+
 By the central limit theorem,
 
 $$
@@ -265,6 +268,9 @@ and $1 \leq j \leq d$.
 Note that $\E[X_{ij}] = 0$,
 $\V[X_{ij}] \sim \frac{M^2}{n}$
 and $|X_{ij}| \leq M$ a.s.
+
+TODO give bernstein bound
+
 Then
 
 $$
@@ -312,7 +318,7 @@ Z_j
 - 1
 \right)
 \geq
-\frac{M}{16}
+\frac{M}{7}
 \left(
 \frac{\log d}{\log \log d} - 1
 \right).
@@ -575,8 +581,6 @@ used in Example 2.
 
 <h4> Lemma (Poisson lower bound) </h4>
 
-TODO no abs
-
 Let $X_1, \ldots, X_d$ be i.i.d.
 $\Pois(1)$ random variables.
 Then for large enough $d$,
@@ -584,7 +588,7 @@ Then for large enough $d$,
 $$
 \E\left[
 \max_{1 \leq j \leq d}
-|X_j|
+X_j
 \right]
 \geq \frac{\log d}{16 \log \log d}
 $$
@@ -596,45 +600,29 @@ As for the Gaussian lower bound, we have for any integer $t \geq 2$
 $$
 \E\left[
 \max_{1 \leq j \leq d}
-|X_j|
+X_j
 \right]
-\geq
-t \left(1 - \left(1 -
-\P\left(|X_j| \geq t \right)
-\right)^d \right)
 \geq
 t \left(1 - \left(1 -
 \P\left(X_j \geq t \right)
 \right)^d \right).
 $$
 
-Now by Taylor's theorem with integral remainder
-for the exponential function,
+Now note that
 
 $$
 \begin{align*}
 \P\left(X_j \geq t \right)
 &=
 \frac{1}{e} \sum_{k=t}^\infty
-\frac{1}{k!} \\
-&=
-\frac{1}{e}
-\int_0^1 \frac{e^s}{(t-1)!}
-(1-s)^{t-1} \diff{s} \\
-&\geq
-\frac{1}{e}
-\int_0^{\frac{1}{t-1}} \frac{e^s}{(t-1)!}
-\left(1-\frac{1}{t-1}\right)^{t-1} \diff{s} \\
-&\geq
-\frac{e^{\frac{1}{t-1}} - 1}{e^2(t-1)!} \\
-&\geq
-\frac{1}{e^2 t!} \\
-&\geq
-\frac{1}{e^2 t^t},
+\frac{1}{k!}
+\geq
+\frac{1}{e t!}
+\geq
+\frac{1}{e t^t}.
 \end{align*}
 $$
 
-where we used $t! \leq t^t$.
 Hence setting
 $\frac{\log d}{2\log \log d} \leq t \leq \frac{\log d}{\log \log d}$
 gives
@@ -647,18 +635,16 @@ $$
 \right]
 &\geq
 t \left(1 - \left(1 -
-\frac{1}{e^2 t^t}
+\frac{1}{e t^t}
 \right)^d \right) \\
 &\geq
 t \left(1 - \left(1 -
-e^{-2}
-\exp(-t \log t)
+e^{-1} \exp(-t \log t)
 \right)^d \right) \\
 &\geq
 \frac{\log d}{2\log \log d}
 \left(1 - \left(1 -
-e^{-2}
-\exp\left(
+e^{-1} \exp\left(
 -\frac{\log d}{\log \log d}
 \log \frac{\log d}{\log \log d}
 \right)
@@ -666,13 +652,13 @@ e^{-2}
 &\geq
 \frac{\log d}{2\log \log d}
 \left(1 - \left(1 -
-\frac{1}{e^2 d}
+\frac{1}{e d}
 \right)^d \right) \\
 &\geq
 \frac{\log d}{2\log \log d}
-\left(1 - e^{-1/e^2} \right) \\
+\left(1 - e^{-1/e} \right) \\
 &\geq
-\frac{\log d}{16 \log \log d}.
+\frac{\log d}{7 \log \log d}.
 \end{align*}
 $$
 
