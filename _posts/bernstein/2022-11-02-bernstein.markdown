@@ -24,7 +24,6 @@ is clearer than the usual formulation.
   $ \newcommand \cN {\mathcal{N}} $
   $ \newcommand \N {\mathbb{N}} $
   $ \newcommand \diff {\,\mathrm{d}} $
-  $ \newcommand \erfc {\mathrm{erfc}} $
 </div>
 
 ## Introduction
@@ -76,10 +75,10 @@ src="/assets/posts/bernstein/bernstein.svg">
 We propose the following setup which is widely applicable
 in practice.
 
-- $X_{ij}$ are real-valued random variables for
+- $X_{i j}$ are real-valued random variables for
   $1 \leq i \leq n$ and $1 \leq j \leq d$.
 
-- $X_{1j}, \ldots, X_{nj}$ are
+- $X_{1j}, \ldots, X_{n j}$ are
   independent and identically distributed (i.i.d.)
   for each $j$.
 
@@ -89,19 +88,22 @@ in practice.
 
 - $\max_{1 \leq j \leq d} \|X_{1j}\| \leq M$ almost surely (a.s.).
 
-- We will provide bounds for the variable
-  $\max_{1 \leq j \leq d} \left| \sum_{i=1}^n X_{ij} \right|$.
+- We will provide expectation bounds for the variable
+  $\max_{1 \leq j \leq d} \left| \sum_{i=1}^n X_{i j} \right|$.
 
 A brief discussion is in order.
 Firstly, the mean-zero property and the variance bound
 tell us that
 $\max_{1 \leq j \leq d}
-\E\big[\left| \sum_{i=1}^n X_{ij} \right|\big] \leq \sqrt{n\sigma^2}$.
+\E\big[\left| \sum_{i=1}^n X_{i j} \right|\big] \leq \sqrt{n\sigma^2}$.
 However in order to put the maximum inside the sum,
 we will need greater control on the tails of the summands,
 achieved by imposing the almost sure bound.
 Note that we do not make any assumptions
 on dependencies between different values of $j$.
+However, as we will see later, a useful heuristic is that
+the maximum is typically largest when we have independence across $j$,
+as this gives the most degrees of freedom.
 
 
 ## Bernstein's inequality
@@ -116,7 +118,7 @@ to avoid distracting from the discussion.
 <h4> Theorem (Bernstein's maximal inequality) </h4>
 
 For each $1 \leq j \leq d$,
-let $X_{1j}, \ldots, X_{nj}$ be
+let $X_{1j}, \ldots, X_{n j}$ be
 i.i.d. real-valued random variables.
 Suppose $\E[X_{1j}] = 0$ for each $j$,
 $\max_{1 \leq j \leq d} \V[X_{1j}] \leq \sigma^2$
@@ -127,7 +129,7 @@ $$
 \E\left[
 \max_{1 \leq j \leq d}
 \left|
-\sum_{i=1}^n X_{ij}
+\sum_{i=1}^n X_{i j}
 \right|
 \right]
 \leq
@@ -168,10 +170,11 @@ which are worth discussing separately.
   $\sqrt{2 n \sigma^2 \log 2d}$,
   which depends on $n$ and $\sigma^2$ but not $M$,
   and has a sub-Gaussian-type dependence on the dimension.
-  This is exactly the bound obtained if we assume that
+  This is the bound obtained if we assume that
   each $X_{1j}$ is $\sigma^2$-sub-Gaussian,
-  and this term corresponds in some sense
-  to the central limit theorem.
+  and this term corresponds
+  to the central limit theorem for
+  $\frac{1}{\sqrt{n \sigma^2}}\sum_{i=1}^n X_{i j}$.
 
 - The second term is
   $\frac{M}{3} \log 2d$
@@ -181,14 +184,13 @@ which are worth discussing separately.
   bounded random variables.
   This term corresponds in some cases
   to a Poisson weak convergence of
-  $\sum_{i=1}^n X_{ij}$.
+  $\frac{1}{M} \sum_{i=1}^n X_{i j} + 1$.
 
 
 It is worth remarking at this point that
 [Bennett's inequality](https://en.wikipedia.org/wiki/Bennett%27s_inequality)
 provides a further refinement of Bernstein's inequality,
-but the difference is minor in many
-applications so we will not discuss it here.
+but the difference is minor in many applications.
 
 
 
@@ -203,20 +205,33 @@ near-optimality of Bernstein's maximal inequality.
 
 ### Example 1: central limit theorem
 
-Let $X_{ij} = \pm \sigma$
+Let $X_{i j} = \pm \sigma$
 with equal probability
 and be i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
-Note $\E[X_{ij}] = 0$, $\V[X_{ij}] = \sigma^2$
-and $|X_{ij}| = \sigma^2$ a.s.
-
-TODO give bernstein bound
-
-By the central limit theorem,
+Note $\E[X_{i j}] = 0$, $\V[X_{i j}] = \sigma^2$
+and $|X_{i j}| = \sigma$ a.s., so Bernstein's inequality gives
 
 $$
 \begin{align*}
-\frac{1}{\sigma \sqrt n}
+\limsup_{n \to \infty}
+\E\left[
+\max_{1 \leq j \leq d}
+\left|
+\frac{1}{\sqrt{n \sigma^2}}
+\sum_{i=1}^n X_{i j}
+\right|
+\right]
+&\leq
+\sqrt{2 \log 2d}.
+\end{align*}
+$$
+
+However we also have by the central limit theorem that
+
+$$
+\begin{align*}
+\frac{1}{\sqrt{n \sigma^2}}
 \sum_{i=1}^n
 (X_{i1}, \ldots, X_{id})
 \rightsquigarrow
@@ -225,9 +240,8 @@ $$
 $$
 
 as $n \to \infty$,
-where $Z_j \sim \cN(0,1)$ are independent.
-This implies that by a Gaussian
-lower bound given in the appendix,
+where $Z_j \sim \cN(0,1)$ are i.i.d.
+So by a Gaussian lower bound in the appendix,
 
 $$
 \begin{align*}
@@ -235,8 +249,8 @@ $$
 \E\left[
 \max_{1 \leq j \leq d}
 \left|
-\frac{1}{\sigma \sqrt n}
-\sum_{i=1}^n X_{ij}
+\frac{1}{\sqrt{n \sigma^2}}
+\sum_{i=1}^n X_{i j}
 \right|
 \right]
 = \E\left[
@@ -260,30 +274,38 @@ is unimprovable up to constants.
 
 ### Example 2: Poisson weak convergence
 
-Now let $X_{ij} = M\left(1 - \frac{1}{n}\right)$
+Now let $X_{i j} = M\left(1 - \frac{1}{n}\right)$
 with probability $1/n$
 and $-\frac{M}{n}$ with probability $1 - 1/n$ be
 i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
-Note that $\E[X_{ij}] = 0$,
-$\V[X_{ij}] \sim \frac{M^2}{n}$
-and $|X_{ij}| \leq M$ a.s.
+Note that $\E[X_{i j}] = 0$,
+$\V[X_{i j}] \sim \frac{M^2}{n}$
+and $|X_{i j}| \leq M$ a.s.,
+so Bernstein's inequality gives
 
-TODO give bernstein bound
+$$
+\limsup_{d \to \infty}
+\E\left[
+\max_{1 \leq j \leq d}
+\left|
+\frac{1}{M \log d}
+\sum_{i=1}^n X_{i j}
+\right|
+\right]
+\leq
+\frac{1}{3}.
+$$
 
-Then
+But also note the binomial distribution limit
 
 $$
 \begin{align*}
-\P\left(\sum_{i=1}^n \left(\frac{X_{ij}}{M} + \frac{1}{n}\right) = k\right)
+\P\left(\sum_{i=1}^n \left(\frac{X_{i j}}{M} + \frac{1}{n}\right) = k\right)
 &= \frac{n!}{k!(n-k)!}
 \left(\frac{1}{n}\right)^k
-\left(1 - \frac{1}{n}\right)^{n-k} \\
-&= \frac{1}{k!}
-\frac{n(n-1) \cdots (n-k+1)}{n^k}
-\left(1 - \frac{1}{n}\right)^n
-\left(1 - \frac{1}{n}\right)^{-k} \\
-&\to \frac{1}{ek!}
+\left(1 - \frac{1}{n}\right)^{n-k}
+\to \frac{1}{e k!}
 \end{align*}
 $$
 
@@ -292,10 +314,12 @@ Thus we have the Poisson weak convergence
 
 $$
 \begin{align*}
+\frac{1}{M}
 \sum_{i=1}^n
-(X_{i1}, \ldots, X_{id}),
+(X_{i1}, \ldots, X_{id})
++ (1, \ldots, 1)
 \rightsquigarrow
-M (Z_1-1, \ldots, Z_d-1)
+(Z_1, \ldots, Z_d)
 \end{align*}
 $$
 
@@ -304,29 +328,28 @@ So by a Poisson lower bound in the appendix,
 
 $$
 \begin{align*}
-\lim_{n \to \infty} \,
+\liminf_{d \to \infty}
+\lim_{n \to \infty}
 \E\left[
 \max_{1 \leq j \leq d}
-\sum_{i=1}^n X_{ij}
+\left|
+\frac{\log \log d}{M \log d}
+\sum_{i=1}^n X_{i j}
+\right|
 \right]
-= M
+ =
+\liminf_{d \to \infty}
+\frac{\log \log d}{\log d}
 \left(
-\E\left[
-\max_{1 \leq j \leq d}
-Z_j
-\right]
-- 1
+\E\left[\max_{1 \leq j \leq d} Z_j \right] - 1
 \right)
 \geq
-\frac{M}{7}
-\left(
-\frac{\log d}{\log \log d} - 1
-\right).
+\frac{1}{7}.
 \end{align*}
 $$
 
 Hence the second term in Bernstein's inequality
-is tight up to a factor of $\sqrt{\log \log d}$.
+is tight up to a factor of $\log \log d$.
 
 
 
@@ -359,18 +382,18 @@ of this post.
 <h4> Proof of Bernstein's maximal inequality </h4>
 
 We first bound the moment generating function
-of $X_{ij}$. Let $t > 0$ and note that by
+of $X_{i j}$. Let $t > 0$ and note that by
 the mean-zero property and the variance
 and almost sure bounds,
 
 $$
 \begin{align*}
 \E\left[
-e^{t X_{ij}}
+e^{t X_{i j}}
 \right]
 &=
 1 + \sum_{k=2}^\infty
-\frac{t^k \E[X_{ij}^k]}{k!}
+\frac{t^k \E[X_{i j}^k]}{k!}
 \leq
 1 + t^2 \sigma^2
 \sum_{k=2}^\infty
@@ -386,17 +409,17 @@ we have for $t < 3/M$
 $$
 \begin{align*}
 \E\left[
-e^{t X_{ij}}
+e^{t X_{i j}}
 \right]
 &\leq
 1 + \frac{t^2 \sigma^2}{2}
 \sum_{k=2}^\infty
-\left( \frac{tM}{3} \right)^{k-2}
+\left( \frac{t M}{3} \right)^{k-2}
  =
-1 + \frac{t^2 \sigma^2/2}{1 - tM/3}
+1 + \frac{t^2 \sigma^2/2}{1 - t M/3}
 \leq
 \exp\left(
-\frac{t^2 \sigma^2/2}{1 - tM/3}
+\frac{t^2 \sigma^2/2}{1 - t M/3}
 \right).
 \end{align*}
 $$
@@ -410,21 +433,21 @@ $$
 \begin{align*}
 \E\left[
 \max_{1 \leq j \leq d}
-\sum_{i=1}^n X_{ij}
+\sum_{i=1}^n X_{i j}
 \right]
 &\leq
 \frac{1}{t}
 \log \E\left[
 \exp
 \max_{1 \leq j \leq d}
-\sum_{i=1}^n t X_{ij}
+\sum_{i=1}^n t X_{i j}
 \right] \\
 &\leq
 \frac{1}{t}
 \log \E\left[
 \sum_{j=1}^d
 \exp
-\sum_{i=1}^n t X_{ij}
+\sum_{i=1}^n t X_{i j}
 \right] \\
 &\leq
 \frac{1}{t}
@@ -433,7 +456,7 @@ $$
 d \,
 \E\left[
 \exp
-t X_{ij}
+t X_{i j}
 \right]^n
 \big) \\
 &\leq
@@ -452,7 +475,7 @@ $$
 \begin{align*}
 \E\left[
 \max_{1 \leq j \leq d}
-\sum_{i=1}^n X_{ij}
+\sum_{i=1}^n X_{i j}
 \right]
 &\leq
 \sqrt{2 n \sigma^2 \log d}
@@ -460,7 +483,7 @@ $$
 \end{align*}
 $$
 
-Finally we set $X_{i (d+j)} = -X_{ij}$ for $1 \leq j \leq d$
+Finally we set $X_{i (d+j)} = -X_{i j}$ for $1 \leq j \leq d$
 to see that
 
 $$
@@ -468,7 +491,7 @@ $$
 \E\left[
 \max_{1 \leq j \leq d}
 \left|
-\sum_{i=1}^n X_{ij}
+\sum_{i=1}^n X_{i j}
 \right|
 \right]
 &\leq
@@ -590,7 +613,7 @@ $$
 \max_{1 \leq j \leq d}
 X_j
 \right]
-\geq \frac{\log d}{16 \log \log d}
+\geq \frac{\log d}{7 \log \log d}
 $$
 
 <h4> Proof </h4>
