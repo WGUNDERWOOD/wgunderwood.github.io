@@ -36,7 +36,7 @@ providing a mathematical framework to the notion that
 "with enough samples you eventually get the right answer."
 More precisely, they provide bounds on the
 typical deviations
-that a random variable makes away from its expected value.
+that a random variable makes from its expected value.
 [Bernstein's inequality](https://en.wikipedia.org/wiki/
 Bernstein_inequalities_(probability_theory))
 allows us to control
@@ -101,8 +101,8 @@ tell us that
 $\max_{1 \leq j \leq d}
 \E\big[\left| \sum_{i=1}^n X_{i j} \right|\big] \leq \sqrt{n\sigma^2}$.
 However in order to put the maximum inside the sum,
-we will need greater control on the tails of the summands,
-achieved by imposing the almost sure bound.
+we will need finer control on the tails of the summands,
+attained by imposing the almost sure bound.
 Note that we do not make any assumptions
 on dependencies between different values of $j$.
 However, as we will see later, a useful heuristic is that
@@ -189,10 +189,6 @@ which are worth discussing separately.
   This is a sub-exponential-type tail
   which captures rare event phenomena associated with
   bounded random variables.
-  This term corresponds approximately in some cases to a
-  [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution)
-  weak convergence of
-  $\frac{1}{M} \sum_{i=1}^n X_{i j} + 1$.
 
 
 It is worth remarking at this point that
@@ -203,7 +199,7 @@ but the difference is minor in many applications.
 
 
 
-## Examples
+## Approximate optimality
 
 In this section we provide two explicit examples
 which show why each of the two terms discussed above are necessary.
@@ -215,7 +211,7 @@ near-optimality of Bernstein's maximal inequality.
 
 Let $X_{i j} = \pm \sigma$
 with equal probability
-and be i.i.d. for $1 \leq i \leq n$
+be i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
 Note $\E[X_{i j}] = 0$, $\V[X_{i j}] = \sigma^2$
 and $|X_{i j}| = \sigma$ a.s., so Bernstein's inequality gives
@@ -294,6 +290,7 @@ so Bernstein's inequality gives
 
 $$
 \limsup_{d \to \infty}
+\limsup_{n \to \infty}
 \E\left[
 \max_{1 \leq j \leq d}
 \left|
@@ -352,12 +349,19 @@ $$
 \E\left[\max_{1 \leq j \leq d} Z_j \right] - 1
 \right)
 \geq
-\frac{1}{7}.
+\frac{1}{6}.
 \end{align*}
 $$
 
 Hence the second term in Bernstein's inequality
 is tight up to a factor of $\log \log d$.
+This factor diverges so slowly that
+Bernstein's inequality is practically optimal
+in many applications.
+For example, $\log \log d \geq 6$
+already requires $d > 10^{175}$, far more than the number
+of particles in the universe!
+
 
 
 
@@ -471,7 +475,7 @@ t X_{i j}
 &\leq
 \frac{1}{t}
 \log d
-+ \frac{n \sigma^2 t}{2 - 2Mt/3}.
++ \frac{n \sigma^2 t / 2}{1 - Mt/3}.
 \end{align*}
 $$
 
@@ -613,14 +617,14 @@ used in Example 2.
 
 Let $Z_1, \ldots, Z_d$ be i.i.d.
 $\Pois(1)$ random variables.
-Then for large enough $d$,
+Then for $d \geq 16$,
 
 $$
 \E\left[
 \max_{1 \leq j \leq d}
 Z_j
 \right]
-\geq \frac{\log d}{7 \log \log d}
+\geq \frac{\log d}{6 \log \log d}.
 $$
 
 <h4> Proof </h4>
@@ -653,8 +657,9 @@ $$
 \end{align*}
 $$
 
-Hence setting
-$\frac{\log d}{2\log \log d} \leq t \leq \frac{\log d}{\log \log d}$
+Hence noting that $\log \log \log d \geq 0$ and setting
+$\frac{e-1}{e}\frac{\log d}{\log \log d}
+\leq t \leq \frac{\log d}{\log \log d}$
 gives
 
 $$
@@ -672,7 +677,8 @@ t \left(1 - \left(1 -
 e^{-1} \exp(-t \log t)
 \right)^d \right) \\
 &\geq
-\frac{\log d}{2\log \log d}
+\frac{e-1}{e}
+\frac{\log d}{\log \log d}
 \left(1 - \left(1 -
 e^{-1} \exp\left(
 -\frac{\log d}{\log \log d}
@@ -680,15 +686,17 @@ e^{-1} \exp\left(
 \right)
 \right)^d \right) \\
 &\geq
-\frac{\log d}{2\log \log d}
+\frac{e-1}{e}
+\frac{\log d}{\log \log d}
 \left(1 - \left(1 -
 \frac{1}{e d}
 \right)^d \right) \\
 &\geq
-\frac{\log d}{2\log \log d}
+\frac{e-1}{e}
+\frac{\log d}{\log \log d}
 \left(1 - e^{-1/e} \right) \\
 &\geq
-\frac{\log d}{7 \log \log d}.
+\frac{\log d}{6 \log \log d}.
 \end{align*}
 $$
 
