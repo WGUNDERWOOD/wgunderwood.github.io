@@ -28,14 +28,18 @@ is clearer than the usual formulation.
 
 ## Introduction
 
-Concentration inequalities are central to
+[Concentration inequalities](https://en.wikipedia.org/wiki/
+Concentration_inequality)
+are central to
 probability theory, mathematical statistics and theoretical machine learning,
 providing a mathematical framework to the notion that
 "with enough samples you eventually get the right answer."
 More precisely, they provide bounds on the
 typical deviations
 that a random variable makes away from its expected value.
-Bernstein's inequality allows us to control
+[Bernstein's inequality](https://en.wikipedia.org/wiki/
+Bernstein_inequalities_(probability_theory))
+allows us to control
 the size of a sum of random variables
 where variance and almost sure bounds on the summands are available.
 
@@ -173,7 +177,10 @@ which are worth discussing separately.
   This is the bound obtained if we assume that
   each $X_{1j}$ is $\sigma^2$-sub-Gaussian,
   and this term corresponds
-  to the central limit theorem for
+  to the
+  [central limit theorem](https://en.wikipedia.org/wiki/
+  Central_limit_theorem)
+  for
   $\frac{1}{\sqrt{n \sigma^2}}\sum_{i=1}^n X_{i j}$.
 
 - The second term is
@@ -182,8 +189,9 @@ which are worth discussing separately.
   This is a sub-exponential-type tail
   which captures rare event phenomena associated with
   bounded random variables.
-  This term corresponds in some cases
-  to a Poisson weak convergence of
+  This term corresponds approximately in some cases to a
+  [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution)
+  weak convergence of
   $\frac{1}{M} \sum_{i=1}^n X_{i j} + 1$.
 
 
@@ -381,7 +389,8 @@ of this post.
 
 <h4> Proof of Bernstein's maximal inequality </h4>
 
-We first bound the moment generating function
+We first bound the
+moment generating function
 of $X_{i j}$. Let $t > 0$ and note that by
 the mean-zero property and the variance
 and almost sure bounds,
@@ -510,19 +519,17 @@ used in Example 1.
 
 <h4> Lemma (Gaussian lower bound) </h4>
 
-Let $X_1, \ldots, X_d$ be i.i.d.
+Let $Z_1, \ldots, Z_d$ be i.i.d.
 $\cN(0,1)$ random variables.
 Then
 
 $$
 \E\left[
 \max_{1 \leq j \leq d}
-|X_j|
+|Z_j|
 \right]
 \geq \frac{1}{2} \sqrt{\log d}.
 $$
-
-TODO Z not X
 
 <h4> Proof </h4>
 
@@ -532,15 +539,15 @@ inequality
 $$
 \E\left[
 \max_{1 \leq j \leq d}
-|X_j|
+|Z_j|
 \right]
 \geq t \, \P\left(
 \max_{1 \leq j \leq d}
-|X_j| \geq t
+|Z_j| \geq t
 \right)
  =
 t \left(1 - \left(1 -
-\P\left(|X_j| \geq t \right)
+\P\left(|Z_j| \geq t \right)
 \right)^d \right).
 $$
 
@@ -550,7 +557,7 @@ $s^2 \leq 2(s-t)^2 + 2t^2$,
 
 $$
 \begin{align*}
-\P\left(|X_j| \geq t \right)
+\P\left(|Z_j| \geq t \right)
 &=
 \sqrt\frac{2}{\pi}
 \int_t^\infty e^{-s^2/2} \diff{s}
@@ -568,7 +575,7 @@ Hence because $1-x \leq e^{-x}$,
 $$
 \E\left[
 \max_{1 \leq j \leq d}
-|X_j|
+|Z_j|
 \right]
 \geq
 t \left(1 - \left(1 -
@@ -586,7 +593,7 @@ to see
 $$
 \E\left[
 \max_{1 \leq j \leq d}
-|X_j|
+|Z_j|
 \right]
 \geq
 \sqrt{\log d} \left(1 - 1/e \right)
@@ -604,14 +611,14 @@ used in Example 2.
 
 <h4> Lemma (Poisson lower bound) </h4>
 
-Let $X_1, \ldots, X_d$ be i.i.d.
+Let $Z_1, \ldots, Z_d$ be i.i.d.
 $\Pois(1)$ random variables.
 Then for large enough $d$,
 
 $$
 \E\left[
 \max_{1 \leq j \leq d}
-X_j
+Z_j
 \right]
 \geq \frac{\log d}{7 \log \log d}
 $$
@@ -623,11 +630,11 @@ As for the Gaussian lower bound, we have for any integer $t \geq 2$
 $$
 \E\left[
 \max_{1 \leq j \leq d}
-X_j
+Z_j
 \right]
 \geq
 t \left(1 - \left(1 -
-\P\left(X_j \geq t \right)
+\P\left(Z_j \geq t \right)
 \right)^d \right).
 $$
 
@@ -635,7 +642,7 @@ Now note that
 
 $$
 \begin{align*}
-\P\left(X_j \geq t \right)
+\P\left(Z_j \geq t \right)
 &=
 \frac{1}{e} \sum_{k=t}^\infty
 \frac{1}{k!}
@@ -654,7 +661,7 @@ $$
 \begin{align*}
 \E\left[
 \max_{1 \leq j \leq d}
-|X_j|
+|Z_j|
 \right]
 &\geq
 t \left(1 - \left(1 -
@@ -686,5 +693,3 @@ e^{-1} \exp\left(
 $$
 
 </div>
-
-TODO add more links
