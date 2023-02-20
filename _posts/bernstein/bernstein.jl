@@ -5,7 +5,33 @@ using Random
 Random.seed!(314159)
 plt.ioff()
 
-function make_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::String)
+function get_normals_and_maxima(d::Int)
+
+    xs = Float64[]
+    maxs = Float64[]
+
+    while length(unique(maxs)) < 13
+        xs = abs.(rand(Normal(0, 1), d))
+        maxs = accumulate(max, xs)
+    end
+
+    return (xs, maxs)
+end
+
+function get_expected_max_dist(d::Int, nrep::Int, dist)
+
+    expected_max_rv = 0.0
+
+    for rep in 1:nrep
+        rvs = abs.(rand(dist, d))
+        max_rv = maximum(rvs)
+        expected_max_rv += max_rv / nrep
+    end
+
+    return expected_max_rv
+end
+
+function make_max_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::String)
 
     d = length(xs)
 
@@ -35,20 +61,59 @@ function make_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::String)
     close("all")
 end
 
-function main()
+function make_bounds_plot(xs::Vector{Float64}, lowers::Vector{Float64},
+                          uppers::Vector{Float64}, filepath::String)
 
-    mu = 0.0
-    sigma = 1.0
-    d = 100
-    xs = Float64[]
-    maxs = Float64[]
+    nds = length(xs)
 
-    while length(unique(maxs)) < 13
-        xs = abs.(rand(Normal(mu, sigma), d))
-        maxs = accumulate(max, xs)
+    fig, ax = plt.subplots(figsize=(6,4))
+    fig.patch.set_alpha(0)
+    ax.patch.set_alpha(0)
+    ax.tick_params(colors="white")
+
+    for loc in ["bottom", "top", "left", "right"]
+        ax.spines[loc].set_color("white")
     end
 
-    make_plot(xs, maxs, "bernstein.pgf")
+    ax.plot(1:nds, lowers, color="#ff5555", label="lowers")
+    ax.plot(1:nds, uppers, color="#50fa7b", label="uppers")
+    ax.plot(1:nds, xs, color="#bd93f9", label="")
+
+    #ax.set_yticks(0:1:2)
+    legend = plt.legend(edgecolor="white", labelcolor="white")
+    legend.get_frame().set_facecolor((0, 0, 0, 0))
+    legend.get_frame().set_alpha(nothing)
+    legend.get_frame().set_edgecolor((1, 1, 1, 0.7))
+
+    #plt.xlabel("Number of variables, \$d\$", color = "#FFFFFF", size=10)
+    #plt.ylabel("Value of variables", color = "#FFFFFF", size=10, labelpad=12)
+    PyPlot.savefig(filepath, bbox_inches="tight")
+    close("all")
+end
+
+function main()
+
+    # maximum plot
+    d = 100
+    (xs, maxs) = get_normals_and_maxima(d)
+    make_max_plot(xs, maxs, "bernstein.pgf")
+
+
+    # normal plot
+    nrep = 100
+    ds = 10:100
+    expected_max_normals = [get_expected_max_dist(d, nrep, Normal(0, 1)) for d in ds]
+    lowers_normals = sqrt.(0.5 * log.(ds))
+    uppers_normals = sqrt.(2 * log.(2 .* ds)) + log.(2 .* ds) / 3
+    make_bounds_plot(expected_max_normals, lowers_normals, uppers_normals, "normal.png")
+
+    # poisson plot
+    ds = 10:100
+    expected_max_poissons = [get_expected_max_dist(d, nrep, Poisson(1)) for d in ds]
+    lowers_poissons = log.(ds) ./ (6 * log.(log.(ds)))
+    uppers_poissons = log.(2*ds) / 3 + sqrt.(2 .* log.(2 .* ds))
+    make_bounds_plot(expected_max_poissons, lowers_poissons, uppers_poissons, "poisson.png")
+
 end
 
 main()
