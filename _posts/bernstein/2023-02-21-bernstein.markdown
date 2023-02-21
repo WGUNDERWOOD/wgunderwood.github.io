@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bernstein's Inequality"
-date:   2022-11-02
+date:   2023-02-21
 ---
 
 Bernstein's inequality is an important concentration inequality.
@@ -440,7 +440,8 @@ src="/assets/posts/bernstein/poisson.svg">
   of a set of Poisson random variables](arxiv.org/abs/0903.4373)
   by K. M. Briggs, L. Song and T. Prellberg, 2009.
 
-* [A note on Poisson maxima](https://link.springer.com/article/10.1007/BF00533727),
+* [A note on Poisson maxima](https://link.springer.com/article/
+  10.1007/BF00533727)
   by A.C. Kimber, 1983.
 
 
