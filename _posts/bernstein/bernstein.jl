@@ -5,10 +5,26 @@ using Random
 Random.seed!(314159)
 
 rcParams = PyPlot.PyDict(PyPlot.matplotlib."rcParams")
-rcParams["text.usetex"]  = true
-rcParams["text.latex.preamble"]  = "\\usepackage{amsfonts}"
-#rcParams["font.size"]  = 20
+rcParams["pgf.preamble"]  = "\\usepackage{amsfonts}"
 plt.ioff()
+
+function get_expected_max_abs_sum_two_value(n::Int, d::Int, nrep::Int,
+                                            xs::Vector{Float64}, ps::Vector{Float64})
+
+    expected_max_rv = 0.0
+    dist = DiscreteNonParametric(xs, ps)
+
+    for rep in 1:nrep
+        max_rv = 0.0
+        for j in 1:d
+            rv = abs.(sum(rand(dist, n)))
+            max_rv = max(max_rv, rv)
+        end
+        expected_max_rv += max_rv / nrep
+    end
+
+    return expected_max_rv
+end
 
 function get_normals_and_maxima(d::Int)
 
@@ -23,18 +39,6 @@ function get_normals_and_maxima(d::Int)
     return (xs, maxs)
 end
 
-function get_expected_max_dist(d::Int, nrep::Int, dist)
-
-    expected_max_rv = 0.0
-
-    for rep in 1:nrep
-        rvs = abs.(rand(dist, d))
-        max_rv = maximum(rvs)
-        expected_max_rv += max_rv / nrep
-    end
-
-    return expected_max_rv
-end
 
 function make_max_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::String)
 
@@ -66,13 +70,9 @@ function make_max_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::Strin
     close("all")
 end
 
-function make_bounds_plot(ds::Vector{Int},
-                          xs::Vector{Float64},
-                          lowers::Vector{Float64},
-                          uppers::Vector{Float64},
-                          x_label::String,
-                          lower_label::String,
-                          upper_label::String,
+function make_bounds_plot(ds::Vector{Int}, xs::Vector{Float64},
+                          uppers::Vector{Float64}, x_label::String,
+                          upper_label::String, yticks,
                           filepath::String)
 
     fig, ax = plt.subplots(figsize=(6,4))
@@ -84,18 +84,17 @@ function make_bounds_plot(ds::Vector{Int},
         ax.spines[loc].set_color("white")
     end
 
-    ax.plot(ds, lowers, color="#ff5555", label=lower_label)
     ax.plot(ds, uppers, color="#50fa7b", label=upper_label)
     ax.plot(ds, xs, color="#bd93f9", label=x_label)
 
-    ax.set_yticks(0:1:7)
-    legend = plt.legend(edgecolor="white", labelcolor="white")
+    ax.set_yticks(yticks)
+    legend = plt.legend(edgecolor="white", labelcolor="white", loc="upper left")
     legend.get_frame().set_facecolor((0, 0, 0, 0))
     legend.get_frame().set_alpha(nothing)
     legend.get_frame().set_edgecolor((1, 1, 1, 0.7))
 
-    #plt.xlabel("Number of variables, \$d\$", color = "#FFFFFF", size=10)
-    #plt.ylabel("Value of variables", color = "#FFFFFF", size=10, labelpad=12)
+    plt.xlabel("Number of variables, \$d\$", color = "#FFFFFF", size=10)
+    plt.ylabel("Value of variables", color = "#FFFFFF", size=10, labelpad=12)
     PyPlot.savefig(filepath, bbox_inches="tight")
     close("all")
 end
@@ -107,28 +106,37 @@ function main()
     (xs, maxs) = get_normals_and_maxima(d)
     make_max_plot(xs, maxs, "maximum.pgf")
 
-
     # normal plot
-    nrep = 100
+    nrep = 1000
+    n = 50
     ds = collect(1:100)
-    expected_max_normals = [get_expected_max_dist(d, nrep, Normal(0, 1)) for d in ds]
-    lowers_normals = sqrt.(0.5 * log.(ds))
-    uppers_normals = sqrt.(2 * log.(2 .* ds)) + log.(2 .* ds) / 3
-    make_bounds_plot(ds, expected_max_normals, lowers_normals,
-                     uppers_normals,
-                     "Simulated \$\\mathbb{E}[\\max]\$",
-                     "Lower",
-                     "Upper",
-                     "normal.pgf")
+    xs = [-1.0, 1.0]
+    ps = [0.5, 0.5]
+
+    expected_max = [get_expected_max_abs_sum_two_value(n, d, nrep, xs, ps) for d in ds]
+    uppers = sqrt.(2 * n * log.(2 .* ds)) + log.(2 .* ds) / 3
+    make_bounds_plot(
+        ds, expected_max, uppers,
+        "Simulated",
+        "Bernstein's upper bound",
+        0:5:30,
+        "normal.pgf")
 
     # poisson plot
-    ds = collect(20:200)
-    expected_max_poissons = [get_expected_max_dist(d, nrep, Poisson(1)) for d in ds]
-    lowers_poissons = log.(ds) ./ (6 * log.(log.(ds)))
-    uppers_poissons = log.(2*ds) / 3 + sqrt.(2 .* log.(2 .* ds))
-    make_bounds_plot(ds, expected_max_poissons, lowers_poissons,
-                     uppers_poissons, "Simulated", "Lower", "Upper",
-                     "poisson.pgf")
+    nrep = 1000
+    n = 50
+    ds = collect(1:100)
+    xs = [1 - 1/n, -1/n]
+    ps = [1/n, 1 - 1/n]
+
+    expected_max = [get_expected_max_abs_sum_two_value(n, d, nrep, xs, ps) for d in ds]
+    uppers = sqrt.(2 * log.(2 .* ds)) + log.(2 .* ds) / 3
+    make_bounds_plot(
+        ds, expected_max, uppers,
+        "Simulated",
+        "Bernstein's upper bound",
+        0:1:6,
+        "poisson.pgf")
 
 end
 

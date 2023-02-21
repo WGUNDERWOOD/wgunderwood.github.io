@@ -1,4 +1,4 @@
-PREAMBLE="\usepackage[sfdefault,light]{inter}\DeclareMathSizes{10}{11}{9}{9}"
+PREAMBLE="\usepackage[sfdefault,light]{inter}\usepackage{amsfonts}\DeclareMathSizes{10}{11}{9}{9}"
 
 all: julia svg copy clean
 

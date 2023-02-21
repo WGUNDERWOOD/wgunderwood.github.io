@@ -218,6 +218,22 @@ and $|X_{i j}| = \sigma$ a.s., so Bernstein's inequality gives
 
 $$
 \begin{align*}
+\E\left[
+\max_{1 \leq j \leq d}
+\left|
+\sum_{i=1}^n X_{i j}
+\right|
+\right]
+&\leq
+\sqrt{2 n \sigma^2 \log 2d}
++ \frac{\sigma}{3} \log 2d,
+\end{align*}
+$$
+
+and hence for fixed $d \geq 1$
+
+$$
+\begin{align*}
 \limsup_{n \to \infty}
 \E\left[
 \max_{1 \leq j \leq d}
@@ -276,7 +292,12 @@ is unimprovable up to constants.
 <img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/bernstein/normal.svg">
 <figcaption>
-  Fig. 2: TODO
+  Fig. 2: Bernstein's upper bound of
+  $\sqrt{2 n \sigma^2 \log 2d} + \frac{\sigma}{3} \log 2d$
+  and simulated <br> values of
+  $\E\left[\max_{1 \leq j \leq d}
+  \left| \sum_{i=1}^n X_{i j} \right| \right]$
+  for Example 1 with $n = 50$ and $\sigma^2 = 1$.
 </figcaption>
 </figure>
 
@@ -292,9 +313,23 @@ and $-\frac{M}{n}$ with probability $1 - 1/n$ be
 i.i.d. for $1 \leq i \leq n$
 and $1 \leq j \leq d$.
 Note that $\E[X_{i j}] = 0$,
-$\V[X_{i j}] \sim \frac{M^2}{n}$
-and $|X_{i j}| \leq M$ a.s.,
+$\V[X_{i j}] = \frac{n-1}{n^2} M^2$
+and $|X_{i j}| \leq \frac{n-1}{n} M$ a.s.,
 so Bernstein's inequality gives
+
+$$
+\E\left[
+\max_{1 \leq j \leq d}
+\left|
+\sum_{i=1}^n X_{i j}
+\right|
+\right]
+\leq
+\sqrt{2 M^2 \log 2d}
++ \frac{M}{3} \log 2d,
+$$
+
+and hence
 
 $$
 \limsup_{d \to \infty}
@@ -374,7 +409,12 @@ of particles in the universe!
 <img style="width: 600px; margin-left: auto; margin-right: auto;"
 src="/assets/posts/bernstein/poisson.svg">
 <figcaption>
-  Fig. 3: TODO
+  Fig. 3: Bernstein's upper bound of
+  $\sqrt{2 M^2 \log 2d} + \frac{M}{3} \log 2d$
+  and simulated <br> values of
+  $\E\left[\max_{1 \leq j \leq d}
+  \left| \sum_{i=1}^n X_{i j} \right| \right]$
+  for Example 2 with $n = 50$ and $M = 1$.
 </figcaption>
 </figure>
 
@@ -717,3 +757,5 @@ e^{-1} \exp\left(
 $$
 
 </div>
+
+TODO link to code
