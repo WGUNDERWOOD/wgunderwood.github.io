@@ -65,8 +65,8 @@ In this post we focus on maximal inequalities for
 sums of independent random variables.
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 700px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/bernstein/bernstein.svg">
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/bernstein/maximum.svg">
 <figcaption>
   Fig. 1: With $X_j \sim \cN(0,1)$ independent,
   $\max_{1 \leq j \leq d} |X_j|$ grows with $d$.
@@ -272,6 +272,14 @@ $$
 Thus the first term in Bernstein's maximal inequality
 is unimprovable up to constants.
 
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/bernstein/normal.svg">
+<figcaption>
+  Fig. 2: TODO
+</figcaption>
+</figure>
+
 
 
 
@@ -361,6 +369,14 @@ in many applications.
 For example, $\log \log d \geq 6$
 already requires $d > 10^{175}$, far more than the number
 of particles in the universe!
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/bernstein/poisson.svg">
+<figcaption>
+  Fig. 3: TODO
+</figcaption>
+</figure>
 
 
 

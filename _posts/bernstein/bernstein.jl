@@ -3,6 +3,11 @@ using PyPlot
 using Random
 
 Random.seed!(314159)
+
+rcParams = PyPlot.PyDict(PyPlot.matplotlib."rcParams")
+rcParams["text.usetex"]  = true
+rcParams["text.latex.preamble"]  = "\\usepackage{amsfonts}"
+#rcParams["font.size"]  = 20
 plt.ioff()
 
 function get_normals_and_maxima(d::Int)
@@ -61,9 +66,14 @@ function make_max_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::Strin
     close("all")
 end
 
-function make_bounds_plot(ds::Vector{Int}, xs::Vector{Float64},
+function make_bounds_plot(ds::Vector{Int},
+                          xs::Vector{Float64},
                           lowers::Vector{Float64},
-                          uppers::Vector{Float64}, filepath::String)
+                          uppers::Vector{Float64},
+                          x_label::String,
+                          lower_label::String,
+                          upper_label::String,
+                          filepath::String)
 
     fig, ax = plt.subplots(figsize=(6,4))
     fig.patch.set_alpha(0)
@@ -74,9 +84,9 @@ function make_bounds_plot(ds::Vector{Int}, xs::Vector{Float64},
         ax.spines[loc].set_color("white")
     end
 
-    ax.plot(ds, lowers, color="#ff5555", label="Lower bound")
-    ax.plot(ds, uppers, color="#50fa7b", label="Upper bound")
-    ax.plot(ds, xs, color="#bd93f9", label="Simulated")
+    ax.plot(ds, lowers, color="#ff5555", label=lower_label)
+    ax.plot(ds, uppers, color="#50fa7b", label=upper_label)
+    ax.plot(ds, xs, color="#bd93f9", label=x_label)
 
     ax.set_yticks(0:1:7)
     legend = plt.legend(edgecolor="white", labelcolor="white")
@@ -95,7 +105,7 @@ function main()
     # maximum plot
     d = 100
     (xs, maxs) = get_normals_and_maxima(d)
-    make_max_plot(xs, maxs, "bernstein.pgf")
+    make_max_plot(xs, maxs, "maximum.pgf")
 
 
     # normal plot
@@ -105,7 +115,11 @@ function main()
     lowers_normals = sqrt.(0.5 * log.(ds))
     uppers_normals = sqrt.(2 * log.(2 .* ds)) + log.(2 .* ds) / 3
     make_bounds_plot(ds, expected_max_normals, lowers_normals,
-                     uppers_normals, "normal.png")
+                     uppers_normals,
+                     "Simulated \$\\mathbb{E}[\\max]\$",
+                     "Lower",
+                     "Upper",
+                     "normal.pgf")
 
     # poisson plot
     ds = collect(20:200)
@@ -113,7 +127,8 @@ function main()
     lowers_poissons = log.(ds) ./ (6 * log.(log.(ds)))
     uppers_poissons = log.(2*ds) / 3 + sqrt.(2 .* log.(2 .* ds))
     make_bounds_plot(ds, expected_max_poissons, lowers_poissons,
-                     uppers_poissons, "poisson.png")
+                     uppers_poissons, "Simulated", "Lower", "Upper",
+                     "poisson.pgf")
 
 end
 
