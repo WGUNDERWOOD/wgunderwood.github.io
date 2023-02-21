@@ -61,10 +61,9 @@ function make_max_plot(xs::Vector{<:Real}, maxs::Vector{<:Real}, filepath::Strin
     close("all")
 end
 
-function make_bounds_plot(xs::Vector{Float64}, lowers::Vector{Float64},
+function make_bounds_plot(ds::Vector{Int}, xs::Vector{Float64},
+                          lowers::Vector{Float64},
                           uppers::Vector{Float64}, filepath::String)
-
-    nds = length(xs)
 
     fig, ax = plt.subplots(figsize=(6,4))
     fig.patch.set_alpha(0)
@@ -75,11 +74,11 @@ function make_bounds_plot(xs::Vector{Float64}, lowers::Vector{Float64},
         ax.spines[loc].set_color("white")
     end
 
-    ax.plot(1:nds, lowers, color="#ff5555", label="lowers")
-    ax.plot(1:nds, uppers, color="#50fa7b", label="uppers")
-    ax.plot(1:nds, xs, color="#bd93f9", label="")
+    ax.plot(ds, lowers, color="#ff5555", label="Lower bound")
+    ax.plot(ds, uppers, color="#50fa7b", label="Upper bound")
+    ax.plot(ds, xs, color="#bd93f9", label="Simulated")
 
-    #ax.set_yticks(0:1:2)
+    ax.set_yticks(0:1:7)
     legend = plt.legend(edgecolor="white", labelcolor="white")
     legend.get_frame().set_facecolor((0, 0, 0, 0))
     legend.get_frame().set_alpha(nothing)
@@ -101,18 +100,20 @@ function main()
 
     # normal plot
     nrep = 100
-    ds = 10:100
+    ds = collect(1:100)
     expected_max_normals = [get_expected_max_dist(d, nrep, Normal(0, 1)) for d in ds]
     lowers_normals = sqrt.(0.5 * log.(ds))
     uppers_normals = sqrt.(2 * log.(2 .* ds)) + log.(2 .* ds) / 3
-    make_bounds_plot(expected_max_normals, lowers_normals, uppers_normals, "normal.png")
+    make_bounds_plot(ds, expected_max_normals, lowers_normals,
+                     uppers_normals, "normal.png")
 
     # poisson plot
-    ds = 10:100
+    ds = collect(20:200)
     expected_max_poissons = [get_expected_max_dist(d, nrep, Poisson(1)) for d in ds]
     lowers_poissons = log.(ds) ./ (6 * log.(log.(ds)))
     uppers_poissons = log.(2*ds) / 3 + sqrt.(2 .* log.(2 .* ds))
-    make_bounds_plot(expected_max_poissons, lowers_poissons, uppers_poissons, "poisson.png")
+    make_bounds_plot(ds, expected_max_poissons, lowers_poissons,
+                     uppers_poissons, "poisson.png")
 
 end
 
