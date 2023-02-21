@@ -107,7 +107,7 @@ function main()
     make_max_plot(xs, maxs, "maximum.pgf")
 
     # normal plot
-    nrep = 1000
+    nrep = 2000
     n = 50
     ds = collect(1:100)
     xs = [-1.0, 1.0]
@@ -123,7 +123,7 @@ function main()
         "normal.pgf")
 
     # poisson plot
-    nrep = 1000
+    nrep = 2000
     n = 50
     ds = collect(1:100)
     xs = [1 - 1/n, -1/n]

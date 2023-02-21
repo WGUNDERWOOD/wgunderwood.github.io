@@ -40,13 +40,20 @@ that a random variable makes from its expected value.
 [Bernstein's inequality](https://en.wikipedia.org/wiki/
 Bernstein_inequalities_(probability_theory))
 allows us to control
-the size of a sum of random variables
+the size of a sum of independent zero-mean random variables
 where variance and almost sure bounds on the summands are available.
+
+In this post we state and prove Bernstein's inequality,
+and also demonstrate its approximate optimality
+by establishing two different lower bounds.
+The Julia code for the simulations is available on
+[GitHub](https://github.com/WGUNDERWOOD/wgunderwood.github.io/
+tree/main/_posts/bernstein).
 
 ## Motivation
 
 In many applications we need to control the maximum
-of many random variables.
+of a collection of random variables.
 For example,
 we might be proving uniform convergence of a
 [statistical estimator](https://en.wikipedia.org/wiki/Kernel_regression),
@@ -101,13 +108,11 @@ tell us that
 $\max_{1 \leq j \leq d}
 \E\big[\left| \sum_{i=1}^n X_{i j} \right|\big] \leq \sqrt{n\sigma^2}$.
 However in order to put the maximum inside the sum,
-we will need finer control on the tails of the summands,
+we need finer control on the tails of the summands,
 attained by imposing the almost sure bound.
 Note that we do not make any assumptions
-on dependencies between different values of $j$.
-However, as we will see later, a useful heuristic is that
-the maximum is typically largest when we have independence across $j$,
-as this gives the most degrees of freedom.
+regarding the dependencies between
+different values of $j$.
 
 
 ## Bernstein's inequality
@@ -345,7 +350,7 @@ $$
 \frac{1}{3}.
 $$
 
-But also note the binomial distribution limit
+However also note the binomial distribution limit
 
 $$
 \begin{align*}
@@ -402,7 +407,7 @@ This factor diverges so slowly that
 Bernstein's inequality is practically optimal
 in many applications.
 For example, $\log \log d \geq 6$
-already requires $d > 10^{175}$, far more than the number
+already requires ${d > 10^{175}}$, far more than the number
 of particles in the universe!
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
@@ -757,5 +762,3 @@ e^{-1} \exp\left(
 $$
 
 </div>
-
-TODO link to code
