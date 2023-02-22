@@ -1,10 +1,15 @@
 using Distributions
 using LinearAlgebra
+using Random
+
 
 struct Interval
     lo::Float64
     hi::Float64
 end
+
+# TODO add support for kernels: RBF, Brownian, polynomial
+# TODO precompute the Cholesky decomposition before sampling
 
 function sample_gaussian_max(Sigma::Matrix{Float64})
     return maximum(rand(MvNormal(Sigma)))
@@ -35,6 +40,7 @@ res = 0.01
 Sigma = get_Sigma(T, scale, res)
 mean_Z = 0.0
 nreps = 100
+display(size(Sigma))
 
 for rep in 1:nreps
     Z = sample_gaussian_max(Sigma)
