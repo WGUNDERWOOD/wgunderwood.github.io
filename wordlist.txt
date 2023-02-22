@@ -2,6 +2,7 @@
 AOT
 AbstractRange
 Ahmadi
+Akrotirianakis
 Amir
 AoC
 Artemiou
@@ -32,8 +33,10 @@ Goodstein's
 Hartogs
 Hastie
 IMSE
+Ioannis
 JIT
 Kac
+Kimber
 Klusowski
 Kolmogorov
 LaTeX
@@ -51,6 +54,7 @@ PCA
 PDE
 PDEs
 Pois
+Prellberg
 Preprints
 Proboscidea
 PyPI
@@ -65,6 +69,7 @@ Tibshirani
 UnitRange
 VanderPlas
 Vasileios
+Vershynin
 Volcanium
 Vorel
 WGUnderwood
@@ -77,6 +82,7 @@ aartemiou
 addx
 aelliott
 behaviour
+bernstein
 bmi
 bobw
 br
@@ -133,7 +139,9 @@ nonparametric
 noop
 noopener
 noreferrer
+notational
 numpy
+optimality
 optimisations
 optimise
 orfe
@@ -145,6 +153,7 @@ permalink
 permutedims
 png
 pointwise
+poisson
 popfirst
 pre
 precompilation
@@ -163,11 +172,14 @@ rpmasini
 src
 struct
 structs
+summand
+summands
 summarised
 svg
 th
 ul
 undersmoothed
+unimprovable
 untyped
 vectorisation
 vectorised

@@ -6,6 +6,7 @@ default:
 	@make view
 
 all:
+	@make todo
 	@make spell
 	@make longlines
 	@make linkcheck
