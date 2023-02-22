@@ -1,36 +1,4 @@
 * Post ideas
-** Bernstein's inequality
-*** Introduce problem
-**** DONE Tail bound for infinity norm of iid sum of high-dimensional vectors
-**** DONE Applications?
-**** DONE Assume variance and a.s. bounds
-**** DONE No assumption on dependence between coordinates
-*** Main result: maximal Bernstein tail bound
-**** DONE State this way for ease of use -- constants on left not right
-**** DONE Subgaussian part
-**** DONE Subexponential part
-**** DONE Tightened even further with Bennett but only up to logs
-*** Examples
-**** Bernoulli(p)
-***** CLT and union bound
-***** Check Bernstein agrees
-**** Bernoulli(p/n)
-***** Weak convergence to Poisson
-***** Check Bernstein agrees
-**** Kernel estimator?
-*** Embed plotly interactive plot of tails and histogram
-** Bernstein's inequality (old)
-*** Part 1: Introduction
-**** Intro
-**** Basic concentration inequalities with proofs
-***** Markov
-***** Chebyshev
-***** Chernoff
-**** Bernstein's inequality and proof
-*** Part 2: Discussion
-**** Optimality of Bernstein's inequality
-***** CLT and Poisson argument
-** Mondrian forests
 ** Probability theory
 *** Probability spaces
 **** Sample spaces
@@ -61,6 +29,7 @@
 *** CLT
 *** LIL
 ** Brownian hitting times
+** Mondrian forests
 ** Martingale gambling strategy
 ** Bootstrapping
 ** Ill-posed DEs and non-deterministic mechanics
