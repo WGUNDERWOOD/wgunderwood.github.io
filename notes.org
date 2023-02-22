@@ -1,5 +1,4 @@
 * Post ideas
-** Mondrian forests
 ** Probability theory
 *** Probability spaces
 **** Sample spaces
@@ -30,6 +29,7 @@
 *** CLT
 *** LIL
 ** Brownian hitting times
+** Mondrian forests
 ** Martingale gambling strategy
 ** Bootstrapping
 ** Ill-posed DEs and non-deterministic mechanics
@@ -41,5 +41,4 @@
 ** Bayesian optimization
 ** Spline regression
 ** Plotting topological surfaces
-** Easy Bernstein's inequality
 * Other
