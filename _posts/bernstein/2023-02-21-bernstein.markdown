@@ -107,7 +107,7 @@ Firstly, the mean-zero property and the variance bound
 tell us that
 $\max_{1 \leq j \leq d}
 \E\big[\left| \sum_{i=1}^n X_{i j} \right|\big] \leq \sqrt{n\sigma^2}$.
-However in order to put the maximum inside the sum,
+However in order to put the maximum inside the expectation,
 we need finer control on the tails of the summands,
 attained by imposing the almost sure bound.
 Note that we do not make any assumptions
