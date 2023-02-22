@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bernstein's Inequality"
-date:   2023-02-21
+date:   2023-02-22
 ---
 
 Bernstein's inequality is an important concentration inequality.
