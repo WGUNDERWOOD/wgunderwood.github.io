@@ -59,7 +59,8 @@ the following.
 [Arrays](https://docs.julialang.org/en/v1/manual/arrays/)
 in Julia are very easy to use,
 working seamlessly with the rest of its type system
-and requiring no additional packages (I'm looking at you, numpy).
+and requiring no additional packages
+(I'm looking at you, [numpy](https://numpy.org/)).
 For example, dimension is well-defined
 and included in the type declaration:
 
@@ -258,7 +259,7 @@ object, rather than collecting all the elements into an array.
 Another common solution was to use various divisibility tricks,
 storing only the remainders of numbers modulo some divisor,
 rather than keeping the whole number.
-This can help avoid storing huge integers.
+This helped avoid storing huge integers.
 
 A similar challenge was to avoid copying large arrays.
 Julia uses exclamation marks to distinguish "in-place" functions
@@ -292,13 +293,13 @@ advent-of-code-2022/blob/main/src/day01.jl" style="color:#777777">
 </span>
 </h3>
 
-Iterating through the input lines allows us to calculate the
+Iterating through the input lines allowed us to calculate the
 total calories for each elf,
 storing the totals in a
 `Vector{Int}`{:.language-julia .highlight}.
 Finding the most calorific elf (part 1)
 and the most calorific three elves (part 2)
-is easy with the
+was easy with the
 `maximum`{:.language-julia .highlight}
 and
 `sort`{:.language-julia .highlight}
@@ -326,7 +327,7 @@ For example for part 1 we have
 while for part 2 we have
 `"A X" => 3 + 0`{:.language-julia .highlight}.
 Summing the scores over an iterator of the input file
-gives the answer without allocating much memory.
+gave the answer without allocating much memory.
 
 
 <h3>
@@ -341,7 +342,7 @@ advent-of-code-2022/blob/main/src/day03.jl" style="color:#777777">
 </span>
 </h3>
 
-This problem is about finding common characters in several strings.
+This problem was about finding common characters in several strings.
 While I could have just done this for two or three strings as required
 in the question, I wrote a recursive function to handle
 an arbitrary length
@@ -362,7 +363,7 @@ advent-of-code-2022/blob/main/src/day04.jl" style="color:#777777">
 </span>
 </h3>
 
-For this question we are given a list of pairs of integer ranges
+For this question we were given a list of pairs of integer ranges
 and asked for how many pairs do the two ranges
 contain each other (part 1) or overlap (part 2).
 Despite the numbers in this question being quite small,
@@ -371,7 +372,7 @@ using a
 `Tuple{Int, Int}`{:.language-julia .highlight}
 rather than collecting all the values in between into a
 `Vector{Int}`{:.language-julia .highlight}.
-Given the endpoints it is easy to write
+Given the endpoints it was easy to write
 functions to check if one contains the other or if they overlap.
 
 
@@ -388,13 +389,13 @@ advent-of-code-2022/blob/main/src/day05.jl" style="color:#777777">
 </h3>
 
 Did someone say stacks?
-Moving one crate at a time (part 1) is easily achieved by using
+Moving one crate at a time (part 1) was easily achieved by using
 `push!`{:.language-julia .highlight}
 and
 `pop!`{:.language-julia .highlight}
 multiple times on the relevant
 `Vector{Char}`{:.language-julia .highlight}
-and this extends to moving multiple crates (part 2)
+and this extended to moving multiple crates (part 2)
 by pushing them first to a
 temporary "holding array" and then to their final destinations.
 The hardest part was reading the oddly-formatted input.
@@ -414,8 +415,8 @@ advent-of-code-2022/blob/main/src/day06.jl" style="color:#777777">
 
 This was the first puzzle where I predicted what the second part
 might be and planned accordingly.
-Both parts involve finding the first position in a string where
-the preceding $n$ characters are all distinct,
+Both parts involved finding the first position in a string where
+the preceding $n$ characters were all distinct,
 with $n=4$ in the first part and $n=14$ in the second.
 As such I made sure the complexity of
 my solution did not depend much on the size of $n$.
@@ -437,7 +438,7 @@ advent-of-code-2022/blob/main/src/day07.jl" style="color:#777777">
 
 This was the first day I found difficult,
 and also the first for which I used custom composite types.
-The goal is to imitate a simple file system which can run
+The goal was to imitate a simple file system which could run
 `cd` and `ls`.
 After some unsuccessful attempts at recursive types
 (directories in directories etc.),
@@ -467,16 +468,16 @@ I did this by looping over every directory
 in the file system
 and checking that
 
-* Its current `size` is
+* Its current `size` was
 `NaN`{:.language-julia .highlight}
 
-* All of its children have a `size` which is not
+* All of its children had a `size` which was not
 `NaN`{:.language-julia .highlight}
 
-If so then the size of this directory is the sum of the sizes of
+If so then the size of this directory was the sum of the sizes of
 its children.
 I repeated this process $d$ times where $d$ is the depth
-of the file system to ensure propagation has terminated.
+of the file system to ensure propagation had terminated.
 I'm sure there are better ways to do this, but it worked for me.
 
 
@@ -495,7 +496,7 @@ advent-of-code-2022/blob/main/src/day08.jl" style="color:#777777">
 For this problem I wrote a running maximum function to keep track
 of the largest tree in a particular direction,
 and then used some simple logic to establish whether
-there is a line of sight from a tree to the edge of the grid.
+there was a line of sight from a tree to the edge of the grid.
 I handled the four different directions by permuting the input first
 using Julia's
 `reverse`{:.language-julia .highlight}
@@ -521,7 +522,7 @@ advent-of-code-2022/blob/main/src/day09.jl" style="color:#777777">
 For this question I needed only two functions,
 one to move the head of the rope according to the instructions
 and another to adjust the tail to keep up with the head.
-To do this one needs only to check
+To do this one needed only to check
 that the tail segment is two squares away (in $L^\infty$ norm)
 from the head and then adjust it with
 `tail += sign(head - tail)`{:.language-julia .highlight}.
@@ -531,7 +532,7 @@ making sure to adjust the rope from head to tail
 in order to propagate the motion correctly.
 Finally the
 `unique`{:.language-julia .highlight}
-function makes counting the visited squares trivial.
+function made counting the visited squares trivial.
 
 
 <h3>
@@ -546,7 +547,7 @@ advent-of-code-2022/blob/main/src/day10.jl" style="color:#777777">
 </span>
 </h3>
 
-The following two simple functions carry out the bulk of
+The following two simple functions carried out the bulk of
 the work for this question,
 with part 2 requiring some modular arithmetic
 to get the location of the cursor on the CRT.
@@ -580,20 +581,20 @@ advent-of-code-2022/blob/main/src/day11.jl" style="color:#777777">
 I found this problem quite difficult,
 and eventually settled on the following composite type
 for each monkey.
-In light of part 2, which requires modular arithmetic
+In light of part 2, which required modular arithmetic
 to prevent numbers growing too large,
-each item is stored as a dictionary of
+each item was stored as a dictionary of
 divisor -> remainder pairs.
 The `operation`{:.language-julia .highlight}
-field contains each monkey's operation as an anonymous function
+field contained each monkey's operation as an anonymous function
 while `test`{:.language-julia .highlight}
-stores the divisor used for its divisibility test.
-The potential destination monkeys for the items are given in
+stored the divisor used for its divisibility test.
+The potential destination monkeys for the items were given in
 `dest`{:.language-julia .highlight},
-and we keep track of the number of times the monkey inspects an item in
+and I kept track of the number of times the monkey inspected an item in
 `inspections`{:.language-julia .highlight}.
-Once the input has been parsed, performing the rounds of
-throwing is quite straightforward.
+Once the input had been parsed, performing the rounds of
+throwing was quite straightforward.
 
 
 {% highlight julia %}
@@ -620,11 +621,11 @@ advent-of-code-2022/blob/main/src/day12.jl" style="color:#777777">
 </span>
 </h3>
 
-This is a classic shortest path problem,
+This was a classic shortest path problem,
 with the network edges determined by the heights of neighbouring squares.
 For reading the data, Julia's
 `'a':'z'`{:.language-julia .highlight}
-syntax is a neat way to get the alphabet.
+syntax was a neat way to get the alphabet.
 I solved the main problem using
 [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm),
 keeping track of visited squares and their distances in
@@ -632,7 +633,7 @@ auxiliary arrays.
 By running the algorithm to completion,
 not stopping after reaching the target square but
 rather finding the shortest path to all reachable squares,
-part 2 follows immediately without having to run
+part 2 followed immediately without having to run
 the algorithm again.
 
 {% highlight julia %}
@@ -645,8 +646,7 @@ struct Hill
 end
 {% endhighlight %}
 
-Note that each distance
-is of type
+Note that each distance was of type
 `Union{Int, Float64}`{:.language-julia .highlight}
 to allow for the value
 `Inf::Float64`{:.language-julia .highlight}.
@@ -684,8 +684,7 @@ Part 2 was easy once I could compare the objects,
 as I could pass the entire list into Julia's flexible
 `sort`{:.language-julia .highlight} function
 with a custom comparison function,
-using
-[quicksort](https://en.wikipedia.org/wiki/Quicksort)
+using [quicksort](https://en.wikipedia.org/wiki/Quicksort)
 without having to implement it myself.
 
 
@@ -702,7 +701,7 @@ advent-of-code-2022/blob/main/src/day14.jl" style="color:#777777">
 </h3>
 
 This problem was fun to solve as it was easy to visualise and check everything
-is working properly.
+was working properly.
 The first challenge was to parse the layout of the cave from the input,
 which amounted to modifying entries in a matrix along a line
 given the start and end points of that line.
@@ -717,14 +716,14 @@ mutable struct Cave
 end
 {% endhighlight %}
 
-where `layout`{:.language-julia .highlight} function
-shows the cave structure as in the problem statement,
+where `layout`{:.language-julia .highlight}
+showed the cave structure as in the problem statement,
 `current`{:.language-julia .highlight}
-gives the current location of the falling unit of sand,
+gave the current location of the falling unit of sand,
 `start`{:.language-julia .highlight}
-is the starting point of the sand and
+was the starting point of the sand and
 `terminated`{:.language-julia .highlight}
-determines whether to stop the simulation.
+determined whether to stop the simulation.
 Implementing the falling sand logic was not too hard,
 and for part 2 I simply added an extra path of solid rock
 to represent the floor,
@@ -745,14 +744,14 @@ advent-of-code-2022/blob/main/src/day15.jl" style="color:#777777">
 </h3>
 
 This day was quite tricky.
-The obvious thing to do is to represent the positions of everything in a
+The obvious thing to do was to represent the positions of everything in a
 `Matrix{Char}`{:.language-julia .highlight},
 as suggested by the example maps given in the problem.
-However when looking at the problem input it quickly becomes apparent
-that this won't work as the numbers involved
+However when looking at the problem input it quickly became apparent
+that this wouldn't work as the numbers involved
 (and hence the size of the matrix needed)
-are very large.
-Hence I looked for a solution which avoids allocating large amounts of memory,
+were very large.
+Hence I looked for a solution which avoided allocating large amounts of memory,
 storing only the key properties of each sensor and
 using Julia's inbuilt
 `UnitRange{Int}`{:.language-julia .highlight}
@@ -762,16 +761,16 @@ For part 1, I calculated the interval of points precluded by a given sensor
 at a given $y$ value,
 then wrote a function to simplify a collection of such intervals
 into disjoint intervals.
-Counting the number of points in disjoint intervals is then easy.
+Counting the number of points in disjoint intervals was then easy.
 
 It took me a long time to figure out Part 2.
-My final solution relies on the logic that if there is only one point
+My final solution relied on the logic that if there is only one point
 which is not in any of the sensed regions,
 then it must be near a "corner" of two sensed regions.
-Thus it first calculates the intersection points of the boundaries
+Thus I first calculated the intersection points of the boundaries
 of the sensed regions for each pair of sensors.
-It then searches the neighbours of these points to find a point
-which is in none of the sensed regions.
+I then searched the neighbours of these points to find a point
+which was in none of the sensed regions.
 
 
 
@@ -792,7 +791,7 @@ was large enough to require some thought to get it to finish quickly.
 Firstly I did some pre-processing of the input,
 using Dijkstra's algorithm to get the shortest path length between any two
 valves, thus yielding a complete network.
-I then dropped all the valves (nodes) with a zero flow rate as there is no point
+I then dropped all the valves (nodes) with a zero flow rate as there was no point
 going to them except en route to another valve.
 
 For part 1, I used a
@@ -817,7 +816,7 @@ struct State
 end
 {% endhighlight %}
 
-For part 2, I first reasoned that there is no need for both you and the elephant
+For part 2, I first reasoned that there was no need for both you and the elephant
 to ever visit the same valve (in the processed complete network).
 Therefore I used a heuristic to find all of the "good"
 paths within the time limit,
@@ -853,16 +852,16 @@ rather than a
 `Matrix{Char}`{:.language-julia .highlight}
 so I could easily push new rows onto the top to make the whole assembly taller.
 Replicating the behaviour was straightforward,
-checking which action needs to be applied at each time step.
+checking which action needed to be applied at each time step.
 
 Part 2 was initially very challenging, asking to predict the height of the tower
 after 1000000000000
 (yes, a trillion) blocks had fallen.
-Obviously it is not possible to simulate this fully,
-but I realised that the pattern of jets and the block shapes are periodic.
-After checking that the top part of the tower of blocks is also periodic,
-the problem is much easier.
-The answer can be calculated by running the simulation
+Obviously it was not possible to simulate this fully,
+but I realised that the pattern of jets and the block shapes were periodic.
+After checking that the top part of the tower of blocks was also periodic,
+the problem became much easier.
+The answer could be calculated by running the simulation
 for a few thousand iterations
 to observe the repeating section
 and then counting the number of repeats needed to reach
@@ -884,19 +883,19 @@ advent-of-code-2022/blob/main/src/day18.jl" style="color:#777777">
 This was also a fun problem.
 Part 1 was easy, calculating the total area of all the cubes
 and then subtracting non-exposed faces
-which make contact with another cube.
+which made contact with another cube.
 
 For part 2 I wrote a function to "complete" a set of cubes
 by filling in any internal cavities.
 This let me reuse my surface area function
 from part 1 to get the exterior surface area.
-The completion function works by drawing a box around the lava droplet
+The completion function worked by drawing a box around the lava droplet
 and marking cubes on the boundary of this box as "outside" the droplet.
-I then mark any non-droplet neighbours of an
+I then marked any non-droplet neighbours of an
 "outside" cube as also being "outside",
 iterating with a DFS until termination.
-The completed droplet is then simply the union of the original droplet
-and the cubes which are not outside.
+The completed droplet was then simply the union of the original droplet
+and the cubes which were not outside.
 
 
 <h3>
@@ -977,12 +976,12 @@ after seeing part 2 I rewrote all my code,
 keeping track of expressions for each monkey rather than values.
 I then wrote a function to check for a given monkey whether
 both of its "child" monkeys (the monkey that will provide its inputs)
-have had their expressions parsed.
-If so, I can parse the current monkey by substituting the children's
+had had their expressions parsed.
+If so, I could parse the current monkey by substituting the children's
 expressions into its own expression.
-Repeating this for all the monkeys until termination propagates
+Repeating this for all the monkeys until termination propagated
 the expressions right up to the `root` monkey.
-For part 1, this can then be directly evaluated using Julia's
+For part 1, this could then be directly evaluated using Julia's
 [metaprogramming](https://docs.julialang.org/en/v1/manual/metaprogramming/)
 facilities:
 `Meta.parse`{:.language-julia .highlight}
@@ -999,7 +998,7 @@ and the other retained the variable `humn`.
 To find the value of `humn` which solves these equal to each other,
 I implemented a
 [binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm).
-This is probably not guaranteed to work in all situations,
+This was probably not guaranteed to work in all situations,
 but was fine for my instance.
 
 
@@ -1017,7 +1016,7 @@ advent-of-code-2022/blob/main/src/day22.jl" style="color:#777777">
 
 This was a challenging but fun problem,
 requiring the most lines of code out of all of the problems.
-Part 1 was quite easy, especially since we have already solved
+Part 1 was quite easy, especially since we had already solved
 a few of these "follow the rules on a grid"-type problems
 (day 9, day 14, day 17),
 with the only tricky task being to write down the rules for wrapping around
@@ -1036,11 +1035,11 @@ mutable struct Face
 end
 {% endhighlight %}
 
-Here, `id` identifies each face uniquely,
-`board` provides the layout of open tiles and walls on the face,
-`face_coords` gives the coordinates in 3D space of the
+Here, `id` identified each face uniquely,
+`board` provided the layout of open tiles and walls on the face,
+`face_coords` gave the coordinates in 3D space of the
 top-left, top-right and bottom-left corners of the face,
-and `corner_loc` records where the face is located on the original
+and `corner_loc` recorded where the face was located on the original
 input net.
 To parse the faces, I set the first face to have coordinates
 `[-1 1 -1 1; 1 1 -1 -1; 1 1 1 1]` and then
@@ -1051,13 +1050,13 @@ coordinates of each face.
 The main part of the problem was then to handle the logic
 for going over an edge on the resulting cube.
 I did this in stages, first identifying the coordinates of the
-edge to cross, then matching this to determine which face we end up on.
-Again matching coordinates identifies which side of this face we emerge on,
-and we then have to work out where on this edge we appear,
-and which way we are then facing.
-It took me a long time to realise that I had forgotten the last stage:
-we have to check we don't emerge into a wall,
-as then we don't make the transition at all.
+edge to cross, then matching this to determine which face we ended up on.
+Again matching coordinates identified which side of this face we emerged on,
+and I then had to work out where on this edge we would appear,
+and which way we would then be facing.
+It took me a long time to realise that I had forgotten the last step:
+we had to check we wouldn't emerge into a wall,
+as then we would not make the transition at all.
 My code ended up being pretty long, but I think it should work
 in generality as I never "hard-coded" my cube's net.
 
@@ -1128,8 +1127,7 @@ recording the number of blizzards in each direction at every location.
 For part 1 I first calculated all of the blizzard locations at each
 time step following the rules,
 up to some time limit chosen by trial and error.
-I then used DFS again for the main search problem,
-with the following state object:
+I then used DFS again for the main search problem, with
 
 {% highlight julia %}
 struct State
@@ -1139,10 +1137,10 @@ end
 {% endhighlight %}
 
 I used the following pruning strategy to reduce run-time.
-I noted that the blizzards are periodic with period given
+I noted that the blizzards were periodic with period given
 by the least common multiple of the dimensions of the valley.
-Thus if we are in the same location at the same time modulo this period,
-then the state has already been seen and can be discarded.
+Thus if we were in the same location at the same time modulo this period,
+then the state had already been seen and could be discarded.
 
 For part 2 I used the same approach,
 swapping the start and end points and resuming the
@@ -1175,7 +1173,7 @@ looking up the coefficients in a dictionary and
 calculating in base five.
 The `decimal_to_snafu`{:.language-julia .highlight}
 function was much harder,
-and my final solution is recursive,
+and my final solution was recursive,
 first finding a large enough power of five for the leading digit
 and calculating the coefficient, then
 calling the function again with the power reduced by one
