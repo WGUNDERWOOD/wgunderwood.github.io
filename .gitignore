@@ -11,3 +11,4 @@ _posts/**/*.pgf
 _posts/**/*.gif
 __pycache__/
 README.html
+target/

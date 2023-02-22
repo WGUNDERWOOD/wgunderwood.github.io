@@ -791,7 +791,8 @@ was large enough to require some thought to get it to finish quickly.
 Firstly I did some pre-processing of the input,
 using Dijkstra's algorithm to get the shortest path length between any two
 valves, thus yielding a complete network.
-I then dropped all the valves (nodes) with a zero flow rate as there was no point
+I then dropped all the valves (nodes) with a
+zero flow rate as there was no point
 going to them except en route to another valve.
 
 For part 1, I used a
@@ -816,7 +817,8 @@ struct State
 end
 {% endhighlight %}
 
-For part 2, I first reasoned that there was no need for both you and the elephant
+For part 2, I first reasoned that there was no need
+for both you and the elephant
 to ever visit the same valve (in the processed complete network).
 Therefore I used a heuristic to find all of the "good"
 paths within the time limit,
