@@ -1,51 +1,54 @@
 using Distributions
 using LinearAlgebra
 using Random
-
+using UnicodePlots
 
 struct Interval
     lo::Float64
     hi::Float64
 end
 
-# TODO add support for kernels: RBF, Brownian, polynomial
-# TODO precompute the Cholesky decomposition before sampling
+abstract type Kernel end
 
-function sample_gaussian_max(Sigma::Matrix{Float64})
-    return maximum(rand(MvNormal(Sigma)))
+struct RBFKernel <: Kernel
+    scale::Float64
 end
 
-function get_Sigma(T::Interval, scale::Float64, res::Float64)
-
-    xs = T.lo : res : T.hi
-    n_xs = length(xs)
-    Sigma = zeros(n_xs, n_xs)
-
-    for i in 1:n_xs, j in 1:n_xs
-        Sigma[i, j] = exp(-(xs[i] - xs[j])^2 / (2 * scale^2))
-    end
-
-    min_eig = minimum(eigvals(Sigma))
-
-    if min_eig < 0
-        Sigma -= min_eig * I
-    end
-
-    return Sigma
+struct OUKernel <: Kernel
+    scale::Float64
 end
 
-T = Interval(0, 1)
+evaluate(x::Float64, y::Float64, kernel::OUKernel) = exp(-abs(x-y) / kernel.scale)
+evaluate(x::Float64, y::Float64, kernel::RBFKernel) = exp(-(x-y)^2 / (2*kernel.scale^2))
+
+function sample_gaussian(Sigma_svd::SVD)
+    Z = rand(Normal(0, 1), length(Sigma_svd.S))
+    return Sigma_svd.U * Diagonal(sqrt.(Sigma_svd.S)) * Sigma_svd.Vt * Z
+end
+
+function get_Sigma(xs::Vector{Float64}, kernel::Kernel)
+    return broadcast((x, y) -> evaluate(x, y, kernel), xs, xs')
+end
+
 scale = 0.3
-res = 0.01
-Sigma = get_Sigma(T, scale, res)
-mean_Z = 0.0
-nreps = 100
-display(size(Sigma))
+#kernel = OUKernel(scale)
+kernel = RBFKernel(scale)
+ngrid = 1000
+xs = collect(range(0, 1, length = ngrid))
+Sigma = get_Sigma(xs, kernel)
+Sigma_svd = svd(Sigma)
+Z = sample_gaussian(Sigma_svd)
 
-for rep in 1:nreps
-    Z = sample_gaussian_max(Sigma)
-    global mean_Z += Z / nreps
-end
+lineplot(Z)
 
-println(scale)
-println(mean_Z)
+#mean_Z = 0.0
+#nreps = 100
+#display(size(Sigma))
+
+#for rep in 1:nreps
+    #Z = sample_gaussian_max(Sigma)
+    #global mean_Z += Z / nreps
+#end
+
+#println(scale)
+#println(mean_Z)
