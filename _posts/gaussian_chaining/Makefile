@@ -22,11 +22,14 @@ svg:
 	svgo bounds_OU.svg
 
 copy:
-	#ROOT=$$(git rev-parse --show-toplevel);\
-	#DEST="$$ROOT/assets/posts/gaussian_chaining/";\
-	#cp maximum.svg $$DEST;\
-	#cp normal.svg $$DEST;\
-	#cp poisson.svg $$DEST
+	ROOT=$$(git rev-parse --show-toplevel);\
+	DEST="$$ROOT/assets/posts/gaussian_chaining/";\
+	cp trajectory_RBF_1.svg $$DEST;\
+	cp trajectory_RBF_2.svg $$DEST;\
+	cp trajectory_OU_1.svg $$DEST;\
+	cp trajectory_OU_2.svg $$DEST;\
+	cp bounds_RBF.svg $$DEST;\
+	cp bounds_OU.svg $$DEST
 
 clean:
 	rm -fv *.pgf

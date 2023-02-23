@@ -85,10 +85,10 @@ end
 
 function plot_bounds()
 
-    ls = Dict(RBFKernel => collect(0.1:0.1:1),
-              OUKernel => collect(0.1:0.1:1))
-    nrep = 200
-    ngrid = 100
+    ls = Dict(RBFKernel => collect(0.05:0.05:5),
+              OUKernel => collect(0.05:0.05:5))
+    nrep = 500
+    ngrid = 400
     xs = collect(range(0, 1, length = ngrid))
 
     for k in keys(ls)
@@ -112,11 +112,11 @@ function plot_bounds()
         colors = ["#bd93f9", "#50fa7b", "#ffb86c", "#8be9fd", "#ff79c6"]
 
         ax.plot(ls[k], expected_max_Zs, color = "#8be9fd")
-        ax.plot(ls[k], 1 ./ ls[k], color = "#ff79c6")
-        ax.plot(ls[k], 1 ./ sqrt.(ls[k]), color = "#ff79c6")
+        #ax.plot(ls[k], 1 ./ ls[k], color = "#ff79c6")
+        #ax.plot(ls[k], 1 ./ sqrt.(ls[k]), color = "#ff79c6")
         plt.xlabel("Scale, \$l\$", color = "#FFFFFF", size=10)
         plt.ylabel("Expected supremum", color = "#FFFFFF", size=10, labelpad=12)
-        ax.set_yticks(0:0.5:2)
+        ax.set_yticks(0:0.5:2.5)
         fig, ax = format_plot(fig, ax)
         savefig("bounds_$(shortname(k(1))).pgf")
         close("all")
