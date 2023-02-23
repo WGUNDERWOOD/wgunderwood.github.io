@@ -434,21 +434,21 @@ src="/assets/posts/bernstein/poisson.svg">
 * The University of Oxford's course on Algorithmic Foundations of Learning,
   taught by
   [Patrick Rebeschini](https://www.stats.ox.ac.uk/~rebeschi/)
-  in 2018.
+  in 2018
 
 * Princeton University's course on Probability in High Dimension,
   taught by
   [Ramon van Handel](https://web.math.princeton.edu/~rvan/)
-  in 2021.
+  in 2021
 
 
 * [A note on the distribution of the maximum
   of a set of Poisson random variables](arxiv.org/abs/0903.4373)
-  by K. M. Briggs, L. Song and T. Prellberg, 2009.
+  by K. M. Briggs, L. Song and T. Prellberg, 2009
 
 * [A note on Poisson maxima](https://link.springer.com/article/
   10.1007/BF00533727)
-  by A.C. Kimber, 1983.
+  by A.C. Kimber, 1983
 
 
 
