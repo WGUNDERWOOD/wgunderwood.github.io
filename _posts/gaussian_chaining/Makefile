@@ -12,10 +12,14 @@ svg:
 	pgf2svg -p $(PREAMBLE) trajectory_RBF_2.pgf
 	pgf2svg -p $(PREAMBLE) trajectory_OU_1.pgf
 	pgf2svg -p $(PREAMBLE) trajectory_OU_2.pgf
+	pgf2svg -p $(PREAMBLE) bounds_RBF.pgf
+	pgf2svg -p $(PREAMBLE) bounds_OU.pgf
 	svgo trajectory_RBF_1.svg
 	svgo trajectory_RBF_2.svg
 	svgo trajectory_OU_1.svg
 	svgo trajectory_OU_2.svg
+	svgo bounds_RBF.svg
+	svgo bounds_OU.svg
 
 copy:
 	#ROOT=$$(git rev-parse --show-toplevel);\

@@ -53,14 +53,15 @@ end
 
 function plot_trajectories()
 
-    ls = [0.1, 0.5]
+    ls = Dict(RBFKernel => [0.05, 0.3], OUKernel => [0.4, 1])
     nrep = 3
     ngrid = 200
     xs = collect(range(0, 1, length = ngrid))
 
-    for (i, l) in enumerate(ls)
-        for kernel in [RBFKernel(l), OUKernel(l)]
+    for k in keys(ls)
+        for (i, l) in enumerate(ls[k])
 
+            kernel = k(l)
             Sigma = get_Sigma(xs, kernel)
             Sigma_svd = svd(Sigma)
             Zs = [sample_gaussian(Sigma_svd) for _ in 1:nrep]
@@ -72,7 +73,8 @@ function plot_trajectories()
             end
 
             plt.xlabel("Index, \$x\$", color = "#FFFFFF", size=10)
-            plt.ylabel("Gaussian process, \$Z_x\$", color = "#FFFFFF", size=10, labelpad=12)
+            plt.ylabel("Gaussian process, \$Z_x\$", color = "#FFFFFF",
+                       size=10, labelpad=12)
             ax.set_yticks(-3:3)
             fig, ax = format_plot(fig, ax)
             savefig("trajectory_$(shortname(kernel))_$i.pgf")
@@ -82,31 +84,50 @@ function plot_trajectories()
 end
 
 function plot_bounds()
-    # TODO
-end
 
+    ls = Dict(RBFKernel => collect(0.1:0.1:1),
+              OUKernel => collect(0.1:0.1:1))
+    nrep = 200
+    ngrid = 100
+    xs = collect(range(0, 1, length = ngrid))
+
+    for k in keys(ls)
+
+        expected_max_Zs = zeros(length(ls[k]))
+
+        for (i, l) in enumerate(ls[k])
+
+            kernel = k(l)
+            Sigma = get_Sigma(xs, kernel)
+            Sigma_svd = svd(Sigma)
+
+            for rep in 1:nrep
+                Z = sample_gaussian(Sigma_svd)
+                max_Z = maximum(Z)
+                expected_max_Zs[i] += max_Z / nrep
+            end
+        end
+
+        fig, ax = plt.subplots(figsize=(6,4))
+        colors = ["#bd93f9", "#50fa7b", "#ffb86c", "#8be9fd", "#ff79c6"]
+
+        ax.plot(ls[k], expected_max_Zs, color = "#8be9fd")
+        ax.plot(ls[k], 1 ./ ls[k], color = "#ff79c6")
+        ax.plot(ls[k], 1 ./ sqrt.(ls[k]), color = "#ff79c6")
+        plt.xlabel("Scale, \$l\$", color = "#FFFFFF", size=10)
+        plt.ylabel("Expected supremum", color = "#FFFFFF", size=10, labelpad=12)
+        ax.set_yticks(0:0.5:2)
+        fig, ax = format_plot(fig, ax)
+        savefig("bounds_$(shortname(k(1))).pgf")
+        close("all")
+    end
+end
 
 function main()
     Random.seed!(314159)
     plt.ioff()
     plot_trajectories()
-    #plot_bounds()
+    plot_bounds()
 end
 
 main()
-
-#kernel = OUKernel(l)
-
-#lineplot(Z)
-
-#mean_Z = 0.0
-#nreps = 100
-#display(size(Sigma))
-
-#for rep in 1:nreps
-    #Z = sample_gaussian_max(Sigma)
-    #global mean_Z += Z / nreps
-#end
-
-#println(l)
-#println(mean_Z)
