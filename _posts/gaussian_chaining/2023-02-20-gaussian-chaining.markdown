@@ -32,7 +32,7 @@ TODO Define and give properties
 
 <div class="box-rounded">
 
-Let $(\cT,d)$ be a metric space and
+Let $(\cT,d)$ be a TODO not metric! metric space and
 $X_t$ be real-valued random variables for
 $t \in \cT$.
 Suppose $\E[X_t]=0$ for all $t$
@@ -82,6 +82,10 @@ TODO Use the chaining method to prove Dudley's theorem
 ## Examples
 
 ### Example 1: radial basis function kernel
+
+$d_l(s, t) = \exp\left(-\frac{(s-t)^2}{2 l^2}\right)$
+
+TODO do these interactive -- regenerate random trajectory?
 
 <figure style="display: block; margin-left: auto; margin-right: auto;">
 <img style="width: 600px; margin-left: auto; margin-right: auto;"
