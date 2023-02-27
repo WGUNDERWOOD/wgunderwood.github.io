@@ -11,6 +11,7 @@ along with some simulations and diagrams.
 
 {% include mathjax.html %}
 
+
 <div style="display:none">
   $ \newcommand \cT {\mathcal{T}} $
   $ \newcommand \R {\mathbb{R}} $
@@ -81,58 +82,15 @@ TODO Use the chaining method to prove Dudley's theorem
 
 ## Examples
 
+
 ### Example 1: radial basis function kernel
 
 $d_l(s, t) = \exp\left(-\frac{(s-t)^2}{2 l^2}\right)$
 
+{% include_relative sample_rbf.html %}
+
 TODO do these interactive -- regenerate random trajectory?
-
-<figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 600px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/gaussian_chaining/trajectory_RBF_1.svg">
-<figcaption>
-  Fig. 1: TODO
-</figcaption>
-</figure>
-
-<figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 600px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/gaussian_chaining/trajectory_RBF_2.svg">
-<figcaption>
-  Fig. 1: TODO
-</figcaption>
-</figure>
-
-<figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 600px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/gaussian_chaining/bounds_RBF.svg">
-<figcaption>
-  Fig. 1: TODO
-</figcaption>
-</figure>
 
 ### Example 2: Ornstein--Uhlenbeck kernel
 
-<figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 600px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/gaussian_chaining/trajectory_OU_1.svg">
-<figcaption>
-  Fig. 1: TODO
-</figcaption>
-</figure>
-
-<figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 600px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/gaussian_chaining/trajectory_OU_2.svg">
-<figcaption>
-  Fig. 1: TODO
-</figcaption>
-</figure>
-
-<figure style="display: block; margin-left: auto; margin-right: auto;">
-<img style="width: 600px; margin-left: auto; margin-right: auto;"
-src="/assets/posts/gaussian_chaining/bounds_OU.svg">
-<figcaption>
-  Fig. 1: TODO
-</figcaption>
-</figure>
+{% include_relative sample_ou.html %}
