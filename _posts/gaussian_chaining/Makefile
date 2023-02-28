@@ -8,28 +8,20 @@ julia:
 	julia gaussian_chaining.jl
 
 svg:
-	pgf2svg -p $(PREAMBLE) trajectory_RBF_1.pgf
-	pgf2svg -p $(PREAMBLE) trajectory_RBF_2.pgf
-	pgf2svg -p $(PREAMBLE) trajectory_OU_1.pgf
-	pgf2svg -p $(PREAMBLE) trajectory_OU_2.pgf
-	pgf2svg -p $(PREAMBLE) bounds_RBF.pgf
-	pgf2svg -p $(PREAMBLE) bounds_OU.pgf
-	svgo trajectory_RBF_1.svg
-	svgo trajectory_RBF_2.svg
-	svgo trajectory_OU_1.svg
-	svgo trajectory_OU_2.svg
-	svgo bounds_RBF.svg
-	svgo bounds_OU.svg
+	for f in *.pgf; do pgf2svg -p $(PREAMBLE) "$$f"; done
+
+anim:
+	svgasm traj_OU_l1_rep*.svg -d 1 > traj_OU_l1.svg
 
 copy:
-	ROOT=$$(git rev-parse --show-toplevel);\
-	DEST="$$ROOT/assets/posts/gaussian_chaining/";\
-	cp trajectory_RBF_1.svg $$DEST;\
-	cp trajectory_RBF_2.svg $$DEST;\
-	cp trajectory_OU_1.svg $$DEST;\
-	cp trajectory_OU_2.svg $$DEST;\
-	cp bounds_RBF.svg $$DEST;\
-	cp bounds_OU.svg $$DEST
+	#ROOT=$$(git rev-parse --show-toplevel);\
+	#DEST="$$ROOT/assets/posts/gaussian_chaining/";\
+	#cp trajectory_RBF_1.svg $$DEST;\
+	#cp trajectory_RBF_2.svg $$DEST;\
+	#cp trajectory_OU_1.svg $$DEST;\
+	#cp trajectory_OU_2.svg $$DEST;\
+	#cp bounds_RBF.svg $$DEST;\
+	#cp bounds_OU.svg $$DEST
 
 clean:
 	rm -fv *.pgf

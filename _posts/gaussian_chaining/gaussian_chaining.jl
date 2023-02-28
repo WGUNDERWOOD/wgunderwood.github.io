@@ -3,12 +3,6 @@ using LinearAlgebra
 using Random
 using PyPlot
 
-
-struct Interval
-    lo::Float64
-    hi::Float64
-end
-
 abstract type Kernel end
 
 struct RBFKernel <: Kernel
@@ -26,13 +20,14 @@ name(kernel::RBFKernel) = "Radial basis function"
 shortname(kernel::OUKernel) = "OU"
 shortname(kernel::RBFKernel) = "RBF"
 
-function sample_gaussian(Sigma_svd::SVD)
-    Z = rand(Normal(0, 1), length(Sigma_svd.S))
-    return Sigma_svd.U * Diagonal(sqrt.(Sigma_svd.S)) * Sigma_svd.Vt * Z
-end
-
 function get_Sigma(xs::Vector{Float64}, kernel::Kernel)
-    return broadcast((x, y) -> evaluate(x, y, kernel), xs, xs')
+    Sigma = broadcast((x, y) -> evaluate(x, y, kernel), xs, xs')
+    min_eig = eigmin(Sigma)
+    if min_eig < 0
+        return Sigma - min_eig * I
+    else
+        return Sigma
+    end
 end
 
 function format_plot(fig, ax)
@@ -54,7 +49,7 @@ end
 function plot_trajectories()
 
     ls = Dict(RBFKernel => [0.05, 0.3], OUKernel => [0.4, 1])
-    nrep = 3
+    nrep = 10
     ngrid = 200
     xs = collect(range(0, 1, length = ngrid))
 
@@ -63,22 +58,21 @@ function plot_trajectories()
 
             kernel = k(l)
             Sigma = get_Sigma(xs, kernel)
-            Sigma_svd = svd(Sigma)
-            Zs = [sample_gaussian(Sigma_svd) for _ in 1:nrep]
-            fig, ax = plt.subplots(figsize=(6,4))
-            colors = ["#bd93f9", "#50fa7b", "#ffb86c", "#8be9fd", "#ff79c6"]
+            gp = MvNormal(Sigma)
+            Zs = [rand(gp) for _ in 1:nrep]
 
             for (j, Z) in enumerate(Zs)
-                ax.plot(xs, Z, color = colors[j])
-            end
+                fig, ax = plt.subplots(figsize=(6,4))
+                ax.plot(xs, Z, color = "#bd93f9")
 
-            plt.xlabel("Index, \$x\$", color = "#FFFFFF", size=10)
-            plt.ylabel("Gaussian process, \$Z_x\$", color = "#FFFFFF",
-                       size=10, labelpad=12)
-            ax.set_yticks(-3:3)
-            fig, ax = format_plot(fig, ax)
-            savefig("trajectory_$(shortname(kernel))_$i.pgf")
-            close("all")
+                plt.xlabel("Index, \$x\$", color = "#FFFFFF", size=10)
+                plt.ylabel("Gaussian process, \$Z_x\$", color = "#FFFFFF",
+                           size=10, labelpad=12)
+                ax.set_yticks(-3:3)
+                fig, ax = format_plot(fig, ax)
+                savefig("traj_$(shortname(kernel))_l$(i)_rep$(j).pgf")
+                close("all")
+            end
         end
     end
 end
@@ -127,7 +121,7 @@ function main()
     Random.seed!(314159)
     plt.ioff()
     plot_trajectories()
-    plot_bounds()
+    #plot_bounds()
 end
 
 main()
