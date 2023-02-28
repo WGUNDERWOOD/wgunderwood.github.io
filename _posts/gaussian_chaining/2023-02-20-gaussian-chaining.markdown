@@ -87,10 +87,52 @@ TODO Use the chaining method to prove Dudley's theorem
 
 $d_l(s, t) = \exp\left(-\frac{(s-t)^2}{2 l^2}\right)$
 
-{% include_relative sample_rbf.html %}
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/gaussian_chaining/traj_RBF_l1.svg">
+<figcaption>
+  Fig. 1: TODO
+</figcaption>
+</figure>
 
-TODO do these interactive -- regenerate random trajectory?
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/gaussian_chaining/traj_RBF_l2.svg">
+<figcaption>
+  Fig. 1: TODO
+</figcaption>
+</figure>
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/gaussian_chaining/bounds_RBF.svg">
+<figcaption>
+  Fig. 1: TODO
+</figcaption>
+</figure>
 
 ### Example 2: Ornstein--Uhlenbeck kernel
 
-{% include_relative sample_ou.html %}
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/gaussian_chaining/traj_OU_l1.svg">
+<figcaption>
+  Fig. 1: TODO
+</figcaption>
+</figure>
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/gaussian_chaining/traj_OU_l2.svg">
+<figcaption>
+  Fig. 1: TODO
+</figcaption>
+</figure>
+
+<figure style="display: block; margin-left: auto; margin-right: auto;">
+<img style="width: 600px; margin-left: auto; margin-right: auto;"
+src="/assets/posts/gaussian_chaining/bounds_OU.svg">
+<figcaption>
+  Fig. 1: TODO
+</figcaption>
+</figure>

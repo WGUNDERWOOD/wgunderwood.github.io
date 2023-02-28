@@ -1,5 +1,4 @@
 using Distributions
-using LinearAlgebra
 using Random
 using PyPlot
 
@@ -48,9 +47,9 @@ end
 
 function plot_trajectories()
 
-    ls = Dict(RBFKernel => [0.05, 0.3], OUKernel => [0.4, 1])
+    ls = Dict(RBFKernel => [0.05, 0.3], OUKernel => [0.2, 5])
     nrep = 10
-    ngrid = 200
+    ngrid = 150
     xs = collect(range(0, 1, length = ngrid))
 
     for k in keys(ls)
@@ -68,9 +67,11 @@ function plot_trajectories()
                 plt.xlabel("Index, \$x\$", color = "#FFFFFF", size=10)
                 plt.ylabel("Gaussian process, \$Z_x\$", color = "#FFFFFF",
                            size=10, labelpad=12)
+                plt.ylim((-3.5, 3.5))
                 ax.set_yticks(-3:3)
                 fig, ax = format_plot(fig, ax)
-                savefig("traj_$(shortname(kernel))_l$(i)_rep$(j).pgf")
+                savefig("traj_$(shortname(kernel))_l$(i)_rep$(j).pgf",
+                        bbox_inches="tight")
                 close("all")
             end
         end
@@ -82,7 +83,7 @@ function plot_bounds()
     ls = Dict(RBFKernel => collect(0.05:0.05:5),
               OUKernel => collect(0.05:0.05:5))
     nrep = 500
-    ngrid = 400
+    ngrid = 500
     xs = collect(range(0, 1, length = ngrid))
 
     for k in keys(ls)
@@ -93,26 +94,30 @@ function plot_bounds()
 
             kernel = k(l)
             Sigma = get_Sigma(xs, kernel)
-            Sigma_svd = svd(Sigma)
+            gp = MvNormal(Sigma)
 
             for rep in 1:nrep
-                Z = sample_gaussian(Sigma_svd)
+                Z = rand(gp)
                 max_Z = maximum(Z)
                 expected_max_Zs[i] += max_Z / nrep
             end
         end
 
         fig, ax = plt.subplots(figsize=(6,4))
-        colors = ["#bd93f9", "#50fa7b", "#ffb86c", "#8be9fd", "#ff79c6"]
-
         ax.plot(ls[k], expected_max_Zs, color = "#8be9fd")
-        #ax.plot(ls[k], 1 ./ ls[k], color = "#ff79c6")
-        #ax.plot(ls[k], 1 ./ sqrt.(ls[k]), color = "#ff79c6")
+
+        if k == RBFKernel
+            ax.plot(ls[k], 12 ./ ls[k], color = "#ff79c6")
+        elseif k == OUKernel
+            ax.plot(ls[k], 12 ./ sqrt.(ls[k]), color = "#ff79c6")
+        end
         plt.xlabel("Scale, \$l\$", color = "#FFFFFF", size=10)
         plt.ylabel("Expected supremum", color = "#FFFFFF", size=10, labelpad=12)
         ax.set_yticks(0:0.5:2.5)
+        plt.ylim((0, 2.5))
         fig, ax = format_plot(fig, ax)
-        savefig("bounds_$(shortname(k(1))).pgf")
+        savefig("bounds_$(shortname(k(1))).pgf",
+                bbox_inches="tight")
         close("all")
     end
 end
@@ -121,7 +126,7 @@ function main()
     Random.seed!(314159)
     plt.ioff()
     plot_trajectories()
-    #plot_bounds()
+    plot_bounds()
 end
 
 main()
