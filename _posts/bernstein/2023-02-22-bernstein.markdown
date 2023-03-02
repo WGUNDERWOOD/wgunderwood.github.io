@@ -441,9 +441,8 @@ src="/assets/posts/bernstein/poisson.svg">
   [Ramon van Handel](https://web.math.princeton.edu/~rvan/)
   in 2021
 
-
 * [A note on the distribution of the maximum
-  of a set of Poisson random variables](arxiv.org/abs/0903.4373)
+  of a set of Poisson random variables](https://arxiv.org/abs/0903.4373)
   by K. M. Briggs, L. Song and T. Prellberg, 2009
 
 * [A note on Poisson maxima](https://link.springer.com/article/
