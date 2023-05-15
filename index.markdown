@@ -47,7 +47,7 @@ src="/assets/general/princeton_logo.png">
 
 <a href="https://orfe.princeton.edu/">
 <img
-style="width: 160px; border: 2px solid #111111; margin-top: 15px;"
+style="width: 160px; border: 2px solid #111111; margin-top: 20px;"
 src="/assets/general/orfe_logo.png">
 </a>
 
