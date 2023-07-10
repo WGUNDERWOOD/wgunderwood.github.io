@@ -9,7 +9,7 @@ description: Welcome to my homepage.
 <a href="/">
 <img
 style="width: 160px; border: 2px solid #111111; margin-top: 0px"
-src="/assets/general/profile_boston.png">
+src="/assets/general/profile_ts.png">
 </a>
 
 </div>
@@ -47,7 +47,7 @@ src="/assets/general/princeton_logo.png">
 
 <a href="https://orfe.princeton.edu/">
 <img
-style="width: 160px; border: 2px solid #111111; margin-top: 15px;"
+style="width: 160px; border: 2px solid #111111; margin-top: 20px;"
 src="/assets/general/orfe_logo.png">
 </a>
 
