@@ -29,3 +29,4 @@ copy:
 clean:
 	rm -fv *.pgf
 	rm -fv *.svg
+	rm -fv *.synctex.gz

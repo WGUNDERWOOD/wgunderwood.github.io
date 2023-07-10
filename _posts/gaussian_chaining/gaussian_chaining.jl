@@ -1,4 +1,5 @@
 using Distributions
+using LinearAlgebra
 using Random
 using PyPlot
 
@@ -113,8 +114,8 @@ function plot_bounds()
         end
         plt.xlabel("Scale, \$l\$", color = "#FFFFFF", size=10)
         plt.ylabel("Expected supremum", color = "#FFFFFF", size=10, labelpad=12)
-        ax.set_yticks(0:0.5:2.5)
-        plt.ylim((0, 2.5))
+        #ax.set_yticks(0:0.5:2.5)
+        plt.ylim((0, 10))
         fig, ax = format_plot(fig, ax)
         savefig("bounds_$(shortname(k(1))).pgf",
                 bbox_inches="tight")
