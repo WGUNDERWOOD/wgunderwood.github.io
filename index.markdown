@@ -130,6 +130,25 @@ I have served as an Assistant in Instruction
 for these classes at Princeton University:
 
 <ul>
+
+<li>
+<strong> ORF 498: </strong>
+Senior Independent Research Foundations,
+with
+<a href="https://drigobon.com/">
+Daniel Rigobon</a>,
+Fall 2023
+</li>
+
+<li>
+<strong> SML 201: </strong>
+Introduction to Data Science,
+with
+<a href="https://csml.princeton.edu/people/daisy-yan-huang">
+Daisy Yan Huang</a>,
+Fall 2023
+</li>
+
 <li>
 <strong> ORF 363: </strong>
 Computing and Optimization,
@@ -248,3 +267,17 @@ Journal of Business and Economic Statistics
 </li>
 
 </ul>
+
+<h2> Conferences </h2>
+<ul>
+
+<li>
+<strong>
+Statistical Foundations of Data Science and their Applications
+</strong> <br>
+Princeton University, May 2023 <br>
+Local organizing committee member
+</li>
+
+</ul>
+
