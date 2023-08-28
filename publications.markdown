@@ -58,7 +58,7 @@ January 2022
 
 ## Working papers
 
-- **Uniform Estimation and Inference with Mondrian Trees and Forests** <br>
+- **Inference with Mondrian Random Forests** <br>
 [M. D. Cattaneo][mdcattaneo],
 [J. M. Klusowski][jmklusowski]
 and [W. G. Underwood][wgunderwood] <br>
@@ -66,6 +66,14 @@ Working paper
 
 
 ## Presentations
+
+- **Inference with Mondrian Random Forests** <br>
+[M. D. Cattaneo][mdcattaneo],
+[J. M. Klusowski][jmklusowski]
+and [W. G. Underwood][wgunderwood] <br>
+*Two Sigma PhD Poster Session* <br>
+July 2023
+
 
 - **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
 [M. D. Cattaneo][mdcattaneo],
