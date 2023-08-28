@@ -140,4 +140,4 @@ May 2020 <br>
 [aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
 [lsmallman]: https://scholar.google.co.uk/citations?user=B1A0KykAAAAJ&hl=en
 [rpmasini]: https://masini.princeton.edu/
-[jmklusowski]: https://jasonklusowski.github.io/
+[jmklusowski]: https://klusowski.princeton.edu/
