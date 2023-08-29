@@ -266,6 +266,10 @@ Econometric Theory
 Journal of Business and Economic Statistics
 </li>
 
+<li>
+Operations Research
+</li>
+
 </ul>
 
 <h2> Conferences </h2>
