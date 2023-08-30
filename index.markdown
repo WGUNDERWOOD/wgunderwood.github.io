@@ -14,13 +14,6 @@ src="/assets/general/profile_ts.png">
 
 </div>
 
-
-
-
-
-
-
-
 <h2> About </h2>
 
 I am a PhD candidate in the
@@ -34,6 +27,9 @@ Currently I am working with my advisor
 <a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>
 on nonparametric network estimation,
 martingale coupling theory and random forest procedures.
+
+**I am currently on the academic job market,
+seeking positions starting in the latter half of 2024.**
 
 <div class="frame">
 
@@ -54,12 +50,6 @@ src="/assets/general/orfe_logo.png">
 <br>
 
 </div>
-
-
-
-
-
-
 
 <h2> Biography </h2>
 
