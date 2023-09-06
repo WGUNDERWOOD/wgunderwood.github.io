@@ -100,7 +100,8 @@ September 2021
 Dyadic kernel density estimation in Julia <br>
 [W. G. Underwood][wgunderwood] <br>
 Available on
-[GitHub](https://github.com/WGUNDERWOOD/DyadicKDE.jl) <br>
+[GitHub](https://github.com/WGUNDERWOOD/DyadicKDE.jl)
+and the [Julia General registry](https://juliapackages.com/p/dyadickde) <br>
 January 2022 <br>
 
 - **motifcluster** <br>
@@ -112,8 +113,7 @@ and [A. Elliott][aelliott] <br>
 Available on
 [GitHub](https://github.com/WGUNDERWOOD/motifcluster),
 [CRAN](https://cran.r-project.org/web/packages/motifcluster/index.html),
-[PyPI](https://pypi.org/project/motifcluster/)
-and the [Julia General registry](https://juliapackages.com/p/dyadickde) <br>
+and [PyPI](https://pypi.org/project/motifcluster/) <br>
 May 2020 <br>
 
 
