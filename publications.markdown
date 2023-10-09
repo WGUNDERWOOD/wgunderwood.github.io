@@ -4,7 +4,7 @@ title: Publications
 permalink: /publications/
 ---
 
-A list of my publications,
+My publications,
 as in my
 [CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.pdf).
 Also available in
@@ -16,6 +16,15 @@ My software is hosted on
 
 
 ## Articles
+
+- **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
+[M. D. Cattaneo][mdcattaneo],
+[Y. Feng][yfeng]
+and [W. G. Underwood][wgunderwood] <br>
+[*Journal of the American Statistical Association*](https://www.tandfonline.com/toc/uasa20/current),
+forthcoming <br>
+[arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
+October 2023
 
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood],
@@ -49,15 +58,6 @@ and [W. G. Underwood][wgunderwood] <br>
 reject and resubmit <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
 October 2022
-
-- **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
-[M. D. Cattaneo][mdcattaneo],
-[Y. Feng][yfeng]
-and [W. G. Underwood][wgunderwood] <br>
-[*Journal of the American Statistical Association*](https://www.tandfonline.com/toc/uasa20/current),
-revise and resubmit <br>
-[arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
-January 2022
 
 
 ## Working papers
