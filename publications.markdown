@@ -12,9 +12,6 @@ Also available in
 My software is hosted on
 [GitHub](https://github.com/WGUNDERWOOD).
 
-
-
-
 ## Articles
 
 - **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
@@ -47,8 +44,14 @@ and [A. Artemiou][aartemiou] <br>
 https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 June 2019
 
-
 ## Preprints
+
+- **Inference with Mondrian Random Forests** <br>
+[M. D. Cattaneo][mdcattaneo],
+[J. M. Klusowski][jmklusowski]
+and [W. G. Underwood][wgunderwood] <br>
+[arXiv:2310.09702](https://arxiv.org/abs/2310.09702) <br>
+October 2023
 
 - **Yurinskii's Coupling for Martingales** <br>
 [M. D. Cattaneo][mdcattaneo],
@@ -59,14 +62,7 @@ reject and resubmit <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
 October 2022
 
-
 ## Working papers
-
-- **Inference with Mondrian Random Forests** <br>
-[M. D. Cattaneo][mdcattaneo],
-[J. M. Klusowski][jmklusowski]
-and [W. G. Underwood][wgunderwood] <br>
-Working paper
 
 - **Higher-order extensions to the Lindeberg method** <br>
 [M. D. Cattaneo][mdcattaneo],
@@ -81,7 +77,6 @@ Working paper
 and [W. G. Underwood][wgunderwood] <br>
 Working paper
 
-
 ## Presentations
 
 - Two Sigma PhD Poster Session,
@@ -92,7 +87,6 @@ June 2022
 
 - Princeton Statistics Laboratory, Princeton University,
 September 2021
-
 
 ## Software
 
@@ -116,9 +110,7 @@ Available on
 and [PyPI](https://pypi.org/project/motifcluster/) <br>
 May 2020 <br>
 
-
 [wgunderwood]: /
-
 [aartemiou]: https://artemioua.com/
 [mcucuringu]: https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en
 [mdcattaneo]: https://cattaneo.princeton.edu/
