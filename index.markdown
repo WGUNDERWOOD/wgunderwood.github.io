@@ -244,21 +244,15 @@ July 2016
 <h2> Peer Review </h2>
 <ul>
 
-<li>
-Journal of the American Statistical Association
-</li>
+<li> Econometric Theory </li>
 
-<li>
-Econometric Theory
-</li>
+<li> Journal of the American Statistical Association </li>
 
-<li>
-Journal of Business and Economic Statistics
-</li>
+<li> Journal of Business and Economic Statistics </li>
 
-<li>
-Operations Research
-</li>
+<li> Journal of Causal Inference </li>
+
+<li> Operations Research </li>
 
 </ul>
 
