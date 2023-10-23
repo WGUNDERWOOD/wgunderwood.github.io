@@ -38,5 +38,5 @@ this allows one to perform asymptotically valid statistical inference,
 such as constructing confidence intervals, on the unknown regression function.
 We also provide a debiasing procedure for Mondrian random
 forests which allows them to achieve minimax-optimal estimation rates
-with $\beta$-H{\"o}lder regression functions, for all $\beta$
+with $\beta$-Hölder regression functions, for all $\beta$
 and in arbitrary dimension, assuming appropriate parameter tuning.
