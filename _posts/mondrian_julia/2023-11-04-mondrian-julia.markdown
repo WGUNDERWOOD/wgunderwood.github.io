@@ -7,6 +7,7 @@ date:   2023-11-04
 My new Julia package for Mondrian random forest
 regression is available on
 [GitHub](https://github.com/WGUNDERWOOD/MondrianForests.jl).
+
 This package provides:
 
 - Fitting (debiased) Mondrian random forests
