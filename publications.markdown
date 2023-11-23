@@ -90,16 +90,22 @@ September 2021
 
 ## Software
 
+- **MondrianForests** <br>
+Mondrian random forests in Julia <br>
+[W. G. Underwood][wgunderwood] <br>
+Available on
+[GitHub](https://github.com/WGUNDERWOOD/MondrianForests.jl) <br>
+November 2023 <br>
+
 - **DyadicKDE** <br>
 Dyadic kernel density estimation in Julia <br>
 [W. G. Underwood][wgunderwood] <br>
 Available on
-[GitHub](https://github.com/WGUNDERWOOD/DyadicKDE.jl)
-and the [Julia General registry](https://juliapackages.com/p/dyadickde) <br>
+[GitHub](https://github.com/WGUNDERWOOD/DyadicKDE.jl) <br>
 January 2022 <br>
 
 - **motifcluster** <br>
-Motif-based spectral clustering of weighted directed networks
+Motif-based spectral clustering of directed networks
 in R, Python and Julia <br>
 [W. G. Underwood][wgunderwood]
 and [A. Elliott][aelliott] <br>
