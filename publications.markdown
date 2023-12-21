@@ -33,6 +33,7 @@ and [M. Cucuringu][mcucuringu] <br>
 5, 62 <br>
 [doi:10.1007/s41109-020-00293-z](
 https://doi.org/doi:10.1007/s41109-020-00293-z) <br>
+[arXiv:2004.01293](https://arxiv.org/abs/2004.01293) <br>
 September 2020
 
 - **Simple Poisson PCA: an algorithm for (sparse) feature extraction
