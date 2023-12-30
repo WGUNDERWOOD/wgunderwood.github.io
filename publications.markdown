@@ -20,6 +20,8 @@ My software is hosted on
 and [W. G. Underwood][wgunderwood] <br>
 [*Journal of the American Statistical Association*](https://www.tandfonline.com/toc/uasa20/current),
 forthcoming <br>
+[doi:10.1080/01621459.2023.2272785](
+https://doi.org/10.1080/01621459.2023.2272785) <br>
 [arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
 October 2023
 
