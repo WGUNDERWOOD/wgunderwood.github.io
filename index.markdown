@@ -122,6 +122,15 @@ for these classes at Princeton University:
 <ul>
 
 <li>
+<strong> ORF 499: </strong>
+Senior Thesis,
+with
+<a href="https://drigobon.com/">
+Daniel Rigobon</a>,
+Spring 2024
+</li>
+
+<li>
 <strong> ORF 498: </strong>
 Senior Independent Research Foundations,
 with
