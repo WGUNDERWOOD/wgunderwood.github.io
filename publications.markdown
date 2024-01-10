@@ -17,52 +17,53 @@ My software is hosted on
 - **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
 [M. D. Cattaneo][mdcattaneo],
 [Y. Feng][yfeng]
-and [W. G. Underwood][wgunderwood] <br>
+and [W. G. Underwood][wgunderwood],
+2024 <br>
 [*Journal of the American Statistical Association*](https://www.tandfonline.com/toc/uasa20/current),
 forthcoming <br>
 [doi:10.1080/01621459.2023.2272785](
 https://doi.org/10.1080/01621459.2023.2272785) <br>
 [arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
-October 2023
 
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood],
 [A. Elliott][aelliott]
-and [M. Cucuringu][mcucuringu] <br>
+and [M. Cucuringu][mcucuringu],
+2020 <br>
 [*Applied Network Science*](https://appliednetsci.springeropen.com/)
 5, 62 <br>
 [doi:10.1007/s41109-020-00293-z](
 https://doi.org/doi:10.1007/s41109-020-00293-z) <br>
-September 2020
+[arXiv:2004.01293](https://arxiv.org/abs/2004.01293) <br>
 
 - **Simple Poisson PCA: an algorithm for (sparse) feature extraction
 with simultaneous dimension determination** <br>
 [L. Smallman][lsmallman],
 [W. G. Underwood][wgunderwood]
-and [A. Artemiou][aartemiou] <br>
+and [A. Artemiou][aartemiou],
+2019 <br>
 [*Computational Statistics*](https://link.springer.com/journal/180)
 35, 559-577 <br>
 [doi:10.1007/s00180-019-00903-0](
 https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
-June 2019
 
 ## Preprints
 
 - **Inference with Mondrian Random Forests** <br>
 [M. D. Cattaneo][mdcattaneo],
 [J. M. Klusowski][jmklusowski]
-and [W. G. Underwood][wgunderwood] <br>
+and [W. G. Underwood][wgunderwood],
+2023 <br>
 [arXiv:2310.09702](https://arxiv.org/abs/2310.09702) <br>
-October 2023
 
 - **Yurinskii's Coupling for Martingales** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
-and [W. G. Underwood][wgunderwood] <br>
+and [W. G. Underwood][wgunderwood],
+2022 <br>
 [*Annals of Statistics*](https://imstat.org/journals-and-publications/annals-of-statistics/),
 reject and resubmit <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
-October 2022
 
 ## Working papers
 
@@ -70,14 +71,12 @@ October 2022
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
 and [W. G. Underwood][wgunderwood] <br>
-Working paper
 
 - **Adaptive Mondrian Random Forests** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. Chandak][rchandak],
 [J. M. Klusowski][jmklusowski]
 and [W. G. Underwood][wgunderwood] <br>
-Working paper
 
 ## Presentations
 
@@ -94,29 +93,29 @@ September 2021
 
 - **MondrianForests** <br>
 Mondrian random forests in Julia <br>
-[W. G. Underwood][wgunderwood] <br>
+[W. G. Underwood][wgunderwood],
+2023 <br>
 Available on
 [GitHub](https://github.com/WGUNDERWOOD/MondrianForests.jl) <br>
-November 2023 <br>
 
 - **DyadicKDE** <br>
 Dyadic kernel density estimation in Julia <br>
-[W. G. Underwood][wgunderwood] <br>
+[W. G. Underwood][wgunderwood],
+2022 <br>
 Available on
 [GitHub](https://github.com/WGUNDERWOOD/DyadicKDE.jl) <br>
-January 2022 <br>
 
 - **motifcluster** <br>
 Motif-based spectral clustering of directed networks
 in R, Python and Julia <br>
 [W. G. Underwood][wgunderwood]
-and [A. Elliott][aelliott] <br>
+and [A. Elliott][aelliott],
+2020 <br>
 [doi:10.5281/zenodo.3832400](https://doi.org/10.5281/zenodo.3832400) <br>
 Available on
 [GitHub](https://github.com/WGUNDERWOOD/motifcluster),
 [CRAN](https://cran.r-project.org/web/packages/motifcluster/index.html),
 and [PyPI](https://pypi.org/project/motifcluster/) <br>
-May 2020 <br>
 
 [wgunderwood]: /
 [aartemiou]: https://artemioua.com/
