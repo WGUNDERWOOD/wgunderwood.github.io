@@ -28,8 +28,18 @@ Currently I am working with my advisor
 on nonparametric network estimation,
 martingale coupling theory and random forest procedures.
 
-**I am currently on the academic job market,
-seeking positions starting in the latter half of 2024.**
+In July I will be joining the
+<a href="http://www.statslab.cam.ac.uk/">
+Statistical Laboratory</a>
+in the
+<a href="https://www.cam.ac.uk/">
+University of Cambridge</a>
+<a href="https://www.dpmms.cam.ac.uk/">
+Department of Pure Mathematics and Mathematical Statistics</a>
+as a postdoctoral researcher
+hosted by
+<a href="http://www.statslab.cam.ac.uk/~rjs57/">
+Richard Samworth</a>.
 
 <div class="frame">
 
