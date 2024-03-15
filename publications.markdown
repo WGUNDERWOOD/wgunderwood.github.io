@@ -80,13 +80,28 @@ and [W. G. Underwood][wgunderwood] <br>
 
 ## Presentations
 
-- Two Sigma PhD Poster Session,
+- Statistics Seminar,
+University of Pittsburgh,
+February 2024
+
+- Statistics Seminar,
+University of Illinois,
+January 2024
+
+- Statistics Seminar,
+University of Michigan,
+January 2024
+
+- PhD Poster Session,
+Two Sigma Investments,
 July 2023
 
-- Two Sigma PhD Research Symposium,
+- PhD Research Symposium,
+Two Sigma Investments,
 June 2022
 
-- Princeton Statistics Laboratory, Princeton University,
+- Statistics Laboratory,
+Princeton University,
 September 2021
 
 ## Software
