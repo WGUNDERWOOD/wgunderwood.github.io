@@ -5,15 +5,14 @@ permalink: /contact/
 ---
 
 ### Email address
-[wgu2@princeton.edu](mailto:wgu@princeton.edu)
+[wgu21@cam.ac.uk](mailto:wgu21@cam.ac.uk)
 
 ### Office address
 William G Underwood <br>
-Sherrerd Hall <br>
-Princeton University <br>
-Princeton,
-NJ 08544 <br>
-USA
+Statistical Laboratory <br>
+Centre for Mathematical Sciences <br>
+Wilberforce Road <br>
+Cambridge, CB3 0WB <br>
 
 ### Other links
 - [BibTeX bibliography](https://github.com/WGUNDERWOOD/wgu-cv/

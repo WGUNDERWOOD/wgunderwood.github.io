@@ -16,30 +16,20 @@ src="/assets/general/profile_ts.png">
 
 <h2> About </h2>
 
-I am a PhD candidate in the
-<a href="https://orfe.princeton.edu/">
-Operations Research & Financial Engineering</a>
-(ORFE) department at
-<a href="https://www.princeton.edu/">Princeton University</a>,
-where my research interests include mathematical statistics
-and probability theory.
-Currently I am working with my advisor
-<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>
-on nonparametric network estimation,
-martingale coupling theory and random forest procedures.
-
-In July I will be joining the
+I am a postdoctoral researcher in the
 <a href="http://www.statslab.cam.ac.uk/">
 Statistical Laboratory</a>
-in the
-<a href="https://www.cam.ac.uk/">
-University of Cambridge</a>
+at the
 <a href="https://www.dpmms.cam.ac.uk/">
-Department of Pure Mathematics and Mathematical Statistics</a>
-as a postdoctoral researcher
-hosted by
+Department of Pure Mathematics and Mathematical Statistics</a>,
+<a href="https://www.cam.ac.uk/">
+University of Cambridge</a>.
+I am hosted by
 <a href="http://www.statslab.cam.ac.uk/~rjs57/">
-Richard Samworth</a>.
+Richard Samworth</a>,
+and my research interests encompass various topics in statistical
+theory and methodology, including nonparametric procedures,
+random forests, and coupling theory.
 
 <div class="frame">
 
@@ -63,21 +53,20 @@ src="/assets/general/orfe_logo.png">
 
 <h2> Biography </h2>
 
-I received an MA degree in ORFE
-from Princeton in 2021.
-Before moving to New Jersey,
-I obtained my MMath in Mathematics & Statistics from the
-<a href="https://www.stats.ox.ac.uk/">Department of Statistics</a>
-at the
+I received my PhD in
+<a href="https://orfe.princeton.edu/">
+Operations Research & Financial Engineering</a>
+(ORFE) from
+<a href="https://www.princeton.edu/">Princeton University</a>
+in 2024, where I wrote my
+<a href = "https://github.com/WGUNDERWOOD/phd-dissertation/">dissertation</a>
+under the supervision of
+<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>.
+Previously I received an MA degree in ORFE
+from Princeton in 2021 and an
+MMath in Mathematics & Statistics from the
 <a href="http://www.ox.ac.uk/">University of Oxford</a>
-in 2019.
-I was supervised there by
-<a href="http://www.stats.ox.ac.uk/~cucuring/">Mihai Cucuringu</a>,
-and wrote my master's dissertation on
-[Motif-Based Spectral Clustering of Weighted Directed Networks](
-https://github.com/WGUNDERWOOD/masters-dissertation/blob/
-main/writeup/main/main.pdf).
-I am an alumnus of
+in 2019. I am an alumnus of
 <a href="https://www.sjc.ox.ac.uk/">St John’s College, Oxford</a>.
 
 In my spare time I enjoy
@@ -89,17 +78,10 @@ hiking,
 skiing
 and playing squash.
 
-
-
-
-
-
-
-
 <h2> Contact </h2>
 
 Contact me by email at
-<a href="mailto:wgu2@princeton.edu">wgu2@princeton.edu</a>
+<a href="mailto:wgu21@cam.ac.uk">wgu21@cam.ac.uk</a>
 with any questions!
 Other contact details are available
 on my
@@ -108,26 +90,10 @@ and you can
 <a href="https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.pdf">
 download my CV here</a>.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h2> Teaching </h2>
 
-I have served as an Assistant in Instruction
-for these classes at Princeton University:
+I served as an Assistant in Instruction
+for the following classes at Princeton University:
 
 <ul>
 
@@ -208,12 +174,6 @@ Fall 2020
 </li>
 </ul>
 
-
-
-
-
-
-
 <h2> Awards </h2>
 
 <ul>
@@ -257,8 +217,6 @@ St John's College, University of Oxford,
 July 2016
 </li>
 </ul>
-
-
 
 <h2> Peer Review </h2>
 <ul>

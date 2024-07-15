@@ -42,3 +42,6 @@
 ** Spline regression
 ** Plotting topological surfaces
 * Other
+** Nix flakes
+** Update email addresses for colleagues
+** Update images on index page
