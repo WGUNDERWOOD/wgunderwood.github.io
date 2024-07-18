@@ -33,7 +33,7 @@ random forests, and coupling theory.
 
 <div class="frame">
 
-<a href="https://www.princeton.edu">
+<a href="https://www.cam.ac.uk">
 <img
 style="width: 160px; border: 2px solid #73c18d; margin-top: 2px;"
 src="/assets/general/cambridge_logo.png">
@@ -41,7 +41,7 @@ src="/assets/general/cambridge_logo.png">
 
 <br>
 
-<a href="https://orfe.princeton.edu/">
+<a href="https://www.princeton.edu">
 <img
 style="width: 160px; border: 2px solid #ac3e0f; margin-top: 20px;"
 src="/assets/general/princeton_logo.png">
@@ -49,7 +49,7 @@ src="/assets/general/princeton_logo.png">
 
 <br>
 
-<a href="https://orfe.princeton.edu/">
+<a href="https://www.ox.ac.uk">
 <img
 style="width: 160px; border: 2px solid #888888; margin-top: 20px;"
 src="/assets/general/oxford_logo.png">
