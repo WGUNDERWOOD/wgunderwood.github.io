@@ -8,7 +8,7 @@ description: Welcome to my homepage.
 
 <a href="/">
 <img
-style="width: 160px; border: 2px solid #111111; margin-top: 0px"
+style="width: 160px; border: 2px solid #999999; margin-top: 0px"
 src="/assets/general/profile_ts.png">
 </a>
 
