@@ -237,6 +237,8 @@ July 2016
 
 <li> Journal of Causal Inference </li>
 
+<li> Journal of Econometrics </li>
+
 <li> Operations Research </li>
 
 </ul>
