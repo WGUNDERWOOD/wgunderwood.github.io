@@ -10,7 +10,7 @@ titled "Yurinskii's Coupling for Martingales"
 and coauthored with
 [Matias Cattaneo](https://cattaneo.princeton.edu)
 and
-[Ricardo Masini](https://masini.princeton.edu).
+[Ricardo Masini](https://anson.ucdavis.edu/~rmasini/bio.html).
 
 It can be found at
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362).

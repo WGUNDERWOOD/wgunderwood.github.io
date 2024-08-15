@@ -139,6 +139,6 @@ and [PyPI](https://pypi.org/project/motifcluster/) <br>
 [yfeng]: https://sites.google.com/site/yingjieum/
 [aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
 [lsmallman]: https://scholar.google.co.uk/citations?user=B1A0KykAAAAJ&hl=en
-[rpmasini]: https://masini.princeton.edu/
+[rpmasini]: https://anson.ucdavis.edu/~rmasini/bio.html
 [jmklusowski]: https://klusowski.princeton.edu/
 [rchandak]: https://rajitachandak.github.io/
