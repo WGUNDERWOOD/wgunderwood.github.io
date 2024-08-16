@@ -43,4 +43,4 @@
 ** Plotting topological surfaces
 * Other
 ** TODO Nix flakes
-** TODO Update email addresses for colleagues
+** TODO Move to zola
