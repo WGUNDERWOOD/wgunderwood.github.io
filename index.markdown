@@ -29,7 +29,8 @@ I am hosted by
 Richard Samworth</a>,
 and my research interests encompass various topics in statistical
 theory and methodology, including nonparametric procedures,
-random forests, and coupling theory.
+random forests, and coupling theory. I also offer regular consultations at the
+[Statistics Clinic](http://www.statslab.cam.ac.uk/clinic).
 
 <div class="frame">
 
