@@ -53,14 +53,16 @@ https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 [M. D. Cattaneo][mdcattaneo],
 [J. M. Klusowski][jmklusowski]
 and [W. G. Underwood][wgunderwood],
-2023 <br>
+2024 <br>
+[*Annals of Statistics*](https://imstat.org/journals-and-publications/annals-of-statistics/),
+reject and resubmit <br>
 [arXiv:2310.09702](https://arxiv.org/abs/2310.09702) <br>
 
 - **Yurinskii's Coupling for Martingales** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
 and [W. G. Underwood][wgunderwood],
-2022 <br>
+2024 <br>
 [*Annals of Statistics*](https://imstat.org/journals-and-publications/annals-of-statistics/),
 reject and resubmit <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
