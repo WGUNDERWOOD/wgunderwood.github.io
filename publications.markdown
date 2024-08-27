@@ -87,7 +87,7 @@ University of Pittsburgh,
 February 2024
 
 - Statistics Seminar,
-University of Illinois,
+University of Illinois Urbana-Champaign,
 January 2024
 
 - Statistics Seminar,
