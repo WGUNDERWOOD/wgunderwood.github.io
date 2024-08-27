@@ -2,8 +2,8 @@
 
 # Site variables
 # Can create custom variables, accessible via {{ site.myvariable }}
-title: William G Underwood
-author: William G Underwood
+title: William G. Underwood
+author: William G. Underwood
 email: wgu21@cam.ac.uk
 description: Welcome to my website.
 baseurl: ""
