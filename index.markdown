@@ -220,6 +220,14 @@ July 2019
 
 <li>
 <strong>
+James Fund for Mathematics Research Grant
+</strong> <br>
+St John's College, University of Oxford,
+June 2017
+</li>
+
+<li>
+<strong>
 Academic Exhibition
 </strong> <br>
 St John's College, University of Oxford,
