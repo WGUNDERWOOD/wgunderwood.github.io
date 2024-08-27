@@ -8,7 +8,7 @@ permalink: /contact/
 [wgu21@cam.ac.uk](mailto:wgu21@cam.ac.uk)
 
 ### Office address
-William G.\ Underwood <br>
+William G. Underwood <br>
 Statistical Laboratory <br>
 Centre for Mathematical Sciences <br>
 Wilberforce Road <br>
