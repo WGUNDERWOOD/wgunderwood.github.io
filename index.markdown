@@ -29,6 +29,7 @@ I am hosted by
 Richard Samworth</a>,
 and my research interests encompass various topics in statistical
 theory and methodology, including nonparametric procedures,
+kernel techniques,
 random forests, and coupling theory. I also offer regular consultations at the
 [Statistics Clinic](http://www.statslab.cam.ac.uk/clinic).
 
