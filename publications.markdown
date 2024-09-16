@@ -64,7 +64,7 @@ reject and resubmit <br>
 and [W. G. Underwood][wgunderwood],
 2024 <br>
 [*Annals of Statistics*](https://imstat.org/journals-and-publications/annals-of-statistics/),
-reject and resubmit <br>
+revise and resubmit <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
 
 ## Working papers
