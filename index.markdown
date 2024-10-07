@@ -241,6 +241,8 @@ July 2016
 
 <li> Econometric Theory </li>
 
+<li> Information Theory, Probability and Statistical Learning </li>
+
 <li> Journal of the American Statistical Association </li>
 
 <li> Journal of Business and Economic Statistics </li>
