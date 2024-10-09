@@ -80,13 +80,11 @@ in 2019. I am an alumnus of
 <a href="https://www.sjc.ox.ac.uk/">St John’s College, Oxford</a>.
 
 In my spare time I enjoy
-choral singing,
-classical piano,
-chess and programming,
-as well as
-hiking,
-skiing
-and playing squash.
+programming in [Julia](https://julialang.org/) and
+[Rust](https://www.rust-lang.org/),
+choral singing with the
+[Choir of Christ's College, Cambridge](https://www.christs.cam.ac.uk/choir),
+and playing classical piano.
 
 <h2> Contact </h2>
 
