@@ -237,6 +237,8 @@ July 2016
 <h2> Peer Review </h2>
 <ul>
 
+<li> Annals of Statistics </li>
+
 <li> Econometric Theory </li>
 
 <li> Information Theory, Probability and Statistical Learning </li>
