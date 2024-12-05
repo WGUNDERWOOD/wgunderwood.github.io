@@ -19,8 +19,9 @@ My software is hosted on
 [Y. Feng][yfeng]
 and [W. G. Underwood][wgunderwood],
 2024 <br>
-[*Journal of the American Statistical Association*](https://www.tandfonline.com/toc/uasa20/current),
-forthcoming <br>
+[*Journal of the American Statistical Association*](
+https://www.tandfonline.com/toc/uasa20/current),
+*119*(548), 2695--2708 <br>
 [doi:10.1080/01621459.2023.2272785](
 https://doi.org/10.1080/01621459.2023.2272785) <br>
 [arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
@@ -54,7 +55,8 @@ https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 [J. M. Klusowski][jmklusowski]
 and [W. G. Underwood][wgunderwood],
 2024 <br>
-[*Annals of Statistics*](https://imstat.org/journals-and-publications/annals-of-statistics/),
+[*Annals of Statistics*](
+https://imstat.org/journals-and-publications/annals-of-statistics/),
 reject and resubmit <br>
 [arXiv:2310.09702](https://arxiv.org/abs/2310.09702) <br>
 
@@ -63,7 +65,8 @@ reject and resubmit <br>
 [R. P. Masini][rpmasini]
 and [W. G. Underwood][wgunderwood],
 2024 <br>
-[*Annals of Statistics*](https://imstat.org/journals-and-publications/annals-of-statistics/),
+[*Annals of Statistics*](
+https://imstat.org/journals-and-publications/annals-of-statistics/),
 revise and resubmit <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
 
