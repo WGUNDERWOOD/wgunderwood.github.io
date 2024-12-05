@@ -108,6 +108,13 @@ September 2021
 
 ## Software
 
+- **tex-fmt** <br>
+LaTeX formatter written in Rust <br>
+[W. G. Underwood][wgunderwood],
+2024 <br>
+Available on
+[GitHub](https://github.com/WGUNDERWOOD/tex-fmt) <br>
+
 - **MondrianForests** <br>
 Mondrian random forests in Julia <br>
 [W. G. Underwood][wgunderwood],
