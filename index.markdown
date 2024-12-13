@@ -100,8 +100,7 @@ download my CV here</a>.
 
 <h2> Teaching </h2>
 
-I served as an Assistant in Instruction
-for the following classes at Princeton University:
+<h3> Assistant in Instruction, Princeton University </h3>
 
 <ul>
 
@@ -250,6 +249,8 @@ July 2016
 <li> Journal of Causal Inference </li>
 
 <li> Journal of Econometrics </li>
+
+<li> Journal of Machine Learning Research </li>
 
 <li> Operations Research </li>
 
