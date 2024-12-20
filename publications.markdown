@@ -6,8 +6,8 @@ permalink: /publications/
 
 My publications,
 as in my
-[CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.pdf).
-Also available in
+[CV](https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.pdf);
+also available in
 [BibTeX](https://github.com/WGUNDERWOOD/wgu-cv/blob/main/WGUnderwood.bib).
 My software is hosted on
 [GitHub](https://github.com/WGUNDERWOOD).
