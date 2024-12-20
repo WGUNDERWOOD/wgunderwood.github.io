@@ -83,7 +83,11 @@ and [W. G. Underwood][wgunderwood] <br>
 [J. M. Klusowski][jmklusowski]
 and [W. G. Underwood][wgunderwood] <br>
 
-## Presentations
+## Presentations and conferences
+
+- International Conference on Statistics and Data Science,
+Nice,
+December 2024
 
 - Statistics Seminar,
 University of Pittsburgh,
@@ -98,11 +102,15 @@ University of Michigan,
 January 2024
 
 - PhD Poster Session,
-Two Sigma Investments,
+Two Sigma Investments, New York,
 July 2023
 
-- PhD Research Symposium,
-Two Sigma Investments,
+- Statistical Foundations of Data Science and their Applications,
+Princeton University,
+May 2023
+
+- Research Symposium,
+Two Sigma Investments, New York,
 June 2022
 
 - Statistics Laboratory,
