@@ -100,82 +100,96 @@ download my CV here</a>.
 
 <h2> Teaching </h2>
 
+<h3> Supervisor, University of Cambridge </h3>
+
+<li>
+Part IB Statistics, with
+<a href="">
+TODO </a>,
+Lent 2025
+</li>
+
+<h3> Drop-in session leader, University of Cambridge </h3>
+
+<li>
+Part III Concentration Inequalities, with
+<a href="">
+TODO </a>,
+Lent 2025
+</li>
+
+<li>
+Part III Topics in Statistical Theory, with
+<a href="http://www.statslab.cam.ac.uk/~rjs57/">
+Richard Samworth</a>,
+Michaelmas 2024
+</li>
+
+<li>
+Part III Modern Statistical Methods, with
+<a href="http://www.statslab.cam.ac.uk/~sb2116/">
+Sergio Bacallado</a>,
+Michaelmas 2024
+</li>
+
 <h3> Assistant in Instruction, Princeton University </h3>
 
 <ul>
 
 <li>
-<strong> ORF 499: </strong>
-Senior Thesis,
-with
+ORF 499: Senior Thesis, with
 <a href="https://drigobon.com/">
 Daniel Rigobon</a>,
 Spring 2024
 </li>
 
 <li>
-<strong> ORF 498: </strong>
-Senior Independent Research Foundations,
-with
+ORF 498: Senior Independent Research Foundations, with
 <a href="https://drigobon.com/">
 Daniel Rigobon</a>,
 Fall 2023
 </li>
 
 <li>
-<strong> SML 201: </strong>
-Introduction to Data Science,
-with
+SML 201: Introduction to Data Science, with
 <a href="https://csml.princeton.edu/people/daisy-yan-huang">
 Daisy Yan Huang</a>,
 Fall 2023
 </li>
 
 <li>
-<strong> ORF 363: </strong>
-Computing and Optimization,
-with
+ORF 363: Computing and Optimization, with
 <a href="https://orfe.princeton.edu/people/ioannis-akrotirianakis">
 Ioannis Akrotirianakis</a>,
 Spring 2023
 </li>
 
 <li>
-<strong> ORF 524: </strong>
-Statistical Theory and Methods,
-with
+ORF 524: Statistical Theory and Methods, with
 <a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
 Fall 2022
 </li>
 
 <li>
-<strong> ORF 526: </strong>
-Probability Theory,
-with
+ORF 526: Probability Theory, with
 <a href="http://mykhaylo.princeton.edu/">Mykhaylo Shkolnikov</a>,
 Fall 2022
 </li>
 
 <li>
-<strong> ORF 524: </strong>
-Statistical Theory and Methods,
-with
+ORF 524: Statistical Theory and Methods, with
 <a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
 Fall 2021
 </li>
 
 <li>
-<strong> ORF 245: </strong>
-Fundamentals of Statistics,
-with
+ORF 245: Fundamentals of Statistics, with
 <a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
 Spring 2021
 </li>
 
 <li>
-<strong> ORF 363: </strong>
-Computing and Optimization,
-with
+ORF 363: Computing and Optimization, with
 <a href="http://aaa.princeton.edu/">Amir Ali Ahmadi</a>,
 Fall 2020
 </li>
