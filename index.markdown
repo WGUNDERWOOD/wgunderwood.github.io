@@ -269,3 +269,6 @@ July 2016
 <li> Operations Research </li>
 
 </ul>
+
+<script data-goatcounter="https://wgunderwood.goatcounter.com/count"
+async src="//gc.zgo.at/count.js"></script>

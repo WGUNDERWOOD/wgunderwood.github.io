@@ -4,6 +4,12 @@ title: Contact
 permalink: /contact/
 ---
 
+<div class="frame">
+<img
+style="width: 200px; border: 2px solid #54576a; margin-top: -45px"
+src="/assets/general/maths_cat.jpeg">
+</div>
+
 ### Email address
 [wgu21@cam.ac.uk](mailto:wgu21@cam.ac.uk)
 
