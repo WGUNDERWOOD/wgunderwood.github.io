@@ -18,13 +18,8 @@ My software is hosted on
 [M. D. Cattaneo][mdcattaneo],
 [Y. Feng][yfeng]
 and [W. G. Underwood][wgunderwood],
-2024 <br>
-[*Journal of the American Statistical Association*](
-https://www.tandfonline.com/toc/uasa20/current),
-*119*(548), 2695--2708 <br>
-[doi:10.1080/01621459.2023.2272785](
-https://doi.org/10.1080/01621459.2023.2272785) <br>
-[arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
+2025 <br>
+[arXiv:2502.07699](https://arxiv.org/abs/2502.07699) <br>
 
 - **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
 [W. G. Underwood][wgunderwood],
@@ -49,6 +44,16 @@ and [A. Artemiou][aartemiou],
 https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 
 ## Preprints
+
+- **Sharp Anti-Concentration Inequalities for Extremum Statistics via Copulas** <br>
+[M. D. Cattaneo][mdcattaneo],
+[R. P. Masini][rpmasini]
+and [W. G. Underwood][wgunderwood],
+2025 <br>
+[*Annals of Statistics*](
+https://imstat.org/journals-and-publications/annals-of-statistics/),
+reject and resubmit <br>
+[arXiv:2310.09702](https://arxiv.org/abs/2310.09702) <br>
 
 - **Inference with Mondrian Random Forests** <br>
 [M. D. Cattaneo][mdcattaneo],
