@@ -104,19 +104,12 @@ download my CV here</a>.
 
 <li>
 Part IB Statistics, with
-<a href="">
-TODO </a>,
+<a href="http://www.statslab.cam.ac.uk/~qz280/">
+Qingyuan Zhao</a>,
 Lent 2025
 </li>
 
 <h3> Drop-in session leader, University of Cambridge </h3>
-
-<li>
-Part III Concentration Inequalities, with
-<a href="">
-TODO </a>,
-Lent 2025
-</li>
 
 <li>
 Part III Topics in Statistical Theory, with
