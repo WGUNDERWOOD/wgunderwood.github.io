@@ -114,6 +114,13 @@ Lent 2025
 <ul>
 
 <li>
+Part III Concentration Inequalities, with
+<a href="https://www.dpmms.cam.ac.uk/~lg560/index.html">
+Lampros Gavalakis</a>,
+Lent 2025
+</li>
+
+<li>
 Part III Topics in Statistical Theory, with
 <a href="http://www.statslab.cam.ac.uk/~rjs57/">
 Richard Samworth</a>,
