@@ -111,6 +111,8 @@ Lent 2025
 
 <h3> Drop-in session leader, University of Cambridge </h3>
 
+<ul>
+
 <li>
 Part III Topics in Statistical Theory, with
 <a href="http://www.statslab.cam.ac.uk/~rjs57/">
@@ -124,6 +126,8 @@ Part III Modern Statistical Methods, with
 Sergio Bacallado</a>,
 Michaelmas 2024
 </li>
+
+</ul>
 
 <h3> Assistant in Instruction, Princeton University </h3>
 
