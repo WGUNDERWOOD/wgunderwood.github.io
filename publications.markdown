@@ -50,6 +50,13 @@ https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 
 ## Preprints
 
+- **Sharp Anti-Concentration Inequalities for Extremum Statistics via Copulas** <br>
+[M. D. Cattaneo][mdcattaneo],
+[R. P. Masini][rpmasini]
+and [W. G. Underwood][wgunderwood],
+2025 <br>
+[arXiv:2502.07699](https://arxiv.org/abs/2502.07699) <br>
+
 - **Inference with Mondrian Random Forests** <br>
 [M. D. Cattaneo][mdcattaneo],
 [J. M. Klusowski][jmklusowski]
