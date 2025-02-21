@@ -102,12 +102,16 @@ download my CV here</a>.
 
 <h3> Supervisor, University of Cambridge </h3>
 
+<ul>
+
 <li>
 Part IB Statistics, with
 <a href="http://www.statslab.cam.ac.uk/~qz280/">
 Qingyuan Zhao</a>,
 Lent 2025
 </li>
+
+</ul>
 
 <h3> Drop-in session leader, University of Cambridge </h3>
 
