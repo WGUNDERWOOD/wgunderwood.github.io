@@ -4,8 +4,8 @@ title:  "Sharp Anti-Concentration Inequalities for Extremum Statistics via Copul
 date:   2025-02-13
 ---
 
-I'm pleased to share my new preprint, titled
-"Sharp Anti-Concentration Inequalities for Extremum Statistics via Copulas"
+My new preprint is titled
+"Sharp Anti-Concentration Inequalities for Extremum Statistics via Copulas",
 with
 [Matias Cattaneo](https://cattaneo.princeton.edu)
 and
