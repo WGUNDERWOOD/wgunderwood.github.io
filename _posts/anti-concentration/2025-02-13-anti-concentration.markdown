@@ -6,7 +6,7 @@ date:   2025-02-13
 
 I'm pleased to share my new preprint, titled
 "Sharp Anti-Concentration Inequalities for Extremum Statistics via Copulas"
-and coauthored with
+with
 [Matias Cattaneo](https://cattaneo.princeton.edu)
 and
 [Ricardo Masini](https://anson.ucdavis.edu/~rmasini/bio.html).
