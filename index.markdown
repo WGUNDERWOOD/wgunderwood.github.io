@@ -274,6 +274,8 @@ July 2016
 
 <li> Journal of Machine Learning Research </li>
 
+<li> Journal of Nonparametric Statistics </li>
+
 <li> Operations Research </li>
 
 </ul>
