@@ -260,6 +260,8 @@ July 2016
 
 <li> Annals of Statistics </li>
 
+<li> Bernoulli </li>
+
 <li> Econometric Theory </li>
 
 <li> Information Theory, Probability and Statistical Learning </li>
