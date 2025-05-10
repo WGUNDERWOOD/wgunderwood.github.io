@@ -68,10 +68,10 @@ and [W. G. Underwood][wgunderwood],
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
 and [W. G. Underwood][wgunderwood],
-2024 <br>
+2025 <br>
 [*Annals of Statistics*](
 https://imstat.org/journals-and-publications/annals-of-statistics/),
-revise and resubmit <br>
+forthcoming <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
 
 ## Working papers
