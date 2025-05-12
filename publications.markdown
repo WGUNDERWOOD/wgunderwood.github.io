@@ -14,6 +14,16 @@ My software is hosted on
 
 ## Articles
 
+- **Yurinskii's Coupling for Martingales** <br>
+[M. D. Cattaneo][mdcattaneo],
+[R. P. Masini][rpmasini]
+and [W. G. Underwood][wgunderwood],
+2025 <br>
+[*Annals of Statistics*](
+https://imstat.org/journals-and-publications/annals-of-statistics/),
+forthcoming <br>
+[arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
+
 - **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
 [M. D. Cattaneo][mdcattaneo],
 [Y. Feng][yfeng]
@@ -57,16 +67,6 @@ and [W. G. Underwood][wgunderwood],
 2025 <br>
 [arXiv:2502.07699](https://arxiv.org/abs/2502.07699) <br>
 
-- **Yurinskii's Coupling for Martingales** <br>
-[M. D. Cattaneo][mdcattaneo],
-[R. P. Masini][rpmasini]
-and [W. G. Underwood][wgunderwood],
-2025 <br>
-[*Annals of Statistics*](
-https://imstat.org/journals-and-publications/annals-of-statistics/),
-forthcoming <br>
-[arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
-
 - **Inference with Mondrian Random Forests** <br>
 [M. D. Cattaneo][mdcattaneo],
 [J. M. Klusowski][jmklusowski]
@@ -79,12 +79,6 @@ and [W. G. Underwood][wgunderwood],
 - **Higher-order extensions to the Lindeberg method** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
-and [W. G. Underwood][wgunderwood] <br>
-
-- **Adaptive Mondrian Random Forests** <br>
-[M. D. Cattaneo][mdcattaneo],
-[R. Chandak][rchandak],
-[J. M. Klusowski][jmklusowski]
 and [W. G. Underwood][wgunderwood] <br>
 
 ## Presentations and conferences
