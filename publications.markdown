@@ -14,7 +14,7 @@ My software is hosted on
 
 ## Articles
 
-- **Yurinskii's Coupling for Martingales** <br>
+- **Yurinskii's coupling for martingales** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
 and [W. G. Underwood][wgunderwood],
@@ -24,7 +24,7 @@ https://imstat.org/journals-and-publications/annals-of-statistics/),
 forthcoming <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
 
-- **Uniform Inference for Kernel Density Estimators with Dyadic Data** <br>
+- **Uniform inference for kernel density estimators with dyadic data** <br>
 [M. D. Cattaneo][mdcattaneo],
 [Y. Feng][yfeng]
 and [W. G. Underwood][wgunderwood],
@@ -36,7 +36,7 @@ https://www.tandfonline.com/toc/uasa20/current),
 https://doi.org/10.1080/01621459.2023.2272785) <br>
 [arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
 
-- **Motif-Based Spectral Clustering of Weighted Directed Networks** <br>
+- **Motif-based spectral clustering of weighted directed networks** <br>
 [W. G. Underwood][wgunderwood],
 [A. Elliott][aelliott]
 and [M. Cucuringu][mcucuringu],
@@ -60,14 +60,14 @@ https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 
 ## Preprints
 
-- **Sharp Anti-Concentration Inequalities for Extremum Statistics via Copulas** <br>
+- **Sharp anti-concentration inequalities for extremum statistics via copulas** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
 and [W. G. Underwood][wgunderwood],
 2025 <br>
 [arXiv:2502.07699](https://arxiv.org/abs/2502.07699) <br>
 
-- **Inference with Mondrian Random Forests** <br>
+- **Inference with Mondrian random forests** <br>
 [M. D. Cattaneo][mdcattaneo],
 [J. M. Klusowski][jmklusowski]
 and [W. G. Underwood][wgunderwood],
