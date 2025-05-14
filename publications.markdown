@@ -83,6 +83,10 @@ and [W. G. Underwood][wgunderwood] <br>
 
 ## Presentations and conferences
 
+- London Symposium on Information Theory,
+Cambridge,
+May 2025
+
 - International Conference on Statistics and Data Science,
 Nice,
 December 2024
