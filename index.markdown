@@ -111,6 +111,13 @@ Qingyuan Zhao</a>,
 Lent 2025
 </li>
 
+<li>
+Part III Essay on Inference with Random Forests, with
+<a href="http://www.statslab.cam.ac.uk/~rjs57/">
+Richard Samworth</a>,
+Lent 2025
+</li>
+
 </ul>
 
 <h3> Drop-in session leader, University of Cambridge </h3>
