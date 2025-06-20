@@ -100,6 +100,17 @@ download my CV here</a>.
 
 <h2> Teaching </h2>
 
+<h3> Lecturer, University of Cambridge </h3>
+
+<ul>
+
+<li>
+Part III Statistical Learning in Practice,
+Lent 2026
+</li>
+
+</ul>
+
 <h3> Supervisor, University of Cambridge </h3>
 
 <ul>
