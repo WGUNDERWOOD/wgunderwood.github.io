@@ -62,11 +62,11 @@ https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 
 - **Upgrading survival models with CARE** <br>
 [W. G. Underwood][wgunderwood],
-[Henry Reeve][hwjreeve],
-[Oliver Feng][oyfeng],
-[Samuel Lambert][salambert],
+[Henry W. J. Reeve][hwjreeve],
+[Oliver Y. Feng][oyfeng],
+[Samuel A. Lambert][salambert],
 [Bhramar Mukherjee][bmukherjee]
-and [Richard Samworth][rjsamworth],
+and [Richard J. Samworth][rjsamworth],
 2025 <br>
 [arXiv:2506.23870](https://arxiv.org/abs/2506.23870) <br>
 
