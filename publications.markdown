@@ -64,7 +64,7 @@ https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 [W. G. Underwood][wgunderwood],
 [Henry W. J. Reeve][hwjreeve],
 [Oliver Y. Feng][oyfeng],
-[Samuel A. Lambert][salambert],
+[Samuel A. Lambert][salambert], <br>
 [Bhramar Mukherjee][bmukherjee]
 and [Richard J. Samworth][rjsamworth],
 2025 <br>
