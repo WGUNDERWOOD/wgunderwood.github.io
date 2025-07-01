@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Upgrading Survival Models with CARE"
+date:   2025-07-01
+---
+
+I'm pleased to share my new preprint,
+"Upgrading survival models with CARE",
+authored with
+[Henry Reeve](https://henryreeve.netlify.app/),
+[Oliver Feng](https://sites.google.com/view/oyfeng20/home),
+[Samuel Lambert](https://www.phpc.cam.ac.uk/staff/dr-samuel-lambert),
+[Bhramar Mukherjee](https://ysph.yale.edu/profile/bhramar-mukherjee/)
+and [Richard Samworth](https://ysph.yale.edu/profile/bhramar-mukherjee/).
+
+It can be found at
+[arXiv:2506.23870](https://arxiv.org/abs/2506.23870).
+
+{% include mathjax.html %}
+
+# Abstract
+
+Clinical risk prediction models are regularly updated as new data, often with
+additional covariates, become available. We propose CARE (Convex Aggregation of
+relative Risk Estimators) as a general approach for combining existing
+"external" estimators with a new data set in a time-to-event survival analysis
+setting. Our method initially employs the new data to fit a flexible family of
+reproducing kernel estimators via penalised partial likelihood maximisation.
+The final relative risk estimator is then constructed as a convex combination
+of the kernel and external estimators, with the convex combination coefficients
+and regularisation parameters selected using cross-validation. We establish
+high-probability bounds for the $L_2$-error of our proposed aggregated
+estimator, showing that it achieves a rate of convergence that is at least as
+good as both the optimal kernel estimator and the best external model.
+Empirical results from simulation studies align with the theoretical results,
+and we illustrate the improvements our methods provide for cardiovascular
+disease risk modelling. Our methodology is implemented in the Python package
+[care-survival](https://github.com/WGUNDERWOOD/care-survival).
