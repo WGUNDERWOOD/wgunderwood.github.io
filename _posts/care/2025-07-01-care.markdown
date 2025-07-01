@@ -5,15 +5,15 @@ date:   2025-07-01
 ---
 
 I'm pleased to share my new preprint,
-"Upgrading survival models with CARE",
-authored with
+"Upgrading survival models with CARE".
+
+It is authored with
 [Henry Reeve](https://henryreeve.netlify.app/),
 [Oliver Feng](https://sites.google.com/view/oyfeng20/home),
 [Samuel Lambert](https://www.phpc.cam.ac.uk/staff/dr-samuel-lambert),
 [Bhramar Mukherjee](https://ysph.yale.edu/profile/bhramar-mukherjee/)
-and [Richard Samworth](https://ysph.yale.edu/profile/bhramar-mukherjee/).
-
-It can be found at
+and [Richard Samworth](https://ysph.yale.edu/profile/bhramar-mukherjee/),
+and can be found at
 [arXiv:2506.23870](https://arxiv.org/abs/2506.23870).
 
 {% include mathjax.html %}
