@@ -131,6 +131,13 @@ September 2021
 
 ## Software
 
+- **care-survival** <br>
+Upgrading survival models with CARE in Python <br>
+[W. G. Underwood][wgunderwood],
+2025 <br>
+Available on
+[GitHub](https://github.com/WGUNDERWOOD/care-survival) <br>
+
 - **tex-fmt** <br>
 LaTeX formatter written in Rust <br>
 [W. G. Underwood][wgunderwood],
