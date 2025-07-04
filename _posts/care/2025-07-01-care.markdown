@@ -11,7 +11,7 @@ authored with
 [Oliver Feng](https://sites.google.com/view/oyfeng20/home),
 [Samuel Lambert](https://www.phpc.cam.ac.uk/staff/dr-samuel-lambert),
 [Bhramar Mukherjee](https://ysph.yale.edu/profile/bhramar-mukherjee/)
-and [Richard Samworth](https://ysph.yale.edu/profile/bhramar-mukherjee/).
+and [Richard Samworth](https://www.statslab.cam.ac.uk/~rjs57/).
 
 It can be found at
 [arXiv:2506.23870](https://arxiv.org/abs/2506.23870).
