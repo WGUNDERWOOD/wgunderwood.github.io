@@ -27,8 +27,6 @@ Cambridge, CB3 0WB <br>
 - [GitHub](https://github.com/WGUNDERWOOD)
 - [Google Scholar](https://scholar.google.co.uk/
   citations?user=4rtNN4wAAAAJ&hl=en)
-- [Kaggle](https://www.kaggle.com/wgunderwood)
-- [Keybase](https://keybase.io/wgunderwood/chat)
 - [LinkedIn](https://www.linkedin.com/in/william--underwood/)
 - [ORCID](https://orcid.org/0000-0003-4604-1548)
 - [ResearchGate](https://www.researchgate.net/profile/William-Underwood-4)
