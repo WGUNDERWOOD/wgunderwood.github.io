@@ -117,7 +117,7 @@ January 2024
 Two Sigma Investments, New York,
 July 2023
 
-- Statistical Foundations of Data Science and their Applications,
+- Statistical Foundations of Data Science,
 Princeton University,
 May 2023
 
