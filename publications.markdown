@@ -136,7 +136,8 @@ Upgrading survival models with CARE in Python <br>
 [W. G. Underwood][wgunderwood],
 2025 <br>
 Available on
-[GitHub](https://github.com/WGUNDERWOOD/care-survival) <br>
+[GitHub](https://github.com/WGUNDERWOOD/care-survival)
+and [PyPI](https://pypi.org/project/care-survival/) <br>
 
 - **tex-fmt** <br>
 LaTeX formatter written in Rust <br>
