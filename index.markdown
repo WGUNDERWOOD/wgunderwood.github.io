@@ -33,8 +33,8 @@ kernel techniques,
 random forests, and coupling theory. I also offer regular consultations at the
 [Statistics Clinic](http://www.statslab.cam.ac.uk/clinic).
 
-**I am currently on the academic job market,
-seeking positions starting in the latter half of 2025.**
+**I am on the academic job market,
+seeking positions starting in Autumn 2026.**
 
 <div class="frame">
 
