@@ -299,6 +299,8 @@ July 2016
 
 <li> Journal of Nonparametric Statistics </li>
 
+<li> Journal of the Royal Statistical Society, Series B </li>
+
 <li> Operations Research </li>
 
 </ul>
