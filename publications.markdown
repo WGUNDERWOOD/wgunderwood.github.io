@@ -93,6 +93,18 @@ and [W. G. Underwood][wgunderwood] <br>
 
 ## Presentations and conferences
 
+- GSEM Statistics Seminar,
+Université de Genève,
+November 2025
+
+- MRC Biostatistics Unit Seminar,
+University of Cambridge,
+September 2025
+
+- StatMathAppli,
+Fréjus,
+September 2025
+
 - London Symposium on Information Theory,
 Cambridge,
 May 2025
