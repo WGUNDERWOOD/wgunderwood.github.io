@@ -301,6 +301,8 @@ July 2016
 
 <li> Journal of the Royal Statistical Society, Series B </li>
 
+<li> Journal of Statistical Computation and Simulation </li>
+
 <li> Operations Research </li>
 
 </ul>
