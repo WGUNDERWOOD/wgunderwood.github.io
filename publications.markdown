@@ -97,6 +97,10 @@ and [W. G. Underwood][wgunderwood] <br>
 Université de Genève,
 November 2025
 
+- Economics Seminar,
+University of York,
+October 2025
+
 - MRC Biostatistics Unit Seminar,
 University of Cambridge,
 September 2025
