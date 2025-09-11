@@ -228,6 +228,15 @@ Fall 2020
 <h2> Awards </h2>
 
 <ul>
+
+<li>
+<strong>
+Early Career Researcher Grant
+</strong> <br>
+G-Research,
+August 2025
+</li>
+
 <li>
 <strong>
 School of Engineering and Applied Science Award for Excellence
