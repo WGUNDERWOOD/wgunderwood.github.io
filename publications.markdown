@@ -86,10 +86,18 @@ and [W. G. Underwood][wgunderwood],
 
 ## Working papers
 
-- **Higher-order extensions to the Lindeberg method** <br>
+- **Higher-order Yurinskii coupling** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
 and [W. G. Underwood][wgunderwood] <br>
+
+- **Manifold testing with diffusion models** <br>
+[W. G. Underwood][wgunderwood],
+[S. Kotekal][skotekal]
+and [Richard J. Samworth][rjsamworth] <br>
+
+- **Optimal polyadic estimation** <br>
+[W. G. Underwood][wgunderwood] <br>
 
 ## Presentations and conferences
 
@@ -202,4 +210,5 @@ and [PyPI](https://pypi.org/project/motifcluster/) <br>
 [oyfeng]: https://sites.google.com/view/oyfeng20/home
 [salambert]: https://www.phpc.cam.ac.uk/staff/dr-samuel-lambert
 [bmukherjee]: https://ysph.yale.edu/profile/bhramar-mukherjee/
-[rjsamworth]: https://ysph.yale.edu/profile/bhramar-mukherjee/
+[rjsamworth]: https://www.statslab.cam.ac.uk/~rjs57/
+[skotekal]: https://skotekal.github.io/
