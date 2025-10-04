@@ -49,7 +49,7 @@ https://doi.org/doi:10.1007/s41109-020-00293-z) <br>
 
 - **Simple Poisson PCA: an algorithm for (sparse) feature extraction
 with simultaneous dimension determination** <br>
-[L. Smallman][lsmallman],
+L. Smallman,
 [W. G. Underwood][wgunderwood]
 and [A. Artemiou][aartemiou],
 2019 <br>
@@ -202,7 +202,6 @@ and [PyPI](https://pypi.org/project/motifcluster/) <br>
 [mdcattaneo]: https://cattaneo.princeton.edu/
 [yfeng]: https://sites.google.com/site/yingjieum/
 [aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
-[lsmallman]: https://scholar.google.co.uk/citations?user=B1A0KykAAAAJ&hl=en
 [rpmasini]: https://anson.ucdavis.edu/~rmasini/bio.html
 [jmklusowski]: https://klusowski.princeton.edu/
 [rchandak]: https://rajitachandak.github.io/

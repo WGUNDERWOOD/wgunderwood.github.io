@@ -209,7 +209,7 @@ Fall 2022
 
 <li>
 ORF 526: Probability Theory, with
-<a href="http://mykhaylo.princeton.edu/">Mykhaylo Shkolnikov</a>,
+<a href="https://www.math.cmu.edu/~mshkolni/">Mykhaylo Shkolnikov</a>,
 Fall 2022
 </li>
 
