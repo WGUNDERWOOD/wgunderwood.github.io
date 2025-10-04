@@ -120,6 +120,13 @@ Lent 2026
 <ul>
 
 <li>
+Part II Probability and Measure, with
+<a href="https://www.dpmms.cam.ac.uk/professor-pierre-raphael-personal-homepage">
+Pierre Raphaël</a>,
+Michaelmas 2025
+</li>
+
+<li>
 Part IB Statistics, with
 <a href="http://www.statslab.cam.ac.uk/~qz280/">
 Qingyuan Zhao</a>,
