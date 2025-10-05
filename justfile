@@ -14,11 +14,8 @@ build:
 serve:
     @JEKYLL_ENV=development jekyll serve
 
-#bundle:
-#@bundle install
-
 gemset:
-    @BUNDLE_FORCE_RUBY_PLATFORM=true bundix -l
+    @BUNDLE_FORCE_RUBY_PLATFORM=true bundix --magic
 
 view:
     @firefox --new-window "localhost:4000" &
@@ -26,6 +23,9 @@ view:
 linkcheck:
     @linkchecker --ignore-url=researchgate.*William.*Underwood \
         --check-extern "https://wgunderwood.github.io/" --no-warnings
+
+update:
+    @bundle update
 
 spell:
     @spell-check *.markdown _posts/**/*.markdown

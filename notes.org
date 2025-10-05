@@ -42,5 +42,4 @@
 ** Spline regression
 ** Plotting topological surfaces
 * Other
-** TODO Nix flakes
 ** TODO Move to zola
