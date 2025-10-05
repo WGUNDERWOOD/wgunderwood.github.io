@@ -6,6 +6,10 @@ built using
 [Jekyll](https://jekyllrb.com/)
 and hosted with [GitHub Pages](https://pages.github.com/).
 
+## Building with Nix
+
+Run `nix develop` to enter the environment.
+
 ## Posts
 
 All of my posts can be found under
