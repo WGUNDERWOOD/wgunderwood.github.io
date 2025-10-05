@@ -70,7 +70,8 @@ and [Richard J. Samworth][rjsamworth],
 2025 <br>
 [arXiv:2506.23870](https://arxiv.org/abs/2506.23870) <br>
 
-- **Sharp anti-concentration inequalities for extremum statistics via copulas** <br>
+- **Sharp anti-concentration inequalities for
+extremum statistics via copulas** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
 and [W. G. Underwood][wgunderwood],
@@ -204,7 +205,6 @@ and [PyPI](https://pypi.org/project/motifcluster/) <br>
 [aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
 [rpmasini]: https://anson.ucdavis.edu/~rmasini/bio.html
 [jmklusowski]: https://klusowski.princeton.edu/
-[rchandak]: https://rajitachandak.github.io/
 [hwjreeve]: https://henryreeve.netlify.app/
 [oyfeng]: https://sites.google.com/view/oyfeng20/home
 [salambert]: https://www.phpc.cam.ac.uk/staff/dr-samuel-lambert
