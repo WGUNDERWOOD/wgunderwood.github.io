@@ -102,6 +102,10 @@ and [Richard J. Samworth][rjsamworth] <br>
 
 ## Presentations and conferences
 
+- International Conference on Statistics and Data Science,
+Seville,
+December 2025
+
 - GSEM Statistics Seminar,
 Université de Genève,
 November 2025
