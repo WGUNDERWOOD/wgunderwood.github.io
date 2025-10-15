@@ -322,4 +322,6 @@ July 2016
 
 <li> Operations Research </li>
 
+<li> SIAM Journal on Mathematics of Data Science </li>
+
 </ul>
