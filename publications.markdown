@@ -14,6 +14,17 @@ My software is hosted on
 
 ## Articles
 
+- **Sharp anti-concentration inequalities for
+extremum statistics via copulas** <br>
+[M. D. Cattaneo][mdcattaneo],
+[R. P. Masini][rpmasini]
+and [W. G. Underwood][wgunderwood],
+2025 <br>
+[*Bernoulli*](
+https://bernoullisociety.org/publications/bernoulli-journal),
+forthcoming <br>
+[arXiv:2502.07699](https://arxiv.org/abs/2502.07699) <br>
+
 - **Yurinskii's coupling for martingales** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
@@ -69,14 +80,6 @@ https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 and [Richard J. Samworth][rjsamworth],
 2025 <br>
 [arXiv:2506.23870](https://arxiv.org/abs/2506.23870) <br>
-
-- **Sharp anti-concentration inequalities for
-extremum statistics via copulas** <br>
-[M. D. Cattaneo][mdcattaneo],
-[R. P. Masini][rpmasini]
-and [W. G. Underwood][wgunderwood],
-2025 <br>
-[arXiv:2502.07699](https://arxiv.org/abs/2502.07699) <br>
 
 - **Inference with Mondrian random forests** <br>
 [M. D. Cattaneo][mdcattaneo],
