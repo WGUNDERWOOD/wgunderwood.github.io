@@ -113,6 +113,10 @@ December 2025
 Université de Genève,
 November 2025
 
+- MRC Biostatistics Unit Armitage Workshop,
+University of Cambridge,
+October 2025
+
 - Economics Seminar,
 University of York,
 October 2025
