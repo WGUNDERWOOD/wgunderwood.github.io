@@ -120,7 +120,7 @@ Lent 2026
 <ul>
 
 <li>
-Part III Essay on Score Matching and Diffusion Models, with
+Part III Essay on Score Matching and Diffusion, with
 <a href="http://www.statslab.cam.ac.uk/~rjs57/">
 Richard Samworth</a>,
 Lent 2026
