@@ -120,6 +120,13 @@ Lent 2026
 <ul>
 
 <li>
+Part III Essay on Score Matching and Diffusion Models, with
+<a href="http://www.statslab.cam.ac.uk/~rjs57/">
+Richard Samworth</a>,
+Lent 2026
+</li>
+
+<li>
 Part II Probability and Measure, with
 <a href="https://www.dpmms.cam.ac.uk/professor-pierre-raphael-personal-homepage">
 Pierre Raphaël</a>,
