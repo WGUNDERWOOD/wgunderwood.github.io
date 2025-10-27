@@ -42,7 +42,7 @@ and [W. G. Underwood][wgunderwood],
 2024 <br>
 [*Journal of the American Statistical Association*](
 https://www.tandfonline.com/toc/uasa20/current),
-*119*(548), 2695--2708 <br>
+119(548), 2695--2708 <br>
 [doi:10.1080/01621459.2023.2272785](
 https://doi.org/10.1080/01621459.2023.2272785) <br>
 [arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
@@ -53,7 +53,7 @@ https://doi.org/10.1080/01621459.2023.2272785) <br>
 and [M. Cucuringu][mcucuringu],
 2020 <br>
 [*Applied Network Science*](https://appliednetsci.springeropen.com/)
-5, 62 <br>
+5(62) <br>
 [doi:10.1007/s41109-020-00293-z](
 https://doi.org/doi:10.1007/s41109-020-00293-z) <br>
 [arXiv:2004.01293](https://arxiv.org/abs/2004.01293) <br>
