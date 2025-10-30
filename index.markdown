@@ -331,4 +331,6 @@ July 2016
 
 <li> SIAM Journal on Mathematics of Data Science </li>
 
+<li> Statistical Science </li>
+
 </ul>
