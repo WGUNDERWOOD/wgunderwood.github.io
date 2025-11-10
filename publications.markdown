@@ -31,8 +31,8 @@ forthcoming <br>
 and [W. G. Underwood][wgunderwood],
 2025 <br>
 [*Annals of Statistics*](
-https://imstat.org/journals-and-publications/annals-of-statistics/),
-53(5), 2179--2203 <br>
+https://imstat.org/journals-and-publications/annals-of-statistics/)
+53(5): 2179--2203 <br>
 [doi:10.1214/25-AOS2538](
 https://doi.org/10.1214/25-AOS2538) <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
@@ -43,8 +43,8 @@ https://doi.org/10.1214/25-AOS2538) <br>
 and [W. G. Underwood][wgunderwood],
 2024 <br>
 [*Journal of the American Statistical Association*](
-https://www.tandfonline.com/toc/uasa20/current),
-119(548), 2695--2708 <br>
+https://www.tandfonline.com/toc/uasa20/current)
+119(548): 2695--2708 <br>
 [doi:10.1080/01621459.2023.2272785](
 https://doi.org/10.1080/01621459.2023.2272785) <br>
 [arXiv:2201.05967](https://arxiv.org/abs/2201.05967) <br>
@@ -67,7 +67,7 @@ L. Smallman,
 and [A. Artemiou][aartemiou],
 2019 <br>
 [*Computational Statistics*](https://link.springer.com/journal/180)
-35, 559-577 <br>
+35: 559-577 <br>
 [doi:10.1007/s00180-019-00903-0](
 https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 
