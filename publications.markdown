@@ -32,7 +32,9 @@ and [W. G. Underwood][wgunderwood],
 2025 <br>
 [*Annals of Statistics*](
 https://imstat.org/journals-and-publications/annals-of-statistics/),
-forthcoming <br>
+53(5), 2179--2203 <br>
+[doi:10.1214/25-AOS2538](
+https://doi.org/10.1214/25-AOS2538) <br>
 [arXiv:2210.00362](https://arxiv.org/abs/2210.00362) <br>
 
 - **Uniform inference for kernel density estimators with dyadic data** <br>
