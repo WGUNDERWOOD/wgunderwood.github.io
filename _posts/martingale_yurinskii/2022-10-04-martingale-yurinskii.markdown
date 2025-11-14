@@ -8,7 +8,7 @@ date:   2022-10-04
 I'm pleased to share my new preprint,
 titled "Yurinskii's Coupling for Martingales"
 and coauthored with
-[Matias Cattaneo](https://cattaneo.princeton.edu)
+[Matias Cattaneo](https://mdcattaneo.github.io/)
 and
 [Ricardo Masini](https://anson.ucdavis.edu/~rmasini/bio.html).
 

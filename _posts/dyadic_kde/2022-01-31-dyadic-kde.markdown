@@ -10,7 +10,7 @@ dyadic kernel density estimation.
 I'm pleased to announce that my preprint,
 titled "Uniform Inference for Kernel Density Estimators with Dyadic Data"
 and coauthored with
-[Matias Cattaneo](https://cattaneo.princeton.edu)
+[Matias Cattaneo](https://mdcattaneo.github.io/)
 and
 [Yingjie Feng](https://sites.google.com/site/yingjieum/),
 is now available at

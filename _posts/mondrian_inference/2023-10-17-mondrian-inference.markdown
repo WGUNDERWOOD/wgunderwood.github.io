@@ -7,7 +7,7 @@ date:   2023-10-17
 I'm excited to share my new preprint,
 titled "Inference with Mondrian random forests"
 and coauthored with
-[Matias Cattaneo](https://cattaneo.princeton.edu)
+[Matias Cattaneo](https://mdcattaneo.github.io/)
 and
 [Jason Klusowski](https://klusowski.princeton.edu/).
 

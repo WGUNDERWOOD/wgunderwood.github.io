@@ -213,7 +213,7 @@ and [PyPI](https://pypi.org/project/motifcluster/) <br>
 [wgunderwood]: /
 [aartemiou]: https://artemioua.com/
 [mcucuringu]: https://scholar.google.com/citations?user=GFvVRzwAAAAJ&hl=en
-[mdcattaneo]: https://cattaneo.princeton.edu/
+[mdcattaneo]: https://mdcattaneo.github.io/
 [yfeng]: https://sites.google.com/site/yingjieum/
 [aelliott]: https://www.turing.ac.uk/people/researchers/andrew-elliott
 [rpmasini]: https://anson.ucdavis.edu/~rmasini/bio.html

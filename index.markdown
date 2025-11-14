@@ -74,7 +74,7 @@ Operations Research & Financial Engineering</a>
 in 2024, where I wrote my
 <a href = "https://github.com/WGUNDERWOOD/phd-dissertation/">dissertation</a>
 under the supervision of
-<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>.
+<a href="https://mdcattaneo.github.io/">Matias Cattaneo</a>.
 Previously I received an MA degree in ORFE
 from Princeton in 2021 and an
 MMath in Mathematics & Statistics from the
@@ -210,7 +210,7 @@ Spring 2023
 
 <li>
 ORF 524: Statistical Theory and Methods, with
-<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
+<a href="https://mdcattaneo.github.io/">Matias Cattaneo</a>,
 Fall 2022
 </li>
 
@@ -222,13 +222,13 @@ Fall 2022
 
 <li>
 ORF 524: Statistical Theory and Methods, with
-<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
+<a href="https://mdcattaneo.github.io/">Matias Cattaneo</a>,
 Fall 2021
 </li>
 
 <li>
 ORF 245: Fundamentals of Statistics, with
-<a href="https://cattaneo.princeton.edu">Matias Cattaneo</a>,
+<a href="https://mdcattaneo.github.io/">Matias Cattaneo</a>,
 Spring 2021
 </li>
 
