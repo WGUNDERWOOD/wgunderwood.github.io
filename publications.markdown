@@ -14,6 +14,16 @@ My software is hosted on
 
 ## Articles
 
+- **Inference with Mondrian random forests** <br>
+[M. D. Cattaneo][mdcattaneo],
+[J. M. Klusowski][jmklusowski]
+and [W. G. Underwood][wgunderwood],
+2025 <br>
+[*Journal of the Royal Statistical Society, Series B*](
+https://academic.oup.com/jrsssb),
+forthcoming <br>
+[arXiv:2310.09702](https://arxiv.org/abs/2310.09702) <br>
+
 - **Sharp anti-concentration inequalities for
 extremum statistics via copulas** <br>
 [M. D. Cattaneo][mdcattaneo],
@@ -82,13 +92,6 @@ https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 and [Richard J. Samworth][rjsamworth],
 2025 <br>
 [arXiv:2506.23870](https://arxiv.org/abs/2506.23870) <br>
-
-- **Inference with Mondrian random forests** <br>
-[M. D. Cattaneo][mdcattaneo],
-[J. M. Klusowski][jmklusowski]
-and [W. G. Underwood][wgunderwood],
-2024 <br>
-[arXiv:2310.09702](https://arxiv.org/abs/2310.09702) <br>
 
 ## Working papers
 
