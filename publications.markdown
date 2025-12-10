@@ -22,6 +22,8 @@ and [W. G. Underwood][wgunderwood],
 [*Journal of the Royal Statistical Society, Series B*](
 https://academic.oup.com/jrsssb),
 forthcoming <br>
+[doi:10.1093/jrsssb/qkaf077](
+https://doi.org/10.1093/jrsssb/qkaf077) <br>
 [arXiv:2310.09702](https://arxiv.org/abs/2310.09702) <br>
 
 - **Sharp anti-concentration inequalities for
