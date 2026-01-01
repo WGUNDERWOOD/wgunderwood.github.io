@@ -18,7 +18,7 @@ My software is hosted on
 [M. D. Cattaneo][mdcattaneo],
 [J. M. Klusowski][jmklusowski]
 and [W. G. Underwood][wgunderwood],
-2025 <br>
+2026 <br>
 [*Journal of the Royal Statistical Society, Series B*](
 https://academic.oup.com/jrsssb),
 forthcoming <br>
@@ -31,7 +31,7 @@ extremum statistics via copulas** <br>
 [M. D. Cattaneo][mdcattaneo],
 [R. P. Masini][rpmasini]
 and [W. G. Underwood][wgunderwood],
-2025 <br>
+2026 <br>
 [*Bernoulli*](
 https://bernoullisociety.org/publications/bernoulli-journal),
 forthcoming <br>
