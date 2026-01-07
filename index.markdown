@@ -303,6 +303,8 @@ July 2016
 <h2> Peer Review </h2>
 <ul>
 
+<li> Annals of the Institute of Statistical Mathematics </li>
+
 <li> Annals of Statistics </li>
 
 <li> Bernoulli </li>
