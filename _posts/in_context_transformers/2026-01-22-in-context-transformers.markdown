@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Minimax-optimal in-context nonparametric regression with transformers"
+title:  "Minimax-optimal In-context Regression with Transformers"
 date:   2026-01-22
 ---
 
@@ -11,7 +11,7 @@ students, Michelle Ching, Ioana Popescu and Nico Smith!
 
 In "Efficient and
 minimax-optimal in-context nonparametric regression with transformers", we show
-that deep transformer networks require only order $log n$ parameters to attain
+that deep transformer networks require only order $\log n$ parameters to attain
 optimal rates in smooth regression problems.
 The paper is joint work with
 [Michelle Ching](https://www.linkedin.com/in/michelle-ching-408557294/),
