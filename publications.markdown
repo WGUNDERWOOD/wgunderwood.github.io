@@ -85,13 +85,24 @@ https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 
 ## Preprints
 
+- **Efficient and minimax-optimal in-context nonparametric regression with transformers** <br>
+
+[M. Ching](https://www.linkedin.com/in/michelle-ching-408557294/),
+[I. Popescu](https://www.linkedin.com/in/ioana-popescu-409294253/),
+[N. Smith](https://www.linkedin.com/in/nico-smith-4730562a1/),
+[T. Ma](https://tianyima2000.github.io/),
+[W. G. Underwood][wgunderwood]
+and [R. J. Samworth][rjsamworth],
+2026 <br>
+[arXiv:2601.15014](https://arxiv.org/abs/2601.15014) <br>
+
 - **Upgrading survival models with CARE** <br>
 [W. G. Underwood][wgunderwood],
-[Henry W. J. Reeve][hwjreeve],
-[Oliver Y. Feng][oyfeng],
-[Samuel A. Lambert][salambert], <br>
-[Bhramar Mukherjee][bmukherjee]
-and [Richard J. Samworth][rjsamworth],
+[H. W. J. Reeve][hwjreeve],
+[O. Y. Feng][oyfeng],
+[S. A. Lambert][salambert], <br>
+[B. Mukherjee][bmukherjee]
+and [R. J. Samworth][rjsamworth],
 2025 <br>
 [arXiv:2506.23870](https://arxiv.org/abs/2506.23870) <br>
 
@@ -105,7 +116,7 @@ and [W. G. Underwood][wgunderwood] <br>
 - **Manifold testing with diffusion models** <br>
 [W. G. Underwood][wgunderwood],
 [S. Kotekal][skotekal]
-and [Richard J. Samworth][rjsamworth] <br>
+and [R. J. Samworth][rjsamworth] <br>
 
 - **Optimal polyadic estimation** <br>
 [W. G. Underwood][wgunderwood] <br>
