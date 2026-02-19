@@ -14,9 +14,9 @@
         pkgs = nixpkgs.legacyPackages.${system};
         ruby = pkgs.ruby;
         gems = pkgs.bundlerEnv {
-        name = "wgunderwood.github.io";
-        inherit ruby;
-        gemdir = ./.;
+          name = "wgunderwood.github.io";
+          inherit ruby;
+          gemdir = ./.;
         };
       in {
         devShells.default = pkgs.mkShell {
