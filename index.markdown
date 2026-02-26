@@ -313,6 +313,8 @@ July 2016
 
 <li> Information Theory, Probability and Statistical Learning </li>
 
+<li> International Conference on Machine Learning </li>
+
 <li> Journal of the American Statistical Association </li>
 
 <li> Journal of Business and Economic Statistics </li>
