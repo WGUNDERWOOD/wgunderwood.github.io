@@ -122,6 +122,10 @@ and [R. J. Samworth][rjsamworth] <br>
 
 ## Presentations and conferences
 
+- Royal Statistical Society International Conference,
+Bournemouth,
+September 2026
+
 - International Conference on Statistics and Data Science,
 Seville,
 December 2025
