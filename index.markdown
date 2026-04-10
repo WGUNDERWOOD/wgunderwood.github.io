@@ -334,4 +334,6 @@ July 2016
 
 <li> Statistical Science </li>
 
+<li> Statistics and Computing </li>
+
 </ul>
