@@ -9,6 +9,7 @@ and hosted with [GitHub Pages](https://pages.github.com/).
 ## Nix environment
 
 Enter the Nix environment with `nix develop`.
+If there are issues building the site, try removing `vendor/`.
 
 ## Updating gems
 
