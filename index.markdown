@@ -8,7 +8,7 @@ description: Welcome to my homepage.
 
 <a href="/">
 <img
-style="width: 160px; border: 2px solid #999999; margin-top: 0px"
+style="width: 160px; border: 2px solid #999999; margin-top: 4px"
 src="/assets/general/profile_cambridge.jpg">
 </a>
 
@@ -30,14 +30,28 @@ Richard Samworth</a>,
 and my research interests encompass various topics in statistical
 theory and methodology, including nonparametric procedures,
 kernel techniques,
-random forests, and coupling theory. I also offer regular consultations at the
-[Statistics Clinic](http://www.statslab.cam.ac.uk/clinic).
+random forests, and coupling theory.
+In the autumn of 2026, I will be joining the
+<a href="https://warwick.ac.uk/fac/sci/statistics/">
+Department of Statistics</a>
+at the
+<a href="https://warwick.ac.uk">
+University of Warwick</a>
+as an Assistant Professor.
 
 <div class="frame">
 
+<a href="https://warwick.ac.uk/">
+<img
+style="width: 160px; border: 2px solid #ee85cc; margin-top: 2px;"
+src="/assets/general/warwick_logo.png">
+</a>
+
+<br>
+
 <a href="https://www.cam.ac.uk">
 <img
-style="width: 160px; border: 2px solid #73c18d; margin-top: 2px;"
+style="width: 160px; border: 2px solid #73c18d; margin-top: 10px;"
 src="/assets/general/cambridge_logo.png">
 </a>
 
@@ -45,7 +59,7 @@ src="/assets/general/cambridge_logo.png">
 
 <a href="https://www.princeton.edu">
 <img
-style="width: 160px; border: 2px solid #ac3e0f; margin-top: 20px;"
+style="width: 160px; border: 2px solid #ac3e0f; margin-top: 10px;"
 src="/assets/general/princeton_logo.png">
 </a>
 
@@ -53,7 +67,7 @@ src="/assets/general/princeton_logo.png">
 
 <a href="https://www.ox.ac.uk">
 <img
-style="width: 160px; border: 2px solid #888888; margin-top: 20px;"
+style="width: 160px; border: 2px solid #888888; margin-top: 10px;"
 src="/assets/general/oxford_logo.png">
 </a>
 
@@ -169,6 +183,12 @@ Part III Modern Statistical Methods, with
 <a href="http://www.statslab.cam.ac.uk/~sb2116/">
 Sergio Bacallado</a>,
 Michaelmas 2024
+</li>
+
+<li>
+<a href="http://www.statslab.cam.ac.uk/clinic">
+Statistics Clinic</a>,
+Michaelmas 2024 to Easter 2026
 </li>
 
 </ul>
