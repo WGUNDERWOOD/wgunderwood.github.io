@@ -22,7 +22,7 @@ My software is hosted on
 [W. G. Underwood][wgunderwood]
 and [R. J. Samworth][rjsamworth],
 2026 <br>
-[*International Conference on Statistics and Machine Learning*](
+[*International Conference on Machine Learning*](
 https://icml.cc/),
 forthcoming <br>
 [arXiv:2601.15014](https://arxiv.org/abs/2601.15014) <br>
