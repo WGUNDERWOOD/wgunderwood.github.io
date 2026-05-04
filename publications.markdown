@@ -14,6 +14,19 @@ My software is hosted on
 
 ## Articles
 
+- **Efficient and minimax-optimal in-context nonparametric regression with transformers** <br>
+[M. Ching](https://www.linkedin.com/in/michelle-ching-408557294/),
+[I. Popescu](https://www.linkedin.com/in/ioana-popescu-409294253/),
+[N. Smith](https://www.linkedin.com/in/nico-smith-4730562a1/),
+[T. Ma](https://tianyima2000.github.io/),
+[W. G. Underwood][wgunderwood]
+and [R. J. Samworth][rjsamworth],
+2026 <br>
+[*International Conference on Statistics and Machine Learning*](
+https://icml.cc/),
+forthcoming <br>
+[arXiv:2601.15014](https://arxiv.org/abs/2601.15014) <br>
+
 - **Inference with Mondrian random forests** <br>
 [M. D. Cattaneo][mdcattaneo],
 [J. M. Klusowski][jmklusowski]
@@ -86,16 +99,6 @@ and [A. Artemiou][aartemiou],
 https://doi.org/doi:10.1007/s00180-019-00903-0) <br>
 
 ## Preprints
-
-- **Efficient and minimax-optimal in-context nonparametric regression with transformers** <br>
-[M. Ching](https://www.linkedin.com/in/michelle-ching-408557294/),
-[I. Popescu](https://www.linkedin.com/in/ioana-popescu-409294253/),
-[N. Smith](https://www.linkedin.com/in/nico-smith-4730562a1/),
-[T. Ma](https://tianyima2000.github.io/),
-[W. G. Underwood][wgunderwood]
-and [R. J. Samworth][rjsamworth],
-2026 <br>
-[arXiv:2601.15014](https://arxiv.org/abs/2601.15014) <br>
 
 - **Upgrading survival models with CARE** <br>
 [W. G. Underwood][wgunderwood],
