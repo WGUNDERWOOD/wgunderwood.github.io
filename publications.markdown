@@ -33,8 +33,10 @@ extremum statistics via copulas** <br>
 and [W. G. Underwood][wgunderwood],
 2026 <br>
 [*Bernoulli*](
-https://bernoullisociety.org/publications/bernoulli-journal),
-forthcoming <br>
+https://bernoullisociety.org/publications/bernoulli-journal)
+32(3), 2022--2045 <br>
+[doi:10.3150/25-BEJ1943](
+https://doi.org/10.3150/25-BEJ1943) <br>
 [arXiv:2502.07699](https://arxiv.org/abs/2502.07699) <br>
 
 - **Yurinskii's coupling for martingales** <br>
