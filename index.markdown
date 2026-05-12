@@ -43,7 +43,7 @@ as an Assistant Professor.
 
 <a href="https://warwick.ac.uk/">
 <img
-style="width: 160px; border: 2px solid #ee85cc; margin-top: 2px;"
+style="width: 160px; border: 2px solid #fe95dc; margin-top: 2px;"
 src="/assets/general/warwick_logo.png">
 </a>
 
