@@ -14,7 +14,7 @@ My software is hosted on
 
 ## Articles
 
-- **Efficient and minimax-optimal in-context nonparametric regression with transformers** <br>
+- **Efficient and minimax optimal in-context nonparametric regression with transformers** <br>
 [M. Ching](https://www.linkedin.com/in/michelle-ching-408557294/),
 [I. Popescu](https://www.linkedin.com/in/ioana-popescu-409294253/),
 [N. Smith](https://www.linkedin.com/in/nico-smith-4730562a1/),

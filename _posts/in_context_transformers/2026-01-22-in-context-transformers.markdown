@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Minimax-optimal In-context Regression with Transformers"
+title:  "Minimax optimal In-context Regression with Transformers"
 date:   2026-01-22
 ---
 
@@ -10,7 +10,7 @@ students, Michelle Ching, Ioana Popescu and Nico Smith!
 {% include mathjax.html %}
 
 In "Efficient and
-minimax-optimal in-context nonparametric regression with transformers", we show
+minimax optimal in-context nonparametric regression with transformers", we show
 that deep transformer networks require only order $\log n$ parameters to attain
 optimal rates in smooth regression problems.
 The paper is joint work with
@@ -32,7 +32,7 @@ prove that, with $n$ in-context examples and $d$-dimensional
 regression covariates, a pretrained
 transformer with $\Theta(\log n)$ parameters and
 $\Omega\bigl(n^{2\alpha/(2\alpha+d)}\log^3 n\bigr)$ pretraining sequences can
-achieve the minimax-optimal rate of convergence
+achieve the minimax optimal rate of convergence
 $O\bigl(n^{-2\alpha/(2\alpha+d)}\bigr)$ in mean squared error.
 Our result requires substantially fewer
 transformer parameters and pretraining sequences
