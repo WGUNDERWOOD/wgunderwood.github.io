@@ -348,6 +348,8 @@ July 2016
 
 <li> Journal of Statistical Computation and Simulation </li>
 
+<li> Neural Information Processing Systems </li>
+
 <li> Operations Research </li>
 
 <li> SIAM Journal on Mathematics of Data Science </li>
