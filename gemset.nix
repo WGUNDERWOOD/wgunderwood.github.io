@@ -87,10 +87,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1aymcakhzl83k77g2f2krz07bg1cbafbcd2ghvwr4lky3rz86mkb";
+      sha256 = "1c2i64xsd35vijnb50rxb70g508s0x674xi0qpyyb8jy7bncl4j4";
       type = "gem";
     };
-    version = "1.3.6";
+    version = "1.3.7";
   };
   connection_pool = {
     groups = ["default" "jekyll_plugins"];
@@ -181,10 +181,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1b930ag8nh99v8n9645ac1wcah9fx0mclbp323q4i1ly9acvkk3k";
+      sha256 = "0y7j6yzv07zggic6g0p2v1ivnvkzsbqjnfdl4215qqb6cxz290hq";
       type = "gem";
     };
-    version = "2.14.2";
+    version = "2.14.3";
   };
   faraday-net_http = {
     dependencies = ["net-http"];
@@ -192,10 +192,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1hgflj9qj8imf8yhbbn0aiyjija9j37yxvk9lx2z64lkxkn3pccx";
+      sha256 = "125m3qri52vwh5v9dhq0dkqxf8629cxrf99yyc01pva72wasyy0f";
       type = "gem";
     };
-    version = "3.4.3";
+    version = "3.4.4";
   };
   ffi = {
     groups = ["default" "jekyll_plugins"];
@@ -276,10 +276,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1994i044vdmzzkyr76g8rpl1fq1532wf0sb21xg5r1ilj5iphmr8";
+      sha256 = "1dfikmmd9dllirsfq0kjiyxpmlq0afkxm5sslsr97r9g85ifpy80";
       type = "gem";
     };
-    version = "1.14.8";
+    version = "1.15.2";
   };
   io-wait = {
     groups = ["default"];
@@ -711,10 +711,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0n9ch455pnvl9vxs2f3j77bpdmxg5g3mn3vyr9wxa0a87raii2i1";
+      sha256 = "0ay31y1yl208xrpcsw6b0k4q309magq7q5prmdbb0lm9ampbqqlk";
       type = "gem";
     };
-    version = "2.19.5";
+    version = "2.20.0";
   };
   kramdown = {
     dependencies = ["rexml"];
@@ -828,10 +828,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1s30b7h7qpyim30m8060xs415mbr3ci7i5hdg09chh1aqfx2qcbq";
+      sha256 = "1d9safb4dly6qmc2g06444l0zifby52yy6j1a5fa1g4j3ihm3jah";
       type = "gem";
     };
-    version = "1.19.3";
+    version = "1.19.4";
   };
   octokit = {
     dependencies = ["faraday" "sawyer"];
