@@ -326,6 +326,8 @@ July 2016
 
 <li> Bernoulli </li>
 
+<li> Biometrika </li>
+
 <li> Econometric Theory </li>
 
 <li> Information Theory, Probability and Statistical Learning </li>
