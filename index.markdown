@@ -97,9 +97,7 @@ In my spare time I enjoy programming in
 [Rust](https://www.rust-lang.org/),
 [Julia](https://julialang.org/)
 and [Python](https://www.python.org/),
-choral singing with the
-[Choir of Christ's College, Cambridge](https://www.christs.cam.ac.uk/choir),
-and playing classical piano.
+as well as choral singing and playing classical piano.
 
 <h2> Contact </h2>
 
