@@ -8,7 +8,7 @@ description: Welcome to my homepage.
 
 <a href="/">
 <img
-style="width: 160px; border: 2px solid #999999; margin-top: 4px"
+style="width: 160px; border: 2px solid #999999; margin-top: 0px"
 src="/assets/general/profile_cambridge.jpg">
 </a>
 
@@ -16,34 +16,24 @@ src="/assets/general/profile_cambridge.jpg">
 
 <h2> About </h2>
 
-I am a postdoctoral researcher in the
-<a href="http://www.statslab.cam.ac.uk/">
-Statistical Laboratory</a>
-at the
-<a href="https://www.dpmms.cam.ac.uk/">
-Department of Pure Mathematics and Mathematical Statistics</a>,
-<a href="https://www.cam.ac.uk/">
-University of Cambridge</a>.
-I am hosted by
-<a href="http://www.statslab.cam.ac.uk/~rjs57/">
-Richard Samworth</a>,
-and my research interests encompass various topics in statistical
-theory and methodology, including nonparametric procedures,
-kernel techniques,
-random forests, and coupling theory.
-In the autumn of 2026, I will be joining the
+I am an Assistant Professor in the
 <a href="https://warwick.ac.uk/fac/sci/statistics/">
 Department of Statistics</a>
 at the
 <a href="https://warwick.ac.uk">
-University of Warwick</a>
-as an Assistant Professor.
+University of Warwick</a>.
+My research interests encompass various topics in statistical
+theory and methodology, including nonparametric estimation,
+data augmentation, kernel techniques,
+random forests, coupling theory,
+dependent data analysis,
+and the mathematics of deep learning.
 
 <div class="frame">
 
 <a href="https://warwick.ac.uk/">
 <img
-style="width: 160px; border: 2px solid #fe95dc; margin-top: 2px;"
+style="width: 160px; border: 2px solid #fe95dc; margin-top: 0px;"
 src="/assets/general/warwick_logo.png">
 </a>
 
@@ -51,7 +41,7 @@ src="/assets/general/warwick_logo.png">
 
 <a href="https://www.cam.ac.uk">
 <img
-style="width: 160px; border: 2px solid #73c18d; margin-top: 10px;"
+style="width: 160px; border: 2px solid #73c18d; margin-top: 14px;"
 src="/assets/general/cambridge_logo.png">
 </a>
 
@@ -59,7 +49,7 @@ src="/assets/general/cambridge_logo.png">
 
 <a href="https://www.princeton.edu">
 <img
-style="width: 160px; border: 2px solid #ac3e0f; margin-top: 10px;"
+style="width: 160px; border: 2px solid #ac3e0f; margin-top: 14px;"
 src="/assets/general/princeton_logo.png">
 </a>
 
@@ -67,7 +57,7 @@ src="/assets/general/princeton_logo.png">
 
 <a href="https://www.ox.ac.uk">
 <img
-style="width: 160px; border: 2px solid #888888; margin-top: 10px;"
+style="width: 160px; border: 2px solid #888888; margin-top: 14px;"
 src="/assets/general/oxford_logo.png">
 </a>
 
@@ -77,6 +67,17 @@ src="/assets/general/oxford_logo.png">
 
 <h2> Biography </h2>
 
+From 2024--2026 I was a postdoc in the
+<a href="http://www.statslab.cam.ac.uk/">
+Statistical Laboratory</a>
+at the
+<a href="https://www.dpmms.cam.ac.uk/">
+Department of Pure Mathematics and Mathematical Statistics</a>,
+<a href="https://www.cam.ac.uk/">
+University of Cambridge</a>,
+hosted by
+<a href="http://www.statslab.cam.ac.uk/~rjs57/">
+Richard Samworth</a>.
 I received my PhD in
 <a href="https://orfe.princeton.edu/">
 Operations Research & Financial Engineering</a>
@@ -86,13 +87,12 @@ in 2024, where I wrote my
 <a href = "https://github.com/WGUNDERWOOD/phd-dissertation/">dissertation</a>
 under the supervision of
 <a href="https://mdcattaneo.github.io/">Matias Cattaneo</a>.
-Previously I received an MA degree in ORFE
+Previously, I received an MA degree in ORFE
 from Princeton in 2021 and an
 MMath in Mathematics & Statistics from the
 <a href="http://www.ox.ac.uk/">University of Oxford</a>
 in 2019. I am an alumnus of
 <a href="https://www.sjc.ox.ac.uk/">St John’s College, Oxford</a>.
-
 In my spare time I enjoy programming in
 [Rust](https://www.rust-lang.org/),
 [Julia](https://julialang.org/)
@@ -102,7 +102,7 @@ as well as choral singing and playing classical piano.
 <h2> Contact </h2>
 
 Contact me by email at
-<a href="mailto:wgu21@cam.ac.uk">wgu21@cam.ac.uk</a>
+<a href="mailto:william.underwood@warwick.ac.uk">william.underwood@warwick.ac.uk</a>
 with any questions!
 Other contact details are available
 on my

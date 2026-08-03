@@ -11,14 +11,14 @@ src="/assets/general/maths_cat.jpeg">
 </div>
 
 ### Email address
-[wgu21@cam.ac.uk](mailto:wgu21@cam.ac.uk)
+[william.underwood@warwick.ac.uk](mailto:william.underwood@warwick.ac.uk)
 
 ### Office address
-William G. Underwood <br>
-Statistical Laboratory <br>
-Centre for Mathematical Sciences <br>
-Wilberforce Road <br>
-Cambridge, CB3 0WB <br>
+Dr. William Underwood <br>
+Room 2.14, Mathematical Sciences Building <br>
+Department of Statistics <br>
+University of Warwick <br>
+Coventry, CV4 7AL <br>
 
 ### Other links
 - [BibTeX bibliography](https://github.com/WGUNDERWOOD/wgu-cv/
