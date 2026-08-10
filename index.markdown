@@ -113,6 +113,22 @@ download my CV here</a>.
 
 <h2> Teaching </h2>
 
+<h3> Lecturer, University of Warwick </h3>
+
+<ul>
+
+<li>
+ST343: Topics in Data Science,
+Spring 2027
+</li>
+
+<li>
+ST925: Statistical Theory of Neural Networks,
+Spring 2027
+</li>
+
+</ul>
+
 <h3> Lecturer, University of Cambridge </h3>
 
 <ul>
@@ -357,5 +373,14 @@ July 2016
 <li> Statistical Science </li>
 
 <li> Statistics and Computing </li>
+
+</ul>
+
+<h2> Service </h2>
+<ul>
+
+<li> Department conference organiser, University of Warwick </li>
+
+<li> Statistics seminar organiser, University of Warwick </li>
 
 </ul>
