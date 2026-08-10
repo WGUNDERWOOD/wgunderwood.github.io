@@ -379,8 +379,10 @@ July 2016
 <h2> Service </h2>
 <ul>
 
-<li> Department conference organiser, University of Warwick </li>
+<li> Department conference organiser,
+University of Warwick, 2026--2027 </li>
 
-<li> Statistics seminar organiser, University of Warwick </li>
+<li> Statistics seminar organiser,
+University of Warwick, 2026--2027 </li>
 
 </ul>
