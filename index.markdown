@@ -67,7 +67,7 @@ src="/assets/general/oxford_logo.png">
 
 <h2> Biography </h2>
 
-From 2024--2026 I was a postdoc in the
+From 2024–2026 I was a postdoc in the
 <a href="http://www.statslab.cam.ac.uk/">
 Statistical Laboratory</a>
 at the
@@ -380,9 +380,9 @@ July 2016
 <ul>
 
 <li> Department conference organiser,
-University of Warwick, 2026--2027 </li>
+University of Warwick, 2026–2027 </li>
 
 <li> Statistics seminar organiser,
-University of Warwick, 2026--2027 </li>
+University of Warwick, 2026–2027 </li>
 
 </ul>
