@@ -379,10 +379,10 @@ July 2016
 <h2> Service </h2>
 <ul>
 
-<li> Organiser, Statistical Learning & Inference Seminar,
+<li> Statistical Learning & Inference Seminar,
 University of Warwick, 2026–2027 </li>
 
-<li> Organiser, Statistics Department Conference,
+<li> Statistics Department Conference,
 University of Warwick, 2026–2027 </li>
 
 </ul>
