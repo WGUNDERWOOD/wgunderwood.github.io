@@ -386,7 +386,7 @@ University of Warwick, 2026–2027 </li>
 University of Warwick, 2026–2027 </li>
 
 <li> Consultant, Cambridge Statistics Clinic,
-University of Cambridge, 2024--2026 </li>
+University of Cambridge, 2024–2026 </li>
 
 <li> Local organiser,
 Statistical Foundations of Data Science, Princeton University, 2023 </li>
