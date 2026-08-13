@@ -127,6 +127,11 @@ ST925: Statistical Theory of Neural Networks,
 Spring 2027
 </li>
 
+<li>
+ST921: Statistical Frontiers,
+Autumn 2026
+</li>
+
 </ul>
 
 <h3> Lecturer, University of Cambridge </h3>
