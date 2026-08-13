@@ -127,6 +127,10 @@ and [R. J. Samworth][rjsamworth] <br>
 
 ## Presentations and conferences
 
+- Statistical Sciences Research Institute Seminar,
+University of Southampton,
+October 2026
+
 - Royal Statistical Society International Conference,
 Bournemouth,
 September 2026
