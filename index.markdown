@@ -204,12 +204,6 @@ Sergio Bacallado</a>,
 Michaelmas 2024
 </li>
 
-<li>
-<a href="http://www.statslab.cam.ac.uk/clinic">
-Statistics Clinic</a>,
-Michaelmas 2024 to Easter 2026
-</li>
-
 </ul>
 
 <h3> Assistant in Instruction, Princeton University </h3>
@@ -390,7 +384,8 @@ University of Warwick, 2026–2027 </li>
 <li> Statistics Department Conference,
 University of Warwick, 2026–2027 </li>
 
-<li> Consultant, Cambridge Statistics Clinic,
+<li> Consultant, <a href="http://www.statslab.cam.ac.uk/clinic">
+Statistics Clinic</a>,
 University of Cambridge, 2024–2026 </li>
 
 <li> Local organiser,
