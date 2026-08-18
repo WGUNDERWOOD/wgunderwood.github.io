@@ -373,6 +373,8 @@ July 2016
 
 <li> Statistics and Computing </li>
 
+<li> Technometrics </li>
+
 </ul>
 
 <h2> Service </h2>
