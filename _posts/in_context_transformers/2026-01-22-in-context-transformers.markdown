@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Minimax optimal In-context Regression with Transformers"
+title:  "Minimax Optimal In-context Regression with Transformers"
 date:   2026-01-22
 ---
 
