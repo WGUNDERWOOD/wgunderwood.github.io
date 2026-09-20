@@ -124,7 +124,7 @@ Spring 2027
 </li>
 
 <li>
-ST925: Graduate Topics in Statistics:
+ST925: Graduate Topics:
 Statistical Theory of Neural Networks,
 Spring 2027
 </li>
