@@ -118,17 +118,20 @@ download my CV here</a>.
 <ul>
 
 <li>
-ST343: Topics in Data Science,
+ST343: Topics in Data Science:
+Causal Inference,
 Spring 2027
 </li>
 
 <li>
-ST925: Statistical Theory of Neural Networks,
+ST925: Graduate Topics in Statistics:
+Statistical Theory of Neural Networks,
 Spring 2027
 </li>
 
 <li>
-ST921: Statistical Frontiers,
+ST921: Statistical Frontiers:
+Nonparametric Inference via Resampling,
 Autumn 2026
 </li>
 
