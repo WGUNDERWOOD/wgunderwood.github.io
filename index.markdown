@@ -346,6 +346,8 @@ July 2016
 
 <li> Econometric Theory </li>
 
+<li> Electronic Journal of Statistics </li>
+
 <li> Information Theory, Probability and Statistical Learning </li>
 
 <li> International Conference on Machine Learning </li>
