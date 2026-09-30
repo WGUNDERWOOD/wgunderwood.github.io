@@ -385,6 +385,12 @@ July 2016
 <h2> Service </h2>
 <ul>
 
+<li> Welfare, Equality, Diversity and Inclusion Committee, <br>
+University of Warwick, 2026–2027 </li>
+
+<li> Early Career Committee,
+University of Warwick, 2026–2027 </li>
+
 <li> Statistical Learning & Inference Seminar,
 University of Warwick, 2026–2027 </li>
 
