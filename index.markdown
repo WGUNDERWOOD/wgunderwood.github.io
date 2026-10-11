@@ -102,7 +102,8 @@ as well as choral singing and playing classical piano.
 <h2> Contact </h2>
 
 Contact me by email at
-<a href="mailto:william.underwood@warwick.ac.uk">william.underwood@warwick.ac.uk</a>
+<a href="mailto:william.underwood@warwick.ac.uk">
+william.underwood@warwick.ac.uk</a>
 with any questions!
 Other contact details are available
 on my

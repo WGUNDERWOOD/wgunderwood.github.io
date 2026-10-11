@@ -9,6 +9,7 @@ Akrotirianakis
 Amir
 AoC
 AOT
+Armitage
 Artemiou
 Bacallado
 Ber
@@ -16,6 +17,7 @@ bernstein
 BFS
 Bhramar
 BibTeX
+Biometrika
 biostatistics
 bmi
 bmukherjee
@@ -32,6 +34,7 @@ center
 centered
 Champaign
 characterization
+Ching
 Chleboun
 clt
 color
@@ -92,6 +95,7 @@ img
 IMSE
 integrable
 interarrival
+Ioana
 Ioannis
 JIT
 jl
@@ -134,6 +138,7 @@ Mykhaylo
 Nadaraya
 NaN
 ndash
+Nico
 nonparametric
 noop
 noopener
@@ -162,12 +167,15 @@ pointwise
 Pois
 poisson
 polyadic
+Popescu
 popfirst
 pre
 precompilation
 Prellberg
 preprint
 Preprints
+pretrained
+pretraining
 princeton
 Proboscidea
 procedurally
@@ -201,8 +209,10 @@ sublinear
 summand
 summands
 svg
+Technometrics
 tex
 th
+Tianyi
 Tibshirani
 TODO
 ul
@@ -219,6 +229,7 @@ vectorised
 Vershynin
 Volcanium
 Vorel
+warwick
 WGUnderwood
 wgunderwood
 Witten

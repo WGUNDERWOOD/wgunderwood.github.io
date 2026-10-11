@@ -21,9 +21,9 @@
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = [
-            pkgs.bundix
             gems
             ruby
+            pkgs.bundix
           ];
         };
       });
