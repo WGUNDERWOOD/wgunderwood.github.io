@@ -282,16 +282,6 @@
     };
     version = "1.15.2";
   };
-  io-wait = {
-    groups = ["default"];
-    platforms = [];
-    source = {
-      remotes = ["https://rubygems.org"];
-      sha256 = "0a4zcb0qgd1gnpa3fh5vfwlwqvynyy40s8zfa43xw8l3pl0bdpyc";
-      type = "gem";
-    };
-    version = "1.0.0";
-  };
   ipaddr = {
     groups = ["default"];
     platforms = [];

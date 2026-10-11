@@ -116,7 +116,6 @@ GEM
     http_parser.rb (0.8.1)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
-    io-wait (1.0.0)
     ipaddr (1.2.9)
     jekyll (3.10.0)
       addressable (~> 2.4)
@@ -322,7 +321,6 @@ PLATFORMS
 DEPENDENCIES
   activesupport (>= 6.1.7.1)
   github-pages
-  io-wait
   ipaddr
   jekyll-feed (~> 0.12)
   kramdown (>= 2.3.0)
