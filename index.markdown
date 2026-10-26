@@ -398,8 +398,7 @@ University of Warwick, 2026–2027 </li>
 <li> Statistics Department Conference,
 University of Warwick, 2026–2027 </li>
 
-<li> Consultant, <a href="http://www.statslab.cam.ac.uk/clinic">
-Statistics Clinic</a>,
+<li> Consultant, Statistics Clinic,
 University of Cambridge, 2024–2026 </li>
 
 <li> Local organiser,

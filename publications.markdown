@@ -14,7 +14,7 @@ My software is hosted on
 
 ## Articles
 
-- **Efficient and minimax optimal in-context nonparametric regression with transformers** <br>
+- **Efficient and minimax optimal in-context nonparametric regression <br> with transformers** <br>
 [M. Ching](https://www.linkedin.com/in/michelle-ching-408557294/),
 [I. Popescu](https://www.linkedin.com/in/ioana-popescu-409294253/),
 [N. Smith](https://www.linkedin.com/in/nico-smith-4730562a1/),
@@ -22,9 +22,9 @@ My software is hosted on
 [W. G. Underwood][wgunderwood]
 and [R. J. Samworth][rjsamworth],
 2026 <br>
-[*International Conference on Machine Learning*](
+[*Forty-Third International Conference on Machine Learning*](
 https://icml.cc/),
-forthcoming <br>
+306, 19581--19610 <br>
 [arXiv:2601.15014](https://arxiv.org/abs/2601.15014) <br>
 
 - **Inference with Mondrian random forests** <br>
