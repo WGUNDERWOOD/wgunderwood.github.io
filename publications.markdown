@@ -127,6 +127,14 @@ and [R. J. Samworth][rjsamworth] <br>
 
 ## Presentations and conferences
 
+- Workshop on PhD Research in the Age of AI,
+University of Warwick,
+December 2026
+
+- Statistics Department Forum,
+University of Warwick,
+November 2026
+
 - Statistical Sciences Research Institute Seminar,
 University of Southampton,
 October 2026
