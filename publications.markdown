@@ -135,7 +135,7 @@ December 2026
 University of Warwick,
 November 2026
 
-- Statistical Sciences Research Institute Seminar,
+- S3RI Seminar,
 University of Southampton,
 October 2026
 
